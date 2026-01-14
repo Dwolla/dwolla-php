@@ -1,0 +1,10 @@
+# Documents
+
+
+## Fields
+
+| Field                                                                        | Type                                                                         | Required                                                                     | Description                                                                  | Example                                                                      |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `links`                                                                      | array<string, [Components\HalLink](../../Models/Components/HalLink.md)>      | :heavy_check_mark:                                                           | N/A                                                                          |                                                                              |
+| `embedded`                                                                   | [Components\DocumentsEmbedded](../../Models/Components/DocumentsEmbedded.md) | :heavy_check_mark:                                                           | N/A                                                                          |                                                                              |
+| `total`                                                                      | *int*                                                                        | :heavy_check_mark:                                                           | N/A                                                                          | 2                                                                            |

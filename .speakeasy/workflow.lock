@@ -1,0 +1,37 @@
+speakeasyVersion: 1.685.0
+sources:
+    Dwolla API:
+        sourceNamespace: dwolla-api
+        sourceRevisionDigest: sha256:c53d3645517fdf38c882c4a3ad0a0c05f9bd360f72fffd5c1174cfbe090303fb
+        sourceBlobDigest: sha256:2fe7146abebdc8acf2c09a1cca5d83dc387dc390171fca930e3b67c46f8d8edb
+        tags:
+            - latest
+            - "2.0"
+targets:
+    dwolla:
+        source: Dwolla API
+        sourceNamespace: dwolla-api
+        sourceRevisionDigest: sha256:c53d3645517fdf38c882c4a3ad0a0c05f9bd360f72fffd5c1174cfbe090303fb
+        sourceBlobDigest: sha256:2fe7146abebdc8acf2c09a1cca5d83dc387dc390171fca930e3b67c46f8d8edb
+        codeSamplesNamespace: dwolla-api-php-code-samples
+        codeSamplesRevisionDigest: sha256:188c7a2e074cf6ac119afb3389416a8746b49d35051de0543111f3df95710362
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Dwolla API:
+            inputs:
+                - location: https://raw.githubusercontent.com/Dwolla/dwolla-openapi/refs/heads/main/openapi.yml
+            output: .speakeasy/out.openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/dwolla/dwolla/dwolla-api
+    targets:
+        dwolla:
+            target: php
+            source: Dwolla API
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/dwolla/dwolla/dwolla-api-php-code-samples
+                labelOverride:
+                    fixedValue: Php (SDK)
+                blocking: false

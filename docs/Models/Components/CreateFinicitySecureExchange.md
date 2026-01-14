@@ -1,0 +1,9 @@
+# CreateFinicitySecureExchange
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `links`                                                                                                      | [Components\CreateFinicitySecureExchangeLinks](../../Models/Components/CreateFinicitySecureExchangeLinks.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `finicity`                                                                                                   | [Components\Finicity](../../Models/Components/Finicity.md)                                                   | :heavy_check_mark:                                                                                           | N/A                                                                                                          |

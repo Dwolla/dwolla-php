@@ -1,0 +1,12 @@
+# CreateApplicationAccessTokenResponseBody
+
+successful operation
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      | Example                                                                                          |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `accessToken`                                                                                    | *string*                                                                                         | :heavy_check_mark:                                                                               | A new access token that is used to authenticate against resources that belong to the app itself. | gTm0p62yYXFiB1rOdhV0TsNOinC2V2P1CMaAtojkO9JEGbv3i5                                               |
+| `tokenType`                                                                                      | *string*                                                                                         | :heavy_check_mark:                                                                               | The type of token, always "Bearer"                                                               | Bearer                                                                                           |
+| `expiresIn`                                                                                      | *int*                                                                                            | :heavy_check_mark:                                                                               | The lifetime of the access token, in seconds. Default is 3600.                                   | 3599                                                                                             |

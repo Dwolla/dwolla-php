@@ -1,0 +1,9 @@
+# CreateLabelLedgerEntryRequest
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `id`                                                                                                         | *string*                                                                                                     | :heavy_check_mark:                                                                                           | The Id of the Label to update.                                                                               |
+| `body`                                                                                                       | [Operations\CreateLabelLedgerEntryRequestBody](../../Models/Operations/CreateLabelLedgerEntryRequestBody.md) | :heavy_check_mark:                                                                                           | Parameters to create a label ledger entry                                                                    |

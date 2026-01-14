@@ -1,0 +1,10 @@
+# RetrieveLabelReallocationLinks
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `self`                                                                                                | [?Operations\RetrieveLabelReallocationSelf](../../Models/Operations/RetrieveLabelReallocationSelf.md) | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `toLedgerEntry`                                                                                       | [?Operations\ToLedgerEntry](../../Models/Operations/ToLedgerEntry.md)                                 | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `fromLedgerEntry`                                                                                     | [?Operations\FromLedgerEntry](../../Models/Operations/FromLedgerEntry.md)                             | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |

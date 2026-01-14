@@ -1,0 +1,9 @@
+# CreateMXOpenBankingExchange
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `links`                                                                                                    | [Components\CreateMXOpenBankingExchangeLinks](../../Models/Components/CreateMXOpenBankingExchangeLinks.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |
+| `mx`                                                                                                       | [Components\Mx](../../Models/Components/Mx.md)                                                             | :heavy_check_mark:                                                                                         | N/A                                                                                                        |

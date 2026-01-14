@@ -1,0 +1,10 @@
+# Exchanges
+
+
+## Fields
+
+| Field                                                                        | Type                                                                         | Required                                                                     | Description                                                                  | Example                                                                      |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `links`                                                                      | array<string, [Components\HalLink](../../Models/Components/HalLink.md)>      | :heavy_check_mark:                                                           | N/A                                                                          |                                                                              |
+| `embedded`                                                                   | [Components\ExchangesEmbedded](../../Models/Components/ExchangesEmbedded.md) | :heavy_check_mark:                                                           | N/A                                                                          |                                                                              |
+| `total`                                                                      | *int*                                                                        | :heavy_check_mark:                                                           | N/A                                                                          | 3                                                                            |

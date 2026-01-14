@@ -1,0 +1,9 @@
+# AvailableExchangeConnectionsLinks
+
+
+## Fields
+
+| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `self`                                                                                                               | [Components\AvailableExchangeConnectionsSelf](../../Models/Components/AvailableExchangeConnectionsSelf.md)           | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
+| `customers`                                                                                                          | [Components\AvailableExchangeConnectionsCustomers](../../Models/Components/AvailableExchangeConnectionsCustomers.md) | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |

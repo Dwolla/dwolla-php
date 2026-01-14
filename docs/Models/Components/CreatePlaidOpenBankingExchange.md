@@ -1,0 +1,9 @@
+# CreatePlaidOpenBankingExchange
+
+
+## Fields
+
+| Field                                                                                                            | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `links`                                                                                                          | [Components\CreatePlaidOpenBankingExchangeLinks](../../Models/Components/CreatePlaidOpenBankingExchangeLinks.md) | :heavy_check_mark:                                                                                               | N/A                                                                                                              |
+| `plaid`                                                                                                          | [Components\Plaid](../../Models/Components/Plaid.md)                                                             | :heavy_check_mark:                                                                                               | N/A                                                                                                              |

@@ -1,0 +1,12 @@
+# ListWebhooksResponseBody
+
+successful operation
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         | Example                                                                             |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `links`                                                                             | [?Operations\ListWebhooksLinks](../../Models/Operations/ListWebhooksLinks.md)       | :heavy_minus_sign:                                                                  | N/A                                                                                 |                                                                                     |
+| `embedded`                                                                          | [?Operations\ListWebhooksEmbedded](../../Models/Operations/ListWebhooksEmbedded.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |                                                                                     |
+| `total`                                                                             | *?int*                                                                              | :heavy_minus_sign:                                                                  | N/A                                                                                 | 1                                                                                   |

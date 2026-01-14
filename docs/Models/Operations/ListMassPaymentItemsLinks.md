@@ -1,0 +1,10 @@
+# ListMassPaymentItemsLinks
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `self`                                                                                        | [?Operations\ListMassPaymentItemsSelf](../../Models/Operations/ListMassPaymentItemsSelf.md)   | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `first`                                                                                       | [?Operations\ListMassPaymentItemsFirst](../../Models/Operations/ListMassPaymentItemsFirst.md) | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `last`                                                                                        | [?Operations\ListMassPaymentItemsLast](../../Models/Operations/ListMassPaymentItemsLast.md)   | :heavy_minus_sign:                                                                            | N/A                                                                                           |

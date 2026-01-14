@@ -1,0 +1,11 @@
+# CreateCustomerDocumentRequestBody
+
+Upload a document for a customer.
+
+
+## Fields
+
+| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    | Example                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `documentType`                                                                                                 | [Operations\CreateCustomerDocumentDocumentType](../../Models/Operations/CreateCustomerDocumentDocumentType.md) | :heavy_check_mark:                                                                                             | N/A                                                                                                            | license                                                                                                        |
+| `file`                                                                                                         | [Operations\CreateCustomerDocumentFile](../../Models/Operations/CreateCustomerDocumentFile.md)                 | :heavy_check_mark:                                                                                             | N/A                                                                                                            |                                                                                                                |

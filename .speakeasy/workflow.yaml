@@ -1,0 +1,19 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    Dwolla API:
+        inputs:
+            - location: https://raw.githubusercontent.com/Dwolla/dwolla-openapi/refs/heads/main/openapi.yml
+        output: .speakeasy/out.openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/dwolla/dwolla/dwolla-api
+targets:
+    dwolla:
+        target: php
+        source: Dwolla API
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/dwolla/dwolla/dwolla-api-php-code-samples
+            labelOverride:
+                fixedValue: Php (SDK)
+            blocking: false

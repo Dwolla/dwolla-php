@@ -1,0 +1,10 @@
+# Customers
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   | Example                                                                       |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `links`                                                                       | array<string, [Components\HalLink](../../Models/Components/HalLink.md)>       | :heavy_minus_sign:                                                            | N/A                                                                           |                                                                               |
+| `embedded`                                                                    | [?Components\CustomersEmbedded](../../Models/Components/CustomersEmbedded.md) | :heavy_minus_sign:                                                            | N/A                                                                           |                                                                               |
+| `total`                                                                       | *?int*                                                                        | :heavy_minus_sign:                                                            | N/A                                                                           | 2                                                                             |
