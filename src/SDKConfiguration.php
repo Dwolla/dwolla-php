@@ -18,17 +18,17 @@ class SDKConfiguration
     public ?\Closure $securitySource = null;
     public string $serverUrl = '';
 
-    public int $serverIndex = 0;
+    public string $server = '';
 
     public string $language = 'php';
 
     public string $openapiDocVersion = '2.0';
 
-    public string $sdkVersion = '0.0.1';
+    public string $sdkVersion = '0.0.1-beta.1';
 
-    public string $genVersion = '2.794.1';
+    public string $genVersion = '2.797.1';
 
-    public string $userAgent = 'speakeasy-sdk/php 0.0.1 2.794.1 2.0 dwolla/dwolla-php';
+    public string $userAgent = 'speakeasy-sdk/php 0.0.1-beta.1 2.797.1 2.0 dwolla/dwolla-php';
 
     public ?RetryConfig $retryConfig = null;
 
@@ -44,11 +44,11 @@ class SDKConfiguration
             return $this->serverUrl;
         }
 
-        if (isset(Dwolla::SERVERS[$this->serverIndex])) {
-            return Dwolla::SERVERS[$this->serverIndex];
-        } else {
-            throw new \OutOfBoundsException('Server index '.$this->serverIndex.' is out of bounds');
+        if ($this->server === '') {
+            $this->server = Dwolla::SERVER_PROD;
         }
+
+        return Dwolla::SERVERS[$this->server];
     }
     public function hasSecurity(): bool
     {
@@ -68,11 +68,8 @@ class SDKConfiguration
         if ($this->serverUrl !== '') {
             return new Utils\ServerDetails(rtrim($this->serverUrl, '/'), []);
         }
-        if ($this->serverIndex === null) {
-            $this->serverIndex = 0;
-        }
 
-        return new Utils\ServerDetails(Dwolla::SERVERS[$this->serverIndex], []);
+        return new Utils\ServerDetails(Dwolla::SERVERS[$this->server], []);
 
     }
 

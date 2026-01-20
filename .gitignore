@@ -6,3 +6,6 @@ vendor
 **/.speakeasy/logs/
 .env
 .env.local
+.phpunit.result.cache
+# Code workspace files
+*.code-workspace

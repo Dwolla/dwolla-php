@@ -15,8 +15,10 @@ jsonSchemaDialect: https://spec.openapis.org/oas/3.1/dialect/base
 servers:
   - url: https://api.dwolla.com
     description: Production server
+    x-speakeasy-server-id: prod
   - url: https://api-sandbox.dwolla.com
     description: Sandbox server
+    x-speakeasy-server-id: sandbox
 security:
   - clientCredentials: []
 tags:
@@ -1012,23 +1014,7 @@ paths:
         description: Parameters for updating a Customer
         content:
           application/json:
-            schema:
-              oneOf:
-                - $ref: '#/components/schemas/DeactivateCustomer'
-                - $ref: '#/components/schemas/ReactivateCustomer'
-                - $ref: '#/components/schemas/SuspendCustomer'
-                - $ref: '#/components/schemas/UpdateUnverifiedAndReceiveOnly'
-                - $ref: '#/components/schemas/UpdateVerifiedPersonal'
-                - $ref: '#/components/schemas/UpdateVerifiedBusiness'
-                - $ref: '#/components/schemas/UpgradeToUnverified'
-                - $ref: '#/components/schemas/UpgradeToVerifiedPersonal'
-                - $ref: '#/components/schemas/UpgradeToVerifiedBusiness'
-                - $ref: '#/components/schemas/UpgradeToVerifiedSoleProp'
-                - $ref: '#/components/schemas/RetryVerifiedPersonal'
-                - $ref: '#/components/schemas/RetryVerifiedBusinessNoController'
-                - $ref: '#/components/schemas/RetryVerifiedBusinessWithController'
-                - $ref: '#/components/schemas/RetryVerifiedBusinessWithInternationalController'
-                - $ref: '#/components/schemas/RetryVerifiedSoleProp'
+            schema: {}
       responses:
         '200':
           description: successful operation
@@ -3842,133 +3828,7 @@ paths:
             application/vnd.dwolla.v1.hal+json:
               schema:
                 $ref: '#/components/schemas/NotFoundError'
-    post:
-      tags:
-        - funding sources
-      summary: Initiate or Verify micro-deposits
-      description: Handles micro-deposit bank verification process. Make a request without a request body to initiate two small deposits to the customer's bank account. Include deposit amounts to verify the received values and complete verification.
-      operationId: initiateOrVerifyMicroDeposits
-      x-speakeasy-group: fundingSources.microDeposits
-      x-speakeasy-name-override: initiateOrVerify
-      x-codeSamples:
-        - lang: bash
-          source: |
-            POST https://api-sandbox.dwolla.com/funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909/micro-deposits
-            Authorization: Bearer 8tJjM7iTjujLthkbVPMUcHLqMNw4uv5kG712g9j1RRBHplGpwo
-            Content-Type: application/vnd.dwolla.v1.hal+json
-            Accept: application/vnd.dwolla.v1.hal+json
-        - lang: javascript
-          source: |
-            var fundingSourceUrl =
-              "https://api-sandbox.dwolla.com/funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909";
-
-            dwolla.post(`${fundingSourceUrl}/micro-deposits`);
-        - lang: python
-          source: |
-            # Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python
-            funding_source_url = 'https://api-sandbox.dwolla.com/funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909'
-
-            app_token.post('%s/micro-deposits' % funding_source_url)
-        - lang: php
-          source: |
-            <?php
-            // Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-php
-            $fundingSourceUrl = 'https://api-sandbox.dwolla.com/funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909';
-
-            $fsApi = new DwollaSwagger\FundingsourcesApi($apiClient);
-
-            $fsApi->microDeposits(null, $fundingSourceUrl);
-            ?>
-        - lang: ruby
-          source: |
-            # Using dwolla_v2 - https://github.com/Dwolla/dwolla-v2-ruby
-            funding_source_url = 'https://api-sandbox.dwolla.com/funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909'
-
-            app_token.post "#{funding_source_url}/micro-deposits"
-      parameters:
-        - name: id
-          in: path
-          description: The ID of the FS to initiate or verify micro-deposit
-          required: true
-          schema:
-            type: string
-        - $ref: '#/components/parameters/Accept'
-      requestBody:
-        required: false
-        description: |
-          Optional request body for verifying micro-deposits.
-          - If omitted: Endpoint will initiate micro-deposits
-          - If provided: Must contain micro-deposit amounts for verification
-        content:
-          application/json:
-            schema:
-              oneOf:
-                - type:
-                    - object
-                    - 'null'
-                  title: InitiateMicroDeposits
-                  description: No request body is required for initiating micro-deposits.
-                - $ref: '#/components/schemas/VerifyMicroDeposits'
-                  description: Required request body for verifying micro-deposits
-      responses:
-        '200':
-          description: successful operation
-          headers: {}
-          content:
-            application/vnd.dwolla.v1.hal+json:
-              schema:
-                type: object
-                description: Response for microdeposits operations (initiation and verification)
-                properties:
-                  _links:
-                    type: object
-                    properties:
-                      self:
-                        type: object
-                        properties:
-                          href:
-                            type: string
-                            format: uri
-                            example: https://api-sandbox.dwolla.com/funding-sources/2e446d1b-fb3c-42a0-9691-5d1d6a4dbbf0/micro-deposits
-                          type:
-                            type: string
-                            example: application/vnd.dwolla.v1.hal+json
-                          resource-type:
-                            type: string
-                            example: micro-deposits
-        '201':
-          description: created
-          headers:
-            Location:
-              $ref: '#/components/headers/Location'
-        '403':
-          description: forbidden
-          headers: {}
-          content:
-            application/vnd.dwolla.v1.hal+json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: string
-                    example: InvalidResourceState
-                  message:
-                    type: string
-                    example: Bank already verified.
-        '404':
-          description: not found
-          headers: {}
-          content:
-            application/vnd.dwolla.v1.hal+json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: string
-                    example: NotFound
-                  message:
-                    type: string
-                    example: The requested resource was not found.
+      x-speakeasy-name-override: get
   /funding-sources/{id}/balance:
     get:
       tags:
@@ -10002,6 +9862,208 @@ paths:
             application/vnd.dwolla.v1.hal+json:
               schema:
                 $ref: '#/components/schemas/ForbiddenError'
+  "/funding-sources/{id}/micro-deposits#initiate":
+    post:
+      x-speakeasy-name-override: initiate
+      tags:
+        - funding sources
+      summary: Initiate micro-deposits
+      description: Initiates two small deposits to the customer's bank account for verification purposes. No request body is required.
+      operationId: initiateMicroDeposits
+      x-speakeasy-group: fundingSources.microDeposits
+      parameters:
+        - name: id
+          in: path
+          description: The ID of the funding source to initiate micro-deposits for
+          required: true
+          schema:
+            type: string
+        - name: Accept
+          in: header
+          required: true
+          schema:
+            type: string
+            default: application/vnd.dwolla.v1.hal+json
+      responses:
+        '201':
+          description: Micro-deposits initiated successfully
+          headers:
+            Location:
+              description: URL of the micro-deposits resource
+              schema:
+                type: string
+                example: "https://api-sandbox.dwolla.com/funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909/micro-deposits"
+        '403':
+          description: Forbidden - funding source not eligible for micro-deposits
+          headers: {}
+          content:
+            application/vnd.dwolla.v1.hal+json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    example: InvalidResourceState
+                  message:
+                    type: string
+                    example: Bank already verified.
+        '404':
+          description: Funding source not found
+          headers: {}
+          content:
+            application/vnd.dwolla.v1.hal+json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    example: NotFound
+                  message:
+                    type: string
+                    example: The requested resource was not found.
+  "/funding-sources/{id}/micro-deposits#verify":
+    post:
+      x-speakeasy-name-override: verify
+      tags:
+        - funding sources
+      summary: Verify micro-deposits
+      description: Verifies the micro-deposit amounts received in the customer's bank account to complete funding source verification.
+      operationId: verifyMicroDeposits
+      x-speakeasy-group: fundingSources.microDeposits
+      parameters:
+        - name: id
+          in: path
+          description: The ID of the funding source to verify micro-deposits for
+          required: true
+          schema:
+            type: string
+        - name: Accept
+          in: header
+          required: true
+          schema:
+            type: string
+            default: application/vnd.dwolla.v1.hal+json
+      requestBody:
+        required: true
+        description: The micro-deposit amounts received in the bank account
+        content:
+          application/vnd.dwolla.v1.hal+json:
+            schema:
+              type: object
+              required:
+                - amount1
+                - amount2
+              properties:
+                amount1:
+                  type: object
+                  required:
+                    - value
+                    - currency
+                  properties:
+                    value:
+                      type: string
+                      example: 0.02
+                    currency:
+                      type: string
+                      example: USD
+                amount2:
+                  type: object
+                  required:
+                    - value
+                    - currency
+                  properties:
+                    value:
+                      type: string
+                      example: 0.03
+                    currency:
+                      type: string
+                      example: USD
+      responses:
+        '200':
+          description: Micro-deposits verified successfully
+          headers: {}
+          content:
+            application/vnd.dwolla.v1.hal+json:
+              schema:
+                type: object
+                properties:
+                  _links:
+                    type: object
+                    properties:
+                      self:
+                        type: object
+                        properties:
+                          href:
+                            type: string
+                            format: uri
+                            example: 'https://api-sandbox.dwolla.com/funding-sources/2e446d1b-fb3c-42a0-9691-5d1d6a4dbbf0/micro-deposits'
+                          type:
+                            type: string
+                            example: 'application/vnd.dwolla.v1.hal+json'
+                          resource-type:
+                            type: string
+                            example: 'micro-deposits'
+        '400':
+          description: Bad Request - invalid deposit amounts
+          headers: {}
+          content:
+            application/vnd.dwolla.v1.hal+json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    example: ValidationError
+                  message:
+                    type: string
+                    example: Validation error(s) present. See embedded errors list for more details.
+                  _embedded:
+                    type: object
+                    properties:
+                      errors:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            code:
+                              type: string
+                              example: Invalid
+                            message:
+                              type: string
+                              example: Wrong amount(s).
+                            path:
+                              type: string
+                              example: ""
+                            _links:
+                              type: object
+        '403':
+          description: Forbidden - verification not allowed in current state
+          headers: {}
+          content:
+            application/vnd.dwolla.v1.hal+json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    example: InvalidResourceState
+                  message:
+                    type: string
+                    example: Too many attempts.
+        '404':
+          description: Funding source not found
+          headers: {}
+          content:
+            application/vnd.dwolla.v1.hal+json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    example: NotFound
+                  message:
+                    type: string
+                    example: The requested resource was not found.
 components:
   securitySchemes:
     clientCredentials:
@@ -11381,728 +11443,6 @@ components:
         message:
           type: string
           example: The request body contains bad syntax or is incomplete.
-    DeactivateCustomer:
-      title: DeactivateCustomer
-      description: Deactivate a Customer
-      type: object
-      required:
-        - status
-      properties:
-        status:
-          type: string
-          example: deactivated
-    ReactivateCustomer:
-      title: ReactivateCustomer
-      description: Reactivate a Customer
-      type: object
-      required:
-        - status
-      properties:
-        status:
-          type: string
-          example: reactivated
-    SuspendCustomer:
-      title: SuspendCustomer
-      description: Suspend a Customer
-      type: object
-      required:
-        - status
-      properties:
-        status:
-          type: string
-          example: suspended
-    UpdateUnverifiedAndReceiveOnly:
-      title: UpdateUnverifiedAndReceiveOnly
-      description: Update Unverified Customer or Receive Only User Information
-      type: object
-      properties:
-        firstName:
-          type: string
-          example: John
-        lastName:
-          type: string
-          example: Doe
-        email:
-          type: string
-          example: accountAdmin@email.com
-        businessName:
-          type: string
-          example: Jane Corp
-    UpdateVerifiedPersonal:
-      title: UpdateVerifiedPersonal
-      description: Update Verified Personal Customer Information
-      type: object
-      properties:
-        email:
-          type: string
-          example: accountAdmin@email.com
-        ipAddress:
-          type: string
-          example: 143.156.7.8
-        address1:
-          type: string
-          example: 123 Main Street
-        address2:
-          type: string
-          example: XYZ Suite
-        city:
-          type: string
-          example: Des Moines
-        state:
-          type: string
-          example: IA
-        postalCode:
-          type: string
-          example: '50309'
-        phone:
-          type: string
-          example: '5555555555'
-    UpdateVerifiedBusiness:
-      title: UpdateVerifiedBusiness
-      description: Update Verified Business Customer Information (both Sole Proprietorship and Non-Sole Proprietorship)
-      allOf:
-        - $ref: '#/components/schemas/UpdateVerifiedPersonal'
-        - type: object
-          properties:
-            doingBusinessAs:
-              type: string
-              example: Jane's Electronics
-            website:
-              type: string
-              example: https://www.domain.com
-    UpgradeToUnverified:
-      title: UpgradeToUnverified
-      description: Upgrade Receive Only User to Unverified Customer
-      type: object
-      required:
-        - type
-      properties:
-        type:
-          type: string
-          example: unverified
-    UpgradeToVerifiedPersonal:
-      title: UpgradeToVerifiedPersonal
-      description: Upgrade Unverified Customer to Verified Personal Customer
-      type: object
-      required:
-        - firstName
-        - lastName
-        - email
-        - address1
-        - city
-        - state
-        - postalCode
-        - dateOfBirth
-        - type
-        - ssn
-      properties:
-        firstName:
-          type: string
-          example: John
-        lastName:
-          type: string
-          example: Doe
-        email:
-          type: string
-          example: johndoe@email.net
-        ipAddress:
-          type: string
-          example: 10.10.10.10
-        type:
-          type: string
-          example: personal
-        address1:
-          type: string
-          example: 99-99 33rd St
-        city:
-          type: string
-          example: Some City
-        state:
-          type: string
-          example: NY
-        postalCode:
-          type: string
-          example: '11101'
-        dateOfBirth:
-          type: string
-          example: '1970-01-01'
-        ssn:
-          type: string
-          example: '1234'
-    UpgradeToVerifiedBusiness:
-      title: UpgradeToVerifiedBusiness
-      description: Upgrade Unverified Customer to Verified Business Customer
-      type: object
-      required:
-        - firstName
-        - lastName
-        - email
-        - type
-        - address1
-        - city
-        - state
-        - postalCode
-        - controller
-        - businessClassification
-        - businessType
-        - businessName
-        - ein
-      properties:
-        firstName:
-          type: string
-          example: Account
-        lastName:
-          type: string
-          example: Admin
-        email:
-          type: string
-          example: accountAdmin@email.com
-        ipAddress:
-          type: string
-          example: 143.156.7.8
-        type:
-          type: string
-          example: business
-        address1:
-          type: string
-          example: 99-99 33rd St
-        city:
-          type: string
-          example: Some City
-        state:
-          type: string
-          example: NY
-        postalCode:
-          type: string
-          example: '11101'
-        controller:
-          type: object
-          required:
-            - firstName
-            - lastName
-            - title
-            - dateOfBirth
-            - address
-          properties:
-            firstName:
-              type: string
-              example: John
-            lastName:
-              type: string
-              example: Controller
-            title:
-              type: string
-              example: CEO
-            ssn:
-              type: string
-              example: '6789'
-            dateOfBirth:
-              type: string
-              example: '1980-01-31'
-            address:
-              type: object
-              required:
-                - address1
-                - city
-                - stateProvinceRegion
-                - postalCode
-                - country
-              properties:
-                address1:
-                  type: string
-                  example: 1749 18th st
-                address2:
-                  type: string
-                  example: apt 12
-                city:
-                  type: string
-                  example: Des Moines
-                stateProvinceRegion:
-                  type: string
-                  example: IA
-                postalCode:
-                  type: string
-                  example: '50266'
-                country:
-                  type: string
-                  example: US
-        businessClassification:
-          type: string
-          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
-        businessType:
-          type: string
-          example: llc
-        businessName:
-          type: string
-          example: Jane Corp
-        ein:
-          type: string
-          example: 00-0000000
-    UpgradeToVerifiedSoleProp:
-      title: UpgradeToVerifiedSoleProp
-      description: Upgrade Unverified Customer to Verified Business Customer (Sole Proprietorship)
-      type: object
-      required:
-        - firstName
-        - lastName
-        - email
-        - type
-        - dateOfBirth
-        - ssn
-        - address1
-        - city
-        - state
-        - postalCode
-        - businessClassification
-        - businessType
-        - businessName
-        - ein
-      properties:
-        firstName:
-          type: string
-          example: Business
-        lastName:
-          type: string
-          example: Owner
-        email:
-          type: string
-          example: solePropBusiness@email.com
-        ipAddress:
-          type: string
-          example: 143.156.7.8
-        type:
-          type: string
-          example: business
-        dateOfBirth:
-          type: string
-          example: '1980-01-31'
-        ssn:
-          type: string
-          example: '6789'
-        address1:
-          type: string
-          example: 99-99 33rd St
-        city:
-          type: string
-          example: Some City
-        state:
-          type: string
-          example: NY
-        postalCode:
-          type: string
-          example: '11101'
-        businessClassification:
-          type: string
-          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
-        businessType:
-          type: string
-          example: soleProprietorship
-        businessName:
-          type: string
-          example: Jane Corp
-        ein:
-          type: string
-          example: 00-0000000
-    RetryVerifiedPersonal:
-      title: RetryVerifiedPersonal
-      description: Retry Verification for Verified Personal Customer
-      type: object
-      required:
-        - firstName
-        - lastName
-        - email
-        - address1
-        - city
-        - state
-        - postalCode
-        - dateOfBirth
-        - type
-        - ssn
-      properties:
-        firstName:
-          type: string
-          example: John
-        lastName:
-          type: string
-          example: Doe
-        email:
-          type: string
-          example: johndoe@email.net
-        ipAddress:
-          type: string
-          example: 10.10.10.10
-        type:
-          type: string
-          example: personal
-        address1:
-          type: string
-          example: 99-99 33rd St
-        city:
-          type: string
-          example: Some City
-        state:
-          type: string
-          example: NY
-        postalCode:
-          type: string
-          example: '11101'
-        dateOfBirth:
-          type: string
-          example: '1970-01-01'
-        ssn:
-          type: string
-          example: '1234'
-    RetryVerifiedBusinessNoController:
-      title: RetryVerifiedBusinessNoController
-      description: Retry Verification for Verified Business Customer where only Business Details need to be retried
-      type: object
-      required:
-        - firstName
-        - lastName
-        - email
-        - type
-        - address1
-        - city
-        - state
-        - postalCode
-        - businessClassification
-        - businessType
-        - businessName
-        - ein
-      properties:
-        firstName:
-          type: string
-          example: Account
-        lastName:
-          type: string
-          example: Admin
-        email:
-          type: string
-          example: accountAdmin@email.com
-        ipAddress:
-          type: string
-          example: 143.156.7.8
-        type:
-          type: string
-          example: business
-        address1:
-          type: string
-          example: 99-99 33rd St
-        city:
-          type: string
-          example: Some City
-        state:
-          type: string
-          example: NY
-        postalCode:
-          type: string
-          example: '11101'
-        businessClassification:
-          type: string
-          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
-        businessType:
-          type: string
-          example: llc
-        businessName:
-          type: string
-          example: Jane Corp
-        ein:
-          type: string
-          example: 00-0000000
-    RetryVerifiedBusinessWithController:
-      title: RetryVerifiedBusinessWithController
-      description: Retry Verification for Verified Business Customer where Business Details as well as Controller Details need to be retried
-      type: object
-      required:
-        - firstName
-        - lastName
-        - email
-        - type
-        - address1
-        - city
-        - state
-        - postalCode
-        - controller
-        - businessClassification
-        - businessType
-        - businessName
-        - ein
-      properties:
-        firstName:
-          type: string
-          example: Account
-        lastName:
-          type: string
-          example: Admin
-        email:
-          type: string
-          example: accountAdmin@email.com
-        ipAddress:
-          type: string
-          example: 143.156.7.8
-        type:
-          type: string
-          example: business
-        address1:
-          type: string
-          example: 99-99 33rd St
-        city:
-          type: string
-          example: Some City
-        state:
-          type: string
-          example: NY
-        postalCode:
-          type: string
-          example: '11101'
-        controller:
-          type: object
-          required:
-            - firstName
-            - lastName
-            - title
-            - ssn
-            - dateOfBirth
-            - address
-          properties:
-            firstName:
-              type: string
-              example: John
-            lastName:
-              type: string
-              example: Controller
-            title:
-              type: string
-              example: CEO
-            ssn:
-              type: string
-              example: '123456789'
-            dateOfBirth:
-              type: string
-              example: '1980-01-31'
-            address:
-              type: object
-              required:
-                - address1
-                - city
-                - stateProvinceRegion
-                - postalCode
-                - country
-              properties:
-                address1:
-                  type: string
-                  example: 1749 18th st
-                address2:
-                  type: string
-                  example: apt 12
-                city:
-                  type: string
-                  example: Des Moines
-                stateProvinceRegion:
-                  type: string
-                  example: IA
-                postalCode:
-                  type: string
-                  example: '50266'
-                country:
-                  type: string
-                  example: US
-        businessClassification:
-          type: string
-          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
-        businessType:
-          type: string
-          example: llc
-        businessName:
-          type: string
-          example: Jane Corp
-        ein:
-          type: string
-          example: 00-0000000
-    RetryVerifiedBusinessWithInternationalController:
-      title: RetryVerifiedBusinessWithInternationalController
-      description: Retry Verification for Verified Business Customer where Business Details as well as International Controller Details need to be retried
-      type: object
-      required:
-        - firstName
-        - lastName
-        - email
-        - type
-        - address1
-        - city
-        - state
-        - postalCode
-        - controller
-        - businessClassification
-        - businessType
-        - businessName
-        - ein
-      properties:
-        firstName:
-          type: string
-          example: Account
-        lastName:
-          type: string
-          example: Admin
-        email:
-          type: string
-          example: accountAdmin@email.com
-        ipAddress:
-          type: string
-          example: 143.156.7.8
-        type:
-          type: string
-          example: business
-        address1:
-          type: string
-          example: 99-99 33rd St
-        city:
-          type: string
-          example: Some City
-        state:
-          type: string
-          example: NY
-        postalCode:
-          type: string
-          example: '11101'
-        controller:
-          type: object
-          required:
-            - firstName
-            - lastName
-            - title
-            - dateOfBirth
-            - address
-            - passport
-          properties:
-            firstName:
-              type: string
-              example: John
-            lastName:
-              type: string
-              example: Controller
-            title:
-              type: string
-              example: CEO
-            dateOfBirth:
-              type: string
-              example: '1980-01-31'
-            address:
-              type: object
-              required:
-                - address1
-                - city
-                - country
-                - stateProvinceRegion
-              properties:
-                address1:
-                  type: string
-                  example: 462 Main Street
-                address2:
-                  type: string
-                  example: Suite 123
-                address3:
-                  type: string
-                  example: Unit 123
-                city:
-                  type: string
-                  example: Des Moines
-                postalCode:
-                  type: string
-                  example: '50309'
-                country:
-                  type: string
-                  example: USA
-                stateProvinceRegion:
-                  type: string
-                  example: IA
-            passport:
-              type: object
-              required:
-                - number
-                - country
-              properties:
-                number:
-                  type: string
-                country:
-                  type: string
-        businessClassification:
-          type: string
-          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
-        businessType:
-          type: string
-          example: llc
-        businessName:
-          type: string
-          example: Jane Corp
-        ein:
-          type: string
-          example: 00-0000000
-    RetryVerifiedSoleProp:
-      title: RetryVerifiedSoleProp
-      description: Retry Verification for Verified Business Customer (Sole Proprietorship)
-      type: object
-      required:
-        - firstName
-        - lastName
-        - email
-        - type
-        - dateOfBirth
-        - ssn
-        - address1
-        - city
-        - state
-        - postalCode
-        - businessClassification
-        - businessType
-        - businessName
-        - ein
-      properties:
-        firstName:
-          type: string
-          example: Business
-        lastName:
-          type: string
-          example: Owner
-        email:
-          type: string
-          example: solePropBusiness@email.com
-        ipAddress:
-          type: string
-          example: 143.156.7.8
-        type:
-          type: string
-          example: business
-        dateOfBirth:
-          type: string
-          example: '1980-01-31'
-        ssn:
-          type: string
-          example: '6789'
-        address1:
-          type: string
-          example: 99-99 33rd St
-        city:
-          type: string
-          example: Some City
-        state:
-          type: string
-          example: NY
-        postalCode:
-          type: string
-          example: '11101'
-        businessClassification:
-          type: string
-          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
-        businessType:
-          type: string
-          example: soleProprietorship
-        businessName:
-          type: string
-          example: Jane Corp
-        ein:
-          type: string
-          example: 00-0000000
     BusinessClassification:
       title: BusinessClassification
       type: object
@@ -16366,6 +15706,812 @@ components:
                     type: string
                     description: Name of the external bank account
                     example: XYZ Checking
+    DeactivateCustomer:
+      title: DeactivateCustomer
+      description: Deactivate a Customer
+      type: object
+      required:
+        - operationType
+        - status
+      properties:
+        operationType:
+          type: string
+          const: deactivate
+        status:
+          type: string
+          example: deactivated
+    ReactivateCustomer:
+      title: ReactivateCustomer
+      description: Reactivate a Customer
+      type: object
+      required:
+        - operationType
+        - status
+      properties:
+        operationType:
+          type: string
+          const: reactivate
+        status:
+          type: string
+          example: reactivated
+    SuspendCustomer:
+      title: SuspendCustomer
+      description: Suspend a Customer
+      type: object
+      required:
+        - operationType
+        - status
+      properties:
+        operationType:
+          type: string
+          const: suspend
+        status:
+          type: string
+          example: suspended
+    UpdateUnverifiedAndReceiveOnly:
+      title: UpdateUnverifiedAndReceiveOnly
+      description: Update Unverified Customer or Receive Only User Information
+      type: object
+      required:
+        - operationType
+      properties:
+        operationType:
+          type: string
+          const: updateUnverifiedOrReceiveOnly
+        firstName:
+          type: string
+          example: John
+        lastName:
+          type: string
+          example: Doe
+        email:
+          type: string
+          example: accountAdmin@email.com
+        businessName:
+          type: string
+          example: Jane Corp
+    UpdateVerifiedPersonal:
+      title: UpdateVerifiedPersonal
+      description: Update Verified Personal Customer Information
+      type: object
+      required:
+        - operationType
+      properties:
+        operationType:
+          type: string
+          const: updateVerifiedPersonal
+        email:
+          type: string
+          example: accountAdmin@email.com
+        ipAddress:
+          type: string
+          example: 143.156.7.8
+        address1:
+          type: string
+          example: 123 Main Street
+        address2:
+          type: string
+          example: XYZ Suite
+        city:
+          type: string
+          example: Des Moines
+        state:
+          type: string
+          example: IA
+        postalCode:
+          type: string
+          example: '50309'
+        phone:
+          type: string
+          example: 5555555555
+    UpdateVerifiedBusiness:
+      title: UpdateVerifiedBusiness
+      description: Update Verified Business Customer Information (both Sole Proprietorship and Non-Sole Proprietorship)
+      required:
+        - operationType
+      properties:
+        operationType:
+          type: string
+          const: updateVerifiedBusiness
+        email:
+          type: string
+          example: accountAdmin@email.com
+        ipAddress:
+          type: string
+          example: 143.156.7.8
+        address1:
+          type: string
+          example: 123 Main Street
+        address2:
+          type: string
+          example: XYZ Suite
+        city:
+          type: string
+          example: Des Moines
+        state:
+          type: string
+          example: IA
+        postalCode:
+          type: string
+          example: '50309'
+        phone:
+          type: string
+          example: 5555555555
+        doingBusinessAs:
+          type: string
+          example: Jane's Electronics
+        website:
+          type: string
+          example: https://www.domain.com
+    UpgradeToUnverified:
+      title: UpgradeToUnverified
+      description: Upgrade Receive Only User to Unverified Customer
+      type: object
+      required:
+        - operationType
+        - type
+      properties:
+        operationType:
+          type: string
+          const: upgradeToUnverified
+        type:
+          type: string
+          example: unverified
+    UpgradeToVerifiedPersonal:
+      title: UpgradeToVerifiedPersonal
+      description: Upgrade Unverified Customer to Verified Personal Customer
+      type: object
+      required:
+        - operationType
+        - firstName
+        - lastName
+        - email
+        - address1
+        - city
+        - state
+        - postalCode
+        - dateOfBirth
+        - type
+        - ssn
+      properties:
+        operationType:
+          type: string
+          const: upgradeToVerifiedPersonal
+        firstName:
+          type: string
+          example: John
+        lastName:
+          type: string
+          example: Doe
+        email:
+          type: string
+          example: johndoe@email.net
+        ipAddress:
+          type: string
+          example: 10.10.10.10
+        type:
+          type: string
+          example: personal
+        address1:
+          type: string
+          example: 99-99 33rd St
+        city:
+          type: string
+          example: Some City
+        state:
+          type: string
+          example: NY
+        postalCode:
+          type: string
+          example: 11101
+        dateOfBirth:
+          type: string
+          example: 1970-01-01
+        ssn:
+          type: string
+          example: 1234
+    UpgradeToVerifiedBusiness:
+      title: UpgradeToVerifiedBusiness
+      description: Upgrade Unverified Customer to Verified Business Customer
+      type: object
+      required:
+        - operationType
+        - firstName
+        - lastName
+        - email
+        - type
+        - address1
+        - city
+        - state
+        - postalCode
+        - controller
+        - businessClassification
+        - businessType
+        - businessName
+        - ein
+      properties:
+        operationType:
+          type: string
+          const: upgradeToVerifiedBusiness
+        firstName:
+          type: string
+          example: Account
+        lastName:
+          type: string
+          example: Admin
+        email:
+          type: string
+          example: accountAdmin@email.com
+        ipAddress:
+          type: string
+          example: 143.156.7.8
+        type:
+          type: string
+          example: business
+        address1:
+          type: string
+          example: 99-99 33rd St
+        city:
+          type: string
+          example: Some City
+        state:
+          type: string
+          example: NY
+        postalCode:
+          type: string
+          example: 11101
+        controller:
+          type: object
+          required:
+            - firstName
+            - lastName
+            - title
+            - dateOfBirth
+            - address
+          properties:
+            firstName:
+              type: string
+              example: John
+            lastName:
+              type: string
+              example: Controller
+            title:
+              type: string
+              example: CEO
+            ssn:
+              type: string
+              example: 6789
+            dateOfBirth:
+              type: string
+              example: 1980-01-31
+            address:
+              type: object
+              required:
+                - address1
+                - city
+                - stateProvinceRegion
+                - postalCode
+                - country
+              properties:
+                address1:
+                  type: string
+                  example: 1749 18th st
+                address2:
+                  type: string
+                  example: apt 12
+                city:
+                  type: string
+                  example: Des Moines
+                stateProvinceRegion:
+                  type: string
+                  example: IA
+                postalCode:
+                  type: string
+                  example: 50266
+                country:
+                  type: string
+                  example: US
+        businessClassification:
+          type: string
+          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
+        businessType:
+          type: string
+          example: llc
+        businessName:
+          type: string
+          example: Jane Corp
+        ein:
+          type: string
+          example: 00-0000000
+    UpgradeToVerifiedSoleProp:
+      title: UpgradeToVerifiedSoleProp
+      description: Upgrade Unverified Customer to Verified Business Customer (Sole Proprietorship)
+      type: object
+      required:
+        - operationType
+        - firstName
+        - lastName
+        - email
+        - type
+        - dateOfBirth
+        - ssn
+        - address1
+        - city
+        - state
+        - postalCode
+        - businessClassification
+        - businessType
+        - businessName
+        - ein
+      properties:
+        operationType:
+          type: string
+          const: upgradeToVerifiedSoleProp
+        firstName:
+          type: string
+          example: Business
+        lastName:
+          type: string
+          example: Owner
+        email:
+          type: string
+          example: solePropBusiness@email.com
+        ipAddress:
+          type: string
+          example: 143.156.7.8
+        type:
+          type: string
+          example: business
+        dateOfBirth:
+          type: string
+          example: 1980-01-31
+        ssn:
+          type: string
+          example: 6789
+        address1:
+          type: string
+          example: 99-99 33rd St
+        city:
+          type: string
+          example: Some City
+        state:
+          type: string
+          example: NY
+        postalCode:
+          type: string
+          example: 11101
+        businessClassification:
+          type: string
+          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
+        businessType:
+          type: string
+          example: soleProprietorship
+        businessName:
+          type: string
+          example: Jane Corp
+        ein:
+          type: string
+          example: 00-0000000
+    RetryVerifiedPersonal:
+      title: RetryVerifiedPersonal
+      description: Retry Verification for Verified Personal Customer
+      type: object
+      required:
+        - operationType
+        - firstName
+        - lastName
+        - email
+        - address1
+        - city
+        - state
+        - postalCode
+        - dateOfBirth
+        - type
+        - ssn
+      properties:
+        operationType:
+          type: string
+          const: retryVerifiedPersonal
+        firstName:
+          type: string
+          example: John
+        lastName:
+          type: string
+          example: Doe
+        email:
+          type: string
+          example: johndoe@email.net
+        ipAddress:
+          type: string
+          example: 10.10.10.10
+        type:
+          type: string
+          example: personal
+        address1:
+          type: string
+          example: 99-99 33rd St
+        city:
+          type: string
+          example: Some City
+        state:
+          type: string
+          example: NY
+        postalCode:
+          type: string
+          example: 11101
+        dateOfBirth:
+          type: string
+          example: 1970-01-01
+        ssn:
+          type: string
+          example: 1234
+    RetryVerifiedBusinessNoController:
+      title: RetryVerifiedBusinessNoController
+      description: Retry Verification for Verified Business Customer where only Business Details need to be retried
+      type: object
+      required:
+        - operationType
+        - firstName
+        - lastName
+        - email
+        - type
+        - address1
+        - city
+        - state
+        - postalCode
+        - businessClassification
+        - businessType
+        - businessName
+        - ein
+      properties:
+        operationType:
+          type: string
+          const: retryVerifiedBusinessNoController
+        firstName:
+          type: string
+          example: Account
+        lastName:
+          type: string
+          example: Admin
+        email:
+          type: string
+          example: accountAdmin@email.com
+        ipAddress:
+          type: string
+          example: 143.156.7.8
+        type:
+          type: string
+          example: business
+        address1:
+          type: string
+          example: 99-99 33rd St
+        city:
+          type: string
+          example: Some City
+        state:
+          type: string
+          example: NY
+        postalCode:
+          type: string
+          example: 11101
+        businessClassification:
+          type: string
+          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
+        businessType:
+          type: string
+          example: llc
+        businessName:
+          type: string
+          example: Jane Corp
+        ein:
+          type: string
+          example: 00-0000000
+    RetryVerifiedBusinessWithController:
+      title: RetryVerifiedBusinessWithController
+      description: Retry Verification for Verified Business Customer where Business Details as well as Controller Details need to be retried
+      type: object
+      required:
+        - operationType
+        - firstName
+        - lastName
+        - email
+        - type
+        - address1
+        - city
+        - state
+        - postalCode
+        - controller
+        - businessClassification
+        - businessType
+        - businessName
+        - ein
+      properties:
+        operationType:
+          type: string
+          const: retryVerifiedBusinessWithController
+        firstName:
+          type: string
+          example: Account
+        lastName:
+          type: string
+          example: Admin
+        email:
+          type: string
+          example: accountAdmin@email.com
+        ipAddress:
+          type: string
+          example: 143.156.7.8
+        type:
+          type: string
+          example: business
+        address1:
+          type: string
+          example: 99-99 33rd St
+        city:
+          type: string
+          example: Some City
+        state:
+          type: string
+          example: NY
+        postalCode:
+          type: string
+          example: 11101
+        controller:
+          type: object
+          required:
+            - firstName
+            - lastName
+            - title
+            - ssn
+            - dateOfBirth
+            - address
+          properties:
+            firstName:
+              type: string
+              example: John
+            lastName:
+              type: string
+              example: Controller
+            title:
+              type: string
+              example: CEO
+            ssn:
+              type: string
+              example: 123456789
+            dateOfBirth:
+              type: string
+              example: 1980-01-31
+            address:
+              type: object
+              required:
+                - address1
+                - city
+                - stateProvinceRegion
+                - postalCode
+                - country
+              properties:
+                address1:
+                  type: string
+                  example: 1749 18th st
+                address2:
+                  type: string
+                  example: apt 12
+                city:
+                  type: string
+                  example: Des Moines
+                stateProvinceRegion:
+                  type: string
+                  example: IA
+                postalCode:
+                  type: string
+                  example: 50266
+                country:
+                  type: string
+                  example: US
+        businessClassification:
+          type: string
+          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
+        businessType:
+          type: string
+          example: llc
+        businessName:
+          type: string
+          example: Jane Corp
+        ein:
+          type: string
+          example: 00-0000000
+    RetryVerifiedBusinessWithInternationalController:
+      title: RetryVerifiedBusinessWithInternationalController
+      description: Retry Verification for Verified Business Customer where Business Details as well as International Controller Details need to be retried
+      type: object
+      required:
+        - operationType
+        - firstName
+        - lastName
+        - email
+        - type
+        - address1
+        - city
+        - state
+        - postalCode
+        - controller
+        - businessClassification
+        - businessType
+        - businessName
+        - ein
+      properties:
+        operationType:
+          type: string
+          const: retryVerifiedBusinessWithInternationalController
+        firstName:
+          type: string
+          example: Account
+        lastName:
+          type: string
+          example: Admin
+        email:
+          type: string
+          example: accountAdmin@email.com
+        ipAddress:
+          type: string
+          example: 143.156.7.8
+        type:
+          type: string
+          example: business
+        address1:
+          type: string
+          example: 99-99 33rd St
+        city:
+          type: string
+          example: Some City
+        state:
+          type: string
+          example: NY
+        postalCode:
+          type: string
+          example: 11101
+        controller:
+          type: object
+          required:
+            - firstName
+            - lastName
+            - title
+            - dateOfBirth
+            - address
+            - passport
+          properties:
+            firstName:
+              type: string
+              example: John
+            lastName:
+              type: string
+              example: Controller
+            title:
+              type: string
+              example: CEO
+            dateOfBirth:
+              type: string
+              example: 1980-01-31
+            address:
+              type: object
+              required:
+                - address1
+                - city
+                - country
+                - stateProvinceRegion
+              properties:
+                address1:
+                  type: string
+                  example: 462 Main Street
+                address2:
+                  type: string
+                  example: Suite 123
+                address3:
+                  type: string
+                  example: Unit 123
+                city:
+                  type: string
+                  example: Des Moines
+                postalCode:
+                  type: string
+                  example: '50309'
+                country:
+                  type: string
+                  example: USA
+                stateProvinceRegion:
+                  type: string
+                  example: 'IA'
+            passport:
+              type: object
+              required:
+                - number
+                - country
+              properties:
+                number:
+                  type: string
+                country:
+                  type: string
+        businessClassification:
+          type: string
+          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
+        businessType:
+          type: string
+          example: llc
+        businessName:
+          type: string
+          example: Jane Corp
+        ein:
+          type: string
+          example: 00-0000000
+    RetryVerifiedSoleProp:
+      title: RetryVerifiedSoleProp
+      description: Retry Verification for Verified Business Customer (Sole Proprietorship)
+      type: object
+      required:
+        - operationType
+        - firstName
+        - lastName
+        - email
+        - type
+        - dateOfBirth
+        - ssn
+        - address1
+        - city
+        - state
+        - postalCode
+        - businessClassification
+        - businessType
+        - businessName
+        - ein
+      properties:
+        operationType:
+          type: string
+          const: retryVerifiedSoleProp
+        firstName:
+          type: string
+          example: Business
+        lastName:
+          type: string
+          example: Owner
+        email:
+          type: string
+          example: solePropBusiness@email.com
+        ipAddress:
+          type: string
+          example: 143.156.7.8
+        type:
+          type: string
+          example: business
+        dateOfBirth:
+          type: string
+          example: 1980-01-31
+        ssn:
+          type: string
+          example: 6789
+        address1:
+          type: string
+          example: 99-99 33rd St
+        city:
+          type: string
+          example: Some City
+        state:
+          type: string
+          example: NY
+        postalCode:
+          type: string
+          example: 11101
+        businessClassification:
+          type: string
+          example: 9ed3f670-7d6f-11e3-b1ce-5404a6144203
+        businessType:
+          type: string
+          example: soleProprietorship
+        businessName:
+          type: string
+          example: Jane Corp
+        ein:
+          type: string
+          example: 00-0000000
   headers:
     Location:
       description: The location of the created resource

@@ -34,20 +34,20 @@ class VerifiedBusinessCustomerController
 
     /**
      *
-     * @var VerifiedBusinessCustomerAddress $address
+     * @var Address $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\VerifiedBusinessCustomerAddress')]
-    public VerifiedBusinessCustomerAddress $address;
+    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Address')]
+    public Address $address;
 
     /**
      * @param  string  $firstName
      * @param  string  $lastName
      * @param  string  $title
-     * @param  VerifiedBusinessCustomerAddress  $address
+     * @param  Address  $address
      * @phpstan-pure
      */
-    public function __construct(string $firstName, string $lastName, string $title, VerifiedBusinessCustomerAddress $address)
+    public function __construct(string $firstName, string $lastName, string $title, Address $address)
     {
         $this->firstName = $firstName;
         $this->lastName = $lastName;

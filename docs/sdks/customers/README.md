@@ -210,36 +210,36 @@ $sdk = Dwolla\Dwolla::builder()
 
 $response = $sdk->customers->update(
     id: '<id>',
-    body: new Components\UpgradeToVerifiedBusiness(
-        firstName: 'Account',
-        lastName: 'Admin',
-        email: 'accountAdmin@email.com',
-        ipAddress: '143.156.7.8',
-        type: 'business',
-        address1: '99-99 33rd St',
-        city: 'Some City',
-        state: 'NY',
-        postalCode: '11101',
-        controller: new Components\UpgradeToVerifiedBusinessController(
-            firstName: 'John',
-            lastName: 'Controller',
-            title: 'CEO',
-            ssn: '6789',
-            dateOfBirth: '1980-01-31',
-            address: new Components\UpgradeToVerifiedBusinessAddress(
-                address1: '1749 18th st',
-                address2: 'apt 12',
-                city: 'Des Moines',
-                stateProvinceRegion: 'IA',
-                postalCode: '50266',
-                country: 'US',
-            ),
-        ),
-        businessClassification: '9ed3f670-7d6f-11e3-b1ce-5404a6144203',
-        businessType: 'llc',
-        businessName: 'Jane Corp',
-        ein: '00-0000000',
-    )
+    body: [
+        'firstName' => 'Account',
+        'lastName' => 'Admin',
+        'email' => 'accountAdmin@email.com',
+        'ipAddress' => '143.156.7.8',
+        'type' => 'business',
+        'address1' => '99-99 33rd St',
+        'city' => 'Some City',
+        'state' => 'NY',
+        'postalCode' => '11101',
+        'controller' => [
+            'firstName' => 'John',
+            'lastName' => 'Controller',
+            'title' => 'CEO',
+            'ssn' => '6789',
+            'dateOfBirth' => '1980-01-31',
+            'address' => [
+                'address1' => '1749 18th st',
+                'address2' => 'apt 12',
+                'city' => 'Des Moines',
+                'stateProvinceRegion' => 'IA',
+                'postalCode' => '50266',
+                'country' => 'US',
+            ],
+        ],
+        'businessClassification' => '9ed3f670-7d6f-11e3-b1ce-5404a6144203',
+        'businessType' => 'llc',
+        'businessName' => 'Jane Corp',
+        'ein' => '00-0000000',
+    ]
 
 );
 
@@ -250,10 +250,10 @@ if ($response->oneOf !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Required                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | *string*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Customer unique identifier                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `body`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | [Components\DeactivateCustomer\|Components\ReactivateCustomer\|Components\SuspendCustomer\|Components\UpdateUnverifiedAndReceiveOnly\|Components\UpdateVerifiedPersonal\|Components\UpdateVerifiedBusiness\|Components\UpgradeToUnverified\|Components\UpgradeToVerifiedPersonal\|Components\UpgradeToVerifiedBusiness\|Components\UpgradeToVerifiedSoleProp\|Components\RetryVerifiedPersonal\|Components\RetryVerifiedBusinessNoController\|Components\RetryVerifiedBusinessWithController\|Components\RetryVerifiedBusinessWithInternationalController\|Components\RetryVerifiedSoleProp](../../Models/Operations/UpdateRequestBody.md) | :heavy_check_mark:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Parameters for updating a Customer                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Parameter                          | Type                               | Required                           | Description                        |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| `id`                               | *string*                           | :heavy_check_mark:                 | Customer unique identifier         |
+| `body`                             | *mixed*                            | :heavy_check_mark:                 | Parameters for updating a Customer |
 
 ### Response
 

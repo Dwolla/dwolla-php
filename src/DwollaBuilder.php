@@ -77,12 +77,12 @@ class DwollaBuilder
     /**
      * setServer is used to configure the server for the SDK
      *
-     * @param  int  $serverIdx
+     * @param  string  $server
      * @return DwollaBuilder
      */
-    public function setServerIndex(int $serverIdx): DwollaBuilder
+    public function setServer(string $server): DwollaBuilder
     {
-        $this->sdkConfig->serverIndex = $serverIdx;
+        $this->sdkConfig->server = $server;
 
         return $this;
     }

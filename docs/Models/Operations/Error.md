@@ -1,0 +1,11 @@
+# Error
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               | Example                                                                   |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `code`                                                                    | *?string*                                                                 | :heavy_minus_sign:                                                        | N/A                                                                       | Invalid                                                                   |
+| `message`                                                                 | *?string*                                                                 | :heavy_minus_sign:                                                        | N/A                                                                       | Wrong amount(s).                                                          |
+| `path`                                                                    | *?string*                                                                 | :heavy_minus_sign:                                                        | N/A                                                                       |                                                                           |
+| `links`                                                                   | [?Operations\BadRequestLinks](../../Models/Operations/BadRequestLinks.md) | :heavy_minus_sign:                                                        | N/A                                                                       |                                                                           |

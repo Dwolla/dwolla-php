@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Dwolla;
 
 use Dwolla\Hooks\HookContext;
-use Dwolla\Models\Components;
 use Dwolla\Models\Operations;
 use Dwolla\Utils\Options;
 use Speakeasy\Serializer\DeserializationContext;
@@ -54,7 +53,7 @@ class MicroDeposits
      * @return Operations\GetMicroDepositsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
-    public function getMicroDeposits(string $id, ?Options $options = null): Operations\GetMicroDepositsResponse
+    public function get(string $id, ?Options $options = null): Operations\GetMicroDepositsResponse
     {
         $request = new Operations\GetMicroDepositsRequest(
             id: $id,
@@ -122,33 +121,27 @@ class MicroDeposits
     }
 
     /**
-     * Initiate or Verify micro-deposits
+     * Initiate micro-deposits
      *
-     * Handles micro-deposit bank verification process. Make a request without a request body to initiate two small deposits to the customer's bank account. Include deposit amounts to verify the received values and complete verification.
+     * Initiates two small deposits to the customer's bank account for verification purposes. No request body is required.
      *
      * @param  string  $id
-     * @param  Operations\InitiateMicroDeposits|Components\VerifyMicroDeposits|null  $body
-     * @return Operations\InitiateOrVerifyMicroDepositsResponse
+     * @return Operations\InitiateMicroDepositsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
-    public function initiateOrVerify(string $id, Operations\InitiateMicroDeposits|Components\VerifyMicroDeposits|null $body = null, ?Options $options = null): Operations\InitiateOrVerifyMicroDepositsResponse
+    public function initiate(string $id, ?Options $options = null): Operations\InitiateMicroDepositsResponse
     {
-        $request = new Operations\InitiateOrVerifyMicroDepositsRequest(
+        $request = new Operations\InitiateMicroDepositsRequest(
             id: $id,
-            body: $body,
         );
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/funding-sources/{id}/micro-deposits', Operations\InitiateOrVerifyMicroDepositsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/funding-sources/{id}/micro-deposits#initiate', Operations\InitiateMicroDepositsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, 'body', 'json');
-        if ($body !== null) {
-            $httpOptions = array_merge_recursive($httpOptions, $body);
-        }
         $httpOptions['headers']['Accept'] = 'application/vnd.dwolla.v1.hal+json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'initiateOrVerifyMicroDeposits', [], $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'initiateMicroDeposits', [], $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -165,27 +158,10 @@ class MicroDeposits
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
-        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
-            if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
-                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
-
-                $serializer = Utils\JSON::createSerializer();
-                $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Operations\InitiateOrVerifyMicroDepositsResponseBody', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\InitiateOrVerifyMicroDepositsResponse(
-                    statusCode: $statusCode,
-                    contentType: $contentType,
-                    rawResponse: $httpResponse,
-                    object: $obj);
-
-                return $response;
-            } else {
-                throw new \Dwolla\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
-            }
-        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
+        if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\InitiateOrVerifyMicroDepositsResponse(
+            return new Operations\InitiateMicroDepositsResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -196,7 +172,7 @@ class MicroDeposits
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\InitiateOrVerifyMicroDepositsForbiddenDwollaV1HalJSONException', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\InitiateMicroDepositsForbiddenDwollaV1HalJSONException', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $obj->rawResponse = $httpResponse;
                 throw $obj->toException();
             } else {
@@ -208,7 +184,114 @@ class MicroDeposits
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\InitiateOrVerifyMicroDepositsNotFoundDwollaV1HalJSONException', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\InitiateMicroDepositsNotFoundDwollaV1HalJSONException', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj->rawResponse = $httpResponse;
+                throw $obj->toException();
+            } else {
+                throw new \Dwolla\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Dwolla\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Dwolla\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Dwolla\Models\Errors\APIException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
+     * Verify micro-deposits
+     *
+     * Verifies the micro-deposit amounts received in the customer's bank account to complete funding source verification.
+     *
+     * @param  Operations\VerifyMicroDepositsRequestBody  $body
+     * @param  string  $id
+     * @return Operations\VerifyMicroDepositsResponse
+     * @throws \Dwolla\Models\Errors\APIException
+     */
+    public function verify(Operations\VerifyMicroDepositsRequestBody $body, string $id, ?Options $options = null): Operations\VerifyMicroDepositsResponse
+    {
+        $request = new Operations\VerifyMicroDepositsRequest(
+            id: $id,
+            body: $body,
+        );
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/funding-sources/{id}/micro-deposits#verify', Operations\VerifyMicroDepositsRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'body', 'json');
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
+        $httpOptions['headers']['Accept'] = 'application/vnd.dwolla.v1.hal+json';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'verifyMicroDeposits', [], $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Operations\VerifyMicroDepositsResponseBody', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\VerifyMicroDepositsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    object: $obj);
+
+                return $response;
+            } else {
+                throw new \Dwolla\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['400'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\VerifyMicroDepositsBadRequestDwollaV1HalJSONException', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj->rawResponse = $httpResponse;
+                throw $obj->toException();
+            } else {
+                throw new \Dwolla\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['403'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\VerifyMicroDepositsForbiddenDwollaV1HalJSONException', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj->rawResponse = $httpResponse;
+                throw $obj->toException();
+            } else {
+                throw new \Dwolla\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['404'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\VerifyMicroDepositsNotFoundDwollaV1HalJSONException', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $obj->rawResponse = $httpResponse;
                 throw $obj->toException();
             } else {

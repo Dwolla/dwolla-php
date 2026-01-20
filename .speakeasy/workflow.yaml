@@ -4,6 +4,8 @@ sources:
     Dwolla API:
         inputs:
             - location: https://raw.githubusercontent.com/Dwolla/dwolla-openapi/refs/heads/main/openapi.yml
+        overlays:
+            - location: ./.speakeasy/overlay.yaml
         output: .speakeasy/out.openapi.yaml
         registry:
             location: registry.speakeasyapi.dev/dwolla/dwolla/dwolla-api

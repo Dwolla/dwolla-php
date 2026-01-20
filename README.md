@@ -295,8 +295,9 @@ if ($response->object !== null) {
 
 #### [FundingSources.MicroDeposits](docs/sdks/microdeposits/README.md)
 
-* [getMicroDeposits](docs/sdks/microdeposits/README.md#getmicrodeposits) - Retrieve micro-deposits details
-* [initiateOrVerify](docs/sdks/microdeposits/README.md#initiateorverify) - Initiate or Verify micro-deposits
+* [get](docs/sdks/microdeposits/README.md#get) - Retrieve micro-deposits details
+* [initiate](docs/sdks/microdeposits/README.md#initiate) - Initiate micro-deposits
+* [verify](docs/sdks/microdeposits/README.md#verify) - Verify micro-deposits
 
 #### [FundingSources.OnDemandTransferAuthorizations](docs/sdks/ondemandtransferauthorizations/README.md)
 
@@ -447,14 +448,14 @@ try {
 <!-- Start Server Selection [server] -->
 ## Server Selection
 
-### Select Server by Index
+### Select Server by Name
 
-You can override the default server globally using the `setServerIndex(int $serverIdx)` builder method when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+You can override the default server globally using the `setServer(string $serverName)` builder method when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the names associated with the available servers:
 
-| #   | Server                           | Description       |
-| --- | -------------------------------- | ----------------- |
-| 0   | `https://api.dwolla.com`         | Production server |
-| 1   | `https://api-sandbox.dwolla.com` | Sandbox server    |
+| Name      | Server                           | Description       |
+| --------- | -------------------------------- | ----------------- |
+| `prod`    | `https://api.dwolla.com`         | Production server |
+| `sandbox` | `https://api-sandbox.dwolla.com` | Sandbox server    |
 
 #### Example
 
@@ -467,7 +468,7 @@ use Dwolla;
 use Dwolla\Models\Operations;
 
 $sdk = Dwolla\Dwolla::builder()
-    ->setServerIndex(0)
+    ->setServer('prod')
     ->build();
 
 $request = new Operations\CreateApplicationAccessTokenRequest(
@@ -499,7 +500,7 @@ use Dwolla;
 use Dwolla\Models\Operations;
 
 $sdk = Dwolla\Dwolla::builder()
-    ->setServerURL('https://api-sandbox.dwolla.com')
+    ->setServerURL('https://api.dwolla.com')
     ->build();
 
 $request = new Operations\CreateApplicationAccessTokenRequest(

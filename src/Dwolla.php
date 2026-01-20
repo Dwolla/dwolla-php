@@ -13,11 +13,17 @@ namespace Dwolla;
 /** Dwolla - Dwolla API: Dwolla API Documentation */
 class Dwolla
 {
+    /** SERVER_PROD - Production server */
+    public const SERVER_PROD = 'prod';
+
+    /** SERVER_SANDBOX - Sandbox server */
+    public const SERVER_SANDBOX = 'sandbox';
+
     public const SERVERS = [
         /** Production server */
-        'https://api.dwolla.com',
+        Dwolla::SERVER_PROD => 'https://api.dwolla.com',
         /** Sandbox server */
-        'https://api-sandbox.dwolla.com',
+        Dwolla::SERVER_SANDBOX => 'https://api-sandbox.dwolla.com',
     ];
 
     /**
