@@ -422,12 +422,12 @@ class Customers
      *
      * Update Customer information, upgrade an unverified Customer to a verified Customer, suspend a Customer, deactivate a Customer, reactivate a Customer, and update a verified Customer's information to retry verification.
      *
-     * @param  Components\DeactivateCustomer|Components\ReactivateCustomer|Components\SuspendCustomer|Components\UpdateUnverifiedAndReceiveOnly|Components\UpdateVerifiedPersonal|Components\UpdateVerifiedBusiness|Components\UpgradeToUnverified|Components\UpgradeToVerifiedPersonal|Components\UpgradeToVerifiedBusiness|Components\UpgradeToVerifiedSoleProp|Components\RetryVerifiedPersonal|Components\RetryVerifiedBusinessNoController|Components\RetryVerifiedBusinessWithController|Components\RetryVerifiedBusinessWithInternationalController|Components\RetryVerifiedSoleProp  $body
+     * @param  mixed  $body
      * @param  string  $id
      * @return Operations\UpdateResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
-    public function update(Components\DeactivateCustomer|Components\ReactivateCustomer|Components\SuspendCustomer|Components\UpdateUnverifiedAndReceiveOnly|Components\UpdateVerifiedPersonal|Components\UpdateVerifiedBusiness|Components\UpgradeToUnverified|Components\UpgradeToVerifiedPersonal|Components\UpgradeToVerifiedBusiness|Components\UpgradeToVerifiedSoleProp|Components\RetryVerifiedPersonal|Components\RetryVerifiedBusinessNoController|Components\RetryVerifiedBusinessWithController|Components\RetryVerifiedBusinessWithInternationalController|Components\RetryVerifiedSoleProp $body, string $id, ?Options $options = null): Operations\UpdateResponse
+    public function update(mixed $body, string $id, ?Options $options = null): Operations\UpdateResponse
     {
         $request = new Operations\UpdateRequest(
             id: $id,

@@ -1,5 +1,10 @@
 # dwolla-php
 
+The official PHP SDK for the [Dwolla API](https://developers.dwolla.com/docs/api-reference). Supports server-side PHP calls to Dwolla’s endpoints with typed models, simple client helpers, and OAuth token handling to manage customers, funding sources, transfers, webhooks, and more.
+
+> [!IMPORTANT]
+> **Beta Release** – This SDK is currently in beta. We have run  smoke coverage (SDK build/clients) and a sandbox getting-started flow (root, list customers, create unverified customer, add funding source). Broader operation coverage and retry wiring are still in progress. Breaking changes may occur as we continue hardening and expanding tests; use with caution in production. We welcome beta users to integrate, report issues, and help us catch edge cases.
+
 <!-- Start Summary [summary] -->
 ## Summary
 
@@ -295,8 +300,9 @@ if ($response->object !== null) {
 
 #### [FundingSources.MicroDeposits](docs/sdks/microdeposits/README.md)
 
-* [getMicroDeposits](docs/sdks/microdeposits/README.md#getmicrodeposits) - Retrieve micro-deposits details
-* [initiateOrVerify](docs/sdks/microdeposits/README.md#initiateorverify) - Initiate or Verify micro-deposits
+* [get](docs/sdks/microdeposits/README.md#get) - Retrieve micro-deposits details
+* [initiate](docs/sdks/microdeposits/README.md#initiate) - Initiate micro-deposits
+* [verify](docs/sdks/microdeposits/README.md#verify) - Verify micro-deposits
 
 #### [FundingSources.OnDemandTransferAuthorizations](docs/sdks/ondemandtransferauthorizations/README.md)
 
@@ -447,14 +453,14 @@ try {
 <!-- Start Server Selection [server] -->
 ## Server Selection
 
-### Select Server by Index
+### Select Server by Name
 
-You can override the default server globally using the `setServerIndex(int $serverIdx)` builder method when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+You can override the default server globally using the `setServer(string $serverName)` builder method when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the names associated with the available servers:
 
-| #   | Server                           | Description       |
-| --- | -------------------------------- | ----------------- |
-| 0   | `https://api.dwolla.com`         | Production server |
-| 1   | `https://api-sandbox.dwolla.com` | Sandbox server    |
+| Name      | Server                           | Description       |
+| --------- | -------------------------------- | ----------------- |
+| `prod`    | `https://api.dwolla.com`         | Production server |
+| `sandbox` | `https://api-sandbox.dwolla.com` | Sandbox server    |
 
 #### Example
 
@@ -467,7 +473,7 @@ use Dwolla;
 use Dwolla\Models\Operations;
 
 $sdk = Dwolla\Dwolla::builder()
-    ->setServerIndex(0)
+    ->setServer('prod')
     ->build();
 
 $request = new Operations\CreateApplicationAccessTokenRequest(
@@ -499,7 +505,7 @@ use Dwolla;
 use Dwolla\Models\Operations;
 
 $sdk = Dwolla\Dwolla::builder()
-    ->setServerURL('https://api-sandbox.dwolla.com')
+    ->setServerURL('https://api.dwolla.com')
     ->build();
 
 $request = new Operations\CreateApplicationAccessTokenRequest(
@@ -521,3 +527,11 @@ if ($response->object !== null) {
 <!-- End Server Selection [server] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
+
+## Maturity
+
+This SDK is currently in beta; expect potential breaking changes while we stabilize. We follow [Semantic Versioning](https://semver.org/) for published versions, but until GA we recommend pinning to an exact version and validating in your environment.
+
+## Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. Any manual changes added to internal files will be overwritten on the next generation. We look forward to hearing your feedback. Feel free to open a PR or an issue with a proof of concept and we'll do our best to include it in a future release.

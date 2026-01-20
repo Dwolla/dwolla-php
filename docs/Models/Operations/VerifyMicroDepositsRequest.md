@@ -1,0 +1,9 @@
+# VerifyMicroDepositsRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `id`                                                                                                   | *string*                                                                                               | :heavy_check_mark:                                                                                     | The ID of the funding source to verify micro-deposits for                                              |
+| `body`                                                                                                 | [Operations\VerifyMicroDepositsRequestBody](../../Models/Operations/VerifyMicroDepositsRequestBody.md) | :heavy_check_mark:                                                                                     | The micro-deposit amounts received in the bank account                                                 |

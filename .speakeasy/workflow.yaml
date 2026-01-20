@@ -4,6 +4,8 @@ sources:
     Dwolla API:
         inputs:
             - location: https://raw.githubusercontent.com/Dwolla/dwolla-openapi/refs/heads/main/openapi.yml
+        overlays:
+            - location: ./.speakeasy/overlay.yaml
         output: .speakeasy/out.openapi.yaml
         registry:
             location: registry.speakeasyapi.dev/dwolla/dwolla/dwolla-api
@@ -11,6 +13,10 @@ targets:
     dwolla:
         target: php
         source: Dwolla API
+        publish:
+            packagist:
+                username: $packagist_username
+                token: $packagist_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/dwolla/dwolla/dwolla-api-php-code-samples

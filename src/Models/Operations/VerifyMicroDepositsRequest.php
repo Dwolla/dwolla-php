@@ -9,10 +9,10 @@ declare(strict_types=1);
 namespace Dwolla\Models\Operations;
 
 use Dwolla\Utils\SpeakeasyMetadata;
-class UpdateRequest
+class VerifyMicroDepositsRequest
 {
     /**
-     * Customer unique identifier
+     * The ID of the funding source to verify micro-deposits for
      *
      * @var string $id
      */
@@ -20,19 +20,19 @@ class UpdateRequest
     public string $id;
 
     /**
-     * Parameters for updating a Customer
+     * The micro-deposit amounts received in the bank account
      *
-     * @var mixed $body
+     * @var VerifyMicroDepositsRequestBody $body
      */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public mixed $body;
+    #[SpeakeasyMetadata('request:mediaType=application/vnd.dwolla.v1.hal+json')]
+    public VerifyMicroDepositsRequestBody $body;
 
     /**
      * @param  string  $id
-     * @param  mixed  $body
+     * @param  VerifyMicroDepositsRequestBody  $body
      * @phpstan-pure
      */
-    public function __construct(string $id, mixed $body)
+    public function __construct(string $id, VerifyMicroDepositsRequestBody $body)
     {
         $this->id = $id;
         $this->body = $body;
