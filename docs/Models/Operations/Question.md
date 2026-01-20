@@ -1,0 +1,10 @@
+# Question
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   | Example                                                                       |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `id`                                                                          | *string*                                                                      | :heavy_check_mark:                                                            | N/A                                                                           | 2355953375                                                                    |
+| `text`                                                                        | *string*                                                                      | :heavy_check_mark:                                                            | N/A                                                                           | In what county do you currently live?                                         |
+| `answers`                                                                     | array<[Operations\QuestionAnswer](../../Models/Operations/QuestionAnswer.md)> | :heavy_check_mark:                                                            | N/A                                                                           |                                                                               |

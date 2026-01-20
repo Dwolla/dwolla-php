@@ -1,0 +1,9 @@
+# AvailableExchangeConnections
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `links`                                                                                                            | [Components\AvailableExchangeConnectionsLinks](../../Models/Components/AvailableExchangeConnectionsLinks.md)       | :heavy_check_mark:                                                                                                 | N/A                                                                                                                |
+| `embedded`                                                                                                         | [Components\AvailableExchangeConnectionsEmbedded](../../Models/Components/AvailableExchangeConnectionsEmbedded.md) | :heavy_check_mark:                                                                                                 | N/A                                                                                                                |

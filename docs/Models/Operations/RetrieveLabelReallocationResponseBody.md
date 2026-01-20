@@ -1,0 +1,11 @@
+# RetrieveLabelReallocationResponseBody
+
+successful operation
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             | Example                                                                                                 |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `links`                                                                                                 | [?Operations\RetrieveLabelReallocationLinks](../../Models/Operations/RetrieveLabelReallocationLinks.md) | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |                                                                                                         |
+| `created`                                                                                               | [\DateTime](https://www.php.net/manual/en/class.datetime.php)                                           | :heavy_minus_sign:                                                                                      | N/A                                                                                                     | 2022-05-16T13:41:31.036Z                                                                                |

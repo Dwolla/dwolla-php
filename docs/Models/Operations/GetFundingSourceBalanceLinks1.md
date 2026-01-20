@@ -1,0 +1,9 @@
+# GetFundingSourceBalanceLinks1
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `self`                                                                                              | [?Operations\GetFundingSourceBalanceSelf1](../../Models/Operations/GetFundingSourceBalanceSelf1.md) | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `fundingSource`                                                                                     | [?Operations\FundingSource1](../../Models/Operations/FundingSource1.md)                             | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |

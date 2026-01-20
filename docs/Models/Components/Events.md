@@ -1,0 +1,11 @@
+# Events
+
+
+## Fields
+
+| Field                                                                   | Type                                                                    | Required                                                                | Description                                                             | Example                                                                 |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `links`                                                                 | [?Components\EventsLinks](../../Models/Components/EventsLinks.md)       | :heavy_minus_sign:                                                      | N/A                                                                     |                                                                         |
+| `additionalProperties`                                                  | [?Components\HalLink](../../Models/Components/HalLink.md)               | :heavy_minus_sign:                                                      | N/A                                                                     |                                                                         |
+| `embedded`                                                              | [?Components\EventsEmbedded](../../Models/Components/EventsEmbedded.md) | :heavy_minus_sign:                                                      | N/A                                                                     |                                                                         |
+| `total`                                                                 | *?int*                                                                  | :heavy_minus_sign:                                                      | N/A                                                                     | 3                                                                       |

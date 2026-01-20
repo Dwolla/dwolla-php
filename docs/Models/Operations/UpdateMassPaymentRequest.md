@@ -1,0 +1,9 @@
+# UpdateMassPaymentRequest
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `id`                                                                                               | *string*                                                                                           | :heavy_check_mark:                                                                                 | ID of mass payment to update                                                                       |
+| `body`                                                                                             | [Operations\UpdateMassPaymentRequestBody](../../Models/Operations/UpdateMassPaymentRequestBody.md) | :heavy_check_mark:                                                                                 | Parameters for updating a mass payment                                                             |

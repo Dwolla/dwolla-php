@@ -1,0 +1,9 @@
+# CreateCustomerDocumentRequest
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `id`                                                                                                         | *string*                                                                                                     | :heavy_check_mark:                                                                                           | customer unique identifier                                                                                   |
+| `body`                                                                                                       | [Operations\CreateCustomerDocumentRequestBody](../../Models/Operations/CreateCustomerDocumentRequestBody.md) | :heavy_check_mark:                                                                                           | Upload a document for a customer.                                                                            |

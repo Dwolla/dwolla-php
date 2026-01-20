@@ -1,0 +1,11 @@
+# Label
+
+
+## Fields
+
+| Field                                                                   | Type                                                                    | Required                                                                | Description                                                             | Example                                                                 |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `links`                                                                 | array<string, [Components\HalLink](../../Models/Components/HalLink.md)> | :heavy_minus_sign:                                                      | N/A                                                                     |                                                                         |
+| `id`                                                                    | *?string*                                                               | :heavy_minus_sign:                                                      | N/A                                                                     | 7e042ffe-e25e-40d2-b86e-748b98845ecc                                    |
+| `created`                                                               | [\DateTime](https://www.php.net/manual/en/class.datetime.php)           | :heavy_minus_sign:                                                      | N/A                                                                     | 2022-05-15T22:19:09.635Z                                                |
+| `amount`                                                                | [?Components\LabelAmount](../../Models/Components/LabelAmount.md)       | :heavy_minus_sign:                                                      | N/A                                                                     |                                                                         |

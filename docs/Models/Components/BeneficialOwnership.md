@@ -1,0 +1,9 @@
+# BeneficialOwnership
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  | Example                                                                                      |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `links`                                                                                      | [Components\BeneficialOwnershipLinks](../../Models/Components/BeneficialOwnershipLinks.md)   | :heavy_check_mark:                                                                           | N/A                                                                                          |                                                                                              |
+| `status`                                                                                     | [Components\BeneficialOwnershipStatus](../../Models/Components/BeneficialOwnershipStatus.md) | :heavy_check_mark:                                                                           | N/A                                                                                          | uncertified                                                                                  |

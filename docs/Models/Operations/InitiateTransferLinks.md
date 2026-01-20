@@ -1,0 +1,9 @@
+# InitiateTransferLinks
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `source`                                                                                                    | [?Operations\InitiateTransferLinksSource](../../Models/Operations/InitiateTransferLinksSource.md)           | :heavy_minus_sign:                                                                                          | N/A                                                                                                         |
+| `destination`                                                                                               | [?Operations\InitiateTransferLinksDestination](../../Models/Operations/InitiateTransferLinksDestination.md) | :heavy_minus_sign:                                                                                          | N/A                                                                                                         |

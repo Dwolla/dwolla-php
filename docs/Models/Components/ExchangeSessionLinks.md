@@ -1,0 +1,10 @@
+# ExchangeSessionLinks
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `self`                                                                                                 | [Components\ExchangeSessionSelf](../../Models/Components/ExchangeSessionSelf.md)                       | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `exchangePartner`                                                                                      | [Components\ExchangeSessionExchangePartner](../../Models/Components/ExchangeSessionExchangePartner.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `externalProviderSession`                                                                              | [?Components\ExternalProviderSession](../../Models/Components/ExternalProviderSession.md)              | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

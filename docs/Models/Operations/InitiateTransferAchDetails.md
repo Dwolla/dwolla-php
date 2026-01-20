@@ -1,0 +1,9 @@
+# InitiateTransferAchDetails
+
+
+## Fields
+
+| Field                                                                                                                 | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `source`                                                                                                              | [?Operations\InitiateTransferAchDetailsSource](../../Models/Operations/InitiateTransferAchDetailsSource.md)           | :heavy_minus_sign:                                                                                                    | N/A                                                                                                                   |
+| `destination`                                                                                                         | [?Operations\InitiateTransferAchDetailsDestination](../../Models/Operations/InitiateTransferAchDetailsDestination.md) | :heavy_minus_sign:                                                                                                    | N/A                                                                                                                   |

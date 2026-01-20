@@ -1,0 +1,9 @@
+# CreateCustomerLabelRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `id`                                                                                                   | *string*                                                                                               | :heavy_check_mark:                                                                                     | ID of customer to create a label for                                                                   |
+| `body`                                                                                                 | [Operations\CreateCustomerLabelRequestBody](../../Models/Operations/CreateCustomerLabelRequestBody.md) | :heavy_check_mark:                                                                                     | Parameters to create a customer label                                                                  |

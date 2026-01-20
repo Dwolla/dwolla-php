@@ -1,0 +1,11 @@
+# CreateTokenBasedExchange
+
+Create an exchange using a token. Supports MX, Plaid, and Flinks secure exchange flows.
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          | Example                                                                                              |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `links`                                                                                              | [Components\CreateTokenBasedExchangeLinks](../../Models/Components/CreateTokenBasedExchangeLinks.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |                                                                                                      |
+| `token`                                                                                              | *string*                                                                                             | :heavy_check_mark:                                                                                   | Connection or processor token from the exchange partner                                              | sandbox-token-abc123                                                                                 |

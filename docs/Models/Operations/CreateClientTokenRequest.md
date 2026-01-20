@@ -1,0 +1,9 @@
+# CreateClientTokenRequest
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            | Example                                                                                |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `action`                                                                               | *string*                                                                               | :heavy_check_mark:                                                                     | A granular permission for the Customer performing an action within a drop-in component | customer.update                                                                        |
+| `links`                                                                                | [Operations\CreateClientTokenLinks](../../Models/Operations/CreateClientTokenLinks.md) | :heavy_check_mark:                                                                     | N/A                                                                                    |                                                                                        |

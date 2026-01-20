@@ -1,0 +1,9 @@
+# UpdateWebhookSubscriptionRequest
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `id`                                                                                                               | *string*                                                                                                           | :heavy_check_mark:                                                                                                 | Webhook unique identifier                                                                                          |
+| `body`                                                                                                             | [Operations\UpdateWebhookSubscriptionRequestBody](../../Models/Operations/UpdateWebhookSubscriptionRequestBody.md) | :heavy_check_mark:                                                                                                 | Parameters to update a webhook subscription                                                                        |
