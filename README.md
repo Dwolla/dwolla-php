@@ -1,5 +1,10 @@
 # dwolla-php
 
+The official PHP SDK for the [Dwolla API](https://developers.dwolla.com/docs/api-reference). Supports server-side PHP calls to Dwolla’s endpoints with typed models, simple client helpers, and OAuth token handling to manage customers, funding sources, transfers, webhooks, and more.
+
+> [!IMPORTANT]
+> **Beta Release** – This SDK is currently in beta. We have run  smoke coverage (SDK build/clients) and a sandbox getting-started flow (root, list customers, create unverified customer, add funding source). Broader operation coverage and retry wiring are still in progress. Breaking changes may occur as we continue hardening and expanding tests; use with caution in production. We welcome beta users to integrate, report issues, and help us catch edge cases.
+
 <!-- Start Summary [summary] -->
 ## Summary
 
@@ -522,3 +527,11 @@ if ($response->object !== null) {
 <!-- End Server Selection [server] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
+
+## Maturity
+
+This SDK is currently in beta; expect potential breaking changes while we stabilize. We follow [Semantic Versioning](https://semver.org/) for published versions, but until GA we recommend pinning to an exact version and validating in your environment.
+
+## Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. Any manual changes added to internal files will be overwritten on the next generation. We look forward to hearing your feedback. Feel free to open a PR or an issue with a proof of concept and we'll do our best to include it in a future release.
