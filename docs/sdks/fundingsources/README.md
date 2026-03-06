@@ -12,9 +12,69 @@
 
 Returns detailed information for a specific funding source, including its type, status, and verification details. Supports bank accounts (via Open Banking), debit card funding sources, and Dwolla balance (verified customers only). Debit card funding sources include masked card details such as brand, last four digits, expiration date, and cardholder name.
 
-### Example Usage
+### Example Usage: card_funding_source
 
-<!-- UsageSnippet language="php" operationID="getFundingSource" method="get" path="/funding-sources/{id}" -->
+<!-- UsageSnippet language="php" operationID="getFundingSource" method="get" path="/funding-sources/{id}" example="card_funding_source" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Dwolla;
+use Dwolla\Models\Components;
+
+$sdk = Dwolla\Dwolla::builder()
+    ->setSecurity(
+        new Components\Security(
+            clientID: '<YOUR_CLIENT_ID_HERE>',
+            clientSecret: '<YOUR_CLIENT_SECRET_HERE>',
+        )
+    )
+    ->build();
+
+
+
+$response = $sdk->fundingSources->get(
+    id: '<id>'
+);
+
+if ($response->fundingSource !== null) {
+    // handle response
+}
+```
+### Example Usage: settlement_account
+
+<!-- UsageSnippet language="php" operationID="getFundingSource" method="get" path="/funding-sources/{id}" example="settlement_account" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Dwolla;
+use Dwolla\Models\Components;
+
+$sdk = Dwolla\Dwolla::builder()
+    ->setSecurity(
+        new Components\Security(
+            clientID: '<YOUR_CLIENT_ID_HERE>',
+            clientSecret: '<YOUR_CLIENT_SECRET_HERE>',
+        )
+    )
+    ->build();
+
+
+
+$response = $sdk->fundingSources->get(
+    id: '<id>'
+);
+
+if ($response->fundingSource !== null) {
+    // handle response
+}
+```
+### Example Usage: standard_bank_account
+
+<!-- UsageSnippet language="php" operationID="getFundingSource" method="get" path="/funding-sources/{id}" example="standard_bank_account" -->
 ```php
 declare(strict_types=1);
 

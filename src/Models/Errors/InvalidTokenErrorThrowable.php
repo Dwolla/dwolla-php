@@ -8,11 +8,11 @@ declare(strict_types=1);
 
 namespace Dwolla\Models\Errors;
 
-class InvalidCardTokenErrorThrowable extends \RuntimeException
+class InvalidTokenErrorThrowable extends \RuntimeException
 {
-    public InvalidCardTokenError $container;
+    public InvalidTokenError $container;
 
-    public function __construct(string $message, int $statusCode, InvalidCardTokenError $container)
+    public function __construct(string $message, int $statusCode, InvalidTokenError $container)
     {
         parent::__construct($message, $statusCode);
         $this->container = $container;

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Dwolla\Models\Components;
 
 
-class InvalidCardTokenErrorLinks
+class InvalidTokenErrorLinks
 {
 
     public function __construct()

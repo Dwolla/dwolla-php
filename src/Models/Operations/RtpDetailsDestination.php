@@ -13,7 +13,7 @@ namespace Dwolla\Models\Operations;
 class RtpDetailsDestination
 {
     /**
-     * Remittance information for Real-Time Payments, providing context about the payment purpose
+     * Remittance information for Real-Time Payments, providing context about the payment purpose. Acceptable characters: alphanumeric (0-9, a-z, A-Z), space, and special characters (#,.'&/-@!$%*()_+={}|:;`[]^~\")
      *
      * @var ?string $remittanceData
      */

@@ -15,4 +15,5 @@ enum Name: string
     case Plaid = 'Plaid';
     case Flinks = 'Flinks';
     case Finicity = 'Finicity';
+    case CheckoutCom = 'Checkout.com';
 }

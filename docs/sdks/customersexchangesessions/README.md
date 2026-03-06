@@ -8,7 +8,10 @@
 
 ## create
 
-Creates an exchange session to initiate instant bank account verification for a customer. Supports Plaid and MX open banking partners for faster verification as compared to traditional micro-deposits.
+Creates an exchange session for a customer. Use cases include:
+- **Plaid / MX**: Instant bank account verification (open banking). For faster verification as compared to traditional micro-deposits.
+- **Checkout.com**: Debit card capture for Push to Card. Create a session, then retrieve it to get `externalProviderSessionData` (payment session) for the Checkout.com Flow component.
+
 
 ### Example Usage
 

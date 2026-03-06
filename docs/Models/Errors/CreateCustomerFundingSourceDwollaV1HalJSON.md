@@ -41,13 +41,13 @@ Errors\DuplicateFundingSourceError $value = /* values here */
 Errors\UnsupportedCardCountryError $value = /* values here */
 ```
 
-### `Errors\InvalidCardTokenError`
+### `Errors\InvalidTokenError`
 
 ```php
 /**
-* @var Errors\InvalidCardTokenError
+* @var Errors\InvalidTokenError
 */
-Errors\InvalidCardTokenError $value = /* values here */
+Errors\InvalidTokenError $value = /* values here */
 ```
 
 ### `Errors\MaximumCardsExceededError`

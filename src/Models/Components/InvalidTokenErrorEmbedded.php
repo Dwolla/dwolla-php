@@ -9,19 +9,19 @@ declare(strict_types=1);
 namespace Dwolla\Models\Components;
 
 
-class InvalidCardTokenErrorEmbedded
+class InvalidTokenErrorEmbedded
 {
     /**
      * $errors
      *
-     * @var array<InvalidCardTokenErrorError> $errors
+     * @var array<InvalidTokenErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidCardTokenErrorError>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidTokenErrorError>')]
     public array $errors;
 
     /**
-     * @param  array<InvalidCardTokenErrorError>  $errors
+     * @param  array<InvalidTokenErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(array $errors)

@@ -1,8 +1,0 @@
-# CreateCustomerCardFundingSourceCardDetails
-
-
-## Fields
-
-| Field                                                                                                                                | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `billingAddress`                                                                                                                     | [Components\CreateCustomerCardFundingSourceBillingAddress](../../Models/Components/CreateCustomerCardFundingSourceBillingAddress.md) | :heavy_check_mark:                                                                                                                   | The billing address associated with the card                                                                                         |

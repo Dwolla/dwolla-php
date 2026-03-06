@@ -1,4 +1,4 @@
-# CreateCustomerCardFundingSourceBillingAddress
+# CreateCustomerCardFundingSourceWithExchangeBillingAddress
 
 The billing address associated with the card
 

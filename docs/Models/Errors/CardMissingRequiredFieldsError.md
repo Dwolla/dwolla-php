@@ -1,6 +1,6 @@
 # CardMissingRequiredFieldsError
 
-Error returned when required fields are missing when creating a debit card funding source
+Error returned when required fields are missing when creating an Exchange or a debit card funding source
 
 
 ## Fields

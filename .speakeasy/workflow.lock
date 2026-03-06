@@ -1,9 +1,9 @@
-speakeasyVersion: 1.691.0
+speakeasyVersion: 1.748.0
 sources:
     Dwolla API:
         sourceNamespace: dwolla-api
-        sourceRevisionDigest: sha256:2d1a59af9b39cbd8b1daeb57f598bd8f557cfa4dc1024630744b68a29701005e
-        sourceBlobDigest: sha256:4b0439f06717d3926f158c442a5d8b52a026b941424bfe5357180b37ef06a03c
+        sourceRevisionDigest: sha256:426a3ff37e4ff259a222b0ae3bca3358414698dad68169d6a9db8215ba056552
+        sourceBlobDigest: sha256:80e2494e5ec80fd08c09a1d0ae5f37ff7623b1caf7693895926c844886d98ac5
         tags:
             - latest
             - "2.0"
@@ -11,10 +11,10 @@ targets:
     dwolla:
         source: Dwolla API
         sourceNamespace: dwolla-api
-        sourceRevisionDigest: sha256:2d1a59af9b39cbd8b1daeb57f598bd8f557cfa4dc1024630744b68a29701005e
-        sourceBlobDigest: sha256:4b0439f06717d3926f158c442a5d8b52a026b941424bfe5357180b37ef06a03c
+        sourceRevisionDigest: sha256:426a3ff37e4ff259a222b0ae3bca3358414698dad68169d6a9db8215ba056552
+        sourceBlobDigest: sha256:80e2494e5ec80fd08c09a1d0ae5f37ff7623b1caf7693895926c844886d98ac5
         codeSamplesNamespace: dwolla-api-php-code-samples
-        codeSamplesRevisionDigest: sha256:4015661ef905fec0c98d0db91ca19485c037a53228e5571c28d7b029240c54cb
+        codeSamplesRevisionDigest: sha256:ae8638f8c61c4bcb295d075a7734a26127c2415bce281ee9299ad5f5ca70343c
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

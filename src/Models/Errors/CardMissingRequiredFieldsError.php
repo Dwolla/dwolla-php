@@ -10,7 +10,7 @@ namespace Dwolla\Models\Errors;
 
 use Dwolla\Models\Components;
 use Dwolla\Utils;
-/** CardMissingRequiredFieldsError - Error returned when required fields are missing when creating a debit card funding source */
+/** CardMissingRequiredFieldsError - Error returned when required fields are missing when creating an Exchange or a debit card funding source */
 class CardMissingRequiredFieldsError
 {
     /**

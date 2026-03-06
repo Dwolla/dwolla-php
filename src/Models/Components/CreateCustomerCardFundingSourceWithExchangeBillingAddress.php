@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Dwolla\Models\Components;
 
 
-/** CreateCustomerCardFundingSourceBillingAddress - The billing address associated with the card */
-class CreateCustomerCardFundingSourceBillingAddress
+/** CreateCustomerCardFundingSourceWithExchangeBillingAddress - The billing address associated with the card */
+class CreateCustomerCardFundingSourceWithExchangeBillingAddress
 {
     /**
      * First line of the street address. Must be 50 characters or less.

@@ -3,9 +3,10 @@
 
 ## Values
 
-| Name       | Value      |
-| ---------- | ---------- |
-| `Mx`       | MX         |
-| `Plaid`    | Plaid      |
-| `Flinks`   | Flinks     |
-| `Finicity` | Finicity   |
+| Name          | Value         |
+| ------------- | ------------- |
+| `Mx`          | MX            |
+| `Plaid`       | Plaid         |
+| `Flinks`      | Flinks        |
+| `Finicity`    | Finicity      |
+| `CheckoutCom` | Checkout.com  |

@@ -46,12 +46,12 @@ Components\CreateCustomerExchangeFundingSource $value = /* values here */
 Components\CreateCustomerVirtualAccountFundingSource $value = /* values here */
 ```
 
-### `Components\CreateCustomerCardFundingSource`
+### `Components\CreateCustomerCardFundingSourceWithExchange`
 
 ```php
 /**
-* @var Components\CreateCustomerCardFundingSource
+* @var Components\CreateCustomerCardFundingSourceWithExchange
 */
-Components\CreateCustomerCardFundingSource $value = /* values here */
+Components\CreateCustomerCardFundingSourceWithExchange $value = /* values here */
 ```
 
