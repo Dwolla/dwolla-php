@@ -1,4 +1,4 @@
-# InvalidCardTokenErrorLinks
+# InvalidTokenErrorLinks
 
 
 ## Fields

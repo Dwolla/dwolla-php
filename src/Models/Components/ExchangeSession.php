@@ -9,6 +9,14 @@ declare(strict_types=1);
 namespace Dwolla\Models\Components;
 
 
+/**
+ * ExchangeSession - Details of a previously created exchange session. Response shape varies by exchange partner.
+ *
+ * - **MX**: includes `_links.external-provider-session.href` (redirect URL).
+ * - **Plaid**: includes `externalProviderSessionToken` (Link initialization token).
+ * - **Checkout.com**: includes `externalProviderSessionData` (payment session for Flow/debit card capture).
+ *
+ */
 class ExchangeSession
 {
     /**
@@ -39,15 +47,30 @@ class ExchangeSession
     public ?string $externalProviderSessionToken = null;
 
     /**
+     * Present for Checkout.com exchange sessions (Push to Card / debit card flow).
+     *
+     * Use these fields to initialize the Checkout.com Flow component for card capture.
+     *
+     *
+     * @var ?ExternalProviderSessionData $externalProviderSessionData
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('externalProviderSessionData')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ExternalProviderSessionData|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?ExternalProviderSessionData $externalProviderSessionData = null;
+
+    /**
      * @param  \DateTime  $created
      * @param  ExchangeSessionLinks  $links
      * @param  ?string  $externalProviderSessionToken
+     * @param  ?ExternalProviderSessionData  $externalProviderSessionData
      * @phpstan-pure
      */
-    public function __construct(\DateTime $created, ExchangeSessionLinks $links, ?string $externalProviderSessionToken = null)
+    public function __construct(\DateTime $created, ExchangeSessionLinks $links, ?string $externalProviderSessionToken = null, ?ExternalProviderSessionData $externalProviderSessionData = null)
     {
         $this->created = $created;
         $this->links = $links;
         $this->externalProviderSessionToken = $externalProviderSessionToken;
+        $this->externalProviderSessionData = $externalProviderSessionData;
     }
 }

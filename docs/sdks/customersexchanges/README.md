@@ -61,7 +61,7 @@ if ($response->exchanges !== null) {
 
 ## create
 
-Creates an exchange connection between a customer's external bank account and Dwolla through open banking partners. Acts as the handshake that establishes secure access to the customer's bank account data. Request body varies by partner (Plaid, MX, Flinks, Finicity).
+Creates an exchange connection between a customer and Dwolla. Request body varies by partner (Plaid, MX, Flinks, Finicity, Checkout.com). For bank accounts, use Plaid, MX, Flinks, or Finicity to establish secure access to the customer's bank account data. For debit cards (Push to Card), use Checkout.com and pass the payment ID from Checkout.com Flow.
 
 ### Example Usage
 

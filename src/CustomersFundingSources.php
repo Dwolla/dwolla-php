@@ -48,14 +48,14 @@ class CustomersFundingSources
     /**
      * Create customer funding source
      *
-     * Creates a bank account or debit card funding source for a customer. Supports multiple methods including manual entry with routing/account numbers, instant verification using existing open banking connections, tokenized card creation, and virtual account numbers. Bank funding sources require verification before transfers can be initiated.
+     * Creates a bank account or debit card funding source for a customer. Supports multiple methods including manual entry with routing/account numbers, instant verification using existing open banking connections, debit card addition via Exchange, and virtual account numbers. Bank funding sources require verification before transfers can be initiated.
      *
-     * @param  Components\CreateCustomerBankFundingSourceWithAccountNumbers|Components\CreateCustomerBankFundingSourceWithPlaid|Components\CreateCustomerExchangeFundingSource|Components\CreateCustomerVirtualAccountFundingSource|Components\CreateCustomerCardFundingSource  $body
+     * @param  Components\CreateCustomerBankFundingSourceWithAccountNumbers|Components\CreateCustomerBankFundingSourceWithPlaid|Components\CreateCustomerExchangeFundingSource|Components\CreateCustomerVirtualAccountFundingSource|Components\CreateCustomerCardFundingSourceWithExchange  $body
      * @param  string  $id
      * @return Operations\CreateCustomerFundingSourceResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
-    public function create(Components\CreateCustomerBankFundingSourceWithAccountNumbers|Components\CreateCustomerBankFundingSourceWithPlaid|Components\CreateCustomerExchangeFundingSource|Components\CreateCustomerVirtualAccountFundingSource|Components\CreateCustomerCardFundingSource $body, string $id, ?Options $options = null): Operations\CreateCustomerFundingSourceResponse
+    public function create(Components\CreateCustomerBankFundingSourceWithAccountNumbers|Components\CreateCustomerBankFundingSourceWithPlaid|Components\CreateCustomerExchangeFundingSource|Components\CreateCustomerVirtualAccountFundingSource|Components\CreateCustomerCardFundingSourceWithExchange $body, string $id, ?Options $options = null): Operations\CreateCustomerFundingSourceResponse
     {
         $request = new Operations\CreateCustomerFundingSourceRequest(
             id: $id,
@@ -104,7 +104,7 @@ class CustomersFundingSources
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\InactiveExchangeError|\Dwolla\Models\Errors\InvalidExchangeTokenError|\Dwolla\Models\Errors\DuplicateFundingSourceError|\Dwolla\Models\Errors\UnsupportedCardCountryError|\Dwolla\Models\Errors\InvalidCardTokenError|\Dwolla\Models\Errors\MaximumCardsExceededError|\Dwolla\Models\Errors\CardMissingRequiredFieldsError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\InactiveExchangeError|\Dwolla\Models\Errors\InvalidExchangeTokenError|\Dwolla\Models\Errors\DuplicateFundingSourceError|\Dwolla\Models\Errors\UnsupportedCardCountryError|\Dwolla\Models\Errors\InvalidTokenError|\Dwolla\Models\Errors\MaximumCardsExceededError|\Dwolla\Models\Errors\CardMissingRequiredFieldsError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $obj->rawResponse = $httpResponse;
                 throw $obj->toException();
             } else {

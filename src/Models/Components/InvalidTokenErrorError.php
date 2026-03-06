@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Dwolla\Models\Components;
 
 
-class InvalidCardTokenErrorError
+class InvalidTokenErrorError
 {
     /**
      *
@@ -34,21 +34,21 @@ class InvalidCardTokenErrorError
 
     /**
      *
-     * @var ?InvalidCardTokenErrorLinks $links
+     * @var ?InvalidTokenErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidCardTokenErrorLinks|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidTokenErrorLinks|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?InvalidCardTokenErrorLinks $links = null;
+    public ?InvalidTokenErrorLinks $links = null;
 
     /**
      * @param  string  $code
      * @param  string  $message
      * @param  string  $path
-     * @param  ?InvalidCardTokenErrorLinks  $links
+     * @param  ?InvalidTokenErrorLinks  $links
      * @phpstan-pure
      */
-    public function __construct(string $code, string $message, string $path, ?InvalidCardTokenErrorLinks $links = null)
+    public function __construct(string $code, string $message, string $path, ?InvalidTokenErrorLinks $links = null)
     {
         $this->code = $code;
         $this->message = $message;

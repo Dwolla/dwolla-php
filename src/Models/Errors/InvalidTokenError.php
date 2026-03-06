@@ -10,8 +10,8 @@ namespace Dwolla\Models\Errors;
 
 use Dwolla\Models\Components;
 use Dwolla\Utils;
-/** InvalidCardTokenError - Error returned when attempting to create a debit card funding source with an invalid card token */
-class InvalidCardTokenError
+/** InvalidTokenError - Error returned when creating an Exchange with an invalid token, or when the card data is invalid */
+class InvalidTokenError
 {
     /**
      *
@@ -29,11 +29,11 @@ class InvalidCardTokenError
 
     /**
      *
-     * @var Components\InvalidCardTokenErrorEmbedded $embedded
+     * @var Components\InvalidTokenErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidCardTokenErrorEmbedded')]
-    public Components\InvalidCardTokenErrorEmbedded $embedded;
+    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidTokenErrorEmbedded')]
+    public Components\InvalidTokenErrorEmbedded $embedded;
 
     /**
      * Raw HTTP response; suitable for custom response parsing
@@ -47,11 +47,11 @@ class InvalidCardTokenError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  Components\InvalidCardTokenErrorEmbedded  $embedded
+     * @param  Components\InvalidTokenErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */
-    public function __construct(string $code, string $message, Components\InvalidCardTokenErrorEmbedded $embedded, ?\Psr\Http\Message\ResponseInterface $rawResponse = null)
+    public function __construct(string $code, string $message, Components\InvalidTokenErrorEmbedded $embedded, ?\Psr\Http\Message\ResponseInterface $rawResponse = null)
     {
         $this->code = $code;
         $this->message = $message;
@@ -59,12 +59,12 @@ class InvalidCardTokenError
         $this->rawResponse = $rawResponse;
     }
 
-    public function toException(): InvalidCardTokenErrorThrowable
+    public function toException(): InvalidTokenErrorThrowable
     {
         $serializer = Utils\JSON::createSerializer();
         $message = $serializer->serialize($this, 'json');
         $code = $this->code;
 
-        return new InvalidCardTokenErrorThrowable($message, (int) $code, $this);
+        return new InvalidTokenErrorThrowable($message, (int) $code, $this);
     }
 }

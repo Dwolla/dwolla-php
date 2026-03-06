@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Dwolla\Models\Components;
 
 
-/** CreateTokenBasedExchange - Create an exchange using a token. Supports MX, Plaid, and Flinks secure exchange flows. */
+/** CreateTokenBasedExchange - Create an exchange using a token. Supports MX, Plaid, and Flinks secure exchange flows, and Checkout.com for Push to Card (debit card). */
 class CreateTokenBasedExchange
 {
     /**
@@ -21,7 +21,7 @@ class CreateTokenBasedExchange
     public CreateTokenBasedExchangeLinks $links;
 
     /**
-     * Connection or processor token from the exchange partner
+     * Connection or processor token from the exchange partner (e.g., Plaid, MX, Flinks), or payment ID (pay_xxx) from Checkout.com Flow for Push to Card
      *
      * @var string $token
      */

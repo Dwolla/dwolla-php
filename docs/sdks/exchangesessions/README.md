@@ -8,7 +8,11 @@
 
 ## get
 
-Returns details of a previously created exchange session, including URLs and tokens needed to continue the instant account verification flow. Response varies by partner - MX provides redirect URLs while Plaid provides session tokens for Link initialization.
+Returns details of a previously created exchange session. Response varies by partner:
+- **MX**: `_links.external-provider-session.href` (redirect URL for verification).
+- **Plaid**: `externalProviderSessionToken` (token to initialize Plaid Link).
+- **Checkout.com**: `externalProviderSessionData` with `id`, `payment_session_secret`, and `payment_session_token` to initialize the Checkout.com Flow component for debit card capture (Push to Card).
+
 
 ### Example Usage
 
