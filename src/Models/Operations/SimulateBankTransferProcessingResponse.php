@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Dwolla\Models\Operations;
 
-
+use Dwolla\Models\Components;
 class SimulateBankTransferProcessingResponse
 {
     /**
@@ -33,24 +33,27 @@ class SimulateBankTransferProcessingResponse
     public \Psr\Http\Message\ResponseInterface $rawResponse;
 
     /**
-     * Simulation executed. Pending bank transfers and micro-deposits were processed or failed.
+     * Success. **Bank transfer processing** returns HAL with `total`. **Customer verification directives**
      *
-     * @var ?SimulateBankTransferProcessingResponseBody $object
+     * return HAL `_links.self` and `errorCode` (retrieve the Customer for `_embedded.errors`).
+     *
+     *
+     * @var Components\SandboxSimulationBankProcessingResponse|Components\SandboxSimulationCustomerVerificationResponse|null $oneOf
      */
-    public ?SimulateBankTransferProcessingResponseBody $object = null;
+    public Components\SandboxSimulationBankProcessingResponse|Components\SandboxSimulationCustomerVerificationResponse|null $oneOf = null;
 
     /**
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?SimulateBankTransferProcessingResponseBody  $object
+     * @param  Components\SandboxSimulationBankProcessingResponse|Components\SandboxSimulationCustomerVerificationResponse|null  $oneOf
      * @phpstan-pure
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?SimulateBankTransferProcessingResponseBody $object = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, Components\SandboxSimulationBankProcessingResponse|Components\SandboxSimulationCustomerVerificationResponse|null $oneOf = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->object = $object;
+        $this->oneOf = $oneOf;
     }
 }

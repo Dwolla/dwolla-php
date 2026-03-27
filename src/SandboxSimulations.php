@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Dwolla;
 
 use Dwolla\Hooks\HookContext;
+use Dwolla\Models\Components;
 use Dwolla\Models\Operations;
 use Dwolla\Utils\Options;
 use Speakeasy\Serializer\DeserializationContext;
@@ -45,18 +46,30 @@ class SandboxSimulations
     }
 
     /**
-     * Simulate bank transfer processing (Sandbox only)
+     * Sandbox simulations (bank transfers, VAN transfers, or customer verification directives)
      *
-     * Triggers processing for the last 500 bank transfers on the authorized application or Sandbox account. This endpoint is only available in the Sandbox environment. It will process or fail pending bank-to-bank transactions (including both sides of a transfer when applicable) and initiated micro-deposits. If webhooks are configured, corresponding events will be delivered.
+     * Sandbox-only endpoint with three modes:
      *
-     * If a bank-to-bank transaction is initiated between two users, call this endpoint twice to process both the debit and credit sides.
+     * **Simulate bank transfer processing** — Omit the body or send an empty JSON object. Processes or fails
+     * the last 500 bank transfers on the authorized application or Sandbox account (and initiated micro-deposits).
+     * If webhooks are configured, events are delivered. If a bank-to-bank transaction involves two users,
+     * call this twice to process debit and credit sides. Returns **200** with a HAL document including `total`.
+     *
+     * **Simulate VAN (virtual) transfers** — Send a JSON body with `type` set to `virtual` and a `transfers`
+     * array (up to 10 items). External transfers are created and processed immediately. Returns **202 Accepted**.
+     *
+     * **Simulate verification directives** — For a business Verified Customer in **`retry`** or **`document`**
+     * status, send `type`: `customer-verification`, `_links.customer.href` pointing at that customer, and
+     * `errorCode` set to one of: `PersonalIDRequired`, `POBoxNotAllowed`, `AddressNotAssociatedWithBusiness`,
+     * `EINDocumentRequired`. Returns **200** with HAL `_links.self` and `errorCode`. Then **GET** the Customer;
+     * the same code appears in `_embedded.errors` for end-to-end testing.
      *
      *
-     * @param  ?Operations\SimulateBankTransferProcessingRequest  $request
+     * @param  Components\SandboxSimulationVirtualAccountTransfersRequest|Components\SandboxSimulationCustomerVerificationRequest|Components\SandboxSimulationBankProcessingRequest|null  $request
      * @return Operations\SimulateBankTransferProcessingResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
-    public function simulate(?Operations\SimulateBankTransferProcessingRequest $request = null, ?Options $options = null): Operations\SimulateBankTransferProcessingResponse
+    public function simulate(Components\SandboxSimulationVirtualAccountTransfersRequest|Components\SandboxSimulationCustomerVerificationRequest|Components\SandboxSimulationBankProcessingRequest|null $request = null, ?Options $options = null): Operations\SimulateBankTransferProcessingResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/sandbox-simulations');
@@ -82,7 +95,7 @@ class SandboxSimulations
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['401', '403', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '401', '403', '4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
@@ -92,14 +105,34 @@ class SandboxSimulations
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Operations\SimulateBankTransferProcessingResponseBody', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Components\SandboxSimulationBankProcessingResponse|\Dwolla\Models\Components\SandboxSimulationCustomerVerificationResponse', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\SimulateBankTransferProcessingResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    object: $obj);
+                    oneOf: $obj);
 
                 return $response;
+            } else {
+                throw new \Dwolla\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['202'])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+            return new Operations\SimulateBankTransferProcessingResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['400'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\BadRequestError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj->rawResponse = $httpResponse;
+                throw $obj->toException();
             } else {
                 throw new \Dwolla\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }

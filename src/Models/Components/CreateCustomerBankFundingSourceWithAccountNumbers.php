@@ -46,15 +46,6 @@ class CreateCustomerBankFundingSourceWithAccountNumbers
     public string $name;
 
     /**
-     * Use when creating an unverified bank account.
-     *
-     * @var ?bool $verified
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('verified')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?bool $verified = null;
-
-    /**
      * An array containing a list of processing channels. ACH is the default processing channel for bank transfers.
      *
      * @var ?array<CreateCustomerBankFundingSourceWithAccountNumbersChannel> $channels
@@ -74,6 +65,15 @@ class CreateCustomerBankFundingSourceWithAccountNumbers
     public ?CreateCustomerBankFundingSourceWithAccountNumbersLinks $links = null;
 
     /**
+     * Use when creating an unverified bank account.
+     *
+     * @var ?bool $verified
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('verified')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $verified = null;
+
+    /**
      * @param  string  $routingNumber
      * @param  string  $accountNumber
      * @param  CreateCustomerBankFundingSourceWithAccountNumbersBankAccountType  $bankAccountType
@@ -83,14 +83,14 @@ class CreateCustomerBankFundingSourceWithAccountNumbers
      * @param  ?CreateCustomerBankFundingSourceWithAccountNumbersLinks  $links
      * @phpstan-pure
      */
-    public function __construct(string $routingNumber, string $accountNumber, CreateCustomerBankFundingSourceWithAccountNumbersBankAccountType $bankAccountType, string $name, ?bool $verified = null, ?array $channels = null, ?CreateCustomerBankFundingSourceWithAccountNumbersLinks $links = null)
+    public function __construct(string $routingNumber, string $accountNumber, CreateCustomerBankFundingSourceWithAccountNumbersBankAccountType $bankAccountType, string $name, ?array $channels = null, ?CreateCustomerBankFundingSourceWithAccountNumbersLinks $links = null, ?bool $verified = false)
     {
         $this->routingNumber = $routingNumber;
         $this->accountNumber = $accountNumber;
         $this->bankAccountType = $bankAccountType;
         $this->name = $name;
-        $this->verified = $verified;
         $this->channels = $channels;
         $this->links = $links;
+        $this->verified = $verified;
     }
 }

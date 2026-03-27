@@ -1,0 +1,8 @@
+# SandboxSimulationCustomerVerificationResponseLinks
+
+
+## Fields
+
+| Field                                                    | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `self`                                                   | [Components\HalLink](../../Models/Components/HalLink.md) | :heavy_check_mark:                                       | N/A                                                      |
