@@ -327,7 +327,7 @@ if ($response->object !== null) {
 
 ### [SandboxSimulations](docs/sdks/sandboxsimulations/README.md)
 
-* [simulate](docs/sdks/sandboxsimulations/README.md#simulate) - Simulate bank transfer processing (Sandbox only)
+* [simulate](docs/sdks/sandboxsimulations/README.md#simulate) - Sandbox simulations (bank transfers, VAN transfers, or customer verification directives)
 
 ### [Tokens](docs/sdks/tokens/README.md)
 

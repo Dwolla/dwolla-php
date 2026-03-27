@@ -32,6 +32,15 @@ Components\ReceiveOnlyCustomer $value = /* values here */
 Components\VerifiedPersonalCustomer $value = /* values here */
 ```
 
+### `Components\VerifiedSolePropCustomer`
+
+```php
+/**
+* @var Components\VerifiedSolePropCustomer
+*/
+Components\VerifiedSolePropCustomer $value = /* values here */
+```
+
 ### `Components\VerifiedBusinessCustomer`
 
 ```php

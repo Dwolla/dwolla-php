@@ -212,7 +212,7 @@ class Customers
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Components\UnverifiedCustomer|\Dwolla\Models\Components\ReceiveOnlyCustomer|\Dwolla\Models\Components\VerifiedPersonalCustomer|\Dwolla\Models\Components\VerifiedBusinessCustomer', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Components\UnverifiedCustomer|\Dwolla\Models\Components\ReceiveOnlyCustomer|\Dwolla\Models\Components\VerifiedPersonalCustomer|\Dwolla\Models\Components\VerifiedSolePropCustomer|\Dwolla\Models\Components\VerifiedBusinessCustomer', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\GetCustomerResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,

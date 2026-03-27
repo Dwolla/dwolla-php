@@ -1,9 +1,27 @@
 # SimulateBankTransferProcessingResponseBody
 
-Simulation executed. Pending bank transfers and micro-deposits were processed or failed.
+Success. **Bank transfer processing** returns HAL with `total`. **Customer verification directives**
+return HAL `_links.self` and `errorCode` (retrieve the Customer for `_embedded.errors`).
 
 
-## Fields
 
-| Field       | Type        | Required    | Description |
-| ----------- | ----------- | ----------- | ----------- |
+## Supported Types
+
+### `Components\SandboxSimulationBankProcessingResponse`
+
+```php
+/**
+* @var Components\SandboxSimulationBankProcessingResponse
+*/
+Components\SandboxSimulationBankProcessingResponse $value = /* values here */
+```
+
+### `Components\SandboxSimulationCustomerVerificationResponse`
+
+```php
+/**
+* @var Components\SandboxSimulationCustomerVerificationResponse
+*/
+Components\SandboxSimulationCustomerVerificationResponse $value = /* values here */
+```
+
