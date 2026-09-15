@@ -9,7 +9,7 @@ Bad request or duplicate resource
 
 ```php
 /**
-* @var Errors\BadRequestSchemaException
+* @var \Dwolla\Models\Errors\BadRequestSchemaException
 */
 Errors\BadRequestSchemaException $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\BadRequestSchemaException $value = /* values here */
 
 ```php
 /**
-* @var Errors\DuplicateResourceSchemaException
+* @var \Dwolla\Models\Errors\DuplicateResourceSchemaException
 */
 Errors\DuplicateResourceSchemaException $value = /* values here */
 ```

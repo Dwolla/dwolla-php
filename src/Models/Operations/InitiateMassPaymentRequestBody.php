@@ -14,7 +14,7 @@ class InitiateMassPaymentRequestBody
 {
     /**
      *
-     * @var InitiateMassPaymentLinks $links
+     * @var \Dwolla\Models\Operations\InitiateMassPaymentLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateMassPaymentLinks')]
@@ -23,7 +23,7 @@ class InitiateMassPaymentRequestBody
     /**
      * $items
      *
-     * @var array<Item> $items
+     * @var array<\Dwolla\Models\Operations\Item> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Operations\Item>')]
@@ -39,7 +39,7 @@ class InitiateMassPaymentRequestBody
 
     /**
      *
-     * @var ?InitiateMassPaymentAchDetails $achDetails
+     * @var ?\Dwolla\Models\Operations\InitiateMassPaymentAchDetails $achDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('achDetails')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateMassPaymentAchDetails|null')]
@@ -48,7 +48,7 @@ class InitiateMassPaymentRequestBody
 
     /**
      *
-     * @var ?InitiateMassPaymentClearing $clearing
+     * @var ?\Dwolla\Models\Operations\InitiateMassPaymentClearing $clearing
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('clearing')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateMassPaymentClearing|null')]
@@ -57,7 +57,7 @@ class InitiateMassPaymentRequestBody
 
     /**
      *
-     * @var ?InitiateMassPaymentMetadata $metadata
+     * @var ?\Dwolla\Models\Operations\InitiateMassPaymentMetadata $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateMassPaymentMetadata|null')]
@@ -73,12 +73,12 @@ class InitiateMassPaymentRequestBody
     public ?string $correlationId = null;
 
     /**
-     * @param  InitiateMassPaymentLinks  $links
-     * @param  array<Item>  $items
+     * @param  \Dwolla\Models\Operations\InitiateMassPaymentLinks  $links
+     * @param  array<\Dwolla\Models\Operations\Item>  $items
      * @param  ?string  $status
-     * @param  ?InitiateMassPaymentAchDetails  $achDetails
-     * @param  ?InitiateMassPaymentClearing  $clearing
-     * @param  ?InitiateMassPaymentMetadata  $metadata
+     * @param  ?\Dwolla\Models\Operations\InitiateMassPaymentAchDetails  $achDetails
+     * @param  ?\Dwolla\Models\Operations\InitiateMassPaymentClearing  $clearing
+     * @param  ?\Dwolla\Models\Operations\InitiateMassPaymentMetadata  $metadata
      * @param  ?string  $correlationId
      * @phpstan-pure
      */

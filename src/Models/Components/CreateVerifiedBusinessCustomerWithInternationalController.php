@@ -84,7 +84,7 @@ class CreateVerifiedBusinessCustomerWithInternationalController
 
     /**
      *
-     * @var CreateVerifiedBusinessCustomerWithInternationalControllerController $controller
+     * @var \Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithInternationalControllerController $controller
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('controller')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithInternationalControllerController')]
@@ -92,7 +92,7 @@ class CreateVerifiedBusinessCustomerWithInternationalController
 
     /**
      *
-     * @var CreateVerifiedBusinessCustomerWithInternationalControllerBusinessType $businessType
+     * @var \Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithInternationalControllerBusinessType $businessType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('businessType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithInternationalControllerBusinessType')]
@@ -165,8 +165,8 @@ class CreateVerifiedBusinessCustomerWithInternationalController
      * @param  string  $businessClassification
      * @param  string  $businessName
      * @param  string  $ein
-     * @param  CreateVerifiedBusinessCustomerWithInternationalControllerController  $controller
-     * @param  CreateVerifiedBusinessCustomerWithInternationalControllerBusinessType  $businessType
+     * @param  \Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithInternationalControllerController  $controller
+     * @param  \Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithInternationalControllerBusinessType  $businessType
      * @param  ?string  $ipAddress
      * @param  ?string  $phone
      * @param  ?string  $correlationId

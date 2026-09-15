@@ -9,7 +9,7 @@ Bad Request
 
 ```php
 /**
-* @var Errors\MaximumNumberOfResourcesSchemaException
+* @var \Dwolla\Models\Errors\MaximumNumberOfResourcesSchemaException
 */
 Errors\MaximumNumberOfResourcesSchemaException $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\MaximumNumberOfResourcesSchemaException $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidFileTypeSchemaException
+* @var \Dwolla\Models\Errors\InvalidFileTypeSchemaException
 */
 Errors\InvalidFileTypeSchemaException $value = /* values here */
 ```
@@ -27,7 +27,7 @@ Errors\InvalidFileTypeSchemaException $value = /* values here */
 
 ```php
 /**
-* @var Errors\DuplicateResourceSchemaException
+* @var \Dwolla\Models\Errors\DuplicateResourceSchemaException
 */
 Errors\DuplicateResourceSchemaException $value = /* values here */
 ```

@@ -31,7 +31,7 @@ class VerifyMicroDepositsBadRequestDwollaV1HalJSONException
 
     /**
      *
-     * @var ?Operations\VerifyMicroDepositsEmbedded $embedded
+     * @var ?\Dwolla\Models\Operations\VerifyMicroDepositsEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\VerifyMicroDepositsEmbedded|null')]
@@ -50,7 +50,7 @@ class VerifyMicroDepositsBadRequestDwollaV1HalJSONException
     /**
      * @param  ?string  $code
      * @param  ?string  $message
-     * @param  ?Operations\VerifyMicroDepositsEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Operations\VerifyMicroDepositsEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

@@ -37,7 +37,7 @@ class IncompatibleHoldingsErrorError
 
     /**
      *
-     * @var ?IncompatibleHoldingsErrorLinks $links
+     * @var ?\Dwolla\Models\Components\IncompatibleHoldingsErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\IncompatibleHoldingsErrorLinks|null')]
@@ -48,7 +48,7 @@ class IncompatibleHoldingsErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?IncompatibleHoldingsErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\IncompatibleHoldingsErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?IncompatibleHoldingsErrorLinks $links = null)

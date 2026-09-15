@@ -37,7 +37,7 @@ class WithdrawInvalidAmountErrorError
 
     /**
      *
-     * @var ?WithdrawInvalidAmountErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WithdrawInvalidAmountErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawInvalidAmountErrorLinks|null')]
@@ -48,7 +48,7 @@ class WithdrawInvalidAmountErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WithdrawInvalidAmountErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WithdrawInvalidAmountErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WithdrawInvalidAmountErrorLinks $links = null)

@@ -13,7 +13,7 @@ class MassPaymentItemLinks
 {
     /**
      *
-     * @var ?MassPaymentItemSelf $self
+     * @var ?\Dwolla\Models\Components\MassPaymentItemSelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\MassPaymentItemSelf|null')]
@@ -22,7 +22,7 @@ class MassPaymentItemLinks
 
     /**
      *
-     * @var ?MassPaymentItemMassPayment $massPayment
+     * @var ?\Dwolla\Models\Components\MassPaymentItemMassPayment $massPayment
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('mass-payment')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\MassPaymentItemMassPayment|null')]
@@ -31,7 +31,7 @@ class MassPaymentItemLinks
 
     /**
      *
-     * @var ?MassPaymentItemDestination $destination
+     * @var ?\Dwolla\Models\Components\MassPaymentItemDestination $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\MassPaymentItemDestination|null')]
@@ -40,7 +40,7 @@ class MassPaymentItemLinks
 
     /**
      *
-     * @var ?MassPaymentItemTransfer $transfer
+     * @var ?\Dwolla\Models\Components\MassPaymentItemTransfer $transfer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('transfer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\MassPaymentItemTransfer|null')]
@@ -48,10 +48,10 @@ class MassPaymentItemLinks
     public ?MassPaymentItemTransfer $transfer = null;
 
     /**
-     * @param  ?MassPaymentItemSelf  $self
-     * @param  ?MassPaymentItemMassPayment  $massPayment
-     * @param  ?MassPaymentItemDestination  $destination
-     * @param  ?MassPaymentItemTransfer  $transfer
+     * @param  ?\Dwolla\Models\Components\MassPaymentItemSelf  $self
+     * @param  ?\Dwolla\Models\Components\MassPaymentItemMassPayment  $massPayment
+     * @param  ?\Dwolla\Models\Components\MassPaymentItemDestination  $destination
+     * @param  ?\Dwolla\Models\Components\MassPaymentItemTransfer  $transfer
      * @phpstan-pure
      */
     public function __construct(?MassPaymentItemSelf $self = null, ?MassPaymentItemMassPayment $massPayment = null, ?MassPaymentItemDestination $destination = null, ?MassPaymentItemTransfer $transfer = null)

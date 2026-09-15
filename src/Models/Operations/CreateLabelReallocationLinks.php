@@ -13,7 +13,7 @@ class CreateLabelReallocationLinks
 {
     /**
      *
-     * @var ?FromT $from
+     * @var ?\Dwolla\Models\Operations\FromT $from
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('from')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\FromT|null')]
@@ -22,7 +22,7 @@ class CreateLabelReallocationLinks
 
     /**
      *
-     * @var ?To $to
+     * @var ?\Dwolla\Models\Operations\To $to
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('to')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\To|null')]
@@ -30,8 +30,8 @@ class CreateLabelReallocationLinks
     public ?To $to = null;
 
     /**
-     * @param  ?FromT  $from
-     * @param  ?To  $to
+     * @param  ?\Dwolla\Models\Operations\FromT  $from
+     * @param  ?\Dwolla\Models\Operations\To  $to
      * @phpstan-pure
      */
     public function __construct(?FromT $from = null, ?To $to = null)

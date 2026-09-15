@@ -15,7 +15,7 @@ class ReceiveOnlyCustomer
     /**
      * $links
      *
-     * @var array<string, HalLink> $links
+     * @var array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>')]
@@ -58,7 +58,7 @@ class ReceiveOnlyCustomer
 
     /**
      *
-     * @var ReceiveOnlyCustomerType $type
+     * @var \Dwolla\Models\Components\ReceiveOnlyCustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ReceiveOnlyCustomerType')]
@@ -66,7 +66,7 @@ class ReceiveOnlyCustomer
 
     /**
      *
-     * @var ReceiveOnlyCustomerStatus $status
+     * @var \Dwolla\Models\Components\ReceiveOnlyCustomerStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ReceiveOnlyCustomerStatus')]
@@ -89,14 +89,14 @@ class ReceiveOnlyCustomer
     public ?string $businessName = null;
 
     /**
-     * @param  array<string, HalLink>  $links
+     * @param  array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  string  $id
      * @param  string  $firstName
      * @param  string  $lastName
      * @param  string  $email
      * @param  \DateTime  $created
-     * @param  ReceiveOnlyCustomerType  $type
-     * @param  ReceiveOnlyCustomerStatus  $status
+     * @param  \Dwolla\Models\Components\ReceiveOnlyCustomerType  $type
+     * @param  \Dwolla\Models\Components\ReceiveOnlyCustomerStatus  $status
      * @param  ?string  $correlationId
      * @param  ?string  $businessName
      * @phpstan-pure

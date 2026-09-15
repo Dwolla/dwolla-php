@@ -35,7 +35,7 @@ class GetMicroDepositsResponse
     /**
      * successful operation
      *
-     * @var ?GetMicroDepositsResponseBody $object
+     * @var ?\Dwolla\Models\Operations\GetMicroDepositsResponseBody $object
      */
     public ?GetMicroDepositsResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class GetMicroDepositsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?GetMicroDepositsResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\GetMicroDepositsResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?GetMicroDepositsResponseBody $object = null)

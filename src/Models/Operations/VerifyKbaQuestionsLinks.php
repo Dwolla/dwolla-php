@@ -13,7 +13,7 @@ class VerifyKbaQuestionsLinks
 {
     /**
      *
-     * @var ?VerifyKbaQuestionsCustomer $customer
+     * @var ?\Dwolla\Models\Operations\VerifyKbaQuestionsCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\VerifyKbaQuestionsCustomer|null')]
@@ -21,7 +21,7 @@ class VerifyKbaQuestionsLinks
     public ?VerifyKbaQuestionsCustomer $customer = null;
 
     /**
-     * @param  ?VerifyKbaQuestionsCustomer  $customer
+     * @param  ?\Dwolla\Models\Operations\VerifyKbaQuestionsCustomer  $customer
      * @phpstan-pure
      */
     public function __construct(?VerifyKbaQuestionsCustomer $customer = null)

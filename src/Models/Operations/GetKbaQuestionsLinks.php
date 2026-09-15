@@ -13,14 +13,14 @@ class GetKbaQuestionsLinks
 {
     /**
      *
-     * @var LinksAnswer $answer
+     * @var \Dwolla\Models\Operations\LinksAnswer $answer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('answer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\LinksAnswer')]
     public LinksAnswer $answer;
 
     /**
-     * @param  LinksAnswer  $answer
+     * @param  \Dwolla\Models\Operations\LinksAnswer  $answer
      * @phpstan-pure
      */
     public function __construct(LinksAnswer $answer)

@@ -14,7 +14,7 @@ class Documents
     /**
      * $links
      *
-     * @var array<string, HalLink> $links
+     * @var array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>')]
@@ -22,7 +22,7 @@ class Documents
 
     /**
      *
-     * @var DocumentsEmbedded $embedded
+     * @var \Dwolla\Models\Components\DocumentsEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DocumentsEmbedded')]
@@ -36,8 +36,8 @@ class Documents
     public int $total;
 
     /**
-     * @param  array<string, HalLink>  $links
-     * @param  DocumentsEmbedded  $embedded
+     * @param  array<string, \Dwolla\Models\Components\HalLink>  $links
+     * @param  \Dwolla\Models\Components\DocumentsEmbedded  $embedded
      * @param  int  $total
      * @phpstan-pure
      */

@@ -49,9 +49,9 @@ class CustomersLabels
      *
      * Creates a new label for a Verified Customer with a specified amount. Labels help organize and track funds within a customer's balance. Returns the location of the created label resource in the response header.
      *
-     * @param  Operations\CreateCustomerLabelRequestBody  $body
+     * @param  \Dwolla\Models\Operations\CreateCustomerLabelRequestBody  $body
      * @param  string  $id
-     * @return Operations\CreateCustomerLabelResponse
+     * @return \Dwolla\Models\Operations\CreateCustomerLabelResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Operations\CreateCustomerLabelRequestBody $body, string $id, ?Options $options = null): Operations\CreateCustomerLabelResponse
@@ -84,11 +84,12 @@ class CustomersLabels
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -150,7 +151,7 @@ class CustomersLabels
      * @param  string  $id
      * @param  ?string  $limit
      * @param  ?string  $offset
-     * @return Operations\ListCustomerLabelsResponse
+     * @return \Dwolla\Models\Operations\ListCustomerLabelsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(string $id, ?string $limit = null, ?string $offset = null, ?Options $options = null): Operations\ListCustomerLabelsResponse
@@ -182,11 +183,12 @@ class CustomersLabels
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

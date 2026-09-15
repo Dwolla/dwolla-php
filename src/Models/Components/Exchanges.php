@@ -14,7 +14,7 @@ class Exchanges
     /**
      * $links
      *
-     * @var array<string, HalLink> $links
+     * @var array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>')]
@@ -22,7 +22,7 @@ class Exchanges
 
     /**
      *
-     * @var ExchangesEmbedded $embedded
+     * @var \Dwolla\Models\Components\ExchangesEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ExchangesEmbedded')]
@@ -36,8 +36,8 @@ class Exchanges
     public int $total;
 
     /**
-     * @param  array<string, HalLink>  $links
-     * @param  ExchangesEmbedded  $embedded
+     * @param  array<string, \Dwolla\Models\Components\HalLink>  $links
+     * @param  \Dwolla\Models\Components\ExchangesEmbedded  $embedded
      * @param  int  $total
      * @phpstan-pure
      */

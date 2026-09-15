@@ -14,7 +14,7 @@ class SourceNotCardNetworkSettlementErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<SourceNotCardNetworkSettlementErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\SourceNotCardNetworkSettlementErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\SourceNotCardNetworkSettlementErrorError>|null')]
@@ -22,7 +22,7 @@ class SourceNotCardNetworkSettlementErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<SourceNotCardNetworkSettlementErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\SourceNotCardNetworkSettlementErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

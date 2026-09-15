@@ -15,7 +15,7 @@ class DwollaBalanceResponse
     /**
      * $links
      *
-     * @var array<string, Components\HalLink> $links
+     * @var array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>')]
@@ -23,7 +23,7 @@ class DwollaBalanceResponse
 
     /**
      *
-     * @var Balance $balance
+     * @var \Dwolla\Models\Operations\Balance $balance
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('balance')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\Balance')]
@@ -31,7 +31,7 @@ class DwollaBalanceResponse
 
     /**
      *
-     * @var Total $total
+     * @var \Dwolla\Models\Operations\Total $total
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('total')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\Total')]
@@ -45,9 +45,9 @@ class DwollaBalanceResponse
     public string $lastUpdated;
 
     /**
-     * @param  array<string, Components\HalLink>  $links
-     * @param  Balance  $balance
-     * @param  Total  $total
+     * @param  array<string, \Dwolla\Models\Components\HalLink>  $links
+     * @param  \Dwolla\Models\Operations\Balance  $balance
+     * @param  \Dwolla\Models\Operations\Total  $total
      * @param  string  $lastUpdated
      * @phpstan-pure
      */

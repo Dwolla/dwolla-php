@@ -13,7 +13,7 @@ class FeeLinks
 {
     /**
      *
-     * @var ?ChargeTo $chargeTo
+     * @var ?\Dwolla\Models\Operations\ChargeTo $chargeTo
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('charge-to')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ChargeTo|null')]
@@ -21,7 +21,7 @@ class FeeLinks
     public ?ChargeTo $chargeTo = null;
 
     /**
-     * @param  ?ChargeTo  $chargeTo
+     * @param  ?\Dwolla\Models\Operations\ChargeTo  $chargeTo
      * @phpstan-pure
      */
     public function __construct(?ChargeTo $chargeTo = null)

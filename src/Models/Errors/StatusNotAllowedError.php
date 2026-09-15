@@ -28,7 +28,7 @@ class StatusNotAllowedError
 
     /**
      *
-     * @var ?Components\StatusNotAllowedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\StatusNotAllowedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\StatusNotAllowedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class StatusNotAllowedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\StatusNotAllowedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\StatusNotAllowedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

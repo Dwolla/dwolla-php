@@ -22,14 +22,14 @@ class CreateCustomerLabelRequest
     /**
      * Parameters to create a customer label
      *
-     * @var CreateCustomerLabelRequestBody $body
+     * @var \Dwolla\Models\Operations\CreateCustomerLabelRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public CreateCustomerLabelRequestBody $body;
 
     /**
      * @param  string  $id
-     * @param  CreateCustomerLabelRequestBody  $body
+     * @param  \Dwolla\Models\Operations\CreateCustomerLabelRequestBody  $body
      * @phpstan-pure
      */
     public function __construct(string $id, CreateCustomerLabelRequestBody $body)

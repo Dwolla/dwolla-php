@@ -37,7 +37,7 @@ class InvalidSourceBankAccountTypeErrorError
 
     /**
      *
-     * @var ?InvalidSourceBankAccountTypeErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidSourceBankAccountTypeErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidSourceBankAccountTypeErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidSourceBankAccountTypeErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidSourceBankAccountTypeErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidSourceBankAccountTypeErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidSourceBankAccountTypeErrorLinks $links = null)

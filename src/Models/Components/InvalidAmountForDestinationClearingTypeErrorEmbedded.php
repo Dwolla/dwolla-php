@@ -14,7 +14,7 @@ class InvalidAmountForDestinationClearingTypeErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidAmountForDestinationClearingTypeErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidAmountForDestinationClearingTypeErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidAmountForDestinationClearingTypeErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidAmountForDestinationClearingTypeErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidAmountForDestinationClearingTypeErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidAmountForDestinationClearingTypeErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

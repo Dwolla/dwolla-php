@@ -14,7 +14,7 @@ class InitiateMassPaymentRequest
     /**
      * Parameters for initiating a mass payment
      *
-     * @var InitiateMassPaymentRequestBody $body
+     * @var \Dwolla\Models\Operations\InitiateMassPaymentRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public InitiateMassPaymentRequestBody $body;
@@ -27,7 +27,7 @@ class InitiateMassPaymentRequest
     public ?string $idempotencyKey = null;
 
     /**
-     * @param  InitiateMassPaymentRequestBody  $body
+     * @param  \Dwolla\Models\Operations\InitiateMassPaymentRequestBody  $body
      * @param  ?string  $idempotencyKey
      * @phpstan-pure
      */

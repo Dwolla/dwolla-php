@@ -14,7 +14,7 @@ class WireAccountRestrictedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<WireAccountRestrictedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\WireAccountRestrictedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WireAccountRestrictedErrorError>|null')]
@@ -22,7 +22,7 @@ class WireAccountRestrictedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<WireAccountRestrictedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\WireAccountRestrictedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

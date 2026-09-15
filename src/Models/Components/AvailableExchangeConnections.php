@@ -13,7 +13,7 @@ class AvailableExchangeConnections
 {
     /**
      *
-     * @var AvailableExchangeConnectionsLinks $links
+     * @var \Dwolla\Models\Components\AvailableExchangeConnectionsLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\AvailableExchangeConnectionsLinks')]
@@ -21,15 +21,15 @@ class AvailableExchangeConnections
 
     /**
      *
-     * @var AvailableExchangeConnectionsEmbedded $embedded
+     * @var \Dwolla\Models\Components\AvailableExchangeConnectionsEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\AvailableExchangeConnectionsEmbedded')]
     public AvailableExchangeConnectionsEmbedded $embedded;
 
     /**
-     * @param  AvailableExchangeConnectionsLinks  $links
-     * @param  AvailableExchangeConnectionsEmbedded  $embedded
+     * @param  \Dwolla\Models\Components\AvailableExchangeConnectionsLinks  $links
+     * @param  \Dwolla\Models\Components\AvailableExchangeConnectionsEmbedded  $embedded
      * @phpstan-pure
      */
     public function __construct(AvailableExchangeConnectionsLinks $links, AvailableExchangeConnectionsEmbedded $embedded)

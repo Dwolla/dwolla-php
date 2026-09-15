@@ -35,7 +35,7 @@ class GetVanRoutingResponse
     /**
      * successful operation
      *
-     * @var ?GetVanRoutingResponseBody $object
+     * @var ?\Dwolla\Models\Operations\GetVanRoutingResponseBody $object
      */
     public ?GetVanRoutingResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class GetVanRoutingResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?GetVanRoutingResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\GetVanRoutingResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?GetVanRoutingResponseBody $object = null)

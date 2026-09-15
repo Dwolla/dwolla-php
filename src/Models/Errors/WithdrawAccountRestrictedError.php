@@ -28,7 +28,7 @@ class WithdrawAccountRestrictedError
 
     /**
      *
-     * @var ?Components\WithdrawAccountRestrictedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WithdrawAccountRestrictedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawAccountRestrictedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WithdrawAccountRestrictedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WithdrawAccountRestrictedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WithdrawAccountRestrictedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

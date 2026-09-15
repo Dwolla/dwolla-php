@@ -37,7 +37,7 @@ class InvalidAmountForDestinationProcessingChannelErrorError
 
     /**
      *
-     * @var ?InvalidAmountForDestinationProcessingChannelErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidAmountForDestinationProcessingChannelErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidAmountForDestinationProcessingChannelErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidAmountForDestinationProcessingChannelErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidAmountForDestinationProcessingChannelErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidAmountForDestinationProcessingChannelErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidAmountForDestinationProcessingChannelErrorLinks $links = null)

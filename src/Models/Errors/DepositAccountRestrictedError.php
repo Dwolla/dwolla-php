@@ -28,7 +28,7 @@ class DepositAccountRestrictedError
 
     /**
      *
-     * @var ?Components\DepositAccountRestrictedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\DepositAccountRestrictedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DepositAccountRestrictedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class DepositAccountRestrictedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\DepositAccountRestrictedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\DepositAccountRestrictedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

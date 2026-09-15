@@ -9,7 +9,7 @@ validation error
 
 ```php
 /**
-* @var Errors\InactiveExchangeError
+* @var \Dwolla\Models\Errors\InactiveExchangeError
 */
 Errors\InactiveExchangeError $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\InactiveExchangeError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidExchangeTokenError
+* @var \Dwolla\Models\Errors\InvalidExchangeTokenError
 */
 Errors\InvalidExchangeTokenError $value = /* values here */
 ```
@@ -27,7 +27,7 @@ Errors\InvalidExchangeTokenError $value = /* values here */
 
 ```php
 /**
-* @var Errors\DuplicateFundingSourceError
+* @var \Dwolla\Models\Errors\DuplicateFundingSourceError
 */
 Errors\DuplicateFundingSourceError $value = /* values here */
 ```
@@ -36,7 +36,7 @@ Errors\DuplicateFundingSourceError $value = /* values here */
 
 ```php
 /**
-* @var Errors\UnsupportedCardCountryError
+* @var \Dwolla\Models\Errors\UnsupportedCardCountryError
 */
 Errors\UnsupportedCardCountryError $value = /* values here */
 ```
@@ -45,7 +45,7 @@ Errors\UnsupportedCardCountryError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidTokenError
+* @var \Dwolla\Models\Errors\InvalidTokenError
 */
 Errors\InvalidTokenError $value = /* values here */
 ```
@@ -54,7 +54,7 @@ Errors\InvalidTokenError $value = /* values here */
 
 ```php
 /**
-* @var Errors\MaximumCardsExceededError
+* @var \Dwolla\Models\Errors\MaximumCardsExceededError
 */
 Errors\MaximumCardsExceededError $value = /* values here */
 ```
@@ -63,7 +63,7 @@ Errors\MaximumCardsExceededError $value = /* values here */
 
 ```php
 /**
-* @var Errors\CardMissingRequiredFieldsError
+* @var \Dwolla\Models\Errors\CardMissingRequiredFieldsError
 */
 Errors\CardMissingRequiredFieldsError $value = /* values here */
 ```

@@ -13,7 +13,7 @@ class Fee
 {
     /**
      *
-     * @var ?FeeLinks $links
+     * @var ?\Dwolla\Models\Operations\FeeLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\FeeLinks|null')]
@@ -22,7 +22,7 @@ class Fee
 
     /**
      *
-     * @var ?Components\TransferAmount $amount
+     * @var ?\Dwolla\Models\Components\TransferAmount $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\TransferAmount|null')]
@@ -30,8 +30,8 @@ class Fee
     public ?Components\TransferAmount $amount = null;
 
     /**
-     * @param  ?FeeLinks  $links
-     * @param  ?Components\TransferAmount  $amount
+     * @param  ?\Dwolla\Models\Operations\FeeLinks  $links
+     * @param  ?\Dwolla\Models\Components\TransferAmount  $amount
      * @phpstan-pure
      */
     public function __construct(?FeeLinks $links = null, ?Components\TransferAmount $amount = null)

@@ -28,7 +28,7 @@ class InvalidFacilitatorFeeCollectFromCombinationError
 
     /**
      *
-     * @var ?Components\InvalidFacilitatorFeeCollectFromCombinationErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromCombinationErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromCombinationErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidFacilitatorFeeCollectFromCombinationError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidFacilitatorFeeCollectFromCombinationErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromCombinationErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

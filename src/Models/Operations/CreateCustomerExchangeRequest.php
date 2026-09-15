@@ -22,14 +22,14 @@ class CreateCustomerExchangeRequest
 
     /**
      *
-     * @var Components\CreateFinicitySecureExchange|Components\CreateTokenBasedExchange|Components\CreateMXOpenBankingExchange|Components\CreatePlaidOpenBankingExchange $body
+     * @var \Dwolla\Models\Components\CreateFinicitySecureExchange|\Dwolla\Models\Components\CreateTokenBasedExchange|\Dwolla\Models\Components\CreateMXOpenBankingExchange|\Dwolla\Models\Components\CreatePlaidOpenBankingExchange $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/vnd.dwolla.v1.hal+json')]
     public Components\CreateFinicitySecureExchange|Components\CreateTokenBasedExchange|Components\CreateMXOpenBankingExchange|Components\CreatePlaidOpenBankingExchange $body;
 
     /**
      * @param  string  $id
-     * @param  Components\CreateFinicitySecureExchange|Components\CreateTokenBasedExchange|Components\CreateMXOpenBankingExchange|Components\CreatePlaidOpenBankingExchange  $body
+     * @param  \Dwolla\Models\Components\CreateFinicitySecureExchange|\Dwolla\Models\Components\CreateTokenBasedExchange|\Dwolla\Models\Components\CreateMXOpenBankingExchange|\Dwolla\Models\Components\CreatePlaidOpenBankingExchange  $body
      * @phpstan-pure
      */
     public function __construct(string $id, Components\CreateFinicitySecureExchange|Components\CreateTokenBasedExchange|Components\CreateMXOpenBankingExchange|Components\CreatePlaidOpenBankingExchange $body)

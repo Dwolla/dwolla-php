@@ -13,7 +13,7 @@ class InitiateMassPaymentLinks
 {
     /**
      *
-     * @var ?InitiateMassPaymentLinksSource $source
+     * @var ?\Dwolla\Models\Operations\InitiateMassPaymentLinksSource $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateMassPaymentLinksSource|null')]
@@ -21,7 +21,7 @@ class InitiateMassPaymentLinks
     public ?InitiateMassPaymentLinksSource $source = null;
 
     /**
-     * @param  ?InitiateMassPaymentLinksSource  $source
+     * @param  ?\Dwolla\Models\Operations\InitiateMassPaymentLinksSource  $source
      * @phpstan-pure
      */
     public function __construct(?InitiateMassPaymentLinksSource $source = null)

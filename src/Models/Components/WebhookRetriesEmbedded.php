@@ -14,7 +14,7 @@ class WebhookRetriesEmbedded
     /**
      * $retries
      *
-     * @var ?array<WebhookRetriesRetry> $retries
+     * @var ?array<\Dwolla\Models\Components\WebhookRetriesRetry> $retries
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('retries')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WebhookRetriesRetry>|null')]
@@ -22,7 +22,7 @@ class WebhookRetriesEmbedded
     public ?array $retries = null;
 
     /**
-     * @param  ?array<WebhookRetriesRetry>  $retries
+     * @param  ?array<\Dwolla\Models\Components\WebhookRetriesRetry>  $retries
      * @phpstan-pure
      */
     public function __construct(?array $retries = null)

@@ -14,7 +14,7 @@ class BusinessClassifications
     /**
      * $links
      *
-     * @var ?array<string, HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -23,7 +23,7 @@ class BusinessClassifications
 
     /**
      *
-     * @var ?BusinessClassificationsEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\BusinessClassificationsEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\BusinessClassificationsEmbedded|null')]
@@ -39,8 +39,8 @@ class BusinessClassifications
     public ?int $total = null;
 
     /**
-     * @param  ?array<string, HalLink>  $links
-     * @param  ?BusinessClassificationsEmbedded  $embedded
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
+     * @param  ?\Dwolla\Models\Components\BusinessClassificationsEmbedded  $embedded
      * @param  ?int  $total
      * @phpstan-pure
      */

@@ -28,7 +28,7 @@ class WithdrawInvalidWireBeneficiaryLocalityError
 
     /**
      *
-     * @var ?Components\WithdrawInvalidWireBeneficiaryLocalityErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WithdrawInvalidWireBeneficiaryLocalityErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawInvalidWireBeneficiaryLocalityErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WithdrawInvalidWireBeneficiaryLocalityError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WithdrawInvalidWireBeneficiaryLocalityErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WithdrawInvalidWireBeneficiaryLocalityErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

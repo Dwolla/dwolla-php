@@ -37,7 +37,7 @@ class ReceiverRestrictedErrorError
 
     /**
      *
-     * @var ?ReceiverRestrictedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\ReceiverRestrictedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ReceiverRestrictedErrorLinks|null')]
@@ -48,7 +48,7 @@ class ReceiverRestrictedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?ReceiverRestrictedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\ReceiverRestrictedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?ReceiverRestrictedErrorLinks $links = null)

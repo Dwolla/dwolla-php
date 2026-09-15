@@ -14,7 +14,7 @@ class SecretTooLongErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<SecretTooLongErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\SecretTooLongErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\SecretTooLongErrorError>|null')]
@@ -22,7 +22,7 @@ class SecretTooLongErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<SecretTooLongErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\SecretTooLongErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

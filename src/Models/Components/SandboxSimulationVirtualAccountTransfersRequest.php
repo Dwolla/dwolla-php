@@ -20,7 +20,7 @@ class SandboxSimulationVirtualAccountTransfersRequest
     /**
      * Transfers to simulate (max 10 per request).
      *
-     * @var array<SandboxSimulationVirtualTransferItem> $transfers
+     * @var array<\Dwolla\Models\Components\SandboxSimulationVirtualTransferItem> $transfers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('transfers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\SandboxSimulationVirtualTransferItem>')]
@@ -36,7 +36,7 @@ class SandboxSimulationVirtualAccountTransfersRequest
 
     /**
      * @param  string  $type
-     * @param  array<SandboxSimulationVirtualTransferItem>  $transfers
+     * @param  array<\Dwolla\Models\Components\SandboxSimulationVirtualTransferItem>  $transfers
      * @phpstan-pure
      */
     public function __construct(array $transfers, string $type = 'virtual')

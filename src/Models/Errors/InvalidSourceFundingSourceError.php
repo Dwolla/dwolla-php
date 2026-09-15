@@ -28,7 +28,7 @@ class InvalidSourceFundingSourceError
 
     /**
      *
-     * @var ?Components\InvalidSourceFundingSourceErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidSourceFundingSourceErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidSourceFundingSourceErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidSourceFundingSourceError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidSourceFundingSourceErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidSourceFundingSourceErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

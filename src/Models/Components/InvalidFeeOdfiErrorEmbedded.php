@@ -14,7 +14,7 @@ class InvalidFeeOdfiErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidFeeOdfiErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidFeeOdfiErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidFeeOdfiErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidFeeOdfiErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidFeeOdfiErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidFeeOdfiErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

@@ -28,7 +28,7 @@ class WireInvalidImadError
 
     /**
      *
-     * @var ?Components\WireInvalidImadErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WireInvalidImadErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WireInvalidImadErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WireInvalidImadError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WireInvalidImadErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WireInvalidImadErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

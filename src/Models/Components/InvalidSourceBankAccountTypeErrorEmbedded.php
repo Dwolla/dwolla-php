@@ -14,7 +14,7 @@ class InvalidSourceBankAccountTypeErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidSourceBankAccountTypeErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidSourceBankAccountTypeErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidSourceBankAccountTypeErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidSourceBankAccountTypeErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidSourceBankAccountTypeErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidSourceBankAccountTypeErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

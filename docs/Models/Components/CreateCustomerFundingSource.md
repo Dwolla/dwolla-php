@@ -14,7 +14,7 @@ Parameters for creating customer funding sources using different methods:
 
 ```php
 /**
-* @var Components\CreateCustomerBankFundingSourceWithAccountNumbers
+* @var \Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbers
 */
 Components\CreateCustomerBankFundingSourceWithAccountNumbers $value = /* values here */
 ```
@@ -23,7 +23,7 @@ Components\CreateCustomerBankFundingSourceWithAccountNumbers $value = /* values 
 
 ```php
 /**
-* @var Components\CreateCustomerBankFundingSourceWithPlaid
+* @var \Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaid
 */
 Components\CreateCustomerBankFundingSourceWithPlaid $value = /* values here */
 ```
@@ -32,7 +32,7 @@ Components\CreateCustomerBankFundingSourceWithPlaid $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateCustomerExchangeFundingSource
+* @var \Dwolla\Models\Components\CreateCustomerExchangeFundingSource
 */
 Components\CreateCustomerExchangeFundingSource $value = /* values here */
 ```
@@ -41,7 +41,7 @@ Components\CreateCustomerExchangeFundingSource $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateCustomerVirtualAccountFundingSource
+* @var \Dwolla\Models\Components\CreateCustomerVirtualAccountFundingSource
 */
 Components\CreateCustomerVirtualAccountFundingSource $value = /* values here */
 ```
@@ -50,7 +50,7 @@ Components\CreateCustomerVirtualAccountFundingSource $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateCustomerCardFundingSourceWithExchange
+* @var \Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchange
 */
 Components\CreateCustomerCardFundingSourceWithExchange $value = /* values here */
 ```

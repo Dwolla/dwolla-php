@@ -30,7 +30,7 @@ class Request
     /**
      * $headers
      *
-     * @var ?array<RequestHeader> $headers
+     * @var ?array<\Dwolla\Models\Components\RequestHeader> $headers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('headers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\RequestHeader>|null')]
@@ -48,7 +48,7 @@ class Request
     /**
      * @param  ?\DateTime  $timestamp
      * @param  ?string  $url
-     * @param  ?array<RequestHeader>  $headers
+     * @param  ?array<\Dwolla\Models\Components\RequestHeader>  $headers
      * @param  ?string  $body
      * @phpstan-pure
      */

@@ -14,7 +14,7 @@ class RtpUnverifiedSenderNotSupportedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<RtpUnverifiedSenderNotSupportedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\RtpUnverifiedSenderNotSupportedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\RtpUnverifiedSenderNotSupportedErrorError>|null')]
@@ -22,7 +22,7 @@ class RtpUnverifiedSenderNotSupportedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<RtpUnverifiedSenderNotSupportedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\RtpUnverifiedSenderNotSupportedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

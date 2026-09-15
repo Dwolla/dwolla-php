@@ -28,7 +28,7 @@ class InvalidAmountForDestinationProcessingChannelError
 
     /**
      *
-     * @var ?Components\InvalidAmountForDestinationProcessingChannelErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidAmountForDestinationProcessingChannelErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidAmountForDestinationProcessingChannelErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidAmountForDestinationProcessingChannelError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidAmountForDestinationProcessingChannelErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidAmountForDestinationProcessingChannelErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

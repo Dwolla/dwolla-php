@@ -14,7 +14,7 @@ class InvalidCorrelationIdErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidCorrelationIdErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidCorrelationIdErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidCorrelationIdErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidCorrelationIdErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidCorrelationIdErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidCorrelationIdErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

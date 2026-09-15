@@ -37,7 +37,7 @@ class InvalidDestinationFundingSourceErrorError
 
     /**
      *
-     * @var ?InvalidDestinationFundingSourceErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidDestinationFundingSourceErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidDestinationFundingSourceErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidDestinationFundingSourceErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidDestinationFundingSourceErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidDestinationFundingSourceErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidDestinationFundingSourceErrorLinks $links = null)

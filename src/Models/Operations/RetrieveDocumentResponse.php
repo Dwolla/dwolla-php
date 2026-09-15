@@ -35,7 +35,7 @@ class RetrieveDocumentResponse
     /**
      * successful operation
      *
-     * @var ?Components\Document $document
+     * @var ?\Dwolla\Models\Components\Document $document
      */
     public ?Components\Document $document = null;
 
@@ -43,7 +43,7 @@ class RetrieveDocumentResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\Document  $document
+     * @param  ?\Dwolla\Models\Components\Document  $document
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\Document $document = null)

@@ -14,7 +14,7 @@ class InvalidDestinationClearingTypeErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidDestinationClearingTypeErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidDestinationClearingTypeErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidDestinationClearingTypeErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidDestinationClearingTypeErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidDestinationClearingTypeErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidDestinationClearingTypeErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

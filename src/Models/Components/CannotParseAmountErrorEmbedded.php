@@ -14,7 +14,7 @@ class CannotParseAmountErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<CannotParseAmountErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\CannotParseAmountErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\CannotParseAmountErrorError>|null')]
@@ -22,7 +22,7 @@ class CannotParseAmountErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<CannotParseAmountErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\CannotParseAmountErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

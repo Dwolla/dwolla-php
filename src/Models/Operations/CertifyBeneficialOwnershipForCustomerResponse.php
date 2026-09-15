@@ -35,7 +35,7 @@ class CertifyBeneficialOwnershipForCustomerResponse
     /**
      * successful operation
      *
-     * @var ?Components\BeneficialOwnership $beneficialOwnership
+     * @var ?\Dwolla\Models\Components\BeneficialOwnership $beneficialOwnership
      */
     public ?Components\BeneficialOwnership $beneficialOwnership = null;
 
@@ -43,7 +43,7 @@ class CertifyBeneficialOwnershipForCustomerResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\BeneficialOwnership  $beneficialOwnership
+     * @param  ?\Dwolla\Models\Components\BeneficialOwnership  $beneficialOwnership
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\BeneficialOwnership $beneficialOwnership = null)

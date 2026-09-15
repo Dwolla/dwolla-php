@@ -28,7 +28,7 @@ class WeeklyReceiveLimitReachedError
 
     /**
      *
-     * @var ?Components\WeeklyReceiveLimitReachedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WeeklyReceiveLimitReachedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WeeklyReceiveLimitReachedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WeeklyReceiveLimitReachedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WeeklyReceiveLimitReachedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WeeklyReceiveLimitReachedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

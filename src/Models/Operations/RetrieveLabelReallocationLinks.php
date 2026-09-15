@@ -13,7 +13,7 @@ class RetrieveLabelReallocationLinks
 {
     /**
      *
-     * @var ?RetrieveLabelReallocationSelf $self
+     * @var ?\Dwolla\Models\Operations\RetrieveLabelReallocationSelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\RetrieveLabelReallocationSelf|null')]
@@ -22,7 +22,7 @@ class RetrieveLabelReallocationLinks
 
     /**
      *
-     * @var ?ToLedgerEntry $toLedgerEntry
+     * @var ?\Dwolla\Models\Operations\ToLedgerEntry $toLedgerEntry
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('to-ledger-entry')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ToLedgerEntry|null')]
@@ -31,7 +31,7 @@ class RetrieveLabelReallocationLinks
 
     /**
      *
-     * @var ?FromLedgerEntry $fromLedgerEntry
+     * @var ?\Dwolla\Models\Operations\FromLedgerEntry $fromLedgerEntry
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('from-ledger-entry')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\FromLedgerEntry|null')]
@@ -39,9 +39,9 @@ class RetrieveLabelReallocationLinks
     public ?FromLedgerEntry $fromLedgerEntry = null;
 
     /**
-     * @param  ?RetrieveLabelReallocationSelf  $self
-     * @param  ?ToLedgerEntry  $toLedgerEntry
-     * @param  ?FromLedgerEntry  $fromLedgerEntry
+     * @param  ?\Dwolla\Models\Operations\RetrieveLabelReallocationSelf  $self
+     * @param  ?\Dwolla\Models\Operations\ToLedgerEntry  $toLedgerEntry
+     * @param  ?\Dwolla\Models\Operations\FromLedgerEntry  $fromLedgerEntry
      * @phpstan-pure
      */
     public function __construct(?RetrieveLabelReallocationSelf $self = null, ?ToLedgerEntry $toLedgerEntry = null, ?FromLedgerEntry $fromLedgerEntry = null)

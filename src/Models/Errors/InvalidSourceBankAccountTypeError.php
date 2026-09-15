@@ -28,7 +28,7 @@ class InvalidSourceBankAccountTypeError
 
     /**
      *
-     * @var ?Components\InvalidSourceBankAccountTypeErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidSourceBankAccountTypeErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidSourceBankAccountTypeErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidSourceBankAccountTypeError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidSourceBankAccountTypeErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidSourceBankAccountTypeErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

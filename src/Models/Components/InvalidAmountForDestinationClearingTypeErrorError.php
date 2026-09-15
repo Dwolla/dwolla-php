@@ -37,7 +37,7 @@ class InvalidAmountForDestinationClearingTypeErrorError
 
     /**
      *
-     * @var ?InvalidAmountForDestinationClearingTypeErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidAmountForDestinationClearingTypeErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidAmountForDestinationClearingTypeErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidAmountForDestinationClearingTypeErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidAmountForDestinationClearingTypeErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidAmountForDestinationClearingTypeErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidAmountForDestinationClearingTypeErrorLinks $links = null)

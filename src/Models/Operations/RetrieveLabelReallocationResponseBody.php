@@ -14,7 +14,7 @@ class RetrieveLabelReallocationResponseBody
 {
     /**
      *
-     * @var ?RetrieveLabelReallocationLinks $links
+     * @var ?\Dwolla\Models\Operations\RetrieveLabelReallocationLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\RetrieveLabelReallocationLinks|null')]
@@ -30,7 +30,7 @@ class RetrieveLabelReallocationResponseBody
     public ?\DateTime $created = null;
 
     /**
-     * @param  ?RetrieveLabelReallocationLinks  $links
+     * @param  ?\Dwolla\Models\Operations\RetrieveLabelReallocationLinks  $links
      * @param  ?\DateTime  $created
      * @phpstan-pure
      */

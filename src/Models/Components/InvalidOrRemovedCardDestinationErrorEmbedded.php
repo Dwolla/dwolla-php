@@ -14,7 +14,7 @@ class InvalidOrRemovedCardDestinationErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidOrRemovedCardDestinationErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidOrRemovedCardDestinationErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidOrRemovedCardDestinationErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidOrRemovedCardDestinationErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidOrRemovedCardDestinationErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidOrRemovedCardDestinationErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

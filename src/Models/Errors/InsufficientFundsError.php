@@ -28,7 +28,7 @@ class InsufficientFundsError
 
     /**
      *
-     * @var ?Components\InsufficientFundsErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InsufficientFundsErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InsufficientFundsErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InsufficientFundsError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InsufficientFundsErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InsufficientFundsErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

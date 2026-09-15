@@ -28,7 +28,7 @@ class IncompatibleSourceForRtpDestinationError
 
     /**
      *
-     * @var ?Components\IncompatibleSourceForRtpDestinationErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\IncompatibleSourceForRtpDestinationErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\IncompatibleSourceForRtpDestinationErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class IncompatibleSourceForRtpDestinationError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\IncompatibleSourceForRtpDestinationErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\IncompatibleSourceForRtpDestinationErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

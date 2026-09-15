@@ -14,7 +14,7 @@ class SettlementAccountBalanceResponse
 {
     /**
      *
-     * @var GetFundingSourceBalanceLinks2 $links
+     * @var \Dwolla\Models\Operations\GetFundingSourceBalanceLinks2 $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\GetFundingSourceBalanceLinks2')]
@@ -22,15 +22,15 @@ class SettlementAccountBalanceResponse
 
     /**
      *
-     * @var Available2 $available
+     * @var \Dwolla\Models\Operations\Available2 $available
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('available')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\Available2')]
     public Available2 $available;
 
     /**
-     * @param  GetFundingSourceBalanceLinks2  $links
-     * @param  Available2  $available
+     * @param  \Dwolla\Models\Operations\GetFundingSourceBalanceLinks2  $links
+     * @param  \Dwolla\Models\Operations\Available2  $available
      * @phpstan-pure
      */
     public function __construct(GetFundingSourceBalanceLinks2 $links, Available2 $available)

@@ -49,9 +49,9 @@ class BeneficialOwnersDocuments
      *
      * Uploads an identity verification document for a beneficial owner using multipart form-data. Required when a beneficial owner has "document" status during the business verification process.
      *
-     * @param  Operations\CreateBeneficialOwnerDocumentRequestBody  $body
+     * @param  \Dwolla\Models\Operations\CreateBeneficialOwnerDocumentRequestBody  $body
      * @param  string  $id
-     * @return Operations\CreateBeneficialOwnerDocumentResponse
+     * @return \Dwolla\Models\Operations\CreateBeneficialOwnerDocumentResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Operations\CreateBeneficialOwnerDocumentRequestBody $body, string $id, ?Options $options = null): Operations\CreateBeneficialOwnerDocumentResponse
@@ -84,11 +84,12 @@ class BeneficialOwnersDocuments
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '413', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -160,7 +161,7 @@ class BeneficialOwnersDocuments
      * Returns all identity verification documents submitted for a beneficial owner. Includes document status, verification results, document type (passport, driver's license, etc.), and failure reasons if verification was rejected. Used to track document submission and verification progress during the business verification process.
      *
      * @param  string  $id
-     * @return Operations\ListBeneficialOwnerDocumentsResponse
+     * @return \Dwolla\Models\Operations\ListBeneficialOwnerDocumentsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(string $id, ?Options $options = null): Operations\ListBeneficialOwnerDocumentsResponse
@@ -187,11 +188,12 @@ class BeneficialOwnersDocuments
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

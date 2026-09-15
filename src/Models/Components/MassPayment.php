@@ -14,7 +14,7 @@ class MassPayment
     /**
      * $links
      *
-     * @var ?array<string, HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -47,7 +47,7 @@ class MassPayment
 
     /**
      *
-     * @var ?MassPaymentMetaData $metaData
+     * @var ?\Dwolla\Models\Components\MassPaymentMetaData $metaData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metaData')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\MassPaymentMetaData|null')]
@@ -56,7 +56,7 @@ class MassPayment
 
     /**
      *
-     * @var ?TransferAmount $total
+     * @var ?\Dwolla\Models\Components\TransferAmount $total
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('total')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\TransferAmount|null')]
@@ -65,7 +65,7 @@ class MassPayment
 
     /**
      *
-     * @var ?TransferAmount $totalFees
+     * @var ?\Dwolla\Models\Components\TransferAmount $totalFees
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('totalFees')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\TransferAmount|null')]
@@ -81,13 +81,13 @@ class MassPayment
     public ?string $correlationId = null;
 
     /**
-     * @param  ?array<string, HalLink>  $links
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  ?string  $id
      * @param  ?string  $status
      * @param  ?\DateTime  $created
-     * @param  ?MassPaymentMetaData  $metaData
-     * @param  ?TransferAmount  $total
-     * @param  ?TransferAmount  $totalFees
+     * @param  ?\Dwolla\Models\Components\MassPaymentMetaData  $metaData
+     * @param  ?\Dwolla\Models\Components\TransferAmount  $total
+     * @param  ?\Dwolla\Models\Components\TransferAmount  $totalFees
      * @param  ?string  $correlationId
      * @phpstan-pure
      */

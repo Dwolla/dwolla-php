@@ -37,7 +37,7 @@ class InvalidPointOfSaleAddendaSerialNumberErrorError
 
     /**
      *
-     * @var ?InvalidPointOfSaleAddendaSerialNumberErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidPointOfSaleAddendaSerialNumberErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidPointOfSaleAddendaSerialNumberErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidPointOfSaleAddendaSerialNumberErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidPointOfSaleAddendaSerialNumberErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidPointOfSaleAddendaSerialNumberErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidPointOfSaleAddendaSerialNumberErrorLinks $links = null)

@@ -13,7 +13,7 @@ class InitiateTransferAchDetailsDestination
 {
     /**
      *
-     * @var ?InitiateTransferDestinationAddenda $addenda
+     * @var ?\Dwolla\Models\Operations\InitiateTransferDestinationAddenda $addenda
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('addenda')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateTransferDestinationAddenda|null')]
@@ -21,7 +21,7 @@ class InitiateTransferAchDetailsDestination
     public ?InitiateTransferDestinationAddenda $addenda = null;
 
     /**
-     * @param  ?InitiateTransferDestinationAddenda  $addenda
+     * @param  ?\Dwolla\Models\Operations\InitiateTransferDestinationAddenda  $addenda
      * @phpstan-pure
      */
     public function __construct(?InitiateTransferDestinationAddenda $addenda = null)

@@ -28,7 +28,7 @@ class WireAccountRestrictedError
 
     /**
      *
-     * @var ?Components\WireAccountRestrictedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WireAccountRestrictedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WireAccountRestrictedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WireAccountRestrictedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WireAccountRestrictedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WireAccountRestrictedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

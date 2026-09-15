@@ -13,14 +13,14 @@ class SandboxSimulationCustomerVerificationResponseLinks
 {
     /**
      *
-     * @var HalLink $self
+     * @var \Dwolla\Models\Components\HalLink $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\HalLink')]
     public HalLink $self;
 
     /**
-     * @param  HalLink  $self
+     * @param  \Dwolla\Models\Components\HalLink  $self
      * @phpstan-pure
      */
     public function __construct(HalLink $self)

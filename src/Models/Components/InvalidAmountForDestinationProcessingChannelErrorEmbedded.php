@@ -14,7 +14,7 @@ class InvalidAmountForDestinationProcessingChannelErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidAmountForDestinationProcessingChannelErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidAmountForDestinationProcessingChannelErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidAmountForDestinationProcessingChannelErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidAmountForDestinationProcessingChannelErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidAmountForDestinationProcessingChannelErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidAmountForDestinationProcessingChannelErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

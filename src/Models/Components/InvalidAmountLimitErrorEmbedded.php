@@ -14,7 +14,7 @@ class InvalidAmountLimitErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidAmountLimitErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidAmountLimitErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidAmountLimitErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidAmountLimitErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidAmountLimitErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidAmountLimitErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

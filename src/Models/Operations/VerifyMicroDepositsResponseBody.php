@@ -14,7 +14,7 @@ class VerifyMicroDepositsResponseBody
 {
     /**
      *
-     * @var ?VerifyMicroDepositsLinks $links
+     * @var ?\Dwolla\Models\Operations\VerifyMicroDepositsLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\VerifyMicroDepositsLinks|null')]
@@ -22,7 +22,7 @@ class VerifyMicroDepositsResponseBody
     public ?VerifyMicroDepositsLinks $links = null;
 
     /**
-     * @param  ?VerifyMicroDepositsLinks  $links
+     * @param  ?\Dwolla\Models\Operations\VerifyMicroDepositsLinks  $links
      * @phpstan-pure
      */
     public function __construct(?VerifyMicroDepositsLinks $links = null)

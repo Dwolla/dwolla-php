@@ -14,7 +14,7 @@ class CreateLabelReallocationRequest
 {
     /**
      *
-     * @var CreateLabelReallocationLinks $links
+     * @var \Dwolla\Models\Operations\CreateLabelReallocationLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\CreateLabelReallocationLinks')]
@@ -22,15 +22,15 @@ class CreateLabelReallocationRequest
 
     /**
      *
-     * @var CreateLabelReallocationAmount $amount
+     * @var \Dwolla\Models\Operations\CreateLabelReallocationAmount $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\CreateLabelReallocationAmount')]
     public CreateLabelReallocationAmount $amount;
 
     /**
-     * @param  CreateLabelReallocationLinks  $links
-     * @param  CreateLabelReallocationAmount  $amount
+     * @param  \Dwolla\Models\Operations\CreateLabelReallocationLinks  $links
+     * @param  \Dwolla\Models\Operations\CreateLabelReallocationAmount  $amount
      * @phpstan-pure
      */
     public function __construct(CreateLabelReallocationLinks $links, CreateLabelReallocationAmount $amount)

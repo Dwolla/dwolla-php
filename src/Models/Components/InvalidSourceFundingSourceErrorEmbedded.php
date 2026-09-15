@@ -14,7 +14,7 @@ class InvalidSourceFundingSourceErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidSourceFundingSourceErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidSourceFundingSourceErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidSourceFundingSourceErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidSourceFundingSourceErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidSourceFundingSourceErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidSourceFundingSourceErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

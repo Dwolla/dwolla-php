@@ -13,7 +13,7 @@ class CreateFinicitySecureExchangeLinks
 {
     /**
      *
-     * @var ?CreateFinicitySecureExchangeExchangePartner $exchangePartner
+     * @var ?\Dwolla\Models\Components\CreateFinicitySecureExchangeExchangePartner $exchangePartner
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('exchange-partner')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateFinicitySecureExchangeExchangePartner|null')]
@@ -21,7 +21,7 @@ class CreateFinicitySecureExchangeLinks
     public ?CreateFinicitySecureExchangeExchangePartner $exchangePartner = null;
 
     /**
-     * @param  ?CreateFinicitySecureExchangeExchangePartner  $exchangePartner
+     * @param  ?\Dwolla\Models\Components\CreateFinicitySecureExchangeExchangePartner  $exchangePartner
      * @phpstan-pure
      */
     public function __construct(?CreateFinicitySecureExchangeExchangePartner $exchangePartner = null)

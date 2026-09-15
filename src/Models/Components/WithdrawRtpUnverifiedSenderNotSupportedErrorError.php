@@ -37,7 +37,7 @@ class WithdrawRtpUnverifiedSenderNotSupportedErrorError
 
     /**
      *
-     * @var ?WithdrawRtpUnverifiedSenderNotSupportedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WithdrawRtpUnverifiedSenderNotSupportedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawRtpUnverifiedSenderNotSupportedErrorLinks|null')]
@@ -48,7 +48,7 @@ class WithdrawRtpUnverifiedSenderNotSupportedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WithdrawRtpUnverifiedSenderNotSupportedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WithdrawRtpUnverifiedSenderNotSupportedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WithdrawRtpUnverifiedSenderNotSupportedErrorLinks $links = null)

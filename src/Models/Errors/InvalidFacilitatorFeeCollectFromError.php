@@ -28,7 +28,7 @@ class InvalidFacilitatorFeeCollectFromError
 
     /**
      *
-     * @var ?Components\InvalidFacilitatorFeeCollectFromErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidFacilitatorFeeCollectFromError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidFacilitatorFeeCollectFromErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

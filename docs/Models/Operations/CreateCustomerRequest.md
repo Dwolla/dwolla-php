@@ -9,7 +9,7 @@ Parameters for customer to be created
 
 ```php
 /**
-* @var Components\CreateReceiveOnlyUser
+* @var \Dwolla\Models\Components\CreateReceiveOnlyUser
 */
 Components\CreateReceiveOnlyUser $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Components\CreateReceiveOnlyUser $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateUnverifiedCustomer
+* @var \Dwolla\Models\Components\CreateUnverifiedCustomer
 */
 Components\CreateUnverifiedCustomer $value = /* values here */
 ```
@@ -27,7 +27,7 @@ Components\CreateUnverifiedCustomer $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateVerifiedPersonalCustomer
+* @var \Dwolla\Models\Components\CreateVerifiedPersonalCustomer
 */
 Components\CreateVerifiedPersonalCustomer $value = /* values here */
 ```
@@ -36,7 +36,7 @@ Components\CreateVerifiedPersonalCustomer $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateVerifiedSolePropCustomer
+* @var \Dwolla\Models\Components\CreateVerifiedSolePropCustomer
 */
 Components\CreateVerifiedSolePropCustomer $value = /* values here */
 ```
@@ -45,7 +45,7 @@ Components\CreateVerifiedSolePropCustomer $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateVerifiedBusinessCustomerWithController
+* @var \Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithController
 */
 Components\CreateVerifiedBusinessCustomerWithController $value = /* values here */
 ```
@@ -54,7 +54,7 @@ Components\CreateVerifiedBusinessCustomerWithController $value = /* values here 
 
 ```php
 /**
-* @var Components\CreateVerifiedBusinessCustomerWithInternationalController
+* @var \Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithInternationalController
 */
 Components\CreateVerifiedBusinessCustomerWithInternationalController $value = /* values here */
 ```

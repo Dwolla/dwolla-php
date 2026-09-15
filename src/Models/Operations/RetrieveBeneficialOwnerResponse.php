@@ -35,7 +35,7 @@ class RetrieveBeneficialOwnerResponse
     /**
      * successful operation
      *
-     * @var ?Components\BeneficialOwner $beneficialOwner
+     * @var ?\Dwolla\Models\Components\BeneficialOwner $beneficialOwner
      */
     public ?Components\BeneficialOwner $beneficialOwner = null;
 
@@ -43,7 +43,7 @@ class RetrieveBeneficialOwnerResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\BeneficialOwner  $beneficialOwner
+     * @param  ?\Dwolla\Models\Components\BeneficialOwner  $beneficialOwner
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\BeneficialOwner $beneficialOwner = null)

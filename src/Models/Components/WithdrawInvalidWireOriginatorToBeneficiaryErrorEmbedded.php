@@ -14,7 +14,7 @@ class WithdrawInvalidWireOriginatorToBeneficiaryErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<WithdrawInvalidWireOriginatorToBeneficiaryErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\WithdrawInvalidWireOriginatorToBeneficiaryErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WithdrawInvalidWireOriginatorToBeneficiaryErrorError>|null')]
@@ -22,7 +22,7 @@ class WithdrawInvalidWireOriginatorToBeneficiaryErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<WithdrawInvalidWireOriginatorToBeneficiaryErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\WithdrawInvalidWireOriginatorToBeneficiaryErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

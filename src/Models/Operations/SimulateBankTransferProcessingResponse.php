@@ -38,7 +38,7 @@ class SimulateBankTransferProcessingResponse
      * return HAL `_links.self` and `errorCode` (retrieve the Customer for `_embedded.errors`).
      *
      *
-     * @var Components\SandboxSimulationBankProcessingResponse|Components\SandboxSimulationCustomerVerificationResponse|null $oneOf
+     * @var \Dwolla\Models\Components\SandboxSimulationBankProcessingResponse|\Dwolla\Models\Components\SandboxSimulationCustomerVerificationResponse|null $oneOf
      */
     public Components\SandboxSimulationBankProcessingResponse|Components\SandboxSimulationCustomerVerificationResponse|null $oneOf = null;
 
@@ -46,7 +46,7 @@ class SimulateBankTransferProcessingResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  Components\SandboxSimulationBankProcessingResponse|Components\SandboxSimulationCustomerVerificationResponse|null  $oneOf
+     * @param  \Dwolla\Models\Components\SandboxSimulationBankProcessingResponse|\Dwolla\Models\Components\SandboxSimulationCustomerVerificationResponse|null  $oneOf
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, Components\SandboxSimulationBankProcessingResponse|Components\SandboxSimulationCustomerVerificationResponse|null $oneOf = null)

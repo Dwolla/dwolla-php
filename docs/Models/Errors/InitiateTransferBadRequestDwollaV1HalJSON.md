@@ -9,7 +9,7 @@ Bad Request
 
 ```php
 /**
-* @var Errors\SourceNotFoundError
+* @var \Dwolla\Models\Errors\SourceNotFoundError
 */
 Errors\SourceNotFoundError $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\SourceNotFoundError $value = /* values here */
 
 ```php
 /**
-* @var Errors\ReceiverNotFoundError
+* @var \Dwolla\Models\Errors\ReceiverNotFoundError
 */
 Errors\ReceiverNotFoundError $value = /* values here */
 ```
@@ -27,7 +27,7 @@ Errors\ReceiverNotFoundError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidSourceFundingSourceError
+* @var \Dwolla\Models\Errors\InvalidSourceFundingSourceError
 */
 Errors\InvalidSourceFundingSourceError $value = /* values here */
 ```
@@ -36,7 +36,7 @@ Errors\InvalidSourceFundingSourceError $value = /* values here */
 
 ```php
 /**
-* @var Errors\SenderRestrictedError
+* @var \Dwolla\Models\Errors\SenderRestrictedError
 */
 Errors\SenderRestrictedError $value = /* values here */
 ```
@@ -45,7 +45,7 @@ Errors\SenderRestrictedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\ReceiverRestrictedError
+* @var \Dwolla\Models\Errors\ReceiverRestrictedError
 */
 Errors\ReceiverRestrictedError $value = /* values here */
 ```
@@ -54,7 +54,7 @@ Errors\ReceiverRestrictedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidMetadataError
+* @var \Dwolla\Models\Errors\InvalidMetadataError
 */
 Errors\InvalidMetadataError $value = /* values here */
 ```
@@ -63,7 +63,7 @@ Errors\InvalidMetadataError $value = /* values here */
 
 ```php
 /**
-* @var Errors\OperationBlockedError
+* @var \Dwolla\Models\Errors\OperationBlockedError
 */
 Errors\OperationBlockedError $value = /* values here */
 ```
@@ -72,7 +72,7 @@ Errors\OperationBlockedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidAmountLimitError
+* @var \Dwolla\Models\Errors\InvalidAmountLimitError
 */
 Errors\InvalidAmountLimitError $value = /* values here */
 ```
@@ -81,7 +81,7 @@ Errors\InvalidAmountLimitError $value = /* values here */
 
 ```php
 /**
-* @var Errors\CannotParseAmountError
+* @var \Dwolla\Models\Errors\CannotParseAmountError
 */
 Errors\CannotParseAmountError $value = /* values here */
 ```
@@ -90,7 +90,7 @@ Errors\CannotParseAmountError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InsufficientFundsError
+* @var \Dwolla\Models\Errors\InsufficientFundsError
 */
 Errors\InsufficientFundsError $value = /* values here */
 ```
@@ -99,7 +99,7 @@ Errors\InsufficientFundsError $value = /* values here */
 
 ```php
 /**
-* @var Errors\FacilitatorFeeAccountNotFoundError
+* @var \Dwolla\Models\Errors\FacilitatorFeeAccountNotFoundError
 */
 Errors\FacilitatorFeeAccountNotFoundError $value = /* values here */
 ```
@@ -108,7 +108,7 @@ Errors\FacilitatorFeeAccountNotFoundError $value = /* values here */
 
 ```php
 /**
-* @var Errors\FacilitatorFeeSumTooLargeError
+* @var \Dwolla\Models\Errors\FacilitatorFeeSumTooLargeError
 */
 Errors\FacilitatorFeeSumTooLargeError $value = /* values here */
 ```
@@ -117,7 +117,7 @@ Errors\FacilitatorFeeSumTooLargeError $value = /* values here */
 
 ```php
 /**
-* @var Errors\FacilitatorFeeBelowMinimumError
+* @var \Dwolla\Models\Errors\FacilitatorFeeBelowMinimumError
 */
 Errors\FacilitatorFeeBelowMinimumError $value = /* values here */
 ```
@@ -126,7 +126,7 @@ Errors\FacilitatorFeeBelowMinimumError $value = /* values here */
 
 ```php
 /**
-* @var Errors\HighRiskError
+* @var \Dwolla\Models\Errors\HighRiskError
 */
 Errors\HighRiskError $value = /* values here */
 ```
@@ -135,7 +135,7 @@ Errors\HighRiskError $value = /* values here */
 
 ```php
 /**
-* @var Errors\IncompatibleHoldingsError
+* @var \Dwolla\Models\Errors\IncompatibleHoldingsError
 */
 Errors\IncompatibleHoldingsError $value = /* values here */
 ```
@@ -144,7 +144,7 @@ Errors\IncompatibleHoldingsError $value = /* values here */
 
 ```php
 /**
-* @var Errors\DirectAccountWithoutBankError
+* @var \Dwolla\Models\Errors\DirectAccountWithoutBankError
 */
 Errors\DirectAccountWithoutBankError $value = /* values here */
 ```
@@ -153,7 +153,7 @@ Errors\DirectAccountWithoutBankError $value = /* values here */
 
 ```php
 /**
-* @var Errors\SourceSameAsDestinationError
+* @var \Dwolla\Models\Errors\SourceSameAsDestinationError
 */
 Errors\SourceSameAsDestinationError $value = /* values here */
 ```
@@ -162,7 +162,7 @@ Errors\SourceSameAsDestinationError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidFacilitatorError
+* @var \Dwolla\Models\Errors\InvalidFacilitatorError
 */
 Errors\InvalidFacilitatorError $value = /* values here */
 ```
@@ -171,7 +171,7 @@ Errors\InvalidFacilitatorError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidFacilitatorFeeCollectFromError
+* @var \Dwolla\Models\Errors\InvalidFacilitatorFeeCollectFromError
 */
 Errors\InvalidFacilitatorFeeCollectFromError $value = /* values here */
 ```
@@ -180,7 +180,7 @@ Errors\InvalidFacilitatorFeeCollectFromError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidFacilitatorFeeCollectFromCombinationError
+* @var \Dwolla\Models\Errors\InvalidFacilitatorFeeCollectFromCombinationError
 */
 Errors\InvalidFacilitatorFeeCollectFromCombinationError $value = /* values here */
 ```
@@ -189,7 +189,7 @@ Errors\InvalidFacilitatorFeeCollectFromCombinationError $value = /* values here 
 
 ```php
 /**
-* @var Errors\InvalidDestinationFundingSourceError
+* @var \Dwolla\Models\Errors\InvalidDestinationFundingSourceError
 */
 Errors\InvalidDestinationFundingSourceError $value = /* values here */
 ```
@@ -198,7 +198,7 @@ Errors\InvalidDestinationFundingSourceError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidOrRemovedCardDestinationError
+* @var \Dwolla\Models\Errors\InvalidOrRemovedCardDestinationError
 */
 Errors\InvalidOrRemovedCardDestinationError $value = /* values here */
 ```
@@ -207,7 +207,7 @@ Errors\InvalidOrRemovedCardDestinationError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidFacilitatorFeeAmountError
+* @var \Dwolla\Models\Errors\InvalidFacilitatorFeeAmountError
 */
 Errors\InvalidFacilitatorFeeAmountError $value = /* values here */
 ```
@@ -216,7 +216,7 @@ Errors\InvalidFacilitatorFeeAmountError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WeeklyReceiveLimitReachedError
+* @var \Dwolla\Models\Errors\WeeklyReceiveLimitReachedError
 */
 Errors\WeeklyReceiveLimitReachedError $value = /* values here */
 ```
@@ -225,7 +225,7 @@ Errors\WeeklyReceiveLimitReachedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidDestinationClearingTypeError
+* @var \Dwolla\Models\Errors\InvalidDestinationClearingTypeError
 */
 Errors\InvalidDestinationClearingTypeError $value = /* values here */
 ```
@@ -234,7 +234,7 @@ Errors\InvalidDestinationClearingTypeError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidAmountForDestinationClearingTypeError
+* @var \Dwolla\Models\Errors\InvalidAmountForDestinationClearingTypeError
 */
 Errors\InvalidAmountForDestinationClearingTypeError $value = /* values here */
 ```
@@ -243,7 +243,7 @@ Errors\InvalidAmountForDestinationClearingTypeError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidCorrelationIdError
+* @var \Dwolla\Models\Errors\InvalidCorrelationIdError
 */
 Errors\InvalidCorrelationIdError $value = /* values here */
 ```
@@ -252,7 +252,7 @@ Errors\InvalidCorrelationIdError $value = /* values here */
 
 ```php
 /**
-* @var Errors\SourceAddendaMaxLengthError
+* @var \Dwolla\Models\Errors\SourceAddendaMaxLengthError
 */
 Errors\SourceAddendaMaxLengthError $value = /* values here */
 ```
@@ -261,7 +261,7 @@ Errors\SourceAddendaMaxLengthError $value = /* values here */
 
 ```php
 /**
-* @var Errors\DestinationAddendaMaxLengthError
+* @var \Dwolla\Models\Errors\DestinationAddendaMaxLengthError
 */
 Errors\DestinationAddendaMaxLengthError $value = /* values here */
 ```
@@ -270,7 +270,7 @@ Errors\DestinationAddendaMaxLengthError $value = /* values here */
 
 ```php
 /**
-* @var Errors\AchAddendaEntriesNotEnabledForAccountError
+* @var \Dwolla\Models\Errors\AchAddendaEntriesNotEnabledForAccountError
 */
 Errors\AchAddendaEntriesNotEnabledForAccountError $value = /* values here */
 ```
@@ -279,7 +279,7 @@ Errors\AchAddendaEntriesNotEnabledForAccountError $value = /* values here */
 
 ```php
 /**
-* @var Errors\PointOfSaleAddendaEntriesNotEnabledForAccountError
+* @var \Dwolla\Models\Errors\PointOfSaleAddendaEntriesNotEnabledForAccountError
 */
 Errors\PointOfSaleAddendaEntriesNotEnabledForAccountError $value = /* values here */
 ```
@@ -288,7 +288,7 @@ Errors\PointOfSaleAddendaEntriesNotEnabledForAccountError $value = /* values her
 
 ```php
 /**
-* @var Errors\IncompatibleAddendaEntriesError
+* @var \Dwolla\Models\Errors\IncompatibleAddendaEntriesError
 */
 Errors\IncompatibleAddendaEntriesError $value = /* values here */
 ```
@@ -297,7 +297,7 @@ Errors\IncompatibleAddendaEntriesError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidPointOfSaleAddendaIdentificationCodeError
+* @var \Dwolla\Models\Errors\InvalidPointOfSaleAddendaIdentificationCodeError
 */
 Errors\InvalidPointOfSaleAddendaIdentificationCodeError $value = /* values here */
 ```
@@ -306,7 +306,7 @@ Errors\InvalidPointOfSaleAddendaIdentificationCodeError $value = /* values here 
 
 ```php
 /**
-* @var Errors\InvalidPointOfSaleAddendaSerialNumberError
+* @var \Dwolla\Models\Errors\InvalidPointOfSaleAddendaSerialNumberError
 */
 Errors\InvalidPointOfSaleAddendaSerialNumberError $value = /* values here */
 ```
@@ -315,7 +315,7 @@ Errors\InvalidPointOfSaleAddendaSerialNumberError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidPointOfSaleAddendaDateError
+* @var \Dwolla\Models\Errors\InvalidPointOfSaleAddendaDateError
 */
 Errors\InvalidPointOfSaleAddendaDateError $value = /* values here */
 ```
@@ -324,7 +324,7 @@ Errors\InvalidPointOfSaleAddendaDateError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidPointOfSaleAddendaAddressError
+* @var \Dwolla\Models\Errors\InvalidPointOfSaleAddendaAddressError
 */
 Errors\InvalidPointOfSaleAddendaAddressError $value = /* values here */
 ```
@@ -333,7 +333,7 @@ Errors\InvalidPointOfSaleAddendaAddressError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidPointOfSaleAddendaCityError
+* @var \Dwolla\Models\Errors\InvalidPointOfSaleAddendaCityError
 */
 Errors\InvalidPointOfSaleAddendaCityError $value = /* values here */
 ```
@@ -342,7 +342,7 @@ Errors\InvalidPointOfSaleAddendaCityError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidPointOfSaleAddendaStateError
+* @var \Dwolla\Models\Errors\InvalidPointOfSaleAddendaStateError
 */
 Errors\InvalidPointOfSaleAddendaStateError $value = /* values here */
 ```
@@ -351,7 +351,7 @@ Errors\InvalidPointOfSaleAddendaStateError $value = /* values here */
 
 ```php
 /**
-* @var Errors\TransferExpiredForFeeError
+* @var \Dwolla\Models\Errors\TransferExpiredForFeeError
 */
 Errors\TransferExpiredForFeeError $value = /* values here */
 ```
@@ -360,7 +360,7 @@ Errors\TransferExpiredForFeeError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidFeeOdfiError
+* @var \Dwolla\Models\Errors\InvalidFeeOdfiError
 */
 Errors\InvalidFeeOdfiError $value = /* values here */
 ```
@@ -369,7 +369,7 @@ Errors\InvalidFeeOdfiError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidSourceBankAccountTypeError
+* @var \Dwolla\Models\Errors\InvalidSourceBankAccountTypeError
 */
 Errors\InvalidSourceBankAccountTypeError $value = /* values here */
 ```
@@ -378,7 +378,7 @@ Errors\InvalidSourceBankAccountTypeError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidDestinationBankAccountTypeError
+* @var \Dwolla\Models\Errors\InvalidDestinationBankAccountTypeError
 */
 Errors\InvalidDestinationBankAccountTypeError $value = /* values here */
 ```
@@ -387,7 +387,7 @@ Errors\InvalidDestinationBankAccountTypeError $value = /* values here */
 
 ```php
 /**
-* @var Errors\IncompatibleSourceAndDestinationTypesError
+* @var \Dwolla\Models\Errors\IncompatibleSourceAndDestinationTypesError
 */
 Errors\IncompatibleSourceAndDestinationTypesError $value = /* values here */
 ```
@@ -396,7 +396,7 @@ Errors\IncompatibleSourceAndDestinationTypesError $value = /* values here */
 
 ```php
 /**
-* @var Errors\SourceNotCardNetworkSettlementError
+* @var \Dwolla\Models\Errors\SourceNotCardNetworkSettlementError
 */
 Errors\SourceNotCardNetworkSettlementError $value = /* values here */
 ```
@@ -405,7 +405,7 @@ Errors\SourceNotCardNetworkSettlementError $value = /* values here */
 
 ```php
 /**
-* @var Errors\CardSourceNotAllowedError
+* @var \Dwolla\Models\Errors\CardSourceNotAllowedError
 */
 Errors\CardSourceNotAllowedError $value = /* values here */
 ```
@@ -414,7 +414,7 @@ Errors\CardSourceNotAllowedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\IncompatibleSourceForRtpDestinationError
+* @var \Dwolla\Models\Errors\IncompatibleSourceForRtpDestinationError
 */
 Errors\IncompatibleSourceForRtpDestinationError $value = /* values here */
 ```
@@ -423,7 +423,7 @@ Errors\IncompatibleSourceForRtpDestinationError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidAmountForDestinationProcessingChannelError
+* @var \Dwolla\Models\Errors\InvalidAmountForDestinationProcessingChannelError
 */
 Errors\InvalidAmountForDestinationProcessingChannelError $value = /* values here */
 ```
@@ -432,7 +432,7 @@ Errors\InvalidAmountForDestinationProcessingChannelError $value = /* values here
 
 ```php
 /**
-* @var Errors\RtpFacilitatorFeeNotSupportedError
+* @var \Dwolla\Models\Errors\RtpFacilitatorFeeNotSupportedError
 */
 Errors\RtpFacilitatorFeeNotSupportedError $value = /* values here */
 ```
@@ -441,7 +441,7 @@ Errors\RtpFacilitatorFeeNotSupportedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\RtpUnverifiedSenderNotSupportedError
+* @var \Dwolla\Models\Errors\RtpUnverifiedSenderNotSupportedError
 */
 Errors\RtpUnverifiedSenderNotSupportedError $value = /* values here */
 ```
@@ -450,7 +450,7 @@ Errors\RtpUnverifiedSenderNotSupportedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\RtpPersonalToPersonalNotSupportedError
+* @var \Dwolla\Models\Errors\RtpPersonalToPersonalNotSupportedError
 */
 Errors\RtpPersonalToPersonalNotSupportedError $value = /* values here */
 ```
@@ -459,7 +459,7 @@ Errors\RtpPersonalToPersonalNotSupportedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\DestinationProcessingChannelNotSupportedError
+* @var \Dwolla\Models\Errors\DestinationProcessingChannelNotSupportedError
 */
 Errors\DestinationProcessingChannelNotSupportedError $value = /* values here */
 ```
@@ -468,7 +468,7 @@ Errors\DestinationProcessingChannelNotSupportedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\DestinationRemittanceDataMaxLengthError
+* @var \Dwolla\Models\Errors\DestinationRemittanceDataMaxLengthError
 */
 Errors\DestinationRemittanceDataMaxLengthError $value = /* values here */
 ```
@@ -477,7 +477,7 @@ Errors\DestinationRemittanceDataMaxLengthError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WithdrawInvalidAmountError
+* @var \Dwolla\Models\Errors\WithdrawInvalidAmountError
 */
 Errors\WithdrawInvalidAmountError $value = /* values here */
 ```
@@ -486,7 +486,7 @@ Errors\WithdrawInvalidAmountError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WithdrawInvalidFundingSourceError
+* @var \Dwolla\Models\Errors\WithdrawInvalidFundingSourceError
 */
 Errors\WithdrawInvalidFundingSourceError $value = /* values here */
 ```
@@ -495,7 +495,7 @@ Errors\WithdrawInvalidFundingSourceError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WithdrawAccountRestrictedError
+* @var \Dwolla\Models\Errors\WithdrawAccountRestrictedError
 */
 Errors\WithdrawAccountRestrictedError $value = /* values here */
 ```
@@ -504,7 +504,7 @@ Errors\WithdrawAccountRestrictedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WithdrawInvalidAmountForClearingTypeError
+* @var \Dwolla\Models\Errors\WithdrawInvalidAmountForClearingTypeError
 */
 Errors\WithdrawInvalidAmountForClearingTypeError $value = /* values here */
 ```
@@ -513,7 +513,7 @@ Errors\WithdrawInvalidAmountForClearingTypeError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WithdrawInvalidWireBeneficiaryLocalityError
+* @var \Dwolla\Models\Errors\WithdrawInvalidWireBeneficiaryLocalityError
 */
 Errors\WithdrawInvalidWireBeneficiaryLocalityError $value = /* values here */
 ```
@@ -522,7 +522,7 @@ Errors\WithdrawInvalidWireBeneficiaryLocalityError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WithdrawInvalidWireBeneficiaryRegionError
+* @var \Dwolla\Models\Errors\WithdrawInvalidWireBeneficiaryRegionError
 */
 Errors\WithdrawInvalidWireBeneficiaryRegionError $value = /* values here */
 ```
@@ -531,7 +531,7 @@ Errors\WithdrawInvalidWireBeneficiaryRegionError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WithdrawInvalidWireBeneficiaryCountryError
+* @var \Dwolla\Models\Errors\WithdrawInvalidWireBeneficiaryCountryError
 */
 Errors\WithdrawInvalidWireBeneficiaryCountryError $value = /* values here */
 ```
@@ -540,7 +540,7 @@ Errors\WithdrawInvalidWireBeneficiaryCountryError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WithdrawInvalidWireOriginatorToBeneficiaryError
+* @var \Dwolla\Models\Errors\WithdrawInvalidWireOriginatorToBeneficiaryError
 */
 Errors\WithdrawInvalidWireOriginatorToBeneficiaryError $value = /* values here */
 ```
@@ -549,7 +549,7 @@ Errors\WithdrawInvalidWireOriginatorToBeneficiaryError $value = /* values here *
 
 ```php
 /**
-* @var Errors\WithdrawProcessingChannelNotSupportedError
+* @var \Dwolla\Models\Errors\WithdrawProcessingChannelNotSupportedError
 */
 Errors\WithdrawProcessingChannelNotSupportedError $value = /* values here */
 ```
@@ -558,7 +558,7 @@ Errors\WithdrawProcessingChannelNotSupportedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WithdrawRtpUnverifiedSenderNotSupportedError
+* @var \Dwolla\Models\Errors\WithdrawRtpUnverifiedSenderNotSupportedError
 */
 Errors\WithdrawRtpUnverifiedSenderNotSupportedError $value = /* values here */
 ```
@@ -567,7 +567,7 @@ Errors\WithdrawRtpUnverifiedSenderNotSupportedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WithdrawRtpPersonalWithdrawalNotSupportedError
+* @var \Dwolla\Models\Errors\WithdrawRtpPersonalWithdrawalNotSupportedError
 */
 Errors\WithdrawRtpPersonalWithdrawalNotSupportedError $value = /* values here */
 ```
@@ -576,7 +576,7 @@ Errors\WithdrawRtpPersonalWithdrawalNotSupportedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\DepositAccountRestrictedError
+* @var \Dwolla\Models\Errors\DepositAccountRestrictedError
 */
 Errors\DepositAccountRestrictedError $value = /* values here */
 ```
@@ -585,7 +585,7 @@ Errors\DepositAccountRestrictedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WireInvalidImadError
+* @var \Dwolla\Models\Errors\WireInvalidImadError
 */
 Errors\WireInvalidImadError $value = /* values here */
 ```
@@ -594,7 +594,7 @@ Errors\WireInvalidImadError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WireAccountRestrictedError
+* @var \Dwolla\Models\Errors\WireAccountRestrictedError
 */
 Errors\WireAccountRestrictedError $value = /* values here */
 ```
@@ -603,7 +603,7 @@ Errors\WireAccountRestrictedError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WireNotEnabledError
+* @var \Dwolla\Models\Errors\WireNotEnabledError
 */
 Errors\WireNotEnabledError $value = /* values here */
 ```
@@ -612,7 +612,7 @@ Errors\WireNotEnabledError $value = /* values here */
 
 ```php
 /**
-* @var Errors\WireAccountNotFoundError
+* @var \Dwolla\Models\Errors\WireAccountNotFoundError
 */
 Errors\WireAccountNotFoundError $value = /* values here */
 ```
@@ -621,7 +621,7 @@ Errors\WireAccountNotFoundError $value = /* values here */
 
 ```php
 /**
-* @var Errors\PrefundingSourceNotAllowedError
+* @var \Dwolla\Models\Errors\PrefundingSourceNotAllowedError
 */
 Errors\PrefundingSourceNotAllowedError $value = /* values here */
 ```

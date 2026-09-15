@@ -37,7 +37,7 @@ class InvalidAmountLimitErrorError
 
     /**
      *
-     * @var ?InvalidAmountLimitErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidAmountLimitErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidAmountLimitErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidAmountLimitErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidAmountLimitErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidAmountLimitErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidAmountLimitErrorLinks $links = null)

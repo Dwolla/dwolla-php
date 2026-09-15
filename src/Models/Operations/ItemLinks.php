@@ -13,7 +13,7 @@ class ItemLinks
 {
     /**
      *
-     * @var ?InitiateMassPaymentLinksDestination $destination
+     * @var ?\Dwolla\Models\Operations\InitiateMassPaymentLinksDestination $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateMassPaymentLinksDestination|null')]
@@ -21,7 +21,7 @@ class ItemLinks
     public ?InitiateMassPaymentLinksDestination $destination = null;
 
     /**
-     * @param  ?InitiateMassPaymentLinksDestination  $destination
+     * @param  ?\Dwolla\Models\Operations\InitiateMassPaymentLinksDestination  $destination
      * @phpstan-pure
      */
     public function __construct(?InitiateMassPaymentLinksDestination $destination = null)

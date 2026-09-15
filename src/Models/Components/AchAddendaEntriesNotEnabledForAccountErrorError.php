@@ -37,7 +37,7 @@ class AchAddendaEntriesNotEnabledForAccountErrorError
 
     /**
      *
-     * @var ?AchAddendaEntriesNotEnabledForAccountErrorLinks $links
+     * @var ?\Dwolla\Models\Components\AchAddendaEntriesNotEnabledForAccountErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\AchAddendaEntriesNotEnabledForAccountErrorLinks|null')]
@@ -48,7 +48,7 @@ class AchAddendaEntriesNotEnabledForAccountErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?AchAddendaEntriesNotEnabledForAccountErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\AchAddendaEntriesNotEnabledForAccountErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?AchAddendaEntriesNotEnabledForAccountErrorLinks $links = null)

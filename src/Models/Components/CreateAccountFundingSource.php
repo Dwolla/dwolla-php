@@ -20,7 +20,7 @@ class CreateAccountFundingSource
 
     /**
      *
-     * @var CreateAccountFundingSourceBankAccountType $bankAccountType
+     * @var \Dwolla\Models\Components\CreateAccountFundingSourceBankAccountType $bankAccountType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('bankAccountType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateAccountFundingSourceBankAccountType')]
@@ -42,7 +42,7 @@ class CreateAccountFundingSource
 
     /**
      *
-     * @var ?CreateAccountFundingSourceLinks $links
+     * @var ?\Dwolla\Models\Components\CreateAccountFundingSourceLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateAccountFundingSourceLinks|null')]
@@ -61,10 +61,10 @@ class CreateAccountFundingSource
 
     /**
      * @param  string  $name
-     * @param  CreateAccountFundingSourceBankAccountType  $bankAccountType
+     * @param  \Dwolla\Models\Components\CreateAccountFundingSourceBankAccountType  $bankAccountType
      * @param  string  $accountNumber
      * @param  string  $routingNumber
-     * @param  ?CreateAccountFundingSourceLinks  $links
+     * @param  ?\Dwolla\Models\Components\CreateAccountFundingSourceLinks  $links
      * @param  ?array<string>  $channels
      * @phpstan-pure
      */

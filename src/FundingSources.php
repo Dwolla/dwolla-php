@@ -57,10 +57,10 @@ class FundingSources
     /**
      * Retrieve a funding source
      *
-     * Returns detailed information for a specific funding source, including its type, status, and verification details. Supports bank accounts (via Open Banking), debit card funding sources, and Dwolla balance (verified customers only). Debit card funding sources include masked card details such as brand, last four digits, expiration date, and cardholder name.
+     * Returns detailed information for a specific funding source, including its type, status, and verification details. Supports bank accounts (via Open Banking), debit card funding sources, and Dwolla balance (verified customers only). Debit card funding sources include masked card details such as brand, last four digits, expiration date, and cardholder name, along with `dateOfBirth` and `countryOfBirth` when those optional identity fields were supplied.
      *
      * @param  string  $id
-     * @return Operations\GetFundingSourceResponse
+     * @return \Dwolla\Models\Operations\GetFundingSourceResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\GetFundingSourceResponse
@@ -87,11 +87,12 @@ class FundingSources
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -136,7 +137,7 @@ class FundingSources
      * Returns the unique account and routing numbers for a Virtual Account Number (VAN) funding source. These numbers can be used by external systems to initiate ACH transactions that pull funds from or push funds to the associated Dwolla balance.
      *
      * @param  string  $id
-     * @return Operations\GetVanRoutingResponse
+     * @return \Dwolla\Models\Operations\GetVanRoutingResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function getVanRouting(string $id, ?Options $options = null): Operations\GetVanRoutingResponse
@@ -163,11 +164,12 @@ class FundingSources
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -209,14 +211,28 @@ class FundingSources
     /**
      * Update or remove a funding source
      *
-     * Updates a bank funding source's details or soft deletes it. When updating, you can change the name (any status) or modify routing/account numbers and account type (unverified status only). When removing, the funding source is soft deleted and can still be accessed but marked as removed.
+     * Updates a bank or debit card funding source's details, or soft deletes it.
      *
-     * @param  Components\UpdateUnverifiedBank|Components\UpdateVerifiedBank|Components\RemoveBank  $body
+     * For **bank** funding sources you can change the name (any status), or modify routing/account
+     * numbers and account type (unverified status only).
+     *
+     * For **debit card** funding sources you can change the name and any field within `cardDetails`,
+     * including the optional cardholder identity fields `dateOfBirth`, `countryOfBirth`, and
+     * `identification`. This is how you add or update those identity values on a card funding source
+     * that already exists.
+     *
+     * You must provide at least one updateable field. Bank funding sources cannot be updated with
+     * card fields, and card funding sources cannot be updated with bank fields.
+     *
+     * When removing, the funding source is soft deleted and can still be accessed but marked as removed.
+     *
+     *
+     * @param  \Dwolla\Models\Components\UpdateUnverifiedBank|\Dwolla\Models\Components\UpdateVerifiedBank|\Dwolla\Models\Components\UpdateCardFundingSource|\Dwolla\Models\Components\RemoveBank  $body
      * @param  string  $id
-     * @return Operations\UpdateOrRemoveFundingSourceResponse
+     * @return \Dwolla\Models\Operations\UpdateOrRemoveFundingSourceResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
-    public function updateOrRemove(Components\UpdateUnverifiedBank|Components\UpdateVerifiedBank|Components\RemoveBank $body, string $id, ?Options $options = null): Operations\UpdateOrRemoveFundingSourceResponse
+    public function updateOrRemove(Components\UpdateUnverifiedBank|Components\UpdateVerifiedBank|Components\UpdateCardFundingSource|Components\RemoveBank $body, string $id, ?Options $options = null): Operations\UpdateOrRemoveFundingSourceResponse
     {
         $request = new Operations\UpdateOrRemoveFundingSourceRequest(
             id: $id,
@@ -246,11 +262,12 @@ class FundingSources
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -274,7 +291,7 @@ class FundingSources
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\UpdateOrRemoveFundingSourceBadRequestDwollaV1HalJSONException', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\UpdateFundingSourceValidationError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $obj->rawResponse = $httpResponse;
                 throw $obj->toException();
             } else {
@@ -286,7 +303,7 @@ class FundingSources
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\UpdateOrRemoveFundingSourceForbiddenDwollaV1HalJSONException', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Dwolla\Models\Errors\UpdateOrRemoveFundingSourceDwollaV1HalJSONException', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $obj->rawResponse = $httpResponse;
                 throw $obj->toException();
             } else {

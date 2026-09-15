@@ -15,7 +15,7 @@ class AchDetailsDestination
     /**
      * Contains addenda information for the transfer
      *
-     * @var ?DestinationAddenda $addenda
+     * @var ?\Dwolla\Models\Components\DestinationAddenda $addenda
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('addenda')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DestinationAddenda|null')]
@@ -34,7 +34,7 @@ class AchDetailsDestination
     /**
      * Describes the purpose of the transaction
      *
-     * @var ?DestinationCompanyEntryDescription $companyEntryDescription
+     * @var ?\Dwolla\Models\Components\DestinationCompanyEntryDescription $companyEntryDescription
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('companyEntryDescription')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DestinationCompanyEntryDescription|null')]
@@ -96,9 +96,9 @@ class AchDetailsDestination
     public ?string $traceId = null;
 
     /**
-     * @param  ?DestinationAddenda  $addenda
+     * @param  ?\Dwolla\Models\Components\DestinationAddenda  $addenda
      * @param  ?string  $beneficiaryName
-     * @param  ?DestinationCompanyEntryDescription  $companyEntryDescription
+     * @param  ?\Dwolla\Models\Components\DestinationCompanyEntryDescription  $companyEntryDescription
      * @param  ?string  $companyId
      * @param  ?string  $companyName
      * @param  ?LocalDate  $effectiveDate

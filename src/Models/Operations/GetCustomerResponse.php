@@ -35,7 +35,7 @@ class GetCustomerResponse
     /**
      * successful operation
      *
-     * @var Components\UnverifiedCustomer|Components\ReceiveOnlyCustomer|Components\VerifiedPersonalCustomer|Components\VerifiedSolePropCustomer|Components\VerifiedBusinessCustomer|null $oneOf
+     * @var \Dwolla\Models\Components\UnverifiedCustomer|\Dwolla\Models\Components\ReceiveOnlyCustomer|\Dwolla\Models\Components\VerifiedPersonalCustomer|\Dwolla\Models\Components\VerifiedSolePropCustomer|\Dwolla\Models\Components\VerifiedBusinessCustomer|null $oneOf
      */
     public Components\UnverifiedCustomer|Components\ReceiveOnlyCustomer|Components\VerifiedPersonalCustomer|Components\VerifiedSolePropCustomer|Components\VerifiedBusinessCustomer|null $oneOf = null;
 
@@ -43,7 +43,7 @@ class GetCustomerResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  Components\UnverifiedCustomer|Components\ReceiveOnlyCustomer|Components\VerifiedPersonalCustomer|Components\VerifiedSolePropCustomer|Components\VerifiedBusinessCustomer|null  $oneOf
+     * @param  \Dwolla\Models\Components\UnverifiedCustomer|\Dwolla\Models\Components\ReceiveOnlyCustomer|\Dwolla\Models\Components\VerifiedPersonalCustomer|\Dwolla\Models\Components\VerifiedSolePropCustomer|\Dwolla\Models\Components\VerifiedBusinessCustomer|null  $oneOf
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, Components\UnverifiedCustomer|Components\ReceiveOnlyCustomer|Components\VerifiedPersonalCustomer|Components\VerifiedSolePropCustomer|Components\VerifiedBusinessCustomer|null $oneOf = null)

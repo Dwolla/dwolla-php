@@ -15,7 +15,7 @@ class BeneficialOwners
     /**
      * $links
      *
-     * @var ?array<string, HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -24,7 +24,7 @@ class BeneficialOwners
 
     /**
      *
-     * @var ?BeneficialOwnersEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\BeneficialOwnersEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\BeneficialOwnersEmbedded|null')]
@@ -32,8 +32,8 @@ class BeneficialOwners
     public ?BeneficialOwnersEmbedded $embedded = null;
 
     /**
-     * @param  ?array<string, HalLink>  $links
-     * @param  ?BeneficialOwnersEmbedded  $embedded
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
+     * @param  ?\Dwolla\Models\Components\BeneficialOwnersEmbedded  $embedded
      * @phpstan-pure
      */
     public function __construct(?array $links = null, ?BeneficialOwnersEmbedded $embedded = null)

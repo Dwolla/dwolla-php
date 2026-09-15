@@ -37,7 +37,7 @@ class DestinationRemittanceDataMaxLengthErrorError
 
     /**
      *
-     * @var ?DestinationRemittanceDataMaxLengthErrorLinks $links
+     * @var ?\Dwolla\Models\Components\DestinationRemittanceDataMaxLengthErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DestinationRemittanceDataMaxLengthErrorLinks|null')]
@@ -48,7 +48,7 @@ class DestinationRemittanceDataMaxLengthErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?DestinationRemittanceDataMaxLengthErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\DestinationRemittanceDataMaxLengthErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?DestinationRemittanceDataMaxLengthErrorLinks $links = null)

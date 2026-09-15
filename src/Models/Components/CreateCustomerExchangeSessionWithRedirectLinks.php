@@ -13,7 +13,7 @@ class CreateCustomerExchangeSessionWithRedirectLinks
 {
     /**
      *
-     * @var CreateCustomerExchangeSessionWithRedirectExchangePartner $exchangePartner
+     * @var \Dwolla\Models\Components\CreateCustomerExchangeSessionWithRedirectExchangePartner $exchangePartner
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('exchange-partner')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerExchangeSessionWithRedirectExchangePartner')]
@@ -21,15 +21,15 @@ class CreateCustomerExchangeSessionWithRedirectLinks
 
     /**
      *
-     * @var CreateCustomerExchangeSessionWithRedirectRedirectUrl $redirectUrl
+     * @var \Dwolla\Models\Components\CreateCustomerExchangeSessionWithRedirectRedirectUrl $redirectUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('redirect-url')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerExchangeSessionWithRedirectRedirectUrl')]
     public CreateCustomerExchangeSessionWithRedirectRedirectUrl $redirectUrl;
 
     /**
-     * @param  CreateCustomerExchangeSessionWithRedirectExchangePartner  $exchangePartner
-     * @param  CreateCustomerExchangeSessionWithRedirectRedirectUrl  $redirectUrl
+     * @param  \Dwolla\Models\Components\CreateCustomerExchangeSessionWithRedirectExchangePartner  $exchangePartner
+     * @param  \Dwolla\Models\Components\CreateCustomerExchangeSessionWithRedirectRedirectUrl  $redirectUrl
      * @phpstan-pure
      */
     public function __construct(CreateCustomerExchangeSessionWithRedirectExchangePartner $exchangePartner, CreateCustomerExchangeSessionWithRedirectRedirectUrl $redirectUrl)

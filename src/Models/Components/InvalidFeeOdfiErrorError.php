@@ -37,7 +37,7 @@ class InvalidFeeOdfiErrorError
 
     /**
      *
-     * @var ?InvalidFeeOdfiErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidFeeOdfiErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidFeeOdfiErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidFeeOdfiErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidFeeOdfiErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidFeeOdfiErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidFeeOdfiErrorLinks $links = null)

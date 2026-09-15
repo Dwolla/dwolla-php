@@ -15,7 +15,7 @@ class VerifiedPersonalCustomer
     /**
      * $links
      *
-     * @var array<string, HalLink> $links
+     * @var array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>')]
@@ -58,7 +58,7 @@ class VerifiedPersonalCustomer
 
     /**
      *
-     * @var VerifiedPersonalCustomerType $type
+     * @var \Dwolla\Models\Components\VerifiedPersonalCustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\VerifiedPersonalCustomerType')]
@@ -66,7 +66,7 @@ class VerifiedPersonalCustomer
 
     /**
      *
-     * @var VerifiedPersonalCustomerStatus $status
+     * @var \Dwolla\Models\Components\VerifiedPersonalCustomerStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\VerifiedPersonalCustomerStatus')]
@@ -117,14 +117,14 @@ class VerifiedPersonalCustomer
     public ?string $address2 = null;
 
     /**
-     * @param  array<string, HalLink>  $links
+     * @param  array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  string  $id
      * @param  string  $firstName
      * @param  string  $lastName
      * @param  string  $email
      * @param  \DateTime  $created
-     * @param  VerifiedPersonalCustomerType  $type
-     * @param  VerifiedPersonalCustomerStatus  $status
+     * @param  \Dwolla\Models\Components\VerifiedPersonalCustomerType  $type
+     * @param  \Dwolla\Models\Components\VerifiedPersonalCustomerStatus  $status
      * @param  string  $address1
      * @param  string  $city
      * @param  string  $state

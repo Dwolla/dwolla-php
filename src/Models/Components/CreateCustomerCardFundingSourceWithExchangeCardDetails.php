@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Dwolla\Models\Components;
 
-
+use Brick\DateTime\LocalDate;
 class CreateCustomerCardFundingSourceWithExchangeCardDetails
 {
     /**
@@ -30,22 +30,65 @@ class CreateCustomerCardFundingSourceWithExchangeCardDetails
     /**
      * The billing address associated with the card
      *
-     * @var CreateCustomerCardFundingSourceWithExchangeBillingAddress $billingAddress
+     * @var \Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeBillingAddress $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billingAddress')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeBillingAddress')]
     public CreateCustomerCardFundingSourceWithExchangeBillingAddress $billingAddress;
 
     /**
+     * Optional. Cardholder date of birth in `YYYY-MM-DD` format.
+     *
+     * Supplying this value reduces the number of sanctions screening alerts raised when the card is registered and processed.
+     *
+     *
+     * @var ?LocalDate $dateOfBirth
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('dateOfBirth')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?LocalDate $dateOfBirth = null;
+
+    /**
+     * Optional. Cardholder country of birth as a two-letter country code (ISO 3166-1 alpha-2). Must be exactly 2 characters.
+     *
+     * Supplying this value reduces the number of sanctions screening alerts raised when the card is registered and processed.
+     *
+     *
+     * @var ?string $countryOfBirth
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('countryOfBirth')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $countryOfBirth = null;
+
+    /**
+     * Optional. A government identification document for the cardholder.
+     *
+     * Supplying this value reduces the number of sanctions screening alerts raised when the card is registered and processed.
+     *
+     *
+     * @var ?\Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeIdentification $identification
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('identification')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeIdentification|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?CreateCustomerCardFundingSourceWithExchangeIdentification $identification = null;
+
+    /**
      * @param  string  $firstName
      * @param  string  $lastName
-     * @param  CreateCustomerCardFundingSourceWithExchangeBillingAddress  $billingAddress
+     * @param  \Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeBillingAddress  $billingAddress
+     * @param  ?LocalDate  $dateOfBirth
+     * @param  ?string  $countryOfBirth
+     * @param  ?\Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeIdentification  $identification
      * @phpstan-pure
      */
-    public function __construct(string $firstName, string $lastName, CreateCustomerCardFundingSourceWithExchangeBillingAddress $billingAddress)
+    public function __construct(string $firstName, string $lastName, CreateCustomerCardFundingSourceWithExchangeBillingAddress $billingAddress, ?LocalDate $dateOfBirth = null, ?string $countryOfBirth = null, ?CreateCustomerCardFundingSourceWithExchangeIdentification $identification = null)
     {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->billingAddress = $billingAddress;
+        $this->dateOfBirth = $dateOfBirth;
+        $this->countryOfBirth = $countryOfBirth;
+        $this->identification = $identification;
     }
 }

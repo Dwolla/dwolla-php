@@ -15,13 +15,13 @@ class CreateApplicationAccessTokenRequest
     /**
      * Must be set to "client_credentials"
      *
-     * @var GrantType $grantType
+     * @var \Dwolla\Models\Operations\GrantType $grantType
      */
     #[SpeakeasyMetadata('form:name=grant_type')]
     public GrantType $grantType;
 
     /**
-     * @param  GrantType  $grantType
+     * @param  \Dwolla\Models\Operations\GrantType  $grantType
      * @phpstan-pure
      */
     public function __construct(GrantType $grantType)

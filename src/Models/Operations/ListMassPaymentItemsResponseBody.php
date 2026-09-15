@@ -14,7 +14,7 @@ class ListMassPaymentItemsResponseBody
 {
     /**
      *
-     * @var ?ListMassPaymentItemsLinks $links
+     * @var ?\Dwolla\Models\Operations\ListMassPaymentItemsLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListMassPaymentItemsLinks|null')]
@@ -23,7 +23,7 @@ class ListMassPaymentItemsResponseBody
 
     /**
      *
-     * @var ?ListMassPaymentItemsEmbedded $embedded
+     * @var ?\Dwolla\Models\Operations\ListMassPaymentItemsEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListMassPaymentItemsEmbedded|null')]
@@ -39,8 +39,8 @@ class ListMassPaymentItemsResponseBody
     public ?int $total = null;
 
     /**
-     * @param  ?ListMassPaymentItemsLinks  $links
-     * @param  ?ListMassPaymentItemsEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Operations\ListMassPaymentItemsLinks  $links
+     * @param  ?\Dwolla\Models\Operations\ListMassPaymentItemsEmbedded  $embedded
      * @param  ?int  $total
      * @phpstan-pure
      */

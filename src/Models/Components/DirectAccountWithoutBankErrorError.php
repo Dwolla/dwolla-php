@@ -37,7 +37,7 @@ class DirectAccountWithoutBankErrorError
 
     /**
      *
-     * @var ?DirectAccountWithoutBankErrorLinks $links
+     * @var ?\Dwolla\Models\Components\DirectAccountWithoutBankErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DirectAccountWithoutBankErrorLinks|null')]
@@ -48,7 +48,7 @@ class DirectAccountWithoutBankErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?DirectAccountWithoutBankErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\DirectAccountWithoutBankErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?DirectAccountWithoutBankErrorLinks $links = null)

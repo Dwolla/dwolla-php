@@ -15,7 +15,7 @@ class ListTransferFeesResponseBody
     /**
      * $transactions
      *
-     * @var ?array<Transaction> $transactions
+     * @var ?array<\Dwolla\Models\Operations\Transaction> $transactions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('transactions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Operations\Transaction>|null')]
@@ -31,7 +31,7 @@ class ListTransferFeesResponseBody
     public ?int $total = null;
 
     /**
-     * @param  ?array<Transaction>  $transactions
+     * @param  ?array<\Dwolla\Models\Operations\Transaction>  $transactions
      * @param  ?int  $total
      * @phpstan-pure
      */

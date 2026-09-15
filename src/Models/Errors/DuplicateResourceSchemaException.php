@@ -28,7 +28,7 @@ class DuplicateResourceSchemaException
 
     /**
      *
-     * @var ?Components\DuplicateResourceSchemaLinks $links
+     * @var ?\Dwolla\Models\Components\DuplicateResourceSchemaLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DuplicateResourceSchemaLinks|null')]
@@ -47,7 +47,7 @@ class DuplicateResourceSchemaException
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\DuplicateResourceSchemaLinks  $links
+     * @param  ?\Dwolla\Models\Components\DuplicateResourceSchemaLinks  $links
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

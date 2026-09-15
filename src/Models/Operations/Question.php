@@ -28,7 +28,7 @@ class Question
     /**
      * $answers
      *
-     * @var array<QuestionAnswer> $answers
+     * @var array<\Dwolla\Models\Operations\QuestionAnswer> $answers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('answers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Operations\QuestionAnswer>')]
@@ -37,7 +37,7 @@ class Question
     /**
      * @param  string  $id
      * @param  string  $text
-     * @param  array<QuestionAnswer>  $answers
+     * @param  array<\Dwolla\Models\Operations\QuestionAnswer>  $answers
      * @phpstan-pure
      */
     public function __construct(string $id, string $text, array $answers)

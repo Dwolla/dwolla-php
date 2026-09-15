@@ -21,7 +21,7 @@ class CreateClientTokenRequest
 
     /**
      *
-     * @var CreateClientTokenLinks $links
+     * @var \Dwolla\Models\Operations\CreateClientTokenLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\CreateClientTokenLinks')]
@@ -29,7 +29,7 @@ class CreateClientTokenRequest
 
     /**
      * @param  string  $action
-     * @param  CreateClientTokenLinks  $links
+     * @param  \Dwolla\Models\Operations\CreateClientTokenLinks  $links
      * @phpstan-pure
      */
     public function __construct(string $action, CreateClientTokenLinks $links)

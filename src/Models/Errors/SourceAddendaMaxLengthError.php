@@ -28,7 +28,7 @@ class SourceAddendaMaxLengthError
 
     /**
      *
-     * @var ?Components\SourceAddendaMaxLengthErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\SourceAddendaMaxLengthErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SourceAddendaMaxLengthErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class SourceAddendaMaxLengthError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\SourceAddendaMaxLengthErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\SourceAddendaMaxLengthErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

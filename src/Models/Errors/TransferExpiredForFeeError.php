@@ -28,7 +28,7 @@ class TransferExpiredForFeeError
 
     /**
      *
-     * @var ?Components\TransferExpiredForFeeErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\TransferExpiredForFeeErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\TransferExpiredForFeeErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class TransferExpiredForFeeError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\TransferExpiredForFeeErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\TransferExpiredForFeeErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

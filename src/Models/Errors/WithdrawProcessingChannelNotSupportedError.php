@@ -28,7 +28,7 @@ class WithdrawProcessingChannelNotSupportedError
 
     /**
      *
-     * @var ?Components\WithdrawProcessingChannelNotSupportedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WithdrawProcessingChannelNotSupportedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawProcessingChannelNotSupportedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WithdrawProcessingChannelNotSupportedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WithdrawProcessingChannelNotSupportedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WithdrawProcessingChannelNotSupportedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

@@ -28,7 +28,7 @@ class InvalidPointOfSaleAddendaAddressError
 
     /**
      *
-     * @var ?Components\InvalidPointOfSaleAddendaAddressErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidPointOfSaleAddendaAddressErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidPointOfSaleAddendaAddressErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidPointOfSaleAddendaAddressError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidPointOfSaleAddendaAddressErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidPointOfSaleAddendaAddressErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

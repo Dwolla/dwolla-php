@@ -28,7 +28,7 @@ class HighRiskError
 
     /**
      *
-     * @var ?Components\HighRiskErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\HighRiskErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\HighRiskErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class HighRiskError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\HighRiskErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\HighRiskErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

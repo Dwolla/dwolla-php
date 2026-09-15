@@ -37,7 +37,7 @@ class HighRiskErrorError
 
     /**
      *
-     * @var ?HighRiskErrorLinks $links
+     * @var ?\Dwolla\Models\Components\HighRiskErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\HighRiskErrorLinks|null')]
@@ -48,7 +48,7 @@ class HighRiskErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?HighRiskErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\HighRiskErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?HighRiskErrorLinks $links = null)

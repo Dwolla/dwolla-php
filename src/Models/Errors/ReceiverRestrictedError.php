@@ -28,7 +28,7 @@ class ReceiverRestrictedError
 
     /**
      *
-     * @var ?Components\ReceiverRestrictedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\ReceiverRestrictedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ReceiverRestrictedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class ReceiverRestrictedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\ReceiverRestrictedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\ReceiverRestrictedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

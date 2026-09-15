@@ -35,7 +35,7 @@ class ListEventsResponse
     /**
      * successful operation
      *
-     * @var ?Components\Events $events
+     * @var ?\Dwolla\Models\Components\Events $events
      */
     public ?Components\Events $events = null;
 
@@ -43,7 +43,7 @@ class ListEventsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\Events  $events
+     * @param  ?\Dwolla\Models\Components\Events  $events
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\Events $events = null)

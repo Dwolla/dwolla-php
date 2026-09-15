@@ -28,7 +28,7 @@ class InvalidMetadataError
 
     /**
      *
-     * @var ?Components\InvalidMetadataErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidMetadataErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidMetadataErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidMetadataError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidMetadataErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidMetadataErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

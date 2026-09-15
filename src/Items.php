@@ -50,7 +50,7 @@ class Items
      * Retrieve detailed information for a specific mass payment item by its unique identifier. Returns item status, amount, metadata, and links to the parent mass payment, associated transfer, and destination funding source. Use this endpoint to check the processing status and details of an individual item within a mass payment batch.
      *
      * @param  string  $itemId
-     * @return Operations\GetMassPaymentItemResponse
+     * @return \Dwolla\Models\Operations\GetMassPaymentItemResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $itemId, ?Options $options = null): Operations\GetMassPaymentItemResponse
@@ -77,11 +77,12 @@ class Items
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -141,7 +142,7 @@ class Items
      * @param  ?string  $limit
      * @param  ?string  $offset
      * @param  ?string  $status
-     * @return Operations\ListMassPaymentItemsResponse
+     * @return \Dwolla\Models\Operations\ListMassPaymentItemsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(string $id, ?string $limit = null, ?string $offset = null, ?string $status = null, ?Options $options = null): Operations\ListMassPaymentItemsResponse
@@ -174,11 +175,12 @@ class Items
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

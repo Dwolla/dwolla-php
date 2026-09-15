@@ -28,7 +28,7 @@ class DestinationProcessingChannelNotSupportedError
 
     /**
      *
-     * @var ?Components\DestinationProcessingChannelNotSupportedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\DestinationProcessingChannelNotSupportedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DestinationProcessingChannelNotSupportedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class DestinationProcessingChannelNotSupportedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\DestinationProcessingChannelNotSupportedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\DestinationProcessingChannelNotSupportedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

@@ -14,14 +14,14 @@ class CardMissingRequiredFieldsErrorEmbedded
     /**
      * $errors
      *
-     * @var array<CardMissingRequiredFieldsErrorError> $errors
+     * @var array<\Dwolla\Models\Components\CardMissingRequiredFieldsErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\CardMissingRequiredFieldsErrorError>')]
     public array $errors;
 
     /**
-     * @param  array<CardMissingRequiredFieldsErrorError>  $errors
+     * @param  array<\Dwolla\Models\Components\CardMissingRequiredFieldsErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(array $errors)

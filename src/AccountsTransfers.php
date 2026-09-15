@@ -49,8 +49,8 @@ class AccountsTransfers
      *
      * Returns a paginated, searchable list of transfers associated with the specified Main Dwolla account. Supports advanced filtering by amount range, date range, transfer status, and correlation ID. Results are limited to 10,000 transfers per query; use date range filters for historical data beyond this limit.
      *
-     * @param  Operations\ListAndSearchTransfersRequest  $request
-     * @return Operations\ListAndSearchTransfersResponse
+     * @param  \Dwolla\Models\Operations\ListAndSearchTransfersRequest  $request
+     * @return \Dwolla\Models\Operations\ListAndSearchTransfersResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(Operations\ListAndSearchTransfersRequest $request, ?Options $options = null): Operations\ListAndSearchTransfersResponse
@@ -77,11 +77,12 @@ class AccountsTransfers
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

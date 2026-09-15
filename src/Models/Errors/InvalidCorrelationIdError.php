@@ -28,7 +28,7 @@ class InvalidCorrelationIdError
 
     /**
      *
-     * @var ?Components\InvalidCorrelationIdErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidCorrelationIdErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidCorrelationIdErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidCorrelationIdError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidCorrelationIdErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidCorrelationIdErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

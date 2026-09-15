@@ -22,14 +22,14 @@ class CancelTransferRequest
     /**
      * Parameters to cancel a transfer
      *
-     * @var CancelTransferRequestBody $body
+     * @var \Dwolla\Models\Operations\CancelTransferRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public CancelTransferRequestBody $body;
 
     /**
      * @param  string  $id
-     * @param  CancelTransferRequestBody  $body
+     * @param  \Dwolla\Models\Operations\CancelTransferRequestBody  $body
      * @phpstan-pure
      */
     public function __construct(string $id, CancelTransferRequestBody $body)

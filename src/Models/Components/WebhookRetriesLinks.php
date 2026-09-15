@@ -13,7 +13,7 @@ class WebhookRetriesLinks
 {
     /**
      *
-     * @var ?WebhookRetriesSelf $self
+     * @var ?\Dwolla\Models\Components\WebhookRetriesSelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WebhookRetriesSelf|null')]
@@ -21,7 +21,7 @@ class WebhookRetriesLinks
     public ?WebhookRetriesSelf $self = null;
 
     /**
-     * @param  ?WebhookRetriesSelf  $self
+     * @param  ?\Dwolla\Models\Components\WebhookRetriesSelf  $self
      * @phpstan-pure
      */
     public function __construct(?WebhookRetriesSelf $self = null)

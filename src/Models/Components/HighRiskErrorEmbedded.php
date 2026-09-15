@@ -14,7 +14,7 @@ class HighRiskErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<HighRiskErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\HighRiskErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\HighRiskErrorError>|null')]
@@ -22,7 +22,7 @@ class HighRiskErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<HighRiskErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\HighRiskErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

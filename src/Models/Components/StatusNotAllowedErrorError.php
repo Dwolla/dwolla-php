@@ -37,7 +37,7 @@ class StatusNotAllowedErrorError
 
     /**
      *
-     * @var ?StatusNotAllowedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\StatusNotAllowedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\StatusNotAllowedErrorLinks|null')]
@@ -48,7 +48,7 @@ class StatusNotAllowedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?StatusNotAllowedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\StatusNotAllowedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?StatusNotAllowedErrorLinks $links = null)

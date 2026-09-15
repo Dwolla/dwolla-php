@@ -13,7 +13,7 @@ class InitiateMassPaymentAchDetailsSource
 {
     /**
      *
-     * @var ?InitiateMassPaymentSourceAddenda $addenda
+     * @var ?\Dwolla\Models\Operations\InitiateMassPaymentSourceAddenda $addenda
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('addenda')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateMassPaymentSourceAddenda|null')]
@@ -21,7 +21,7 @@ class InitiateMassPaymentAchDetailsSource
     public ?InitiateMassPaymentSourceAddenda $addenda = null;
 
     /**
-     * @param  ?InitiateMassPaymentSourceAddenda  $addenda
+     * @param  ?\Dwolla\Models\Operations\InitiateMassPaymentSourceAddenda  $addenda
      * @phpstan-pure
      */
     public function __construct(?InitiateMassPaymentSourceAddenda $addenda = null)

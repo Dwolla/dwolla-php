@@ -35,7 +35,7 @@ class ListAvailableExchangeConnectionsResponse
     /**
      * successful operation
      *
-     * @var ?Components\AvailableExchangeConnections $availableExchangeConnections
+     * @var ?\Dwolla\Models\Components\AvailableExchangeConnections $availableExchangeConnections
      */
     public ?Components\AvailableExchangeConnections $availableExchangeConnections = null;
 
@@ -43,7 +43,7 @@ class ListAvailableExchangeConnectionsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\AvailableExchangeConnections  $availableExchangeConnections
+     * @param  ?\Dwolla\Models\Components\AvailableExchangeConnections  $availableExchangeConnections
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\AvailableExchangeConnections $availableExchangeConnections = null)

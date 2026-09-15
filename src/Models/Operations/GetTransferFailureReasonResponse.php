@@ -35,7 +35,7 @@ class GetTransferFailureReasonResponse
     /**
      * successful operation
      *
-     * @var ?GetTransferFailureReasonResponseBody $object
+     * @var ?\Dwolla\Models\Operations\GetTransferFailureReasonResponseBody $object
      */
     public ?GetTransferFailureReasonResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class GetTransferFailureReasonResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?GetTransferFailureReasonResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\GetTransferFailureReasonResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?GetTransferFailureReasonResponseBody $object = null)

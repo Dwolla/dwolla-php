@@ -80,8 +80,8 @@ class Customers
      *
      * Creates a new customer with different verification levels and capabilities. Supports personal verified customers (individuals), business verified customers (businesses), unverified customers, and receive-only users. Customer type determines transaction limits, verification requirements, and available features.
      *
-     * @param  Components\CreateReceiveOnlyUser|Components\CreateUnverifiedCustomer|Components\CreateVerifiedPersonalCustomer|Components\CreateVerifiedSolePropCustomer|Components\CreateVerifiedBusinessCustomerWithController|Components\CreateVerifiedBusinessCustomerWithInternationalController  $request
-     * @return Operations\CreateCustomerResponse
+     * @param  \Dwolla\Models\Components\CreateReceiveOnlyUser|\Dwolla\Models\Components\CreateUnverifiedCustomer|\Dwolla\Models\Components\CreateVerifiedPersonalCustomer|\Dwolla\Models\Components\CreateVerifiedSolePropCustomer|\Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithController|\Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithInternationalController  $request
+     * @return \Dwolla\Models\Operations\CreateCustomerResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Components\CreateReceiveOnlyUser|Components\CreateUnverifiedCustomer|Components\CreateVerifiedPersonalCustomer|Components\CreateVerifiedSolePropCustomer|Components\CreateVerifiedBusinessCustomerWithController|Components\CreateVerifiedBusinessCustomerWithInternationalController $request, ?Options $options = null): Operations\CreateCustomerResponse
@@ -110,11 +110,12 @@ class Customers
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -174,7 +175,7 @@ class Customers
      * Retrieve identifying information for a specific customer. The returned data varies by customer type - verified customers include contact details, address information, and verification status, while unverified customers and receive-only users contain basic contact information only.
      *
      * @param  string  $id
-     * @return Operations\GetCustomerResponse
+     * @return \Dwolla\Models\Operations\GetCustomerResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\GetCustomerResponse
@@ -201,11 +202,12 @@ class Customers
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -265,7 +267,7 @@ class Customers
      * @param  ?int  $offset
      * @param  ?string  $search
      * @param  ?string  $status
-     * @return Operations\ListAndSearchCustomersResponse
+     * @return \Dwolla\Models\Operations\ListAndSearchCustomersResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(?int $limit = null, ?int $offset = null, ?string $search = null, ?string $status = null, ?Options $options = null): Operations\ListAndSearchCustomersResponse
@@ -298,11 +300,12 @@ class Customers
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -347,7 +350,7 @@ class Customers
      * Returns available exchange connections for a customer's bank accounts authorized through MX Connect. Each connection includes an account name and availableConnectionToken required to create exchanges and funding sources for transfers.
      *
      * @param  string  $id
-     * @return Operations\ListAvailableExchangeConnectionsResponse
+     * @return \Dwolla\Models\Operations\ListAvailableExchangeConnectionsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function listAvailableConnections(string $id, ?Options $options = null): Operations\ListAvailableExchangeConnectionsResponse
@@ -374,11 +377,12 @@ class Customers
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -424,7 +428,7 @@ class Customers
      *
      * @param  mixed  $body
      * @param  string  $id
-     * @return Operations\UpdateResponse
+     * @return \Dwolla\Models\Operations\UpdateResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function update(mixed $body, string $id, ?Options $options = null): Operations\UpdateResponse
@@ -457,11 +461,12 @@ class Customers
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

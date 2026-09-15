@@ -28,7 +28,7 @@ class InvalidAmountForDestinationClearingTypeError
 
     /**
      *
-     * @var ?Components\InvalidAmountForDestinationClearingTypeErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidAmountForDestinationClearingTypeErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidAmountForDestinationClearingTypeErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidAmountForDestinationClearingTypeError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidAmountForDestinationClearingTypeErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidAmountForDestinationClearingTypeErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

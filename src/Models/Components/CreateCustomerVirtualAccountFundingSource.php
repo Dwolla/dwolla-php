@@ -23,7 +23,7 @@ class CreateCustomerVirtualAccountFundingSource
     /**
      * Type of funding source. Must be set to "virtual" for VAN creation.
      *
-     * @var CreateCustomerVirtualAccountFundingSourceType $type
+     * @var \Dwolla\Models\Components\CreateCustomerVirtualAccountFundingSourceType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerVirtualAccountFundingSourceType')]
@@ -32,7 +32,7 @@ class CreateCustomerVirtualAccountFundingSource
     /**
      * Type of bank account. Must be "checking" for Virtual Account Numbers.
      *
-     * @var CreateCustomerVirtualAccountFundingSourceBankAccountType $bankAccountType
+     * @var \Dwolla\Models\Components\CreateCustomerVirtualAccountFundingSourceBankAccountType $bankAccountType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('bankAccountType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerVirtualAccountFundingSourceBankAccountType')]
@@ -40,8 +40,8 @@ class CreateCustomerVirtualAccountFundingSource
 
     /**
      * @param  string  $name
-     * @param  CreateCustomerVirtualAccountFundingSourceType  $type
-     * @param  CreateCustomerVirtualAccountFundingSourceBankAccountType  $bankAccountType
+     * @param  \Dwolla\Models\Components\CreateCustomerVirtualAccountFundingSourceType  $type
+     * @param  \Dwolla\Models\Components\CreateCustomerVirtualAccountFundingSourceBankAccountType  $bankAccountType
      * @phpstan-pure
      */
     public function __construct(string $name, CreateCustomerVirtualAccountFundingSourceType $type, CreateCustomerVirtualAccountFundingSourceBankAccountType $bankAccountType)

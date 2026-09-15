@@ -37,7 +37,7 @@ class InvalidFacilitatorFeeCollectFromCombinationErrorError
 
     /**
      *
-     * @var ?InvalidFacilitatorFeeCollectFromCombinationErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromCombinationErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromCombinationErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidFacilitatorFeeCollectFromCombinationErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidFacilitatorFeeCollectFromCombinationErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromCombinationErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidFacilitatorFeeCollectFromCombinationErrorLinks $links = null)

@@ -14,7 +14,7 @@ class VerifyMicroDepositsEmbedded
     /**
      * $errors
      *
-     * @var ?array<Error> $errors
+     * @var ?array<\Dwolla\Models\Operations\Error> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Operations\Error>|null')]
@@ -22,7 +22,7 @@ class VerifyMicroDepositsEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<Error>  $errors
+     * @param  ?array<\Dwolla\Models\Operations\Error>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

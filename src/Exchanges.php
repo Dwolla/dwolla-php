@@ -50,10 +50,18 @@ class Exchanges
     /**
      * Retrieve exchange resource
      *
-     * Returns details for a specific exchange connection between Dwolla and an open banking partner for a customer's bank account. Includes exchange status, creation date, and links to the associated customer and exchange partner.
+     * Returns details for a specific exchange connection between Dwolla and an open banking partner
+     * for a customer's bank account. Includes exchange status, creation date, and links to the
+     * associated customer and exchange partner.
+     *
+     * For card exchanges created from an exchange session that requested an Account Name Inquiry
+     * (ANI), the response also includes `cardDetails.accountNameInquiry` with the name-match result.
+     * Read this value before creating a card funding source to get an early signal of fraudulent
+     * card usage.
+     *
      *
      * @param  string  $id
-     * @return Operations\GetExchangeResponse
+     * @return \Dwolla\Models\Operations\GetExchangeResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\GetExchangeResponse
@@ -80,11 +88,12 @@ class Exchanges
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['401', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

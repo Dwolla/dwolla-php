@@ -28,7 +28,7 @@ class DirectAccountWithoutBankError
 
     /**
      *
-     * @var ?Components\DirectAccountWithoutBankErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\DirectAccountWithoutBankErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DirectAccountWithoutBankErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class DirectAccountWithoutBankError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\DirectAccountWithoutBankErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\DirectAccountWithoutBankErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

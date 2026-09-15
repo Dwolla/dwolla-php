@@ -50,7 +50,7 @@ class CustomersKba
      * Creates a new KBA (Knowledge-Based Authentication) session for a personal Verified Customer. Returns a KBA identifier that represents the session and is used to retrieve authentication questions for customer verification.
      *
      * @param  string  $id
-     * @return Operations\InitiateKbaForCustomerResponse
+     * @return \Dwolla\Models\Operations\InitiateKbaForCustomerResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function initiate(string $id, ?Options $options = null): Operations\InitiateKbaForCustomerResponse
@@ -77,11 +77,12 @@ class CustomersKba
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 

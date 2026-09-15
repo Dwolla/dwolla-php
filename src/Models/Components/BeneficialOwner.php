@@ -15,7 +15,7 @@ class BeneficialOwner
     /**
      * $links
      *
-     * @var array<string, HalLink> $links
+     * @var array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>')]
@@ -44,7 +44,7 @@ class BeneficialOwner
 
     /**
      *
-     * @var InternationalAddress $address
+     * @var \Dwolla\Models\Components\InternationalAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InternationalAddress')]
@@ -52,7 +52,7 @@ class BeneficialOwner
 
     /**
      *
-     * @var VerificationStatus $verificationStatus
+     * @var \Dwolla\Models\Components\VerificationStatus $verificationStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('verificationStatus')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\VerificationStatus')]
@@ -66,12 +66,12 @@ class BeneficialOwner
     public \DateTime $created;
 
     /**
-     * @param  array<string, HalLink>  $links
+     * @param  array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  string  $id
      * @param  string  $firstName
      * @param  string  $lastName
-     * @param  InternationalAddress  $address
-     * @param  VerificationStatus  $verificationStatus
+     * @param  \Dwolla\Models\Components\InternationalAddress  $address
+     * @param  \Dwolla\Models\Components\VerificationStatus  $verificationStatus
      * @param  \DateTime  $created
      * @phpstan-pure
      */

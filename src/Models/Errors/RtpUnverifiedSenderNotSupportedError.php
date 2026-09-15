@@ -28,7 +28,7 @@ class RtpUnverifiedSenderNotSupportedError
 
     /**
      *
-     * @var ?Components\RtpUnverifiedSenderNotSupportedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\RtpUnverifiedSenderNotSupportedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\RtpUnverifiedSenderNotSupportedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class RtpUnverifiedSenderNotSupportedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\RtpUnverifiedSenderNotSupportedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\RtpUnverifiedSenderNotSupportedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

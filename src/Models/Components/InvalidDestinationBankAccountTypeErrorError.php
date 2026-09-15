@@ -37,7 +37,7 @@ class InvalidDestinationBankAccountTypeErrorError
 
     /**
      *
-     * @var ?InvalidDestinationBankAccountTypeErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidDestinationBankAccountTypeErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidDestinationBankAccountTypeErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidDestinationBankAccountTypeErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidDestinationBankAccountTypeErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidDestinationBankAccountTypeErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidDestinationBankAccountTypeErrorLinks $links = null)

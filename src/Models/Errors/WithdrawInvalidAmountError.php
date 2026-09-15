@@ -28,7 +28,7 @@ class WithdrawInvalidAmountError
 
     /**
      *
-     * @var ?Components\WithdrawInvalidAmountErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WithdrawInvalidAmountErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawInvalidAmountErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WithdrawInvalidAmountError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WithdrawInvalidAmountErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WithdrawInvalidAmountErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

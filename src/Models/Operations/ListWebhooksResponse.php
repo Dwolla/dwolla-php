@@ -35,7 +35,7 @@ class ListWebhooksResponse
     /**
      * successful operation
      *
-     * @var ?ListWebhooksResponseBody $object
+     * @var ?\Dwolla\Models\Operations\ListWebhooksResponseBody $object
      */
     public ?ListWebhooksResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class ListWebhooksResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?ListWebhooksResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\ListWebhooksResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?ListWebhooksResponseBody $object = null)

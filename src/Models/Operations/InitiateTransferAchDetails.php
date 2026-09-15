@@ -13,7 +13,7 @@ class InitiateTransferAchDetails
 {
     /**
      *
-     * @var ?InitiateTransferAchDetailsSource $source
+     * @var ?\Dwolla\Models\Operations\InitiateTransferAchDetailsSource $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateTransferAchDetailsSource|null')]
@@ -22,7 +22,7 @@ class InitiateTransferAchDetails
 
     /**
      *
-     * @var ?InitiateTransferAchDetailsDestination $destination
+     * @var ?\Dwolla\Models\Operations\InitiateTransferAchDetailsDestination $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateTransferAchDetailsDestination|null')]
@@ -30,8 +30,8 @@ class InitiateTransferAchDetails
     public ?InitiateTransferAchDetailsDestination $destination = null;
 
     /**
-     * @param  ?InitiateTransferAchDetailsSource  $source
-     * @param  ?InitiateTransferAchDetailsDestination  $destination
+     * @param  ?\Dwolla\Models\Operations\InitiateTransferAchDetailsSource  $source
+     * @param  ?\Dwolla\Models\Operations\InitiateTransferAchDetailsDestination  $destination
      * @phpstan-pure
      */
     public function __construct(?InitiateTransferAchDetailsSource $source = null, ?InitiateTransferAchDetailsDestination $destination = null)

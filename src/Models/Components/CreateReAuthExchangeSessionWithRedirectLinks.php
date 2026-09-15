@@ -13,14 +13,14 @@ class CreateReAuthExchangeSessionWithRedirectLinks
 {
     /**
      *
-     * @var CreateReAuthExchangeSessionWithRedirectRedirectUrl $redirectUrl
+     * @var \Dwolla\Models\Components\CreateReAuthExchangeSessionWithRedirectRedirectUrl $redirectUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('redirect-url')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateReAuthExchangeSessionWithRedirectRedirectUrl')]
     public CreateReAuthExchangeSessionWithRedirectRedirectUrl $redirectUrl;
 
     /**
-     * @param  CreateReAuthExchangeSessionWithRedirectRedirectUrl  $redirectUrl
+     * @param  \Dwolla\Models\Components\CreateReAuthExchangeSessionWithRedirectRedirectUrl  $redirectUrl
      * @phpstan-pure
      */
     public function __construct(CreateReAuthExchangeSessionWithRedirectRedirectUrl $redirectUrl)

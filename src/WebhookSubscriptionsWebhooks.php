@@ -49,8 +49,8 @@ class WebhookSubscriptionsWebhooks
      *
      * Retrieve all fired webhooks for a specific webhook subscription with comprehensive filtering and pagination support. Returns webhook delivery history including topics, attempts, request/response details, and delivery status over a rolling 30-day period. Supports filtering by resource ID, date ranges, and pagination parameters for detailed webhook delivery analysis. Critical for debugging webhook delivery issues and monitoring event notification success rates.
      *
-     * @param  Operations\ListWebhooksRequest  $request
-     * @return Operations\ListWebhooksResponse
+     * @param  \Dwolla\Models\Operations\ListWebhooksRequest  $request
+     * @return \Dwolla\Models\Operations\ListWebhooksResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(Operations\ListWebhooksRequest $request, ?Options $options = null): Operations\ListWebhooksResponse
@@ -77,11 +77,12 @@ class WebhookSubscriptionsWebhooks
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

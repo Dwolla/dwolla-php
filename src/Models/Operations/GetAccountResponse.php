@@ -35,7 +35,7 @@ class GetAccountResponse
     /**
      * successful operation
      *
-     * @var ?Components\Account $account
+     * @var ?\Dwolla\Models\Components\Account $account
      */
     public ?Components\Account $account = null;
 
@@ -43,7 +43,7 @@ class GetAccountResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\Account  $account
+     * @param  ?\Dwolla\Models\Components\Account  $account
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\Account $account = null)

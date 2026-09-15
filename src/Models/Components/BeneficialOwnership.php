@@ -13,7 +13,7 @@ class BeneficialOwnership
 {
     /**
      *
-     * @var BeneficialOwnershipLinks $links
+     * @var \Dwolla\Models\Components\BeneficialOwnershipLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\BeneficialOwnershipLinks')]
@@ -21,15 +21,15 @@ class BeneficialOwnership
 
     /**
      *
-     * @var BeneficialOwnershipStatus $status
+     * @var \Dwolla\Models\Components\BeneficialOwnershipStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\BeneficialOwnershipStatus')]
     public BeneficialOwnershipStatus $status;
 
     /**
-     * @param  BeneficialOwnershipLinks  $links
-     * @param  BeneficialOwnershipStatus  $status
+     * @param  \Dwolla\Models\Components\BeneficialOwnershipLinks  $links
+     * @param  \Dwolla\Models\Components\BeneficialOwnershipStatus  $status
      * @phpstan-pure
      */
     public function __construct(BeneficialOwnershipLinks $links, BeneficialOwnershipStatus $status)

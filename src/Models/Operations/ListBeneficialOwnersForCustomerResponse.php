@@ -35,7 +35,7 @@ class ListBeneficialOwnersForCustomerResponse
     /**
      * successful operation
      *
-     * @var ?Components\BeneficialOwners $beneficialOwners
+     * @var ?\Dwolla\Models\Components\BeneficialOwners $beneficialOwners
      */
     public ?Components\BeneficialOwners $beneficialOwners = null;
 
@@ -43,7 +43,7 @@ class ListBeneficialOwnersForCustomerResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\BeneficialOwners  $beneficialOwners
+     * @param  ?\Dwolla\Models\Components\BeneficialOwners  $beneficialOwners
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\BeneficialOwners $beneficialOwners = null)

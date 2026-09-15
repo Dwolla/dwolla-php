@@ -14,7 +14,7 @@ class FacilitatorFeeBelowMinimumErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<FacilitatorFeeBelowMinimumErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\FacilitatorFeeBelowMinimumErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\FacilitatorFeeBelowMinimumErrorError>|null')]
@@ -22,7 +22,7 @@ class FacilitatorFeeBelowMinimumErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<FacilitatorFeeBelowMinimumErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\FacilitatorFeeBelowMinimumErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

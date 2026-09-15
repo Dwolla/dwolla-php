@@ -21,7 +21,7 @@ class Attempt
 
     /**
      *
-     * @var ?Request $request
+     * @var ?\Dwolla\Models\Components\Request $request
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('request')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Request|null')]
@@ -30,7 +30,7 @@ class Attempt
 
     /**
      *
-     * @var ?Response $response
+     * @var ?\Dwolla\Models\Components\Response $response
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('response')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Response|null')]
@@ -39,8 +39,8 @@ class Attempt
 
     /**
      * @param  ?string  $id
-     * @param  ?Request  $request
-     * @param  ?Response  $response
+     * @param  ?\Dwolla\Models\Components\Request  $request
+     * @param  ?\Dwolla\Models\Components\Response  $response
      * @phpstan-pure
      */
     public function __construct(?string $id = null, ?Request $request = null, ?Response $response = null)

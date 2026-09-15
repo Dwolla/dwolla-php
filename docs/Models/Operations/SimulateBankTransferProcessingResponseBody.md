@@ -11,7 +11,7 @@ return HAL `_links.self` and `errorCode` (retrieve the Customer for `_embedded.e
 
 ```php
 /**
-* @var Components\SandboxSimulationBankProcessingResponse
+* @var \Dwolla\Models\Components\SandboxSimulationBankProcessingResponse
 */
 Components\SandboxSimulationBankProcessingResponse $value = /* values here */
 ```
@@ -20,7 +20,7 @@ Components\SandboxSimulationBankProcessingResponse $value = /* values here */
 
 ```php
 /**
-* @var Components\SandboxSimulationCustomerVerificationResponse
+* @var \Dwolla\Models\Components\SandboxSimulationCustomerVerificationResponse
 */
 Components\SandboxSimulationCustomerVerificationResponse $value = /* values here */
 ```

@@ -30,7 +30,7 @@ class SecretTooLongError
 
     /**
      *
-     * @var ?Components\SecretTooLongErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\SecretTooLongErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SecretTooLongErrorEmbedded|null')]
@@ -49,7 +49,7 @@ class SecretTooLongError
     /**
      * @param  ?string  $code
      * @param  ?string  $message
-     * @param  ?Components\SecretTooLongErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\SecretTooLongErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

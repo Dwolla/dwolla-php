@@ -22,7 +22,7 @@ class SandboxSimulationBankProcessingResponse
 
     /**
      *
-     * @var SandboxSimulationBankProcessingResponseLinks $links
+     * @var \Dwolla\Models\Components\SandboxSimulationBankProcessingResponseLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SandboxSimulationBankProcessingResponseLinks')]
@@ -30,7 +30,7 @@ class SandboxSimulationBankProcessingResponse
 
     /**
      * @param  int  $total
-     * @param  SandboxSimulationBankProcessingResponseLinks  $links
+     * @param  \Dwolla\Models\Components\SandboxSimulationBankProcessingResponseLinks  $links
      * @phpstan-pure
      */
     public function __construct(int $total, SandboxSimulationBankProcessingResponseLinks $links)

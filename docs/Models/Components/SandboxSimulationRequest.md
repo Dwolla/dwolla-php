@@ -12,7 +12,7 @@ are mutually exclusive; use only an omitted body or `{}` for bank processing.
 
 ```php
 /**
-* @var Components\SandboxSimulationVirtualAccountTransfersRequest
+* @var \Dwolla\Models\Components\SandboxSimulationVirtualAccountTransfersRequest
 */
 Components\SandboxSimulationVirtualAccountTransfersRequest $value = /* values here */
 ```
@@ -21,7 +21,7 @@ Components\SandboxSimulationVirtualAccountTransfersRequest $value = /* values he
 
 ```php
 /**
-* @var Components\SandboxSimulationCustomerVerificationRequest
+* @var \Dwolla\Models\Components\SandboxSimulationCustomerVerificationRequest
 */
 Components\SandboxSimulationCustomerVerificationRequest $value = /* values here */
 ```
@@ -30,7 +30,7 @@ Components\SandboxSimulationCustomerVerificationRequest $value = /* values here 
 
 ```php
 /**
-* @var Components\SandboxSimulationBankProcessingRequest
+* @var \Dwolla\Models\Components\SandboxSimulationBankProcessingRequest
 */
 Components\SandboxSimulationBankProcessingRequest $value = /* values here */
 ```

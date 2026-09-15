@@ -9,7 +9,7 @@
 
 ```php
 /**
-* @var Errors\ForbiddenError
+* @var \Dwolla\Models\Errors\ForbiddenError
 */
 Errors\ForbiddenError $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\ForbiddenError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidKbaSessionError
+* @var \Dwolla\Models\Errors\InvalidKbaSessionError
 */
 Errors\InvalidKbaSessionError $value = /* values here */
 ```
@@ -27,7 +27,7 @@ Errors\InvalidKbaSessionError $value = /* values here */
 
 ```php
 /**
-* @var Errors\ExpiredKbaSessionError
+* @var \Dwolla\Models\Errors\ExpiredKbaSessionError
 */
 Errors\ExpiredKbaSessionError $value = /* values here */
 ```

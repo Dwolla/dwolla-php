@@ -14,14 +14,14 @@ class InvalidTokenErrorEmbedded
     /**
      * $errors
      *
-     * @var array<InvalidTokenErrorError> $errors
+     * @var array<\Dwolla\Models\Components\InvalidTokenErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidTokenErrorError>')]
     public array $errors;
 
     /**
-     * @param  array<InvalidTokenErrorError>  $errors
+     * @param  array<\Dwolla\Models\Components\InvalidTokenErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(array $errors)

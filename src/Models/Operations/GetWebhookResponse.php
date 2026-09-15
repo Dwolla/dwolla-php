@@ -35,7 +35,7 @@ class GetWebhookResponse
     /**
      * successful operation
      *
-     * @var ?Components\Webhook $webhook
+     * @var ?\Dwolla\Models\Components\Webhook $webhook
      */
     public ?Components\Webhook $webhook = null;
 
@@ -43,7 +43,7 @@ class GetWebhookResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\Webhook  $webhook
+     * @param  ?\Dwolla\Models\Components\Webhook  $webhook
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\Webhook $webhook = null)

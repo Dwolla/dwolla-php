@@ -28,7 +28,7 @@ class PrefundingSourceNotAllowedError
 
     /**
      *
-     * @var ?Components\PrefundingSourceNotAllowedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\PrefundingSourceNotAllowedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\PrefundingSourceNotAllowedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class PrefundingSourceNotAllowedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\PrefundingSourceNotAllowedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\PrefundingSourceNotAllowedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

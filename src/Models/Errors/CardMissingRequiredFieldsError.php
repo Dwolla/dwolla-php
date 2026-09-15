@@ -29,7 +29,7 @@ class CardMissingRequiredFieldsError
 
     /**
      *
-     * @var Components\CardMissingRequiredFieldsErrorEmbedded $embedded
+     * @var \Dwolla\Models\Components\CardMissingRequiredFieldsErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CardMissingRequiredFieldsErrorEmbedded')]
@@ -47,7 +47,7 @@ class CardMissingRequiredFieldsError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  Components\CardMissingRequiredFieldsErrorEmbedded  $embedded
+     * @param  \Dwolla\Models\Components\CardMissingRequiredFieldsErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

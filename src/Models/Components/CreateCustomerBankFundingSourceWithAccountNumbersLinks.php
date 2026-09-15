@@ -13,7 +13,7 @@ class CreateCustomerBankFundingSourceWithAccountNumbersLinks
 {
     /**
      *
-     * @var ?CreateCustomerBankFundingSourceWithAccountNumbersOnDemandAuthorization $onDemandAuthorization
+     * @var ?\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersOnDemandAuthorization $onDemandAuthorization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('on-demand-authorization')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersOnDemandAuthorization|null')]
@@ -21,7 +21,7 @@ class CreateCustomerBankFundingSourceWithAccountNumbersLinks
     public ?CreateCustomerBankFundingSourceWithAccountNumbersOnDemandAuthorization $onDemandAuthorization = null;
 
     /**
-     * @param  ?CreateCustomerBankFundingSourceWithAccountNumbersOnDemandAuthorization  $onDemandAuthorization
+     * @param  ?\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersOnDemandAuthorization  $onDemandAuthorization
      * @phpstan-pure
      */
     public function __construct(?CreateCustomerBankFundingSourceWithAccountNumbersOnDemandAuthorization $onDemandAuthorization = null)

@@ -14,7 +14,7 @@ class SourceAddendaMaxLengthErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<SourceAddendaMaxLengthErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\SourceAddendaMaxLengthErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\SourceAddendaMaxLengthErrorError>|null')]
@@ -22,7 +22,7 @@ class SourceAddendaMaxLengthErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<SourceAddendaMaxLengthErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\SourceAddendaMaxLengthErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

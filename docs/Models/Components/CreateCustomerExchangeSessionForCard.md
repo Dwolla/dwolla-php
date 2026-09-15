@@ -1,0 +1,17 @@
+# CreateCustomerExchangeSessionForCard
+
+Create an exchange session for debit card capture (Push to Card).
+
+Optionally opt into Account Name Inquiry (ANI) by passing `cardDetails` with the cardholder
+name you expect on the card. The name-match result is returned on the resulting Exchange as
+`cardDetails.accountNameInquiry`, giving you an early signal of fraudulent card usage before
+you create a funding source.
+
+
+
+## Fields
+
+| Field                                                                                                                                                                               | Type                                                                                                                                                                                | Required                                                                                                                                                                            | Description                                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `links`                                                                                                                                                                             | [Components\CreateCustomerExchangeSessionForCardLinks](../../Models/Components/CreateCustomerExchangeSessionForCardLinks.md)                                                        | :heavy_check_mark:                                                                                                                                                                  | N/A                                                                                                                                                                                 |
+| `cardDetails`                                                                                                                                                                       | [?Components\CreateCustomerExchangeSessionForCardCardDetails](../../Models/Components/CreateCustomerExchangeSessionForCardCardDetails.md)                                           | :heavy_minus_sign:                                                                                                                                                                  | Optional. Opt into Account Name Inquiry (ANI) for this session by providing the expected<br/>cardholder name. Retrieve the resulting match on the Exchange with `GET /exchanges/{id}`.<br/> |

@@ -14,7 +14,7 @@ class BankBalanceResponse
 {
     /**
      *
-     * @var GetFundingSourceBalanceLinks1 $links
+     * @var \Dwolla\Models\Operations\GetFundingSourceBalanceLinks1 $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\GetFundingSourceBalanceLinks1')]
@@ -22,7 +22,7 @@ class BankBalanceResponse
 
     /**
      *
-     * @var Available1 $available
+     * @var \Dwolla\Models\Operations\Available1 $available
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('available')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\Available1')]
@@ -30,7 +30,7 @@ class BankBalanceResponse
 
     /**
      *
-     * @var Closing $closing
+     * @var \Dwolla\Models\Operations\Closing $closing
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('closing')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\Closing')]
@@ -44,9 +44,9 @@ class BankBalanceResponse
     public string $lastUpdated;
 
     /**
-     * @param  GetFundingSourceBalanceLinks1  $links
-     * @param  Available1  $available
-     * @param  Closing  $closing
+     * @param  \Dwolla\Models\Operations\GetFundingSourceBalanceLinks1  $links
+     * @param  \Dwolla\Models\Operations\Available1  $available
+     * @param  \Dwolla\Models\Operations\Closing  $closing
      * @param  string  $lastUpdated
      * @phpstan-pure
      */

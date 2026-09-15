@@ -14,7 +14,7 @@ class DestinationProcessingChannelNotSupportedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<DestinationProcessingChannelNotSupportedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\DestinationProcessingChannelNotSupportedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\DestinationProcessingChannelNotSupportedErrorError>|null')]
@@ -22,7 +22,7 @@ class DestinationProcessingChannelNotSupportedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<DestinationProcessingChannelNotSupportedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\DestinationProcessingChannelNotSupportedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

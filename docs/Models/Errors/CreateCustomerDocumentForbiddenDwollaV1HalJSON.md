@@ -9,7 +9,7 @@ not found
 
 ```php
 /**
-* @var Errors\InvalidResourceStateSchemaException
+* @var \Dwolla\Models\Errors\InvalidResourceStateSchemaException
 */
 Errors\InvalidResourceStateSchemaException $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\InvalidResourceStateSchemaException $value = /* values here */
 
 ```php
 /**
-* @var Errors\NotAuthorizedSchemaException
+* @var \Dwolla\Models\Errors\NotAuthorizedSchemaException
 */
 Errors\NotAuthorizedSchemaException $value = /* values here */
 ```

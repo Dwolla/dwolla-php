@@ -13,7 +13,7 @@ class InitiateTransferLinks
 {
     /**
      *
-     * @var ?InitiateTransferLinksSource $source
+     * @var ?\Dwolla\Models\Operations\InitiateTransferLinksSource $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateTransferLinksSource|null')]
@@ -22,7 +22,7 @@ class InitiateTransferLinks
 
     /**
      *
-     * @var ?InitiateTransferLinksDestination $destination
+     * @var ?\Dwolla\Models\Operations\InitiateTransferLinksDestination $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateTransferLinksDestination|null')]
@@ -30,8 +30,8 @@ class InitiateTransferLinks
     public ?InitiateTransferLinksDestination $destination = null;
 
     /**
-     * @param  ?InitiateTransferLinksSource  $source
-     * @param  ?InitiateTransferLinksDestination  $destination
+     * @param  ?\Dwolla\Models\Operations\InitiateTransferLinksSource  $source
+     * @param  ?\Dwolla\Models\Operations\InitiateTransferLinksDestination  $destination
      * @phpstan-pure
      */
     public function __construct(?InitiateTransferLinksSource $source = null, ?InitiateTransferLinksDestination $destination = null)

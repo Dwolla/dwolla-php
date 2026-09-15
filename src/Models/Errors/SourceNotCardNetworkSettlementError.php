@@ -28,7 +28,7 @@ class SourceNotCardNetworkSettlementError
 
     /**
      *
-     * @var ?Components\SourceNotCardNetworkSettlementErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\SourceNotCardNetworkSettlementErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SourceNotCardNetworkSettlementErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class SourceNotCardNetworkSettlementError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\SourceNotCardNetworkSettlementErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\SourceNotCardNetworkSettlementErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

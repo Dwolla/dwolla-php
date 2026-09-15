@@ -13,7 +13,7 @@ class GetFundingSourceBalanceLinks2
 {
     /**
      *
-     * @var ?GetFundingSourceBalanceSelf2 $self
+     * @var ?\Dwolla\Models\Operations\GetFundingSourceBalanceSelf2 $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\GetFundingSourceBalanceSelf2|null')]
@@ -22,7 +22,7 @@ class GetFundingSourceBalanceLinks2
 
     /**
      *
-     * @var ?FundingSource2 $fundingSource
+     * @var ?\Dwolla\Models\Operations\FundingSource2 $fundingSource
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('funding-source')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\FundingSource2|null')]
@@ -30,8 +30,8 @@ class GetFundingSourceBalanceLinks2
     public ?FundingSource2 $fundingSource = null;
 
     /**
-     * @param  ?GetFundingSourceBalanceSelf2  $self
-     * @param  ?FundingSource2  $fundingSource
+     * @param  ?\Dwolla\Models\Operations\GetFundingSourceBalanceSelf2  $self
+     * @param  ?\Dwolla\Models\Operations\FundingSource2  $fundingSource
      * @phpstan-pure
      */
     public function __construct(?GetFundingSourceBalanceSelf2 $self = null, ?FundingSource2 $fundingSource = null)

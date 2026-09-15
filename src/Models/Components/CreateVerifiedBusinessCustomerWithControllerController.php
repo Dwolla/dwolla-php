@@ -41,7 +41,7 @@ class CreateVerifiedBusinessCustomerWithControllerController
 
     /**
      *
-     * @var InternationalAddress $address
+     * @var \Dwolla\Models\Components\InternationalAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InternationalAddress')]
@@ -59,7 +59,7 @@ class CreateVerifiedBusinessCustomerWithControllerController
      * @param  string  $lastName
      * @param  string  $title
      * @param  string  $dateOfBirth
-     * @param  InternationalAddress  $address
+     * @param  \Dwolla\Models\Components\InternationalAddress  $address
      * @param  string  $ssn
      * @phpstan-pure
      */

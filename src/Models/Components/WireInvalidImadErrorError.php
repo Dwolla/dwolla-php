@@ -37,7 +37,7 @@ class WireInvalidImadErrorError
 
     /**
      *
-     * @var ?WireInvalidImadErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WireInvalidImadErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WireInvalidImadErrorLinks|null')]
@@ -48,7 +48,7 @@ class WireInvalidImadErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WireInvalidImadErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WireInvalidImadErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WireInvalidImadErrorLinks $links = null)

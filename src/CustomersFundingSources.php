@@ -50,9 +50,9 @@ class CustomersFundingSources
      *
      * Creates a bank account or debit card funding source for a customer. Supports multiple methods including manual entry with routing/account numbers, instant verification using existing open banking connections, debit card addition via Exchange, and virtual account numbers. Bank funding sources require verification before transfers can be initiated.
      *
-     * @param  Components\CreateCustomerBankFundingSourceWithAccountNumbers|Components\CreateCustomerBankFundingSourceWithPlaid|Components\CreateCustomerExchangeFundingSource|Components\CreateCustomerVirtualAccountFundingSource|Components\CreateCustomerCardFundingSourceWithExchange  $body
+     * @param  \Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbers|\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaid|\Dwolla\Models\Components\CreateCustomerExchangeFundingSource|\Dwolla\Models\Components\CreateCustomerVirtualAccountFundingSource|\Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchange  $body
      * @param  string  $id
-     * @return Operations\CreateCustomerFundingSourceResponse
+     * @return \Dwolla\Models\Operations\CreateCustomerFundingSourceResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Components\CreateCustomerBankFundingSourceWithAccountNumbers|Components\CreateCustomerBankFundingSourceWithPlaid|Components\CreateCustomerExchangeFundingSource|Components\CreateCustomerVirtualAccountFundingSource|Components\CreateCustomerCardFundingSourceWithExchange $body, string $id, ?Options $options = null): Operations\CreateCustomerFundingSourceResponse
@@ -85,11 +85,12 @@ class CustomersFundingSources
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -150,7 +151,7 @@ class CustomersFundingSources
      *
      * @param  string  $id
      * @param  ?string  $removed
-     * @return Operations\ListCustomerFundingSourcesResponse
+     * @return \Dwolla\Models\Operations\ListCustomerFundingSourcesResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(string $id, ?string $removed = null, ?Options $options = null): Operations\ListCustomerFundingSourcesResponse
@@ -181,11 +182,12 @@ class CustomersFundingSources
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

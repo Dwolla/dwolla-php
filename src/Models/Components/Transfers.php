@@ -14,7 +14,7 @@ class Transfers
     /**
      * $links
      *
-     * @var ?array<string, HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -23,7 +23,7 @@ class Transfers
 
     /**
      *
-     * @var ?TransfersEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\TransfersEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\TransfersEmbedded|null')]
@@ -39,8 +39,8 @@ class Transfers
     public ?int $total = null;
 
     /**
-     * @param  ?array<string, HalLink>  $links
-     * @param  ?TransfersEmbedded  $embedded
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
+     * @param  ?\Dwolla\Models\Components\TransfersEmbedded  $embedded
      * @param  ?int  $total
      * @phpstan-pure
      */

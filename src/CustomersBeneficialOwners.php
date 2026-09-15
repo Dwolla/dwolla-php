@@ -50,9 +50,9 @@ class CustomersBeneficialOwners
      *
      * Creates a new beneficial owner for a business verified customer. Beneficial owners are individuals who own 25% or more of the company's equity. Requires personal information, address, and SSN or passport for identity verification.
      *
-     * @param  Components\CreateUSBeneficialOwner|Components\CreateInternationalBeneficialOwner  $body
+     * @param  \Dwolla\Models\Components\CreateUSBeneficialOwner|\Dwolla\Models\Components\CreateInternationalBeneficialOwner  $body
      * @param  string  $id
-     * @return Operations\CreateBeneficialOwnerForCustomerResponse
+     * @return \Dwolla\Models\Operations\CreateBeneficialOwnerForCustomerResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Components\CreateUSBeneficialOwner|Components\CreateInternationalBeneficialOwner $body, string $id, ?Options $options = null): Operations\CreateBeneficialOwnerForCustomerResponse
@@ -85,11 +85,12 @@ class CustomersBeneficialOwners
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -149,7 +150,7 @@ class CustomersBeneficialOwners
      * Returns all beneficial owners associated with a business verified customer. Beneficial owners are individuals who directly or indirectly own 25% or more of the company's equity. Includes personal information, verification status, and address details for each owner.
      *
      * @param  string  $id
-     * @return Operations\ListBeneficialOwnersForCustomerResponse
+     * @return \Dwolla\Models\Operations\ListBeneficialOwnersForCustomerResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(string $id, ?Options $options = null): Operations\ListBeneficialOwnersForCustomerResponse
@@ -176,11 +177,12 @@ class CustomersBeneficialOwners
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

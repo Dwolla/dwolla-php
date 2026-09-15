@@ -14,7 +14,7 @@ class RtpFacilitatorFeeNotSupportedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<RtpFacilitatorFeeNotSupportedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\RtpFacilitatorFeeNotSupportedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\RtpFacilitatorFeeNotSupportedErrorError>|null')]
@@ -22,7 +22,7 @@ class RtpFacilitatorFeeNotSupportedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<RtpFacilitatorFeeNotSupportedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\RtpFacilitatorFeeNotSupportedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

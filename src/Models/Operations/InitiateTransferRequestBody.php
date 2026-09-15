@@ -14,7 +14,7 @@ class InitiateTransferRequestBody
 {
     /**
      *
-     * @var InitiateTransferLinks $links
+     * @var \Dwolla\Models\Operations\InitiateTransferLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateTransferLinks')]
@@ -22,7 +22,7 @@ class InitiateTransferRequestBody
 
     /**
      *
-     * @var Components\TransferAmount $amount
+     * @var \Dwolla\Models\Components\TransferAmount $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\TransferAmount')]
@@ -30,7 +30,7 @@ class InitiateTransferRequestBody
 
     /**
      *
-     * @var ?InitiateTransferMetadata $metadata
+     * @var ?\Dwolla\Models\Operations\InitiateTransferMetadata $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateTransferMetadata|null')]
@@ -40,7 +40,7 @@ class InitiateTransferRequestBody
     /**
      * $fees
      *
-     * @var ?array<Fee> $fees
+     * @var ?array<\Dwolla\Models\Operations\Fee> $fees
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('fees')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Operations\Fee>|null')]
@@ -49,7 +49,7 @@ class InitiateTransferRequestBody
 
     /**
      *
-     * @var ?InitiateTransferClearing $clearing
+     * @var ?\Dwolla\Models\Operations\InitiateTransferClearing $clearing
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('clearing')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateTransferClearing|null')]
@@ -58,7 +58,7 @@ class InitiateTransferRequestBody
 
     /**
      *
-     * @var ?InitiateTransferAchDetails $achDetails
+     * @var ?\Dwolla\Models\Operations\InitiateTransferAchDetails $achDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('achDetails')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateTransferAchDetails|null')]
@@ -68,7 +68,7 @@ class InitiateTransferRequestBody
     /**
      * Real-Time Payments (RTP) specific transaction details.
      *
-     * @var ?RtpDetails $rtpDetails
+     * @var ?\Dwolla\Models\Operations\RtpDetails $rtpDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('rtpDetails')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\RtpDetails|null')]
@@ -78,7 +78,7 @@ class InitiateTransferRequestBody
     /**
      * Instant Payments specific transaction details for both RTP and FedNow networks.
      *
-     * @var ?InstantDetails $instantDetails
+     * @var ?\Dwolla\Models\Operations\InstantDetails $instantDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('instantDetails')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InstantDetails|null')]
@@ -95,7 +95,7 @@ class InitiateTransferRequestBody
 
     /**
      *
-     * @var ?InitiateTransferProcessingChannel $processingChannel
+     * @var ?\Dwolla\Models\Operations\InitiateTransferProcessingChannel $processingChannel
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('processingChannel')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateTransferProcessingChannel|null')]
@@ -103,16 +103,16 @@ class InitiateTransferRequestBody
     public ?InitiateTransferProcessingChannel $processingChannel = null;
 
     /**
-     * @param  InitiateTransferLinks  $links
-     * @param  Components\TransferAmount  $amount
-     * @param  ?InitiateTransferMetadata  $metadata
-     * @param  ?array<Fee>  $fees
-     * @param  ?InitiateTransferClearing  $clearing
-     * @param  ?InitiateTransferAchDetails  $achDetails
-     * @param  ?RtpDetails  $rtpDetails
-     * @param  ?InstantDetails  $instantDetails
+     * @param  \Dwolla\Models\Operations\InitiateTransferLinks  $links
+     * @param  \Dwolla\Models\Components\TransferAmount  $amount
+     * @param  ?\Dwolla\Models\Operations\InitiateTransferMetadata  $metadata
+     * @param  ?array<\Dwolla\Models\Operations\Fee>  $fees
+     * @param  ?\Dwolla\Models\Operations\InitiateTransferClearing  $clearing
+     * @param  ?\Dwolla\Models\Operations\InitiateTransferAchDetails  $achDetails
+     * @param  ?\Dwolla\Models\Operations\RtpDetails  $rtpDetails
+     * @param  ?\Dwolla\Models\Operations\InstantDetails  $instantDetails
      * @param  ?string  $correlationId
-     * @param  ?InitiateTransferProcessingChannel  $processingChannel
+     * @param  ?\Dwolla\Models\Operations\InitiateTransferProcessingChannel  $processingChannel
      * @phpstan-pure
      */
     public function __construct(InitiateTransferLinks $links, Components\TransferAmount $amount, ?InitiateTransferMetadata $metadata = null, ?array $fees = null, ?InitiateTransferClearing $clearing = null, ?InitiateTransferAchDetails $achDetails = null, ?RtpDetails $rtpDetails = null, ?InstantDetails $instantDetails = null, ?string $correlationId = null, ?InitiateTransferProcessingChannel $processingChannel = null)

@@ -13,14 +13,14 @@ class CreateTokenBasedExchangeLinks
 {
     /**
      *
-     * @var CreateTokenBasedExchangeExchangePartner $exchangePartner
+     * @var \Dwolla\Models\Components\CreateTokenBasedExchangeExchangePartner $exchangePartner
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('exchange-partner')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateTokenBasedExchangeExchangePartner')]
     public CreateTokenBasedExchangeExchangePartner $exchangePartner;
 
     /**
-     * @param  CreateTokenBasedExchangeExchangePartner  $exchangePartner
+     * @param  \Dwolla\Models\Components\CreateTokenBasedExchangeExchangePartner  $exchangePartner
      * @phpstan-pure
      */
     public function __construct(CreateTokenBasedExchangeExchangePartner $exchangePartner)

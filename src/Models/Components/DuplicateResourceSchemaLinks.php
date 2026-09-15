@@ -13,7 +13,7 @@ class DuplicateResourceSchemaLinks
 {
     /**
      *
-     * @var ?About $about
+     * @var ?\Dwolla\Models\Components\About $about
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('about')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\About|null')]
@@ -21,7 +21,7 @@ class DuplicateResourceSchemaLinks
     public ?About $about = null;
 
     /**
-     * @param  ?About  $about
+     * @param  ?\Dwolla\Models\Components\About  $about
      * @phpstan-pure
      */
     public function __construct(?About $about = null)

@@ -14,21 +14,21 @@ class CreateCustomerDocumentRequestBody
 {
     /**
      *
-     * @var CreateCustomerDocumentDocumentType $documentType
+     * @var \Dwolla\Models\Operations\CreateCustomerDocumentDocumentType $documentType
      */
     #[SpeakeasyMetadata('multipartForm:name=documentType')]
     public CreateCustomerDocumentDocumentType $documentType;
 
     /**
      *
-     * @var CreateCustomerDocumentFile $file
+     * @var \Dwolla\Models\Operations\CreateCustomerDocumentFile $file
      */
     #[SpeakeasyMetadata('multipartForm:file=true,name=file')]
     public CreateCustomerDocumentFile $file;
 
     /**
-     * @param  CreateCustomerDocumentDocumentType  $documentType
-     * @param  CreateCustomerDocumentFile  $file
+     * @param  \Dwolla\Models\Operations\CreateCustomerDocumentDocumentType  $documentType
+     * @param  \Dwolla\Models\Operations\CreateCustomerDocumentFile  $file
      * @phpstan-pure
      */
     public function __construct(CreateCustomerDocumentDocumentType $documentType, CreateCustomerDocumentFile $file)

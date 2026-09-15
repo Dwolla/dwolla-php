@@ -28,7 +28,7 @@ class AchAddendaEntriesNotEnabledForAccountError
 
     /**
      *
-     * @var ?Components\AchAddendaEntriesNotEnabledForAccountErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\AchAddendaEntriesNotEnabledForAccountErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\AchAddendaEntriesNotEnabledForAccountErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class AchAddendaEntriesNotEnabledForAccountError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\AchAddendaEntriesNotEnabledForAccountErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\AchAddendaEntriesNotEnabledForAccountErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

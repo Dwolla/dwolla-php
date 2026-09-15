@@ -13,7 +13,7 @@ class WebhookLinks
 {
     /**
      *
-     * @var ?WebhookSelf $self
+     * @var ?\Dwolla\Models\Components\WebhookSelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WebhookSelf|null')]
@@ -22,7 +22,7 @@ class WebhookLinks
 
     /**
      *
-     * @var ?Subscription $subscription
+     * @var ?\Dwolla\Models\Components\Subscription $subscription
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subscription')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Subscription|null')]
@@ -31,7 +31,7 @@ class WebhookLinks
 
     /**
      *
-     * @var ?WebhookRetry $retry
+     * @var ?\Dwolla\Models\Components\WebhookRetry $retry
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('retry')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WebhookRetry|null')]
@@ -40,7 +40,7 @@ class WebhookLinks
 
     /**
      *
-     * @var ?WebhookEvent $event
+     * @var ?\Dwolla\Models\Components\WebhookEvent $event
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('event')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WebhookEvent|null')]
@@ -48,10 +48,10 @@ class WebhookLinks
     public ?WebhookEvent $event = null;
 
     /**
-     * @param  ?WebhookSelf  $self
-     * @param  ?Subscription  $subscription
-     * @param  ?WebhookRetry  $retry
-     * @param  ?WebhookEvent  $event
+     * @param  ?\Dwolla\Models\Components\WebhookSelf  $self
+     * @param  ?\Dwolla\Models\Components\Subscription  $subscription
+     * @param  ?\Dwolla\Models\Components\WebhookRetry  $retry
+     * @param  ?\Dwolla\Models\Components\WebhookEvent  $event
      * @phpstan-pure
      */
     public function __construct(?WebhookSelf $self = null, ?Subscription $subscription = null, ?WebhookRetry $retry = null, ?WebhookEvent $event = null)

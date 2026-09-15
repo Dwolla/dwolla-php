@@ -35,7 +35,7 @@ class ListAndSearchCustomersResponse
     /**
      * successful operation
      *
-     * @var ?Components\Customers $customers
+     * @var ?\Dwolla\Models\Components\Customers $customers
      */
     public ?Components\Customers $customers = null;
 
@@ -43,7 +43,7 @@ class ListAndSearchCustomersResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\Customers  $customers
+     * @param  ?\Dwolla\Models\Components\Customers  $customers
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\Customers $customers = null)

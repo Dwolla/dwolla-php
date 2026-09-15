@@ -14,7 +14,7 @@ class LabelLedgerEntriesEmbedded
     /**
      * $ledgerEntries
      *
-     * @var ?array<LabelLedgerEntry> $ledgerEntries
+     * @var ?array<\Dwolla\Models\Components\LabelLedgerEntry> $ledgerEntries
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('ledger-entries')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\LabelLedgerEntry>|null')]
@@ -22,7 +22,7 @@ class LabelLedgerEntriesEmbedded
     public ?array $ledgerEntries = null;
 
     /**
-     * @param  ?array<LabelLedgerEntry>  $ledgerEntries
+     * @param  ?array<\Dwolla\Models\Components\LabelLedgerEntry>  $ledgerEntries
      * @phpstan-pure
      */
     public function __construct(?array $ledgerEntries = null)

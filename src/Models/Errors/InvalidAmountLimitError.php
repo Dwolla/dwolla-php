@@ -28,7 +28,7 @@ class InvalidAmountLimitError
 
     /**
      *
-     * @var ?Components\InvalidAmountLimitErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidAmountLimitErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidAmountLimitErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidAmountLimitError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidAmountLimitErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidAmountLimitErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

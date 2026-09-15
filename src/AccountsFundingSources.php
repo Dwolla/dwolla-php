@@ -53,8 +53,8 @@ class AccountsFundingSources
      * For more information about funding sources, see the [Funding Sources API Reference](https://developers.dwolla.com/docs/api-reference/funding-sources).
      *
      *
-     * @param  Components\CreateAccountFundingSource  $request
-     * @return Operations\CreateFundingSourceResponse
+     * @param  \Dwolla\Models\Components\CreateAccountFundingSource  $request
+     * @return \Dwolla\Models\Operations\CreateFundingSourceResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Components\CreateAccountFundingSource $request, ?Options $options = null): Operations\CreateFundingSourceResponse
@@ -83,11 +83,12 @@ class AccountsFundingSources
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -137,7 +138,7 @@ class AccountsFundingSources
      *
      * @param  string  $id
      * @param  ?string  $removed
-     * @return Operations\ListFundingSourcesResponse
+     * @return \Dwolla\Models\Operations\ListFundingSourcesResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(string $id, ?string $removed = null, ?Options $options = null): Operations\ListFundingSourcesResponse
@@ -168,11 +169,12 @@ class AccountsFundingSources
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

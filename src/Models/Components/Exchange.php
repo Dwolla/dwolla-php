@@ -14,7 +14,7 @@ class Exchange
     /**
      * $links
      *
-     * @var array<string, HalLink> $links
+     * @var array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>')]
@@ -29,7 +29,7 @@ class Exchange
 
     /**
      *
-     * @var ExchangeStatus $status
+     * @var \Dwolla\Models\Components\ExchangeStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ExchangeStatus')]
@@ -43,17 +43,32 @@ class Exchange
     public \DateTime $created;
 
     /**
-     * @param  array<string, HalLink>  $links
+     * Card-specific details. Only present for card exchanges where an Account Name Inquiry (ANI)
+     *
+     * was requested on the exchange session.
+     *
+     *
+     * @var ?\Dwolla\Models\Components\ExchangeCardDetails $cardDetails
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('cardDetails')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ExchangeCardDetails|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?ExchangeCardDetails $cardDetails = null;
+
+    /**
+     * @param  array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  string  $id
-     * @param  ExchangeStatus  $status
+     * @param  \Dwolla\Models\Components\ExchangeStatus  $status
      * @param  \DateTime  $created
+     * @param  ?\Dwolla\Models\Components\ExchangeCardDetails  $cardDetails
      * @phpstan-pure
      */
-    public function __construct(array $links, string $id, ExchangeStatus $status, \DateTime $created)
+    public function __construct(array $links, string $id, ExchangeStatus $status, \DateTime $created, ?ExchangeCardDetails $cardDetails = null)
     {
         $this->links = $links;
         $this->id = $id;
         $this->status = $status;
         $this->created = $created;
+        $this->cardDetails = $cardDetails;
     }
 }

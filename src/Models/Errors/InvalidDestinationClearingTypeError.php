@@ -28,7 +28,7 @@ class InvalidDestinationClearingTypeError
 
     /**
      *
-     * @var ?Components\InvalidDestinationClearingTypeErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidDestinationClearingTypeErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidDestinationClearingTypeErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidDestinationClearingTypeError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidDestinationClearingTypeErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidDestinationClearingTypeErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

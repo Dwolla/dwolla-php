@@ -14,7 +14,7 @@ class CustomersEmbedded
     /**
      * $customers
      *
-     * @var ?array<UnverifiedCustomer|ReceiveOnlyCustomer|VerifiedPersonalCustomer|VerifiedSolePropCustomer|VerifiedBusinessCustomer> $customers
+     * @var ?array<\Dwolla\Models\Components\UnverifiedCustomer|\Dwolla\Models\Components\ReceiveOnlyCustomer|\Dwolla\Models\Components\VerifiedPersonalCustomer|\Dwolla\Models\Components\VerifiedSolePropCustomer|\Dwolla\Models\Components\VerifiedBusinessCustomer> $customers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\UnverifiedCustomer|\Dwolla\Models\Components\ReceiveOnlyCustomer|\Dwolla\Models\Components\VerifiedPersonalCustomer|\Dwolla\Models\Components\VerifiedSolePropCustomer|\Dwolla\Models\Components\VerifiedBusinessCustomer>|null')]
@@ -22,7 +22,7 @@ class CustomersEmbedded
     public ?array $customers = null;
 
     /**
-     * @param  ?array<UnverifiedCustomer|ReceiveOnlyCustomer|VerifiedPersonalCustomer|VerifiedSolePropCustomer|VerifiedBusinessCustomer>  $customers
+     * @param  ?array<\Dwolla\Models\Components\UnverifiedCustomer|\Dwolla\Models\Components\ReceiveOnlyCustomer|\Dwolla\Models\Components\VerifiedPersonalCustomer|\Dwolla\Models\Components\VerifiedSolePropCustomer|\Dwolla\Models\Components\VerifiedBusinessCustomer>  $customers
      * @phpstan-pure
      */
     public function __construct(?array $customers = null)

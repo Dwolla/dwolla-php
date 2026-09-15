@@ -28,7 +28,7 @@ class SourceSameAsDestinationError
 
     /**
      *
-     * @var ?Components\SourceSameAsDestinationErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\SourceSameAsDestinationErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SourceSameAsDestinationErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class SourceSameAsDestinationError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\SourceSameAsDestinationErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\SourceSameAsDestinationErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

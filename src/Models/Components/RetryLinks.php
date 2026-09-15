@@ -13,7 +13,7 @@ class RetryLinks
 {
     /**
      *
-     * @var ?RetrySelf $self
+     * @var ?\Dwolla\Models\Components\RetrySelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\RetrySelf|null')]
@@ -22,7 +22,7 @@ class RetryLinks
 
     /**
      *
-     * @var ?WebhookRetriesWebhook $webhook
+     * @var ?\Dwolla\Models\Components\WebhookRetriesWebhook $webhook
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('webhook')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WebhookRetriesWebhook|null')]
@@ -30,8 +30,8 @@ class RetryLinks
     public ?WebhookRetriesWebhook $webhook = null;
 
     /**
-     * @param  ?RetrySelf  $self
-     * @param  ?WebhookRetriesWebhook  $webhook
+     * @param  ?\Dwolla\Models\Components\RetrySelf  $self
+     * @param  ?\Dwolla\Models\Components\WebhookRetriesWebhook  $webhook
      * @phpstan-pure
      */
     public function __construct(?RetrySelf $self = null, ?WebhookRetriesWebhook $webhook = null)

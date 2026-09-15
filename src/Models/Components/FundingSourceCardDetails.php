@@ -69,12 +69,30 @@ class FundingSourceCardDetails
     /**
      * The billing address associated with the card
      *
-     * @var ?FundingSourceBillingAddress $billingAddress
+     * @var ?\Dwolla\Models\Components\FundingSourceBillingAddress $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billingAddress')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\FundingSourceBillingAddress|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?FundingSourceBillingAddress $billingAddress = null;
+
+    /**
+     * Cardholder date of birth in `YYYY-MM-DD` format. Only present if it was supplied when the card funding source was created or updated.
+     *
+     * @var ?string $dateOfBirth
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('dateOfBirth')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $dateOfBirth = null;
+
+    /**
+     * Cardholder country of birth as a two-letter country code (ISO 3166-1 alpha-2). Only present if it was supplied when the card funding source was created or updated.
+     *
+     * @var ?string $countryOfBirth
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('countryOfBirth')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $countryOfBirth = null;
 
     /**
      * @param  ?string  $brand
@@ -83,10 +101,12 @@ class FundingSourceCardDetails
      * @param  ?int  $expirationYear
      * @param  ?string  $nameOnCard
      * @param  ?string  $bin
-     * @param  ?FundingSourceBillingAddress  $billingAddress
+     * @param  ?\Dwolla\Models\Components\FundingSourceBillingAddress  $billingAddress
+     * @param  ?string  $dateOfBirth
+     * @param  ?string  $countryOfBirth
      * @phpstan-pure
      */
-    public function __construct(?string $brand = null, ?string $lastFour = null, ?int $expirationMonth = null, ?int $expirationYear = null, ?string $nameOnCard = null, ?string $bin = null, ?FundingSourceBillingAddress $billingAddress = null)
+    public function __construct(?string $brand = null, ?string $lastFour = null, ?int $expirationMonth = null, ?int $expirationYear = null, ?string $nameOnCard = null, ?string $bin = null, ?FundingSourceBillingAddress $billingAddress = null, ?string $dateOfBirth = null, ?string $countryOfBirth = null)
     {
         $this->brand = $brand;
         $this->lastFour = $lastFour;
@@ -95,5 +115,7 @@ class FundingSourceCardDetails
         $this->nameOnCard = $nameOnCard;
         $this->bin = $bin;
         $this->billingAddress = $billingAddress;
+        $this->dateOfBirth = $dateOfBirth;
+        $this->countryOfBirth = $countryOfBirth;
     }
 }

@@ -14,7 +14,7 @@ class FacilitatorFeeAccountNotFoundErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<FacilitatorFeeAccountNotFoundErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\FacilitatorFeeAccountNotFoundErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\FacilitatorFeeAccountNotFoundErrorError>|null')]
@@ -22,7 +22,7 @@ class FacilitatorFeeAccountNotFoundErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<FacilitatorFeeAccountNotFoundErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\FacilitatorFeeAccountNotFoundErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

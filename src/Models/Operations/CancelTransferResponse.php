@@ -35,7 +35,7 @@ class CancelTransferResponse
     /**
      * successful operation
      *
-     * @var ?CancelTransferResponseBody $object
+     * @var ?\Dwolla\Models\Operations\CancelTransferResponseBody $object
      */
     public ?CancelTransferResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class CancelTransferResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?CancelTransferResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\CancelTransferResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?CancelTransferResponseBody $object = null)

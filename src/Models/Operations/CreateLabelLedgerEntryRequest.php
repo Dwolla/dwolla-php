@@ -22,14 +22,14 @@ class CreateLabelLedgerEntryRequest
     /**
      * Parameters to create a label ledger entry
      *
-     * @var CreateLabelLedgerEntryRequestBody $body
+     * @var \Dwolla\Models\Operations\CreateLabelLedgerEntryRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public CreateLabelLedgerEntryRequestBody $body;
 
     /**
      * @param  string  $id
-     * @param  CreateLabelLedgerEntryRequestBody  $body
+     * @param  \Dwolla\Models\Operations\CreateLabelLedgerEntryRequestBody  $body
      * @phpstan-pure
      */
     public function __construct(string $id, CreateLabelLedgerEntryRequestBody $body)

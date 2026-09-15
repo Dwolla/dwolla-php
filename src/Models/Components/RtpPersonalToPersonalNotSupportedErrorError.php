@@ -37,7 +37,7 @@ class RtpPersonalToPersonalNotSupportedErrorError
 
     /**
      *
-     * @var ?RtpPersonalToPersonalNotSupportedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\RtpPersonalToPersonalNotSupportedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\RtpPersonalToPersonalNotSupportedErrorLinks|null')]
@@ -48,7 +48,7 @@ class RtpPersonalToPersonalNotSupportedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?RtpPersonalToPersonalNotSupportedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\RtpPersonalToPersonalNotSupportedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?RtpPersonalToPersonalNotSupportedErrorLinks $links = null)

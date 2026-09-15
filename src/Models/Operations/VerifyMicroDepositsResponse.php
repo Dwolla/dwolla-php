@@ -35,7 +35,7 @@ class VerifyMicroDepositsResponse
     /**
      * Micro-deposits verified successfully
      *
-     * @var ?VerifyMicroDepositsResponseBody $object
+     * @var ?\Dwolla\Models\Operations\VerifyMicroDepositsResponseBody $object
      */
     public ?VerifyMicroDepositsResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class VerifyMicroDepositsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?VerifyMicroDepositsResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\VerifyMicroDepositsResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?VerifyMicroDepositsResponseBody $object = null)

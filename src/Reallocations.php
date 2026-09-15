@@ -49,8 +49,8 @@ class Reallocations
      *
      * Reallocates funds between two labels belonging to the same Verified Customer. Moves the specified amount from the source label to the destination label, creating ledger entries for both. The reallocation only succeeds if the source label has sufficient funds.
      *
-     * @param  Operations\CreateLabelReallocationRequest  $request
-     * @return Operations\CreateLabelReallocationResponse
+     * @param  \Dwolla\Models\Operations\CreateLabelReallocationRequest  $request
+     * @return \Dwolla\Models\Operations\CreateLabelReallocationResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Operations\CreateLabelReallocationRequest $request, ?Options $options = null): Operations\CreateLabelReallocationResponse
@@ -79,11 +79,12 @@ class Reallocations
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -143,7 +144,7 @@ class Reallocations
      * Retrieve details for a specific label reallocation that transfers funds between Labels. Returns reallocation information including source and destination Labels, amount transferred, status, and creation timestamp. Use this to track and audit fund movements between different Labels.
      *
      * @param  string  $reallocationId
-     * @return Operations\RetrieveLabelReallocationResponse
+     * @return \Dwolla\Models\Operations\RetrieveLabelReallocationResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $reallocationId, ?Options $options = null): Operations\RetrieveLabelReallocationResponse
@@ -170,11 +171,12 @@ class Reallocations
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

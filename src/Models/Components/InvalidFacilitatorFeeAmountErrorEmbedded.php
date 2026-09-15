@@ -14,7 +14,7 @@ class InvalidFacilitatorFeeAmountErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidFacilitatorFeeAmountErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidFacilitatorFeeAmountErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidFacilitatorFeeAmountErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidFacilitatorFeeAmountErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidFacilitatorFeeAmountErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidFacilitatorFeeAmountErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

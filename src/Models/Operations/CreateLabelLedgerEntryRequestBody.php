@@ -14,14 +14,14 @@ class CreateLabelLedgerEntryRequestBody
 {
     /**
      *
-     * @var CreateLabelLedgerEntryAmount $amount
+     * @var \Dwolla\Models\Operations\CreateLabelLedgerEntryAmount $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\CreateLabelLedgerEntryAmount')]
     public CreateLabelLedgerEntryAmount $amount;
 
     /**
-     * @param  CreateLabelLedgerEntryAmount  $amount
+     * @param  \Dwolla\Models\Operations\CreateLabelLedgerEntryAmount  $amount
      * @phpstan-pure
      */
     public function __construct(CreateLabelLedgerEntryAmount $amount)

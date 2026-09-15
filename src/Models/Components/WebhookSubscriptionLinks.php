@@ -13,7 +13,7 @@ class WebhookSubscriptionLinks
 {
     /**
      *
-     * @var ?WebhookSubscriptionSelf $self
+     * @var ?\Dwolla\Models\Components\WebhookSubscriptionSelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WebhookSubscriptionSelf|null')]
@@ -22,7 +22,7 @@ class WebhookSubscriptionLinks
 
     /**
      *
-     * @var ?Webhooks $webhooks
+     * @var ?\Dwolla\Models\Components\Webhooks $webhooks
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('webhooks')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Webhooks|null')]
@@ -30,8 +30,8 @@ class WebhookSubscriptionLinks
     public ?Webhooks $webhooks = null;
 
     /**
-     * @param  ?WebhookSubscriptionSelf  $self
-     * @param  ?Webhooks  $webhooks
+     * @param  ?\Dwolla\Models\Components\WebhookSubscriptionSelf  $self
+     * @param  ?\Dwolla\Models\Components\Webhooks  $webhooks
      * @phpstan-pure
      */
     public function __construct(?WebhookSubscriptionSelf $self = null, ?Webhooks $webhooks = null)

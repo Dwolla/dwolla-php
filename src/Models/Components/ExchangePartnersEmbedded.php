@@ -14,7 +14,7 @@ class ExchangePartnersEmbedded
     /**
      * $exchangePartners
      *
-     * @var ?array<ExchangePartner> $exchangePartners
+     * @var ?array<\Dwolla\Models\Components\ExchangePartner> $exchangePartners
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('exchange-partners')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\ExchangePartner>|null')]
@@ -22,7 +22,7 @@ class ExchangePartnersEmbedded
     public ?array $exchangePartners = null;
 
     /**
-     * @param  ?array<ExchangePartner>  $exchangePartners
+     * @param  ?array<\Dwolla\Models\Components\ExchangePartner>  $exchangePartners
      * @phpstan-pure
      */
     public function __construct(?array $exchangePartners = null)

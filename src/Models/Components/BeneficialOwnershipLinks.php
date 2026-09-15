@@ -13,7 +13,7 @@ class BeneficialOwnershipLinks
 {
     /**
      *
-     * @var ?HalLink $self
+     * @var ?\Dwolla\Models\Components\HalLink $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\HalLink|null')]
@@ -21,7 +21,7 @@ class BeneficialOwnershipLinks
     public ?HalLink $self = null;
 
     /**
-     * @param  ?HalLink  $self
+     * @param  ?\Dwolla\Models\Components\HalLink  $self
      * @phpstan-pure
      */
     public function __construct(?HalLink $self = null)

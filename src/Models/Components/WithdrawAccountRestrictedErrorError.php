@@ -37,7 +37,7 @@ class WithdrawAccountRestrictedErrorError
 
     /**
      *
-     * @var ?WithdrawAccountRestrictedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WithdrawAccountRestrictedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawAccountRestrictedErrorLinks|null')]
@@ -48,7 +48,7 @@ class WithdrawAccountRestrictedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WithdrawAccountRestrictedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WithdrawAccountRestrictedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WithdrawAccountRestrictedErrorLinks $links = null)

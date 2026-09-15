@@ -14,7 +14,7 @@ class FacilitatorFeeSumTooLargeErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<FacilitatorFeeSumTooLargeErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\FacilitatorFeeSumTooLargeErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\FacilitatorFeeSumTooLargeErrorError>|null')]
@@ -22,7 +22,7 @@ class FacilitatorFeeSumTooLargeErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<FacilitatorFeeSumTooLargeErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\FacilitatorFeeSumTooLargeErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

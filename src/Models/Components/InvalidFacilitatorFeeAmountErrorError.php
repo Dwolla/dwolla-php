@@ -37,7 +37,7 @@ class InvalidFacilitatorFeeAmountErrorError
 
     /**
      *
-     * @var ?InvalidFacilitatorFeeAmountErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidFacilitatorFeeAmountErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidFacilitatorFeeAmountErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidFacilitatorFeeAmountErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidFacilitatorFeeAmountErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidFacilitatorFeeAmountErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidFacilitatorFeeAmountErrorLinks $links = null)

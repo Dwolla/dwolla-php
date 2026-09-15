@@ -29,7 +29,7 @@ class MaximumCardsExceededError
 
     /**
      *
-     * @var Components\MaximumCardsExceededErrorEmbedded $embedded
+     * @var \Dwolla\Models\Components\MaximumCardsExceededErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\MaximumCardsExceededErrorEmbedded')]
@@ -47,7 +47,7 @@ class MaximumCardsExceededError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  Components\MaximumCardsExceededErrorEmbedded  $embedded
+     * @param  \Dwolla\Models\Components\MaximumCardsExceededErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

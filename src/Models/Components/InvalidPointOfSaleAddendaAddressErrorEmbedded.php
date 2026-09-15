@@ -14,7 +14,7 @@ class InvalidPointOfSaleAddendaAddressErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidPointOfSaleAddendaAddressErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidPointOfSaleAddendaAddressErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidPointOfSaleAddendaAddressErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidPointOfSaleAddendaAddressErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidPointOfSaleAddendaAddressErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidPointOfSaleAddendaAddressErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

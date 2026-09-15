@@ -35,7 +35,7 @@ class ListBusinessClassificationsResponse
     /**
      * successful operation
      *
-     * @var ?Components\BusinessClassifications $businessClassifications
+     * @var ?\Dwolla\Models\Components\BusinessClassifications $businessClassifications
      */
     public ?Components\BusinessClassifications $businessClassifications = null;
 
@@ -43,7 +43,7 @@ class ListBusinessClassificationsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\BusinessClassifications  $businessClassifications
+     * @param  ?\Dwolla\Models\Components\BusinessClassifications  $businessClassifications
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\BusinessClassifications $businessClassifications = null)

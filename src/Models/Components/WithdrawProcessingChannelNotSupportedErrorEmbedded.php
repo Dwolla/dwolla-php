@@ -14,7 +14,7 @@ class WithdrawProcessingChannelNotSupportedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<WithdrawProcessingChannelNotSupportedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\WithdrawProcessingChannelNotSupportedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WithdrawProcessingChannelNotSupportedErrorError>|null')]
@@ -22,7 +22,7 @@ class WithdrawProcessingChannelNotSupportedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<WithdrawProcessingChannelNotSupportedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\WithdrawProcessingChannelNotSupportedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

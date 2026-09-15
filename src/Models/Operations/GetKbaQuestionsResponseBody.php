@@ -14,7 +14,7 @@ class GetKbaQuestionsResponseBody
 {
     /**
      *
-     * @var GetKbaQuestionsLinks $links
+     * @var \Dwolla\Models\Operations\GetKbaQuestionsLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\GetKbaQuestionsLinks')]
@@ -30,16 +30,16 @@ class GetKbaQuestionsResponseBody
     /**
      * $questions
      *
-     * @var array<Question> $questions
+     * @var array<\Dwolla\Models\Operations\Question> $questions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('questions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Operations\Question>')]
     public array $questions;
 
     /**
-     * @param  GetKbaQuestionsLinks  $links
+     * @param  \Dwolla\Models\Operations\GetKbaQuestionsLinks  $links
      * @param  string  $id
-     * @param  array<Question>  $questions
+     * @param  array<\Dwolla\Models\Operations\Question>  $questions
      * @phpstan-pure
      */
     public function __construct(GetKbaQuestionsLinks $links, string $id, array $questions)

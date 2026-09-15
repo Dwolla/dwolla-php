@@ -29,7 +29,7 @@ class GetTransferFailureReasonResponseBody
     /**
      * $links
      *
-     * @var ?array<string, Components\HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -47,7 +47,7 @@ class GetTransferFailureReasonResponseBody
     /**
      * @param  string  $code
      * @param  string  $description
-     * @param  ?array<string, Components\HalLink>  $links
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  ?string  $explanation
      * @phpstan-pure
      */

@@ -14,14 +14,14 @@ class Link
 {
     /**
      *
-     * @var SandboxSimulationVirtualTransferItemDestination $destination
+     * @var \Dwolla\Models\Components\SandboxSimulationVirtualTransferItemDestination $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SandboxSimulationVirtualTransferItemDestination')]
     public SandboxSimulationVirtualTransferItemDestination $destination;
 
     /**
-     * @param  SandboxSimulationVirtualTransferItemDestination  $destination
+     * @param  \Dwolla\Models\Components\SandboxSimulationVirtualTransferItemDestination  $destination
      * @phpstan-pure
      */
     public function __construct(SandboxSimulationVirtualTransferItemDestination $destination)

@@ -37,7 +37,7 @@ class WireNotEnabledErrorError
 
     /**
      *
-     * @var ?WireNotEnabledErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WireNotEnabledErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WireNotEnabledErrorLinks|null')]
@@ -48,7 +48,7 @@ class WireNotEnabledErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WireNotEnabledErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WireNotEnabledErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WireNotEnabledErrorLinks $links = null)

@@ -13,7 +13,7 @@ class Webhook
 {
     /**
      *
-     * @var ?WebhookLinks $links
+     * @var ?\Dwolla\Models\Components\WebhookLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WebhookLinks|null')]
@@ -63,7 +63,7 @@ class Webhook
     /**
      * $attempts
      *
-     * @var ?array<Attempt> $attempts
+     * @var ?array<\Dwolla\Models\Components\Attempt> $attempts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attempts')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\Attempt>|null')]
@@ -71,13 +71,13 @@ class Webhook
     public ?array $attempts = null;
 
     /**
-     * @param  ?WebhookLinks  $links
+     * @param  ?\Dwolla\Models\Components\WebhookLinks  $links
      * @param  ?string  $id
      * @param  ?string  $topic
      * @param  ?string  $accountId
      * @param  ?string  $eventId
      * @param  ?string  $subscriptionId
-     * @param  ?array<Attempt>  $attempts
+     * @param  ?array<\Dwolla\Models\Components\Attempt>  $attempts
      * @phpstan-pure
      */
     public function __construct(?WebhookLinks $links = null, ?string $id = null, ?string $topic = null, ?string $accountId = null, ?string $eventId = null, ?string $subscriptionId = null, ?array $attempts = null)

@@ -14,7 +14,7 @@ class Document
 {
     /**
      *
-     * @var DocumentLinks $links
+     * @var \Dwolla\Models\Components\DocumentLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DocumentLinks')]
@@ -31,7 +31,7 @@ class Document
     /**
      * Current status of the document upload
      *
-     * @var DocumentStatus $status
+     * @var \Dwolla\Models\Components\DocumentStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DocumentStatus')]
@@ -40,7 +40,7 @@ class Document
     /**
      * Type of identity document uploaded
      *
-     * @var DocumentType $type
+     * @var \Dwolla\Models\Components\DocumentType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DocumentType')]
@@ -57,7 +57,7 @@ class Document
     /**
      * Verification status of the document after review
      *
-     * @var DocumentVerificationStatus $documentVerificationStatus
+     * @var \Dwolla\Models\Components\DocumentVerificationStatus $documentVerificationStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('documentVerificationStatus')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DocumentVerificationStatus')]
@@ -75,7 +75,7 @@ class Document
     /**
      * Complete list of all failure reasons if document verification was rejected
      *
-     * @var ?array<AllFailureReason> $allFailureReasons
+     * @var ?array<\Dwolla\Models\Components\AllFailureReason> $allFailureReasons
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('allFailureReasons')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\AllFailureReason>|null')]
@@ -83,14 +83,14 @@ class Document
     public ?array $allFailureReasons = null;
 
     /**
-     * @param  DocumentLinks  $links
+     * @param  \Dwolla\Models\Components\DocumentLinks  $links
      * @param  string  $id
-     * @param  DocumentStatus  $status
-     * @param  DocumentType  $type
+     * @param  \Dwolla\Models\Components\DocumentStatus  $status
+     * @param  \Dwolla\Models\Components\DocumentType  $type
      * @param  \DateTime  $created
-     * @param  DocumentVerificationStatus  $documentVerificationStatus
+     * @param  \Dwolla\Models\Components\DocumentVerificationStatus  $documentVerificationStatus
      * @param  ?string  $failureReason
-     * @param  ?array<AllFailureReason>  $allFailureReasons
+     * @param  ?array<\Dwolla\Models\Components\AllFailureReason>  $allFailureReasons
      * @phpstan-pure
      */
     public function __construct(DocumentLinks $links, string $id, DocumentStatus $status, DocumentType $type, \DateTime $created, DocumentVerificationStatus $documentVerificationStatus, ?string $failureReason = null, ?array $allFailureReasons = null)

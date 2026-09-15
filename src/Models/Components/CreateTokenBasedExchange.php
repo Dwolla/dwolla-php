@@ -14,7 +14,7 @@ class CreateTokenBasedExchange
 {
     /**
      *
-     * @var CreateTokenBasedExchangeLinks $links
+     * @var \Dwolla\Models\Components\CreateTokenBasedExchangeLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateTokenBasedExchangeLinks')]
@@ -29,7 +29,7 @@ class CreateTokenBasedExchange
     public string $token;
 
     /**
-     * @param  CreateTokenBasedExchangeLinks  $links
+     * @param  \Dwolla\Models\Components\CreateTokenBasedExchangeLinks  $links
      * @param  string  $token
      * @phpstan-pure
      */

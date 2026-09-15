@@ -50,9 +50,9 @@ class CustomersExchanges
      *
      * Creates an exchange connection between a customer and Dwolla. Request body varies by partner (Plaid, MX, Flinks, Finicity, Checkout.com). For bank accounts, use Plaid, MX, Flinks, or Finicity to establish secure access to the customer's bank account data. For debit cards (Push to Card), use Checkout.com and pass the payment ID from Checkout.com Flow.
      *
-     * @param  Components\CreateFinicitySecureExchange|Components\CreateTokenBasedExchange|Components\CreateMXOpenBankingExchange|Components\CreatePlaidOpenBankingExchange  $body
+     * @param  \Dwolla\Models\Components\CreateFinicitySecureExchange|\Dwolla\Models\Components\CreateTokenBasedExchange|\Dwolla\Models\Components\CreateMXOpenBankingExchange|\Dwolla\Models\Components\CreatePlaidOpenBankingExchange  $body
      * @param  string  $id
-     * @return Operations\CreateCustomerExchangeResponse
+     * @return \Dwolla\Models\Operations\CreateCustomerExchangeResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Components\CreateFinicitySecureExchange|Components\CreateTokenBasedExchange|Components\CreateMXOpenBankingExchange|Components\CreatePlaidOpenBankingExchange $body, string $id, ?Options $options = null): Operations\CreateCustomerExchangeResponse
@@ -85,11 +85,12 @@ class CustomersExchanges
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '401', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -149,7 +150,7 @@ class CustomersExchanges
      * Returns all exchanges for a specific customer. Exchanges represent connections between the customer's external bank accounts and open banking partners. Includes exchange status, creation date, and links to associated funding sources and partners.
      *
      * @param  string  $id
-     * @return Operations\ListCustomerExchangesResponse
+     * @return \Dwolla\Models\Operations\ListCustomerExchangesResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(string $id, ?Options $options = null): Operations\ListCustomerExchangesResponse
@@ -176,11 +177,12 @@ class CustomersExchanges
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

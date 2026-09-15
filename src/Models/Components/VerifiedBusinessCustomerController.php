@@ -34,7 +34,7 @@ class VerifiedBusinessCustomerController
 
     /**
      *
-     * @var Address $address
+     * @var \Dwolla\Models\Components\Address $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Address')]
@@ -44,7 +44,7 @@ class VerifiedBusinessCustomerController
      * @param  string  $firstName
      * @param  string  $lastName
      * @param  string  $title
-     * @param  Address  $address
+     * @param  \Dwolla\Models\Components\Address  $address
      * @phpstan-pure
      */
     public function __construct(string $firstName, string $lastName, string $title, Address $address)

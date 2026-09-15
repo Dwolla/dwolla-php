@@ -15,7 +15,7 @@ class GetMicroDepositsResponseBody
     /**
      * $links
      *
-     * @var ?array<string, Components\HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -40,7 +40,7 @@ class GetMicroDepositsResponseBody
 
     /**
      *
-     * @var ?Failure $failure
+     * @var ?\Dwolla\Models\Operations\Failure $failure
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('failure')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\Failure|null')]
@@ -48,10 +48,10 @@ class GetMicroDepositsResponseBody
     public ?Failure $failure = null;
 
     /**
-     * @param  ?array<string, Components\HalLink>  $links
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  ?\DateTime  $created
      * @param  ?string  $status
-     * @param  ?Failure  $failure
+     * @param  ?\Dwolla\Models\Operations\Failure  $failure
      * @phpstan-pure
      */
     public function __construct(?array $links = null, ?\DateTime $created = null, ?string $status = null, ?Failure $failure = null)

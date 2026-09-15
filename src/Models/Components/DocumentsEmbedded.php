@@ -14,14 +14,14 @@ class DocumentsEmbedded
     /**
      * $documents
      *
-     * @var array<Document> $documents
+     * @var array<\Dwolla\Models\Components\Document> $documents
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('documents')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\Document>')]
     public array $documents;
 
     /**
-     * @param  array<Document>  $documents
+     * @param  array<\Dwolla\Models\Components\Document>  $documents
      * @phpstan-pure
      */
     public function __construct(array $documents)

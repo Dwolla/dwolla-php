@@ -53,7 +53,7 @@ class CustomersMassPayments
      * @param  ?string  $correlationId
      * @param  ?int  $limit
      * @param  ?int  $offset
-     * @return Operations\ListCustomerMassPaymentsResponse
+     * @return \Dwolla\Models\Operations\ListCustomerMassPaymentsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(string $id, ?string $correlationId = null, ?int $limit = null, ?int $offset = null, ?Options $options = null): Operations\ListCustomerMassPaymentsResponse
@@ -86,11 +86,12 @@ class CustomersMassPayments
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

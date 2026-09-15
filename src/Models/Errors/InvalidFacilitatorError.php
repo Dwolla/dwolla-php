@@ -28,7 +28,7 @@ class InvalidFacilitatorError
 
     /**
      *
-     * @var ?Components\InvalidFacilitatorErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidFacilitatorErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidFacilitatorErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidFacilitatorError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidFacilitatorErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidFacilitatorErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

@@ -15,7 +15,7 @@ class SandboxSimulationVirtualTransferItem
     /**
      * Link wrapper for the destination funding source (Dwolla HAL-style single link).
      *
-     * @var Link $link
+     * @var \Dwolla\Models\Components\Link $link
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_link')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Link')]
@@ -23,15 +23,15 @@ class SandboxSimulationVirtualTransferItem
 
     /**
      *
-     * @var TransferAmount $amount
+     * @var \Dwolla\Models\Components\TransferAmount $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\TransferAmount')]
     public TransferAmount $amount;
 
     /**
-     * @param  Link  $link
-     * @param  TransferAmount  $amount
+     * @param  \Dwolla\Models\Components\Link  $link
+     * @param  \Dwolla\Models\Components\TransferAmount  $amount
      * @phpstan-pure
      */
     public function __construct(Link $link, TransferAmount $amount)

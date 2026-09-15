@@ -28,7 +28,7 @@ class WireAccountNotFoundError
 
     /**
      *
-     * @var ?Components\WireAccountNotFoundErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WireAccountNotFoundErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WireAccountNotFoundErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WireAccountNotFoundError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WireAccountNotFoundErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WireAccountNotFoundErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

@@ -9,7 +9,7 @@ Parameters for creating an exchange
 
 ```php
 /**
-* @var Components\CreateFinicitySecureExchange
+* @var \Dwolla\Models\Components\CreateFinicitySecureExchange
 */
 Components\CreateFinicitySecureExchange $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Components\CreateFinicitySecureExchange $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateTokenBasedExchange
+* @var \Dwolla\Models\Components\CreateTokenBasedExchange
 */
 Components\CreateTokenBasedExchange $value = /* values here */
 ```

@@ -14,7 +14,7 @@ class WireInvalidImadErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<WireInvalidImadErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\WireInvalidImadErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WireInvalidImadErrorError>|null')]
@@ -22,7 +22,7 @@ class WireInvalidImadErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<WireInvalidImadErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\WireInvalidImadErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

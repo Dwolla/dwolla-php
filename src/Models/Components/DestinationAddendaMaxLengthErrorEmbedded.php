@@ -14,7 +14,7 @@ class DestinationAddendaMaxLengthErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<DestinationAddendaMaxLengthErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\DestinationAddendaMaxLengthErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\DestinationAddendaMaxLengthErrorError>|null')]
@@ -22,7 +22,7 @@ class DestinationAddendaMaxLengthErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<DestinationAddendaMaxLengthErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\DestinationAddendaMaxLengthErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

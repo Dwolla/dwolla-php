@@ -13,7 +13,7 @@ class CreateAccountFundingSourceLinks
 {
     /**
      *
-     * @var ?CreateAccountFundingSourceExchange $exchange
+     * @var ?\Dwolla\Models\Components\CreateAccountFundingSourceExchange $exchange
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('exchange')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateAccountFundingSourceExchange|null')]
@@ -21,7 +21,7 @@ class CreateAccountFundingSourceLinks
     public ?CreateAccountFundingSourceExchange $exchange = null;
 
     /**
-     * @param  ?CreateAccountFundingSourceExchange  $exchange
+     * @param  ?\Dwolla\Models\Components\CreateAccountFundingSourceExchange  $exchange
      * @phpstan-pure
      */
     public function __construct(?CreateAccountFundingSourceExchange $exchange = null)

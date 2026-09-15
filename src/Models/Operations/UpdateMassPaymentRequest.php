@@ -22,14 +22,14 @@ class UpdateMassPaymentRequest
     /**
      * Parameters for updating a mass payment
      *
-     * @var UpdateMassPaymentRequestBody $body
+     * @var \Dwolla\Models\Operations\UpdateMassPaymentRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public UpdateMassPaymentRequestBody $body;
 
     /**
      * @param  string  $id
-     * @param  UpdateMassPaymentRequestBody  $body
+     * @param  \Dwolla\Models\Operations\UpdateMassPaymentRequestBody  $body
      * @phpstan-pure
      */
     public function __construct(string $id, UpdateMassPaymentRequestBody $body)

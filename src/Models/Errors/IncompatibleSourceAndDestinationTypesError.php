@@ -28,7 +28,7 @@ class IncompatibleSourceAndDestinationTypesError
 
     /**
      *
-     * @var ?Components\IncompatibleSourceAndDestinationTypesErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\IncompatibleSourceAndDestinationTypesErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\IncompatibleSourceAndDestinationTypesErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class IncompatibleSourceAndDestinationTypesError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\IncompatibleSourceAndDestinationTypesErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\IncompatibleSourceAndDestinationTypesErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

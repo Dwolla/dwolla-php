@@ -23,17 +23,17 @@ class UpdateOrRemoveFundingSourceRequest
     /**
      * Parameters to update a customer funding source
      *
-     * @var Components\UpdateUnverifiedBank|Components\UpdateVerifiedBank|Components\RemoveBank $body
+     * @var \Dwolla\Models\Components\UpdateUnverifiedBank|\Dwolla\Models\Components\UpdateVerifiedBank|\Dwolla\Models\Components\UpdateCardFundingSource|\Dwolla\Models\Components\RemoveBank $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public Components\UpdateUnverifiedBank|Components\UpdateVerifiedBank|Components\RemoveBank $body;
+    public Components\UpdateUnverifiedBank|Components\UpdateVerifiedBank|Components\UpdateCardFundingSource|Components\RemoveBank $body;
 
     /**
      * @param  string  $id
-     * @param  Components\UpdateUnverifiedBank|Components\UpdateVerifiedBank|Components\RemoveBank  $body
+     * @param  \Dwolla\Models\Components\UpdateUnverifiedBank|\Dwolla\Models\Components\UpdateVerifiedBank|\Dwolla\Models\Components\UpdateCardFundingSource|\Dwolla\Models\Components\RemoveBank  $body
      * @phpstan-pure
      */
-    public function __construct(string $id, Components\UpdateUnverifiedBank|Components\UpdateVerifiedBank|Components\RemoveBank $body)
+    public function __construct(string $id, Components\UpdateUnverifiedBank|Components\UpdateVerifiedBank|Components\UpdateCardFundingSource|Components\RemoveBank $body)
     {
         $this->id = $id;
         $this->body = $body;

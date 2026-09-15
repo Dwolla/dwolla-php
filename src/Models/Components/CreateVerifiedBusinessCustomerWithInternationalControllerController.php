@@ -41,7 +41,7 @@ class CreateVerifiedBusinessCustomerWithInternationalControllerController
 
     /**
      *
-     * @var InternationalAddress $address
+     * @var \Dwolla\Models\Components\InternationalAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InternationalAddress')]
@@ -49,7 +49,7 @@ class CreateVerifiedBusinessCustomerWithInternationalControllerController
 
     /**
      *
-     * @var Passport $passport
+     * @var \Dwolla\Models\Components\Passport $passport
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('passport')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Passport')]
@@ -60,8 +60,8 @@ class CreateVerifiedBusinessCustomerWithInternationalControllerController
      * @param  string  $lastName
      * @param  string  $title
      * @param  string  $dateOfBirth
-     * @param  InternationalAddress  $address
-     * @param  Passport  $passport
+     * @param  \Dwolla\Models\Components\InternationalAddress  $address
+     * @param  \Dwolla\Models\Components\Passport  $passport
      * @phpstan-pure
      */
     public function __construct(string $firstName, string $lastName, string $title, string $dateOfBirth, InternationalAddress $address, Passport $passport)

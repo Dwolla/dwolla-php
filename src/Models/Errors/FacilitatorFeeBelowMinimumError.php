@@ -28,7 +28,7 @@ class FacilitatorFeeBelowMinimumError
 
     /**
      *
-     * @var ?Components\FacilitatorFeeBelowMinimumErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\FacilitatorFeeBelowMinimumErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\FacilitatorFeeBelowMinimumErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class FacilitatorFeeBelowMinimumError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\FacilitatorFeeBelowMinimumErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\FacilitatorFeeBelowMinimumErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

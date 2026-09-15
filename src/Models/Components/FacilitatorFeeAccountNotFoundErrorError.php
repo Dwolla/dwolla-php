@@ -37,7 +37,7 @@ class FacilitatorFeeAccountNotFoundErrorError
 
     /**
      *
-     * @var ?FacilitatorFeeAccountNotFoundErrorLinks $links
+     * @var ?\Dwolla\Models\Components\FacilitatorFeeAccountNotFoundErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\FacilitatorFeeAccountNotFoundErrorLinks|null')]
@@ -48,7 +48,7 @@ class FacilitatorFeeAccountNotFoundErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?FacilitatorFeeAccountNotFoundErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\FacilitatorFeeAccountNotFoundErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?FacilitatorFeeAccountNotFoundErrorLinks $links = null)

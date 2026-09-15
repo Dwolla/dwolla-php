@@ -37,7 +37,7 @@ class ReceiverNotFoundErrorError
 
     /**
      *
-     * @var ?ReceiverNotFoundErrorLinks $links
+     * @var ?\Dwolla\Models\Components\ReceiverNotFoundErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ReceiverNotFoundErrorLinks|null')]
@@ -48,7 +48,7 @@ class ReceiverNotFoundErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?ReceiverNotFoundErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\ReceiverNotFoundErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?ReceiverNotFoundErrorLinks $links = null)

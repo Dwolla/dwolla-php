@@ -14,7 +14,7 @@ class RtpPersonalToPersonalNotSupportedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<RtpPersonalToPersonalNotSupportedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\RtpPersonalToPersonalNotSupportedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\RtpPersonalToPersonalNotSupportedErrorError>|null')]
@@ -22,7 +22,7 @@ class RtpPersonalToPersonalNotSupportedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<RtpPersonalToPersonalNotSupportedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\RtpPersonalToPersonalNotSupportedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

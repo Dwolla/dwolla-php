@@ -15,7 +15,7 @@ class VerifiedBusinessCustomer
     /**
      * $links
      *
-     * @var array<string, HalLink> $links
+     * @var array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>')]
@@ -58,7 +58,7 @@ class VerifiedBusinessCustomer
 
     /**
      *
-     * @var VerifiedBusinessCustomerType $type
+     * @var \Dwolla\Models\Components\VerifiedBusinessCustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\VerifiedBusinessCustomerType')]
@@ -66,7 +66,7 @@ class VerifiedBusinessCustomer
 
     /**
      *
-     * @var VerifiedBusinessCustomerStatus $status
+     * @var \Dwolla\Models\Components\VerifiedBusinessCustomerStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\VerifiedBusinessCustomerStatus')]
@@ -109,7 +109,7 @@ class VerifiedBusinessCustomer
 
     /**
      *
-     * @var VerifiedBusinessCustomerBusinessType $businessType
+     * @var \Dwolla\Models\Components\VerifiedBusinessCustomerBusinessType $businessType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('businessType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\VerifiedBusinessCustomerBusinessType')]
@@ -124,7 +124,7 @@ class VerifiedBusinessCustomer
 
     /**
      *
-     * @var VerifiedBusinessCustomerController $controller
+     * @var \Dwolla\Models\Components\VerifiedBusinessCustomerController $controller
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('controller')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\VerifiedBusinessCustomerController')]
@@ -171,22 +171,22 @@ class VerifiedBusinessCustomer
     public ?string $doingBusinessAs = null;
 
     /**
-     * @param  array<string, HalLink>  $links
+     * @param  array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  string  $id
      * @param  string  $firstName
      * @param  string  $lastName
      * @param  string  $email
      * @param  \DateTime  $created
-     * @param  VerifiedBusinessCustomerType  $type
-     * @param  VerifiedBusinessCustomerStatus  $status
+     * @param  \Dwolla\Models\Components\VerifiedBusinessCustomerType  $type
+     * @param  \Dwolla\Models\Components\VerifiedBusinessCustomerStatus  $status
      * @param  string  $address1
      * @param  string  $city
      * @param  string  $state
      * @param  string  $postalCode
      * @param  string  $businessName
-     * @param  VerifiedBusinessCustomerBusinessType  $businessType
+     * @param  \Dwolla\Models\Components\VerifiedBusinessCustomerBusinessType  $businessType
      * @param  string  $businessClassification
-     * @param  VerifiedBusinessCustomerController  $controller
+     * @param  \Dwolla\Models\Components\VerifiedBusinessCustomerController  $controller
      * @param  ?string  $correlationId
      * @param  ?string  $address2
      * @param  ?string  $phone

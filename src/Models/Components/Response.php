@@ -22,7 +22,7 @@ class Response
     /**
      * $headers
      *
-     * @var ?array<ResponseHeader> $headers
+     * @var ?array<\Dwolla\Models\Components\ResponseHeader> $headers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('headers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\ResponseHeader>|null')]
@@ -47,7 +47,7 @@ class Response
 
     /**
      * @param  ?\DateTime  $timestamp
-     * @param  ?array<ResponseHeader>  $headers
+     * @param  ?array<\Dwolla\Models\Components\ResponseHeader>  $headers
      * @param  ?int  $statusCode
      * @param  ?string  $body
      * @phpstan-pure

@@ -51,8 +51,8 @@ class ExchangesExchangeSessions
      * Creates a re-authentication exchange session to refresh a user's bank account connection when their existing authorization is no longer valid. Required when receiving an UpdateCredentials error during bank balance checks or when user re-authentication is needed.
      *
      * @param  string  $id
-     * @param  Components\CreateReAuthExchangeSessionForWeb|Components\CreateReAuthExchangeSessionWithRedirect|null  $body
-     * @return Operations\CreateReAuthExchangeSessionResponse
+     * @param  \Dwolla\Models\Components\CreateReAuthExchangeSessionForWeb|\Dwolla\Models\Components\CreateReAuthExchangeSessionWithRedirect|null  $body
+     * @return \Dwolla\Models\Operations\CreateReAuthExchangeSessionResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function createReAuth(string $id, Components\CreateReAuthExchangeSessionForWeb|Components\CreateReAuthExchangeSessionWithRedirect|null $body = null, ?Options $options = null): Operations\CreateReAuthExchangeSessionResponse
@@ -84,11 +84,12 @@ class ExchangesExchangeSessions
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 

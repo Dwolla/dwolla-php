@@ -37,7 +37,7 @@ class InvalidSourceFundingSourceErrorError
 
     /**
      *
-     * @var ?InvalidSourceFundingSourceErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidSourceFundingSourceErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidSourceFundingSourceErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidSourceFundingSourceErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidSourceFundingSourceErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidSourceFundingSourceErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidSourceFundingSourceErrorLinks $links = null)

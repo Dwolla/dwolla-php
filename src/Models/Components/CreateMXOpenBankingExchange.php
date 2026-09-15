@@ -13,7 +13,7 @@ class CreateMXOpenBankingExchange
 {
     /**
      *
-     * @var CreateMXOpenBankingExchangeLinks $links
+     * @var \Dwolla\Models\Components\CreateMXOpenBankingExchangeLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateMXOpenBankingExchangeLinks')]
@@ -21,15 +21,15 @@ class CreateMXOpenBankingExchange
 
     /**
      *
-     * @var Mx $mx
+     * @var \Dwolla\Models\Components\Mx $mx
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('mx')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Mx')]
     public Mx $mx;
 
     /**
-     * @param  CreateMXOpenBankingExchangeLinks  $links
-     * @param  Mx  $mx
+     * @param  \Dwolla\Models\Components\CreateMXOpenBankingExchangeLinks  $links
+     * @param  \Dwolla\Models\Components\Mx  $mx
      * @phpstan-pure
      */
     public function __construct(CreateMXOpenBankingExchangeLinks $links, Mx $mx)

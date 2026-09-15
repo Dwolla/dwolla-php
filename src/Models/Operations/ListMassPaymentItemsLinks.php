@@ -13,7 +13,7 @@ class ListMassPaymentItemsLinks
 {
     /**
      *
-     * @var ?ListMassPaymentItemsSelf $self
+     * @var ?\Dwolla\Models\Operations\ListMassPaymentItemsSelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListMassPaymentItemsSelf|null')]
@@ -22,7 +22,7 @@ class ListMassPaymentItemsLinks
 
     /**
      *
-     * @var ?ListMassPaymentItemsFirst $first
+     * @var ?\Dwolla\Models\Operations\ListMassPaymentItemsFirst $first
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('first')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListMassPaymentItemsFirst|null')]
@@ -31,7 +31,7 @@ class ListMassPaymentItemsLinks
 
     /**
      *
-     * @var ?ListMassPaymentItemsLast $last
+     * @var ?\Dwolla\Models\Operations\ListMassPaymentItemsLast $last
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('last')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListMassPaymentItemsLast|null')]
@@ -39,9 +39,9 @@ class ListMassPaymentItemsLinks
     public ?ListMassPaymentItemsLast $last = null;
 
     /**
-     * @param  ?ListMassPaymentItemsSelf  $self
-     * @param  ?ListMassPaymentItemsFirst  $first
-     * @param  ?ListMassPaymentItemsLast  $last
+     * @param  ?\Dwolla\Models\Operations\ListMassPaymentItemsSelf  $self
+     * @param  ?\Dwolla\Models\Operations\ListMassPaymentItemsFirst  $first
+     * @param  ?\Dwolla\Models\Operations\ListMassPaymentItemsLast  $last
      * @phpstan-pure
      */
     public function __construct(?ListMassPaymentItemsSelf $self = null, ?ListMassPaymentItemsFirst $first = null, ?ListMassPaymentItemsLast $last = null)

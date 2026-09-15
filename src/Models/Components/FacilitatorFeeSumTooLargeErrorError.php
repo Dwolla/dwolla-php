@@ -37,7 +37,7 @@ class FacilitatorFeeSumTooLargeErrorError
 
     /**
      *
-     * @var ?FacilitatorFeeSumTooLargeErrorLinks $links
+     * @var ?\Dwolla\Models\Components\FacilitatorFeeSumTooLargeErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\FacilitatorFeeSumTooLargeErrorLinks|null')]
@@ -48,7 +48,7 @@ class FacilitatorFeeSumTooLargeErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?FacilitatorFeeSumTooLargeErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\FacilitatorFeeSumTooLargeErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?FacilitatorFeeSumTooLargeErrorLinks $links = null)

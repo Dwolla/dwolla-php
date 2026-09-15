@@ -15,7 +15,7 @@ class FedNowDetails
     /**
      * FedNow destination details with network identifiers
      *
-     * @var ?FedNowDetailsDestination $destination
+     * @var ?\Dwolla\Models\Components\FedNowDetailsDestination $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\FedNowDetailsDestination|null')]
@@ -23,7 +23,7 @@ class FedNowDetails
     public ?FedNowDetailsDestination $destination = null;
 
     /**
-     * @param  ?FedNowDetailsDestination  $destination
+     * @param  ?\Dwolla\Models\Components\FedNowDetailsDestination  $destination
      * @phpstan-pure
      */
     public function __construct(?FedNowDetailsDestination $destination = null)

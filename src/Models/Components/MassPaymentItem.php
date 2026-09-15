@@ -13,7 +13,7 @@ class MassPaymentItem
 {
     /**
      *
-     * @var ?MassPaymentItemLinks $links
+     * @var ?\Dwolla\Models\Components\MassPaymentItemLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\MassPaymentItemLinks|null')]
@@ -38,7 +38,7 @@ class MassPaymentItem
 
     /**
      *
-     * @var ?MassPaymentItemAmount $amount
+     * @var ?\Dwolla\Models\Components\MassPaymentItemAmount $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\MassPaymentItemAmount|null')]
@@ -47,7 +47,7 @@ class MassPaymentItem
 
     /**
      *
-     * @var ?MassPaymentItemMetadata $metadata
+     * @var ?\Dwolla\Models\Components\MassPaymentItemMetadata $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\MassPaymentItemMetadata|null')]
@@ -56,7 +56,7 @@ class MassPaymentItem
 
     /**
      *
-     * @var ?MassPaymentItemProcessingChannel $processingChannel
+     * @var ?\Dwolla\Models\Components\MassPaymentItemProcessingChannel $processingChannel
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('processingChannel')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\MassPaymentItemProcessingChannel|null')]
@@ -64,12 +64,12 @@ class MassPaymentItem
     public ?MassPaymentItemProcessingChannel $processingChannel = null;
 
     /**
-     * @param  ?MassPaymentItemLinks  $links
+     * @param  ?\Dwolla\Models\Components\MassPaymentItemLinks  $links
      * @param  ?string  $id
      * @param  ?string  $status
-     * @param  ?MassPaymentItemAmount  $amount
-     * @param  ?MassPaymentItemMetadata  $metadata
-     * @param  ?MassPaymentItemProcessingChannel  $processingChannel
+     * @param  ?\Dwolla\Models\Components\MassPaymentItemAmount  $amount
+     * @param  ?\Dwolla\Models\Components\MassPaymentItemMetadata  $metadata
+     * @param  ?\Dwolla\Models\Components\MassPaymentItemProcessingChannel  $processingChannel
      * @phpstan-pure
      */
     public function __construct(?MassPaymentItemLinks $links = null, ?string $id = null, ?string $status = null, ?MassPaymentItemAmount $amount = null, ?MassPaymentItemMetadata $metadata = null, ?MassPaymentItemProcessingChannel $processingChannel = null)

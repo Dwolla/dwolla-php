@@ -15,7 +15,7 @@ class Source
     /**
      * Contains addenda information for the transfer
      *
-     * @var ?SourceAddenda $addenda
+     * @var ?\Dwolla\Models\Components\SourceAddenda $addenda
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('addenda')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SourceAddenda|null')]
@@ -34,7 +34,7 @@ class Source
     /**
      * Describes the purpose of the transaction
      *
-     * @var ?SourceCompanyEntryDescription $companyEntryDescription
+     * @var ?\Dwolla\Models\Components\SourceCompanyEntryDescription $companyEntryDescription
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('companyEntryDescription')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SourceCompanyEntryDescription|null')]
@@ -96,9 +96,9 @@ class Source
     public ?string $traceId = null;
 
     /**
-     * @param  ?SourceAddenda  $addenda
+     * @param  ?\Dwolla\Models\Components\SourceAddenda  $addenda
      * @param  ?string  $beneficiaryName
-     * @param  ?SourceCompanyEntryDescription  $companyEntryDescription
+     * @param  ?\Dwolla\Models\Components\SourceCompanyEntryDescription  $companyEntryDescription
      * @param  ?string  $companyId
      * @param  ?string  $companyName
      * @param  ?LocalDate  $effectiveDate

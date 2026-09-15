@@ -28,7 +28,7 @@ class InvalidOrRemovedCardDestinationError
 
     /**
      *
-     * @var ?Components\InvalidOrRemovedCardDestinationErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidOrRemovedCardDestinationErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidOrRemovedCardDestinationErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidOrRemovedCardDestinationError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidOrRemovedCardDestinationErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidOrRemovedCardDestinationErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

@@ -15,7 +15,7 @@ class AchDetails
     /**
      * Information sent to the source/originating bank account along with the transfer
      *
-     * @var ?Source $source
+     * @var ?\Dwolla\Models\Components\Source $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Source|null')]
@@ -25,7 +25,7 @@ class AchDetails
     /**
      * Information sent to the destination/receiving bank account along with the transfer
      *
-     * @var ?AchDetailsDestination $destination
+     * @var ?\Dwolla\Models\Components\AchDetailsDestination $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\AchDetailsDestination|null')]
@@ -33,8 +33,8 @@ class AchDetails
     public ?AchDetailsDestination $destination = null;
 
     /**
-     * @param  ?Source  $source
-     * @param  ?AchDetailsDestination  $destination
+     * @param  ?\Dwolla\Models\Components\Source  $source
+     * @param  ?\Dwolla\Models\Components\AchDetailsDestination  $destination
      * @phpstan-pure
      */
     public function __construct(?Source $source = null, ?AchDetailsDestination $destination = null)

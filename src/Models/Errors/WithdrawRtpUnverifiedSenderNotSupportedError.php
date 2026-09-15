@@ -28,7 +28,7 @@ class WithdrawRtpUnverifiedSenderNotSupportedError
 
     /**
      *
-     * @var ?Components\WithdrawRtpUnverifiedSenderNotSupportedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WithdrawRtpUnverifiedSenderNotSupportedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawRtpUnverifiedSenderNotSupportedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WithdrawRtpUnverifiedSenderNotSupportedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WithdrawRtpUnverifiedSenderNotSupportedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WithdrawRtpUnverifiedSenderNotSupportedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

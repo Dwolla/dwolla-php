@@ -14,7 +14,7 @@ class IncompatibleSourceForRtpDestinationErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<IncompatibleSourceForRtpDestinationErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\IncompatibleSourceForRtpDestinationErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\IncompatibleSourceForRtpDestinationErrorError>|null')]
@@ -22,7 +22,7 @@ class IncompatibleSourceForRtpDestinationErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<IncompatibleSourceForRtpDestinationErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\IncompatibleSourceForRtpDestinationErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

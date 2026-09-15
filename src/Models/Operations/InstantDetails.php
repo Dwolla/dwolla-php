@@ -15,7 +15,7 @@ class InstantDetails
     /**
      * Instant payment details for the destination
      *
-     * @var ?InstantDetailsDestination $destination
+     * @var ?\Dwolla\Models\Operations\InstantDetailsDestination $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InstantDetailsDestination|null')]
@@ -23,7 +23,7 @@ class InstantDetails
     public ?InstantDetailsDestination $destination = null;
 
     /**
-     * @param  ?InstantDetailsDestination  $destination
+     * @param  ?\Dwolla\Models\Operations\InstantDetailsDestination  $destination
      * @phpstan-pure
      */
     public function __construct(?InstantDetailsDestination $destination = null)

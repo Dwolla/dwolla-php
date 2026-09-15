@@ -35,7 +35,7 @@ class CreateOnDemandTransferAuthorizationResponse
     /**
      * Ok
      *
-     * @var ?Components\OnDemandAuthorization $onDemandAuthorization
+     * @var ?\Dwolla\Models\Components\OnDemandAuthorization $onDemandAuthorization
      */
     public ?Components\OnDemandAuthorization $onDemandAuthorization = null;
 
@@ -43,7 +43,7 @@ class CreateOnDemandTransferAuthorizationResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\OnDemandAuthorization  $onDemandAuthorization
+     * @param  ?\Dwolla\Models\Components\OnDemandAuthorization  $onDemandAuthorization
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\OnDemandAuthorization $onDemandAuthorization = null)

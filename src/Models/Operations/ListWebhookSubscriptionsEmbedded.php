@@ -14,7 +14,7 @@ class ListWebhookSubscriptionsEmbedded
     /**
      * $webhookSubscriptions
      *
-     * @var ?array<Components\WebhookSubscription> $webhookSubscriptions
+     * @var ?array<\Dwolla\Models\Components\WebhookSubscription> $webhookSubscriptions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('webhook-subscriptions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WebhookSubscription>|null')]
@@ -22,7 +22,7 @@ class ListWebhookSubscriptionsEmbedded
     public ?array $webhookSubscriptions = null;
 
     /**
-     * @param  ?array<Components\WebhookSubscription>  $webhookSubscriptions
+     * @param  ?array<\Dwolla\Models\Components\WebhookSubscription>  $webhookSubscriptions
      * @phpstan-pure
      */
     public function __construct(?array $webhookSubscriptions = null)
