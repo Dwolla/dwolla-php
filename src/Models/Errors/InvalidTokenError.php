@@ -29,7 +29,7 @@ class InvalidTokenError
 
     /**
      *
-     * @var Components\InvalidTokenErrorEmbedded $embedded
+     * @var \Dwolla\Models\Components\InvalidTokenErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidTokenErrorEmbedded')]
@@ -47,7 +47,7 @@ class InvalidTokenError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  Components\InvalidTokenErrorEmbedded  $embedded
+     * @param  \Dwolla\Models\Components\InvalidTokenErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

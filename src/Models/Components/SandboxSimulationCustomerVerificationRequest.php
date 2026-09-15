@@ -20,7 +20,7 @@ class SandboxSimulationCustomerVerificationRequest
 {
     /**
      *
-     * @var SandboxSimulationCustomerVerificationRequestLinks $links
+     * @var \Dwolla\Models\Components\SandboxSimulationCustomerVerificationRequestLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SandboxSimulationCustomerVerificationRequestLinks')]
@@ -29,7 +29,7 @@ class SandboxSimulationCustomerVerificationRequest
     /**
      * Verification directive to simulate for the linked customer.
      *
-     * @var SandboxSimulationCustomerVerificationRequestErrorCode $errorCode
+     * @var \Dwolla\Models\Components\SandboxSimulationCustomerVerificationRequestErrorCode $errorCode
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errorCode')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SandboxSimulationCustomerVerificationRequestErrorCode')]
@@ -45,8 +45,8 @@ class SandboxSimulationCustomerVerificationRequest
 
     /**
      * @param  string  $type
-     * @param  SandboxSimulationCustomerVerificationRequestLinks  $links
-     * @param  SandboxSimulationCustomerVerificationRequestErrorCode  $errorCode
+     * @param  \Dwolla\Models\Components\SandboxSimulationCustomerVerificationRequestLinks  $links
+     * @param  \Dwolla\Models\Components\SandboxSimulationCustomerVerificationRequestErrorCode  $errorCode
      * @phpstan-pure
      */
     public function __construct(SandboxSimulationCustomerVerificationRequestLinks $links, SandboxSimulationCustomerVerificationRequestErrorCode $errorCode, string $type = 'customer-verification')

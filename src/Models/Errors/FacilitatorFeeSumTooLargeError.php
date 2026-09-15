@@ -28,7 +28,7 @@ class FacilitatorFeeSumTooLargeError
 
     /**
      *
-     * @var ?Components\FacilitatorFeeSumTooLargeErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\FacilitatorFeeSumTooLargeErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\FacilitatorFeeSumTooLargeErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class FacilitatorFeeSumTooLargeError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\FacilitatorFeeSumTooLargeErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\FacilitatorFeeSumTooLargeErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

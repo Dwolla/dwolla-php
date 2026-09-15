@@ -14,7 +14,7 @@ class DepositAccountRestrictedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<DepositAccountRestrictedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\DepositAccountRestrictedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\DepositAccountRestrictedErrorError>|null')]
@@ -22,7 +22,7 @@ class DepositAccountRestrictedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<DepositAccountRestrictedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\DepositAccountRestrictedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

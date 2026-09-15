@@ -49,9 +49,9 @@ class Tokens
      *
      * Generate an application access token using OAuth 2.0 client credentials flow for server-to-server authentication. Requires client ID and secret sent via Basic authentication header with grant_type=client_credentials in the request body. Returns a bearer access token with expiration time for authenticating API requests scoped to your application. Essential for secure API access.
      *
-     * @param  Operations\CreateApplicationAccessTokenSecurity  $security
-     * @param  Operations\CreateApplicationAccessTokenRequest  $request
-     * @return Operations\CreateApplicationAccessTokenResponse
+     * @param  \Dwolla\Models\Operations\CreateApplicationAccessTokenSecurity  $security
+     * @param  \Dwolla\Models\Operations\CreateApplicationAccessTokenRequest  $request
+     * @return \Dwolla\Models\Operations\CreateApplicationAccessTokenResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Operations\CreateApplicationAccessTokenSecurity $security, Operations\CreateApplicationAccessTokenRequest $request, ?Options $options = null): Operations\CreateApplicationAccessTokenResponse
@@ -86,11 +86,12 @@ class Tokens
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['401', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

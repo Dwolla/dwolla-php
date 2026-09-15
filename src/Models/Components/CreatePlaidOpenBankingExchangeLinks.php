@@ -13,14 +13,14 @@ class CreatePlaidOpenBankingExchangeLinks
 {
     /**
      *
-     * @var CreatePlaidOpenBankingExchangeExchangePartner $exchangePartner
+     * @var \Dwolla\Models\Components\CreatePlaidOpenBankingExchangeExchangePartner $exchangePartner
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('exchange-partner')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreatePlaidOpenBankingExchangeExchangePartner')]
     public CreatePlaidOpenBankingExchangeExchangePartner $exchangePartner;
 
     /**
-     * @param  CreatePlaidOpenBankingExchangeExchangePartner  $exchangePartner
+     * @param  \Dwolla\Models\Components\CreatePlaidOpenBankingExchangeExchangePartner  $exchangePartner
      * @phpstan-pure
      */
     public function __construct(CreatePlaidOpenBankingExchangeExchangePartner $exchangePartner)

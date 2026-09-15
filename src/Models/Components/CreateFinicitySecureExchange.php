@@ -13,7 +13,7 @@ class CreateFinicitySecureExchange
 {
     /**
      *
-     * @var CreateFinicitySecureExchangeLinks $links
+     * @var \Dwolla\Models\Components\CreateFinicitySecureExchangeLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateFinicitySecureExchangeLinks')]
@@ -21,15 +21,15 @@ class CreateFinicitySecureExchange
 
     /**
      *
-     * @var Finicity $finicity
+     * @var \Dwolla\Models\Components\Finicity $finicity
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('finicity')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Finicity')]
     public Finicity $finicity;
 
     /**
-     * @param  CreateFinicitySecureExchangeLinks  $links
-     * @param  Finicity  $finicity
+     * @param  \Dwolla\Models\Components\CreateFinicitySecureExchangeLinks  $links
+     * @param  \Dwolla\Models\Components\Finicity  $finicity
      * @phpstan-pure
      */
     public function __construct(CreateFinicitySecureExchangeLinks $links, Finicity $finicity)

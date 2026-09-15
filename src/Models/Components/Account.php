@@ -14,7 +14,7 @@ class Account
     /**
      * $links
      *
-     * @var ?array<string, HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -54,7 +54,7 @@ class Account
     public ?string $type = null;
 
     /**
-     * @param  ?array<string, HalLink>  $links
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  ?string  $id
      * @param  ?string  $name
      * @param  ?float  $timezoneOffset

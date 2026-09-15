@@ -14,7 +14,7 @@ class InvalidPointOfSaleAddendaDateErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidPointOfSaleAddendaDateErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidPointOfSaleAddendaDateErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidPointOfSaleAddendaDateErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidPointOfSaleAddendaDateErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidPointOfSaleAddendaDateErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidPointOfSaleAddendaDateErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

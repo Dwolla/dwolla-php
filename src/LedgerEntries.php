@@ -49,9 +49,9 @@ class LedgerEntries
      *
      * Create a new ledger entry to track fund adjustments on a Label by specifying a positive or negative amount value. Returns the location of the created ledger entry in the response header. Label amounts cannot go negative, so validation errors occur if the entry would result in a negative Label balance.
      *
-     * @param  Operations\CreateLabelLedgerEntryRequestBody  $body
+     * @param  \Dwolla\Models\Operations\CreateLabelLedgerEntryRequestBody  $body
      * @param  string  $id
-     * @return Operations\CreateLabelLedgerEntryResponse
+     * @return \Dwolla\Models\Operations\CreateLabelLedgerEntryResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Operations\CreateLabelLedgerEntryRequestBody $body, string $id, ?Options $options = null): Operations\CreateLabelLedgerEntryResponse
@@ -84,11 +84,12 @@ class LedgerEntries
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -148,7 +149,7 @@ class LedgerEntries
      * Returns detailed information for a specific ledger entry on a Label, including its amount, currency, and creation timestamp.
      *
      * @param  string  $ledgerEntryId
-     * @return Operations\GetLabelLedgerEntryResponse
+     * @return \Dwolla\Models\Operations\GetLabelLedgerEntryResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $ledgerEntryId, ?Options $options = null): Operations\GetLabelLedgerEntryResponse
@@ -175,11 +176,12 @@ class LedgerEntries
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -238,7 +240,7 @@ class LedgerEntries
      * @param  string  $id
      * @param  ?int  $limit
      * @param  ?int  $offset
-     * @return Operations\ListLabelLedgerEntriesResponse
+     * @return \Dwolla\Models\Operations\ListLabelLedgerEntriesResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(string $id, ?int $limit = null, ?int $offset = null, ?Options $options = null): Operations\ListLabelLedgerEntriesResponse
@@ -270,11 +272,12 @@ class LedgerEntries
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

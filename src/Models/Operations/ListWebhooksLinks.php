@@ -13,7 +13,7 @@ class ListWebhooksLinks
 {
     /**
      *
-     * @var ?ListWebhooksSelf $self
+     * @var ?\Dwolla\Models\Operations\ListWebhooksSelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListWebhooksSelf|null')]
@@ -22,7 +22,7 @@ class ListWebhooksLinks
 
     /**
      *
-     * @var ?ListWebhooksFirst $first
+     * @var ?\Dwolla\Models\Operations\ListWebhooksFirst $first
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('first')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListWebhooksFirst|null')]
@@ -31,7 +31,7 @@ class ListWebhooksLinks
 
     /**
      *
-     * @var ?ListWebhooksLast $last
+     * @var ?\Dwolla\Models\Operations\ListWebhooksLast $last
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('last')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListWebhooksLast|null')]
@@ -40,7 +40,7 @@ class ListWebhooksLinks
 
     /**
      *
-     * @var ?Next $next
+     * @var ?\Dwolla\Models\Operations\Next $next
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('next')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\Next|null')]
@@ -48,10 +48,10 @@ class ListWebhooksLinks
     public ?Next $next = null;
 
     /**
-     * @param  ?ListWebhooksSelf  $self
-     * @param  ?ListWebhooksFirst  $first
-     * @param  ?ListWebhooksLast  $last
-     * @param  ?Next  $next
+     * @param  ?\Dwolla\Models\Operations\ListWebhooksSelf  $self
+     * @param  ?\Dwolla\Models\Operations\ListWebhooksFirst  $first
+     * @param  ?\Dwolla\Models\Operations\ListWebhooksLast  $last
+     * @param  ?\Dwolla\Models\Operations\Next  $next
      * @phpstan-pure
      */
     public function __construct(?ListWebhooksSelf $self = null, ?ListWebhooksFirst $first = null, ?ListWebhooksLast $last = null, ?Next $next = null)

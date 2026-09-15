@@ -53,7 +53,7 @@ class MassPayments
      * Retrieve detailed information for a mass payment by its unique identifier. Returns the current processing status (pending, processing, or complete), creation date, metadata, and links to the source funding source and payment items. Use this endpoint to monitor mass payment processing progress and determine when to check individual item results.
      *
      * @param  string  $id
-     * @return Operations\GetMassPaymentResponse
+     * @return \Dwolla\Models\Operations\GetMassPaymentResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\GetMassPaymentResponse
@@ -80,11 +80,12 @@ class MassPayments
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -140,9 +141,9 @@ class MassPayments
      *
      * Create a mass payment containing up to 5,000 individual payment items from a Dwolla Main Account or Verified Customer funding source. Supports optional metadata, correlation IDs for traceability, deferred processing, and expedited transfer options including same-day ACH clearing. Returns the location of the created mass payment resource with a unique identifier for tracking and management.
      *
-     * @param  Operations\InitiateMassPaymentRequestBody  $body
+     * @param  \Dwolla\Models\Operations\InitiateMassPaymentRequestBody  $body
      * @param  ?string  $idempotencyKey
-     * @return Operations\InitiateMassPaymentResponse
+     * @return \Dwolla\Models\Operations\InitiateMassPaymentResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Operations\InitiateMassPaymentRequestBody $body, ?string $idempotencyKey = null, ?Options $options = null): Operations\InitiateMassPaymentResponse
@@ -179,11 +180,12 @@ class MassPayments
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -230,9 +232,9 @@ class MassPayments
      *
      * Update the status of a deferred mass payment to control its processing lifecycle. Set status to `pending` to trigger processing and begin fund transfers, or `cancelled` to permanently cancel the mass payment before processing begins. Only applies to mass payments created with deferred status. Returns the updated mass payment resource with the new status.
      *
-     * @param  Operations\UpdateMassPaymentRequestBody  $body
+     * @param  \Dwolla\Models\Operations\UpdateMassPaymentRequestBody  $body
      * @param  string  $id
-     * @return Operations\UpdateMassPaymentResponse
+     * @return \Dwolla\Models\Operations\UpdateMassPaymentResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function update(Operations\UpdateMassPaymentRequestBody $body, string $id, ?Options $options = null): Operations\UpdateMassPaymentResponse
@@ -265,11 +267,12 @@ class MassPayments
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

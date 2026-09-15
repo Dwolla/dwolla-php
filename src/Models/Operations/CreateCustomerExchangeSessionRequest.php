@@ -23,17 +23,17 @@ class CreateCustomerExchangeSessionRequest
     /**
      * Parameters for creating an exchange session
      *
-     * @var Components\CreateCustomerExchangeSessionWithRedirect|Components\CreateCustomerExchangeSessionForWeb $body
+     * @var \Dwolla\Models\Components\CreateCustomerExchangeSessionWithRedirect|\Dwolla\Models\Components\CreateCustomerExchangeSessionForWeb|\Dwolla\Models\Components\CreateCustomerExchangeSessionForCard $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/vnd.dwolla.v1.hal+json')]
-    public Components\CreateCustomerExchangeSessionWithRedirect|Components\CreateCustomerExchangeSessionForWeb $body;
+    public Components\CreateCustomerExchangeSessionWithRedirect|Components\CreateCustomerExchangeSessionForWeb|Components\CreateCustomerExchangeSessionForCard $body;
 
     /**
      * @param  string  $id
-     * @param  Components\CreateCustomerExchangeSessionWithRedirect|Components\CreateCustomerExchangeSessionForWeb  $body
+     * @param  \Dwolla\Models\Components\CreateCustomerExchangeSessionWithRedirect|\Dwolla\Models\Components\CreateCustomerExchangeSessionForWeb|\Dwolla\Models\Components\CreateCustomerExchangeSessionForCard  $body
      * @phpstan-pure
      */
-    public function __construct(string $id, Components\CreateCustomerExchangeSessionWithRedirect|Components\CreateCustomerExchangeSessionForWeb $body)
+    public function __construct(string $id, Components\CreateCustomerExchangeSessionWithRedirect|Components\CreateCustomerExchangeSessionForWeb|Components\CreateCustomerExchangeSessionForCard $body)
     {
         $this->id = $id;
         $this->body = $body;

@@ -13,7 +13,7 @@ class CreatePlaidOpenBankingExchange
 {
     /**
      *
-     * @var CreatePlaidOpenBankingExchangeLinks $links
+     * @var \Dwolla\Models\Components\CreatePlaidOpenBankingExchangeLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreatePlaidOpenBankingExchangeLinks')]
@@ -21,15 +21,15 @@ class CreatePlaidOpenBankingExchange
 
     /**
      *
-     * @var Plaid $plaid
+     * @var \Dwolla\Models\Components\Plaid $plaid
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('plaid')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Plaid')]
     public Plaid $plaid;
 
     /**
-     * @param  CreatePlaidOpenBankingExchangeLinks  $links
-     * @param  Plaid  $plaid
+     * @param  \Dwolla\Models\Components\CreatePlaidOpenBankingExchangeLinks  $links
+     * @param  \Dwolla\Models\Components\Plaid  $plaid
      * @phpstan-pure
      */
     public function __construct(CreatePlaidOpenBankingExchangeLinks $links, Plaid $plaid)

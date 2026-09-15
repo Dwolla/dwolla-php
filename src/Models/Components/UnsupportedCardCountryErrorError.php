@@ -34,7 +34,7 @@ class UnsupportedCardCountryErrorError
 
     /**
      *
-     * @var ?UnsupportedCardCountryErrorLinks $links
+     * @var ?\Dwolla\Models\Components\UnsupportedCardCountryErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\UnsupportedCardCountryErrorLinks|null')]
@@ -45,7 +45,7 @@ class UnsupportedCardCountryErrorError
      * @param  string  $code
      * @param  string  $message
      * @param  string  $path
-     * @param  ?UnsupportedCardCountryErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\UnsupportedCardCountryErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(string $code, string $message, string $path, ?UnsupportedCardCountryErrorLinks $links = null)

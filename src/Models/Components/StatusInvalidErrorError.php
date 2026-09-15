@@ -37,7 +37,7 @@ class StatusInvalidErrorError
 
     /**
      *
-     * @var ?StatusInvalidErrorLinks $links
+     * @var ?\Dwolla\Models\Components\StatusInvalidErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\StatusInvalidErrorLinks|null')]
@@ -48,7 +48,7 @@ class StatusInvalidErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?StatusInvalidErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\StatusInvalidErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?StatusInvalidErrorLinks $links = null)

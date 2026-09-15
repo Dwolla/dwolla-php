@@ -29,7 +29,7 @@ class CardSourceNotAllowedError
 
     /**
      *
-     * @var Components\CardSourceNotAllowedErrorEmbedded $embedded
+     * @var \Dwolla\Models\Components\CardSourceNotAllowedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CardSourceNotAllowedErrorEmbedded')]
@@ -47,7 +47,7 @@ class CardSourceNotAllowedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  Components\CardSourceNotAllowedErrorEmbedded  $embedded
+     * @param  \Dwolla\Models\Components\CardSourceNotAllowedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

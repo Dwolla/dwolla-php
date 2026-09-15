@@ -37,7 +37,7 @@ class WithdrawInvalidWireOriginatorToBeneficiaryErrorError
 
     /**
      *
-     * @var ?WithdrawInvalidWireOriginatorToBeneficiaryErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WithdrawInvalidWireOriginatorToBeneficiaryErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawInvalidWireOriginatorToBeneficiaryErrorLinks|null')]
@@ -48,7 +48,7 @@ class WithdrawInvalidWireOriginatorToBeneficiaryErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WithdrawInvalidWireOriginatorToBeneficiaryErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WithdrawInvalidWireOriginatorToBeneficiaryErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WithdrawInvalidWireOriginatorToBeneficiaryErrorLinks $links = null)

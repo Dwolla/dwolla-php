@@ -28,7 +28,7 @@ class StatusInvalidError
 
     /**
      *
-     * @var ?Components\StatusInvalidErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\StatusInvalidErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\StatusInvalidErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class StatusInvalidError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\StatusInvalidErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\StatusInvalidErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

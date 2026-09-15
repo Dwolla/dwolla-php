@@ -37,7 +37,7 @@ class FacilitatorFeeBelowMinimumErrorError
 
     /**
      *
-     * @var ?FacilitatorFeeBelowMinimumErrorLinks $links
+     * @var ?\Dwolla\Models\Components\FacilitatorFeeBelowMinimumErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\FacilitatorFeeBelowMinimumErrorLinks|null')]
@@ -48,7 +48,7 @@ class FacilitatorFeeBelowMinimumErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?FacilitatorFeeBelowMinimumErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\FacilitatorFeeBelowMinimumErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?FacilitatorFeeBelowMinimumErrorLinks $links = null)

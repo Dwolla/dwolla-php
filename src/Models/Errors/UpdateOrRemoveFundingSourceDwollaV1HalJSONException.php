@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Dwolla\Models\Errors;
 
 use Dwolla\Utils;
-/** UpdateOrRemoveFundingSourceBadRequestDwollaV1HalJSONException - validation error */
-class UpdateOrRemoveFundingSourceBadRequestDwollaV1HalJSONException
+/** UpdateOrRemoveFundingSourceDwollaV1HalJSONException - forbidden */
+class UpdateOrRemoveFundingSourceDwollaV1HalJSONException
 {
     /**
      *
@@ -50,7 +50,7 @@ class UpdateOrRemoveFundingSourceBadRequestDwollaV1HalJSONException
         $this->rawResponse = $rawResponse;
     }
 
-    public function toException(): UpdateOrRemoveFundingSourceBadRequestDwollaV1HalJSONExceptionThrowable
+    public function toException(): UpdateOrRemoveFundingSourceDwollaV1HalJSONExceptionThrowable
     {
         $serializer = Utils\JSON::createSerializer();
         $message = $serializer->serialize($this, 'json');
@@ -60,6 +60,6 @@ class UpdateOrRemoveFundingSourceBadRequestDwollaV1HalJSONException
             $code = -1;
         }
 
-        return new UpdateOrRemoveFundingSourceBadRequestDwollaV1HalJSONExceptionThrowable($message, (int) $code, $this);
+        return new UpdateOrRemoveFundingSourceDwollaV1HalJSONExceptionThrowable($message, (int) $code, $this);
     }
 }

@@ -50,7 +50,7 @@ class Kba
      * Returns the KBA questions for a specific KBA session. The questions are used to verify the customer's identity during the KBA process.
      *
      * @param  string  $id
-     * @return Operations\GetKbaQuestionsResponse
+     * @return \Dwolla\Models\Operations\GetKbaQuestionsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function getQuestions(string $id, ?Options $options = null): Operations\GetKbaQuestionsResponse
@@ -77,11 +77,12 @@ class Kba
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -137,9 +138,9 @@ class Kba
      *
      * Submits customer answers to KBA questions for identity verification. Requires four question-answer pairs with questionId and answerId values. Returns verification status indicating whether the customer passed or failed the KBA authentication.
      *
-     * @param  Operations\VerifyKbaQuestionsRequestBody  $body
+     * @param  \Dwolla\Models\Operations\VerifyKbaQuestionsRequestBody  $body
      * @param  string  $id
-     * @return Operations\VerifyKbaQuestionsResponse
+     * @return \Dwolla\Models\Operations\VerifyKbaQuestionsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function verify(Operations\VerifyKbaQuestionsRequestBody $body, string $id, ?Options $options = null): Operations\VerifyKbaQuestionsResponse
@@ -172,11 +173,12 @@ class Kba
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

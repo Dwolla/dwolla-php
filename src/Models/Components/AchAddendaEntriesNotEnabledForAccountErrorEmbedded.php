@@ -14,7 +14,7 @@ class AchAddendaEntriesNotEnabledForAccountErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<AchAddendaEntriesNotEnabledForAccountErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\AchAddendaEntriesNotEnabledForAccountErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\AchAddendaEntriesNotEnabledForAccountErrorError>|null')]
@@ -22,7 +22,7 @@ class AchAddendaEntriesNotEnabledForAccountErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<AchAddendaEntriesNotEnabledForAccountErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\AchAddendaEntriesNotEnabledForAccountErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

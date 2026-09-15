@@ -14,7 +14,7 @@ class ListWebhookSubscriptionsResponseBody
 {
     /**
      *
-     * @var ?ListWebhookSubscriptionsLinks $links
+     * @var ?\Dwolla\Models\Operations\ListWebhookSubscriptionsLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListWebhookSubscriptionsLinks|null')]
@@ -23,7 +23,7 @@ class ListWebhookSubscriptionsResponseBody
 
     /**
      *
-     * @var ?ListWebhookSubscriptionsEmbedded $embedded
+     * @var ?\Dwolla\Models\Operations\ListWebhookSubscriptionsEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListWebhookSubscriptionsEmbedded|null')]
@@ -39,8 +39,8 @@ class ListWebhookSubscriptionsResponseBody
     public ?int $total = null;
 
     /**
-     * @param  ?ListWebhookSubscriptionsLinks  $links
-     * @param  ?ListWebhookSubscriptionsEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Operations\ListWebhookSubscriptionsLinks  $links
+     * @param  ?\Dwolla\Models\Operations\ListWebhookSubscriptionsEmbedded  $embedded
      * @param  ?int  $total
      * @phpstan-pure
      */

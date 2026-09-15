@@ -37,7 +37,7 @@ class WithdrawInvalidFundingSourceErrorError
 
     /**
      *
-     * @var ?WithdrawInvalidFundingSourceErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WithdrawInvalidFundingSourceErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawInvalidFundingSourceErrorLinks|null')]
@@ -48,7 +48,7 @@ class WithdrawInvalidFundingSourceErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WithdrawInvalidFundingSourceErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WithdrawInvalidFundingSourceErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WithdrawInvalidFundingSourceErrorLinks $links = null)

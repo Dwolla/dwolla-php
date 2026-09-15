@@ -35,7 +35,7 @@ class CreateClientTokenResponse
     /**
      * Client token created successfully
      *
-     * @var ?CreateClientTokenResponseBody $object
+     * @var ?\Dwolla\Models\Operations\CreateClientTokenResponseBody $object
      */
     public ?CreateClientTokenResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class CreateClientTokenResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?CreateClientTokenResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\CreateClientTokenResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?CreateClientTokenResponseBody $object = null)

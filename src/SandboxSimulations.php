@@ -65,8 +65,8 @@ class SandboxSimulations
      * the same code appears in `_embedded.errors` for end-to-end testing.
      *
      *
-     * @param  Components\SandboxSimulationVirtualAccountTransfersRequest|Components\SandboxSimulationCustomerVerificationRequest|Components\SandboxSimulationBankProcessingRequest|null  $request
-     * @return Operations\SimulateBankTransferProcessingResponse
+     * @param  \Dwolla\Models\Components\SandboxSimulationVirtualAccountTransfersRequest|\Dwolla\Models\Components\SandboxSimulationCustomerVerificationRequest|\Dwolla\Models\Components\SandboxSimulationBankProcessingRequest|null  $request
+     * @return \Dwolla\Models\Operations\SimulateBankTransferProcessingResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function simulate(Components\SandboxSimulationVirtualAccountTransfersRequest|Components\SandboxSimulationCustomerVerificationRequest|Components\SandboxSimulationBankProcessingRequest|null $request = null, ?Options $options = null): Operations\SimulateBankTransferProcessingResponse
@@ -94,11 +94,12 @@ class SandboxSimulations
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '401', '403', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

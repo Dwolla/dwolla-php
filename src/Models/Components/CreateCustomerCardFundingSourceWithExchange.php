@@ -14,7 +14,7 @@ class CreateCustomerCardFundingSourceWithExchange
 {
     /**
      *
-     * @var CreateCustomerCardFundingSourceWithExchangeLinks $links
+     * @var \Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeLinks')]
@@ -30,16 +30,16 @@ class CreateCustomerCardFundingSourceWithExchange
 
     /**
      *
-     * @var CreateCustomerCardFundingSourceWithExchangeCardDetails $cardDetails
+     * @var \Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeCardDetails $cardDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cardDetails')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeCardDetails')]
     public CreateCustomerCardFundingSourceWithExchangeCardDetails $cardDetails;
 
     /**
-     * @param  CreateCustomerCardFundingSourceWithExchangeLinks  $links
+     * @param  \Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeLinks  $links
      * @param  string  $name
-     * @param  CreateCustomerCardFundingSourceWithExchangeCardDetails  $cardDetails
+     * @param  \Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeCardDetails  $cardDetails
      * @phpstan-pure
      */
     public function __construct(CreateCustomerCardFundingSourceWithExchangeLinks $links, string $name, CreateCustomerCardFundingSourceWithExchangeCardDetails $cardDetails)

@@ -28,7 +28,7 @@ class DestinationRemittanceDataMaxLengthError
 
     /**
      *
-     * @var ?Components\DestinationRemittanceDataMaxLengthErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\DestinationRemittanceDataMaxLengthErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DestinationRemittanceDataMaxLengthErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class DestinationRemittanceDataMaxLengthError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\DestinationRemittanceDataMaxLengthErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\DestinationRemittanceDataMaxLengthErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

@@ -14,7 +14,7 @@ class TransfersEmbedded
     /**
      * $transfers
      *
-     * @var ?array<Transfer> $transfers
+     * @var ?array<\Dwolla\Models\Components\Transfer> $transfers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('transfers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\Transfer>|null')]
@@ -22,7 +22,7 @@ class TransfersEmbedded
     public ?array $transfers = null;
 
     /**
-     * @param  ?array<Transfer>  $transfers
+     * @param  ?array<\Dwolla\Models\Components\Transfer>  $transfers
      * @phpstan-pure
      */
     public function __construct(?array $transfers = null)

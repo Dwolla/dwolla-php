@@ -37,7 +37,7 @@ class SourceNotFoundErrorError
 
     /**
      *
-     * @var ?SourceNotFoundErrorLinks $links
+     * @var ?\Dwolla\Models\Components\SourceNotFoundErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SourceNotFoundErrorLinks|null')]
@@ -48,7 +48,7 @@ class SourceNotFoundErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?SourceNotFoundErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\SourceNotFoundErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?SourceNotFoundErrorLinks $links = null)

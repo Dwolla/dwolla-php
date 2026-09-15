@@ -56,7 +56,7 @@ class Labels
      * Retrieve details for a specific Label used to categorize and track funds within your account. Returns Label information including unique identifier, current amount with currency, and creation timestamp.
      *
      * @param  string  $id
-     * @return Operations\GetLabelResponse
+     * @return \Dwolla\Models\Operations\GetLabelResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\GetLabelResponse
@@ -83,11 +83,12 @@ class Labels
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -144,7 +145,7 @@ class Labels
      * Delete a Label to stop tracking funds and remove it from your account. Returns success status if the Label is successfully removed. Use this to streamline your account management and remove unused Labels from your system.
      *
      * @param  string  $id
-     * @return Operations\RemoveLabelResponse
+     * @return \Dwolla\Models\Operations\RemoveLabelResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function remove(string $id, ?Options $options = null): Operations\RemoveLabelResponse
@@ -171,11 +172,12 @@ class Labels
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

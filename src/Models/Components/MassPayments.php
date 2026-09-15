@@ -14,7 +14,7 @@ class MassPayments
     /**
      * $links
      *
-     * @var ?array<string, HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -23,7 +23,7 @@ class MassPayments
 
     /**
      *
-     * @var ?MassPaymentsEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\MassPaymentsEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\MassPaymentsEmbedded|null')]
@@ -39,8 +39,8 @@ class MassPayments
     public ?int $total = null;
 
     /**
-     * @param  ?array<string, HalLink>  $links
-     * @param  ?MassPaymentsEmbedded  $embedded
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
+     * @param  ?\Dwolla\Models\Components\MassPaymentsEmbedded  $embedded
      * @param  ?int  $total
      * @phpstan-pure
      */

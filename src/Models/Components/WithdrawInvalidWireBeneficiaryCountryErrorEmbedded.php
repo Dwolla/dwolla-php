@@ -14,7 +14,7 @@ class WithdrawInvalidWireBeneficiaryCountryErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<WithdrawInvalidWireBeneficiaryCountryErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\WithdrawInvalidWireBeneficiaryCountryErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WithdrawInvalidWireBeneficiaryCountryErrorError>|null')]
@@ -22,7 +22,7 @@ class WithdrawInvalidWireBeneficiaryCountryErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<WithdrawInvalidWireBeneficiaryCountryErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\WithdrawInvalidWireBeneficiaryCountryErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

@@ -15,7 +15,7 @@ class UnverifiedCustomer
     /**
      * $links
      *
-     * @var array<string, HalLink> $links
+     * @var array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>')]
@@ -58,7 +58,7 @@ class UnverifiedCustomer
 
     /**
      *
-     * @var UnverifiedCustomerType $type
+     * @var \Dwolla\Models\Components\UnverifiedCustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\UnverifiedCustomerType')]
@@ -66,7 +66,7 @@ class UnverifiedCustomer
 
     /**
      *
-     * @var UnverifiedCustomerStatus $status
+     * @var \Dwolla\Models\Components\UnverifiedCustomerStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\UnverifiedCustomerStatus')]
@@ -89,14 +89,14 @@ class UnverifiedCustomer
     public ?string $businessName = null;
 
     /**
-     * @param  array<string, HalLink>  $links
+     * @param  array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  string  $id
      * @param  string  $firstName
      * @param  string  $lastName
      * @param  string  $email
      * @param  \DateTime  $created
-     * @param  UnverifiedCustomerType  $type
-     * @param  UnverifiedCustomerStatus  $status
+     * @param  \Dwolla\Models\Components\UnverifiedCustomerType  $type
+     * @param  \Dwolla\Models\Components\UnverifiedCustomerStatus  $status
      * @param  ?string  $correlationId
      * @param  ?string  $businessName
      * @phpstan-pure

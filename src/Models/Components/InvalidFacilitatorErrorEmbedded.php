@@ -14,7 +14,7 @@ class InvalidFacilitatorErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidFacilitatorErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidFacilitatorErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidFacilitatorErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidFacilitatorErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidFacilitatorErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidFacilitatorErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

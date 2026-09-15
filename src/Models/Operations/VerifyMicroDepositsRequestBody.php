@@ -14,7 +14,7 @@ class VerifyMicroDepositsRequestBody
 {
     /**
      *
-     * @var Amount1 $amount1
+     * @var \Dwolla\Models\Operations\Amount1 $amount1
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount1')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\Amount1')]
@@ -22,15 +22,15 @@ class VerifyMicroDepositsRequestBody
 
     /**
      *
-     * @var Amount2 $amount2
+     * @var \Dwolla\Models\Operations\Amount2 $amount2
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount2')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\Amount2')]
     public Amount2 $amount2;
 
     /**
-     * @param  Amount1  $amount1
-     * @param  Amount2  $amount2
+     * @param  \Dwolla\Models\Operations\Amount1  $amount1
+     * @param  \Dwolla\Models\Operations\Amount2  $amount2
      * @phpstan-pure
      */
     public function __construct(Amount1 $amount1, Amount2 $amount2)

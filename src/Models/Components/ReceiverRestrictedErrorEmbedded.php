@@ -14,7 +14,7 @@ class ReceiverRestrictedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<ReceiverRestrictedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\ReceiverRestrictedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\ReceiverRestrictedErrorError>|null')]
@@ -22,7 +22,7 @@ class ReceiverRestrictedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<ReceiverRestrictedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\ReceiverRestrictedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

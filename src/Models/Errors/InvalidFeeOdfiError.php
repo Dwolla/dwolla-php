@@ -28,7 +28,7 @@ class InvalidFeeOdfiError
 
     /**
      *
-     * @var ?Components\InvalidFeeOdfiErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidFeeOdfiErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidFeeOdfiErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidFeeOdfiError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidFeeOdfiErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidFeeOdfiErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

@@ -28,7 +28,7 @@ class CannotParseAmountError
 
     /**
      *
-     * @var ?Components\CannotParseAmountErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\CannotParseAmountErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CannotParseAmountErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class CannotParseAmountError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\CannotParseAmountErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\CannotParseAmountErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

@@ -35,7 +35,7 @@ class RetrieveCustomerExchangeSessionResponse
     /**
      * successful operation
      *
-     * @var ?Components\ExchangeSession $exchangeSession
+     * @var ?\Dwolla\Models\Components\ExchangeSession $exchangeSession
      */
     public ?Components\ExchangeSession $exchangeSession = null;
 
@@ -43,7 +43,7 @@ class RetrieveCustomerExchangeSessionResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\ExchangeSession  $exchangeSession
+     * @param  ?\Dwolla\Models\Components\ExchangeSession  $exchangeSession
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\ExchangeSession $exchangeSession = null)

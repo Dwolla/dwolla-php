@@ -9,7 +9,7 @@ successful operation
 
 ```php
 /**
-* @var Operations\DwollaBalanceResponse
+* @var \Dwolla\Models\Operations\DwollaBalanceResponse
 */
 Operations\DwollaBalanceResponse $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Operations\DwollaBalanceResponse $value = /* values here */
 
 ```php
 /**
-* @var Operations\BankBalanceResponse
+* @var \Dwolla\Models\Operations\BankBalanceResponse
 */
 Operations\BankBalanceResponse $value = /* values here */
 ```
@@ -27,7 +27,7 @@ Operations\BankBalanceResponse $value = /* values here */
 
 ```php
 /**
-* @var Operations\SettlementAccountBalanceResponse
+* @var \Dwolla\Models\Operations\SettlementAccountBalanceResponse
 */
 Operations\SettlementAccountBalanceResponse $value = /* values here */
 ```

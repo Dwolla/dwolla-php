@@ -35,7 +35,7 @@ class ListBeneficialOwnerDocumentsResponse
     /**
      * successful operation
      *
-     * @var ?Components\Documents $documents
+     * @var ?\Dwolla\Models\Components\Documents $documents
      */
     public ?Components\Documents $documents = null;
 
@@ -43,7 +43,7 @@ class ListBeneficialOwnerDocumentsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\Documents  $documents
+     * @param  ?\Dwolla\Models\Components\Documents  $documents
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\Documents $documents = null)

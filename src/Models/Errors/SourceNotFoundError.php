@@ -28,7 +28,7 @@ class SourceNotFoundError
 
     /**
      *
-     * @var ?Components\SourceNotFoundErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\SourceNotFoundErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SourceNotFoundErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class SourceNotFoundError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\SourceNotFoundErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\SourceNotFoundErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

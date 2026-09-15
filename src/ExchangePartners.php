@@ -50,7 +50,7 @@ class ExchangePartners
      * Returns details for a specific open banking provider that integrates with Dwolla. Includes partner name, status, and creation date. Use this to verify partner availability before creating exchanges and funding sources.
      *
      * @param  string  $id
-     * @return Operations\GetExchangePartnerResponse
+     * @return \Dwolla\Models\Operations\GetExchangePartnerResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\GetExchangePartnerResponse
@@ -77,11 +77,12 @@ class ExchangePartners
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -125,7 +126,7 @@ class ExchangePartners
      *
      * Returns a list of all supported exchange partners. Each partner includes a unique ID, name, and status indicating whether they are active or inactive.
      *
-     * @return Operations\ListExchangePartnersResponse
+     * @return \Dwolla\Models\Operations\ListExchangePartnersResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(?Options $options = null): Operations\ListExchangePartnersResponse
@@ -149,11 +150,12 @@ class ExchangePartners
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

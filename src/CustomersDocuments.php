@@ -49,9 +49,9 @@ class CustomersDocuments
      *
      * Uploads an identity verification document for a customer using multipart form-data. Required when a customer has "document" status during the verification process.
      *
-     * @param  Operations\CreateCustomerDocumentRequestBody  $body
+     * @param  \Dwolla\Models\Operations\CreateCustomerDocumentRequestBody  $body
      * @param  string  $id
-     * @return Operations\CreateCustomerDocumentResponse
+     * @return \Dwolla\Models\Operations\CreateCustomerDocumentResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Operations\CreateCustomerDocumentRequestBody $body, string $id, ?Options $options = null): Operations\CreateCustomerDocumentResponse
@@ -84,11 +84,12 @@ class CustomersDocuments
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '413', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -160,7 +161,7 @@ class CustomersDocuments
      * Returns all identity verification documents submitted for a customer. Includes document status, verification results, document type (passport, driver's license, etc.), and failure reasons if verification was rejected. Used to track document submission and verification progress during the business verification process.
      *
      * @param  string  $id
-     * @return Operations\ListCustomerDocumentsResponse
+     * @return \Dwolla\Models\Operations\ListCustomerDocumentsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(string $id, ?Options $options = null): Operations\ListCustomerDocumentsResponse
@@ -187,11 +188,12 @@ class CustomersDocuments
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

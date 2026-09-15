@@ -53,12 +53,12 @@ class CustomersExchangeSessions
      * - **Checkout.com**: Debit card capture for Push to Card. Create a session, then retrieve it to get `externalProviderSessionData` (payment session) for the Checkout.com Flow component.
      *
      *
-     * @param  Components\CreateCustomerExchangeSessionWithRedirect|Components\CreateCustomerExchangeSessionForWeb  $body
+     * @param  \Dwolla\Models\Components\CreateCustomerExchangeSessionWithRedirect|\Dwolla\Models\Components\CreateCustomerExchangeSessionForWeb|\Dwolla\Models\Components\CreateCustomerExchangeSessionForCard  $body
      * @param  string  $id
-     * @return Operations\CreateCustomerExchangeSessionResponse
+     * @return \Dwolla\Models\Operations\CreateCustomerExchangeSessionResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
-    public function create(Components\CreateCustomerExchangeSessionWithRedirect|Components\CreateCustomerExchangeSessionForWeb $body, string $id, ?Options $options = null): Operations\CreateCustomerExchangeSessionResponse
+    public function create(Components\CreateCustomerExchangeSessionWithRedirect|Components\CreateCustomerExchangeSessionForWeb|Components\CreateCustomerExchangeSessionForCard $body, string $id, ?Options $options = null): Operations\CreateCustomerExchangeSessionResponse
     {
         $request = new Operations\CreateCustomerExchangeSessionRequest(
             id: $id,
@@ -88,11 +88,12 @@ class CustomersExchangeSessions
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '401', '403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 

@@ -37,7 +37,7 @@ class WithdrawRtpPersonalWithdrawalNotSupportedErrorError
 
     /**
      *
-     * @var ?WithdrawRtpPersonalWithdrawalNotSupportedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WithdrawRtpPersonalWithdrawalNotSupportedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawRtpPersonalWithdrawalNotSupportedErrorLinks|null')]
@@ -48,7 +48,7 @@ class WithdrawRtpPersonalWithdrawalNotSupportedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WithdrawRtpPersonalWithdrawalNotSupportedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WithdrawRtpPersonalWithdrawalNotSupportedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WithdrawRtpPersonalWithdrawalNotSupportedErrorLinks $links = null)

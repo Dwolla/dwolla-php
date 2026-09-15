@@ -35,7 +35,7 @@ class GetExchangePartnerResponse
     /**
      * successful operation
      *
-     * @var ?Components\ExchangePartner $exchangePartner
+     * @var ?\Dwolla\Models\Components\ExchangePartner $exchangePartner
      */
     public ?Components\ExchangePartner $exchangePartner = null;
 
@@ -43,7 +43,7 @@ class GetExchangePartnerResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\ExchangePartner  $exchangePartner
+     * @param  ?\Dwolla\Models\Components\ExchangePartner  $exchangePartner
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\ExchangePartner $exchangePartner = null)

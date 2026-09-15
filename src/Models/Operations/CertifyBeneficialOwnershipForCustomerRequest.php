@@ -22,14 +22,14 @@ class CertifyBeneficialOwnershipForCustomerRequest
     /**
      * Parameters for certifying beneficial ownership for a Customer
      *
-     * @var CertifyBeneficialOwnershipForCustomerRequestBody $body
+     * @var \Dwolla\Models\Operations\CertifyBeneficialOwnershipForCustomerRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public CertifyBeneficialOwnershipForCustomerRequestBody $body;
 
     /**
      * @param  string  $id
-     * @param  CertifyBeneficialOwnershipForCustomerRequestBody  $body
+     * @param  \Dwolla\Models\Operations\CertifyBeneficialOwnershipForCustomerRequestBody  $body
      * @phpstan-pure
      */
     public function __construct(string $id, CertifyBeneficialOwnershipForCustomerRequestBody $body)

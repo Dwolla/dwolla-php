@@ -37,7 +37,7 @@ class InvalidDestinationClearingTypeErrorError
 
     /**
      *
-     * @var ?InvalidDestinationClearingTypeErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidDestinationClearingTypeErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidDestinationClearingTypeErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidDestinationClearingTypeErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidDestinationClearingTypeErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidDestinationClearingTypeErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidDestinationClearingTypeErrorLinks $links = null)

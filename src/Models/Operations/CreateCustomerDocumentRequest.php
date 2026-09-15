@@ -22,14 +22,14 @@ class CreateCustomerDocumentRequest
     /**
      * Upload a document for a customer.
      *
-     * @var CreateCustomerDocumentRequestBody $body
+     * @var \Dwolla\Models\Operations\CreateCustomerDocumentRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=multipart/form-data')]
     public CreateCustomerDocumentRequestBody $body;
 
     /**
      * @param  string  $id
-     * @param  CreateCustomerDocumentRequestBody  $body
+     * @param  \Dwolla\Models\Operations\CreateCustomerDocumentRequestBody  $body
      * @phpstan-pure
      */
     public function __construct(string $id, CreateCustomerDocumentRequestBody $body)

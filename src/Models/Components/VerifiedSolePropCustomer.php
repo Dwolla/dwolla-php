@@ -15,7 +15,7 @@ class VerifiedSolePropCustomer
     /**
      * $links
      *
-     * @var array<string, HalLink> $links
+     * @var array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>')]
@@ -58,7 +58,7 @@ class VerifiedSolePropCustomer
 
     /**
      *
-     * @var VerifiedSolePropCustomerType $type
+     * @var \Dwolla\Models\Components\VerifiedSolePropCustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\VerifiedSolePropCustomerType')]
@@ -66,7 +66,7 @@ class VerifiedSolePropCustomer
 
     /**
      *
-     * @var VerifiedSolePropCustomerStatus $status
+     * @var \Dwolla\Models\Components\VerifiedSolePropCustomerStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\VerifiedSolePropCustomerStatus')]
@@ -109,7 +109,7 @@ class VerifiedSolePropCustomer
 
     /**
      *
-     * @var VerifiedSolePropCustomerBusinessType $businessType
+     * @var \Dwolla\Models\Components\VerifiedSolePropCustomerBusinessType $businessType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('businessType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\VerifiedSolePropCustomerBusinessType')]
@@ -139,20 +139,20 @@ class VerifiedSolePropCustomer
     public ?string $address2 = null;
 
     /**
-     * @param  array<string, HalLink>  $links
+     * @param  array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  string  $id
      * @param  string  $firstName
      * @param  string  $lastName
      * @param  string  $email
      * @param  \DateTime  $created
-     * @param  VerifiedSolePropCustomerType  $type
-     * @param  VerifiedSolePropCustomerStatus  $status
+     * @param  \Dwolla\Models\Components\VerifiedSolePropCustomerType  $type
+     * @param  \Dwolla\Models\Components\VerifiedSolePropCustomerStatus  $status
      * @param  string  $address1
      * @param  string  $city
      * @param  string  $state
      * @param  string  $postalCode
      * @param  string  $businessName
-     * @param  VerifiedSolePropCustomerBusinessType  $businessType
+     * @param  \Dwolla\Models\Components\VerifiedSolePropCustomerBusinessType  $businessType
      * @param  string  $businessClassification
      * @param  ?string  $correlationId
      * @param  ?string  $address2

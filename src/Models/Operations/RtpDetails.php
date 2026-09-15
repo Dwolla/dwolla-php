@@ -15,7 +15,7 @@ class RtpDetails
     /**
      * RTP details for the destination
      *
-     * @var ?RtpDetailsDestination $destination
+     * @var ?\Dwolla\Models\Operations\RtpDetailsDestination $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\RtpDetailsDestination|null')]
@@ -23,7 +23,7 @@ class RtpDetails
     public ?RtpDetailsDestination $destination = null;
 
     /**
-     * @param  ?RtpDetailsDestination  $destination
+     * @param  ?\Dwolla\Models\Operations\RtpDetailsDestination  $destination
      * @phpstan-pure
      */
     public function __construct(?RtpDetailsDestination $destination = null)

@@ -14,14 +14,14 @@ class ExchangesEmbedded
     /**
      * $exchanges
      *
-     * @var array<Exchange> $exchanges
+     * @var array<\Dwolla\Models\Components\Exchange> $exchanges
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('exchanges')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\Exchange>')]
     public array $exchanges;
 
     /**
-     * @param  array<Exchange>  $exchanges
+     * @param  array<\Dwolla\Models\Components\Exchange>  $exchanges
      * @phpstan-pure
      */
     public function __construct(array $exchanges)

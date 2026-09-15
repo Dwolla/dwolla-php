@@ -37,7 +37,7 @@ class WireAccountRestrictedErrorError
 
     /**
      *
-     * @var ?WireAccountRestrictedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WireAccountRestrictedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WireAccountRestrictedErrorLinks|null')]
@@ -48,7 +48,7 @@ class WireAccountRestrictedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WireAccountRestrictedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WireAccountRestrictedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WireAccountRestrictedErrorLinks $links = null)

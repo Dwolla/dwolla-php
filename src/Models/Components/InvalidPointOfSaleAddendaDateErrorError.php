@@ -37,7 +37,7 @@ class InvalidPointOfSaleAddendaDateErrorError
 
     /**
      *
-     * @var ?InvalidPointOfSaleAddendaDateErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidPointOfSaleAddendaDateErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidPointOfSaleAddendaDateErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidPointOfSaleAddendaDateErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidPointOfSaleAddendaDateErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidPointOfSaleAddendaDateErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidPointOfSaleAddendaDateErrorLinks $links = null)

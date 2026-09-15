@@ -28,7 +28,7 @@ class InvalidDestinationFundingSourceError
 
     /**
      *
-     * @var ?Components\InvalidDestinationFundingSourceErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidDestinationFundingSourceErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidDestinationFundingSourceErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidDestinationFundingSourceError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidDestinationFundingSourceErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidDestinationFundingSourceErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

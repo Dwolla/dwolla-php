@@ -50,7 +50,7 @@ class MicroDeposits
      * Returns the status and details of micro-deposits for a funding source to check verification eligibility. Includes deposit status (pending, processed, failed), creation timestamp, and failure details with ACH return codes if deposits failed. Use this endpoint to determine when micro-deposits are ready for verification.
      *
      * @param  string  $id
-     * @return Operations\GetMicroDepositsResponse
+     * @return \Dwolla\Models\Operations\GetMicroDepositsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\GetMicroDepositsResponse
@@ -77,11 +77,12 @@ class MicroDeposits
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -126,7 +127,7 @@ class MicroDeposits
      * Initiates two small deposits to the customer's bank account for verification purposes. No request body is required.
      *
      * @param  string  $id
-     * @return Operations\InitiateMicroDepositsResponse
+     * @return \Dwolla\Models\Operations\InitiateMicroDepositsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function initiate(string $id, ?Options $options = null): Operations\InitiateMicroDepositsResponse
@@ -153,11 +154,12 @@ class MicroDeposits
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -204,9 +206,9 @@ class MicroDeposits
      *
      * Verifies the micro-deposit amounts received in the customer's bank account to complete funding source verification.
      *
-     * @param  Operations\VerifyMicroDepositsRequestBody  $body
+     * @param  \Dwolla\Models\Operations\VerifyMicroDepositsRequestBody  $body
      * @param  string  $id
-     * @return Operations\VerifyMicroDepositsResponse
+     * @return \Dwolla\Models\Operations\VerifyMicroDepositsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function verify(Operations\VerifyMicroDepositsRequestBody $body, string $id, ?Options $options = null): Operations\VerifyMicroDepositsResponse
@@ -239,11 +241,12 @@ class MicroDeposits
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

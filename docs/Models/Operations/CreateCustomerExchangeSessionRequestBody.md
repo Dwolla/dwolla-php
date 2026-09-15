@@ -9,7 +9,7 @@ Parameters for creating an exchange session
 
 ```php
 /**
-* @var Components\CreateCustomerExchangeSessionWithRedirect
+* @var \Dwolla\Models\Components\CreateCustomerExchangeSessionWithRedirect
 */
 Components\CreateCustomerExchangeSessionWithRedirect $value = /* values here */
 ```
@@ -18,8 +18,17 @@ Components\CreateCustomerExchangeSessionWithRedirect $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateCustomerExchangeSessionForWeb
+* @var \Dwolla\Models\Components\CreateCustomerExchangeSessionForWeb
 */
 Components\CreateCustomerExchangeSessionForWeb $value = /* values here */
+```
+
+### `Components\CreateCustomerExchangeSessionForCard`
+
+```php
+/**
+* @var \Dwolla\Models\Components\CreateCustomerExchangeSessionForCard
+*/
+Components\CreateCustomerExchangeSessionForCard $value = /* values here */
 ```
 

@@ -14,14 +14,14 @@ class MaximumCardsExceededErrorEmbedded
     /**
      * $errors
      *
-     * @var array<MaximumCardsExceededErrorError> $errors
+     * @var array<\Dwolla\Models\Components\MaximumCardsExceededErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\MaximumCardsExceededErrorError>')]
     public array $errors;
 
     /**
-     * @param  array<MaximumCardsExceededErrorError>  $errors
+     * @param  array<\Dwolla\Models\Components\MaximumCardsExceededErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(array $errors)

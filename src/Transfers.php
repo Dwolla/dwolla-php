@@ -55,9 +55,9 @@ class Transfers
      *
      * Cancel a pending transfer by setting its status to cancelled. Only transfers in pending status can be cancelled before processing begins. Returns the updated transfer resource with cancelled status. Use this endpoint to stop a bank transfer from further processing.
      *
-     * @param  Operations\CancelTransferRequestBody  $body
+     * @param  \Dwolla\Models\Operations\CancelTransferRequestBody  $body
      * @param  string  $id
-     * @return Operations\CancelTransferResponse
+     * @return \Dwolla\Models\Operations\CancelTransferResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function cancel(Operations\CancelTransferRequestBody $body, string $id, ?Options $options = null): Operations\CancelTransferResponse
@@ -90,11 +90,12 @@ class Transfers
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -151,7 +152,7 @@ class Transfers
      * Retrieve detailed information for a specific transfer by its unique identifier belonging to an Account or Customer. Returns transfer status, amount, creation date, clearing details, and links to source and destination funding sources for complete transaction tracking. Includes cancellation links when applicable and references to related funding transfers. Essential for monitoring transfer lifecycle and transaction reconciliation.
      *
      * @param  string  $id
-     * @return Operations\GetTransferResponse
+     * @return \Dwolla\Models\Operations\GetTransferResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\GetTransferResponse
@@ -178,11 +179,12 @@ class Transfers
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -226,9 +228,9 @@ class Transfers
      *
      * Initiate a transfer between funding sources from a Dwolla Account or API Customer resource. Supports ACH, Instant Payments (RTP/FedNow), Push-to-Debit Card, and wire transfers with optional expedited clearing, facilitator fees, metadata, and correlation IDs for enhanced traceability. Includes idempotency key support to prevent duplicate transfers and extensive customization options for addenda records and processing channels. Returns the location of the created transfer resource for tracking and management.
      *
-     * @param  Operations\InitiateTransferRequestBody  $body
+     * @param  \Dwolla\Models\Operations\InitiateTransferRequestBody  $body
      * @param  ?string  $idempotencyKey
-     * @return Operations\InitiateTransferResponse
+     * @return \Dwolla\Models\Operations\InitiateTransferResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Operations\InitiateTransferRequestBody $body, ?string $idempotencyKey = null, ?Options $options = null): Operations\InitiateTransferResponse
@@ -265,11 +267,12 @@ class Transfers
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '429', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 

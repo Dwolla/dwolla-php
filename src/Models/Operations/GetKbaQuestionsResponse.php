@@ -35,7 +35,7 @@ class GetKbaQuestionsResponse
     /**
      * successful operation
      *
-     * @var ?GetKbaQuestionsResponseBody $object
+     * @var ?\Dwolla\Models\Operations\GetKbaQuestionsResponseBody $object
      */
     public ?GetKbaQuestionsResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class GetKbaQuestionsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?GetKbaQuestionsResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\GetKbaQuestionsResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?GetKbaQuestionsResponseBody $object = null)

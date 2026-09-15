@@ -84,7 +84,7 @@ class CreateVerifiedBusinessCustomerWithController
 
     /**
      *
-     * @var CreateVerifiedBusinessCustomerWithControllerController $controller
+     * @var \Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithControllerController $controller
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('controller')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithControllerController')]
@@ -92,7 +92,7 @@ class CreateVerifiedBusinessCustomerWithController
 
     /**
      *
-     * @var CreateVerifiedBusinessCustomerWithControllerBusinessType $businessType
+     * @var \Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithControllerBusinessType $businessType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('businessType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithControllerBusinessType')]
@@ -165,8 +165,8 @@ class CreateVerifiedBusinessCustomerWithController
      * @param  string  $businessClassification
      * @param  string  $businessName
      * @param  string  $ein
-     * @param  CreateVerifiedBusinessCustomerWithControllerController  $controller
-     * @param  CreateVerifiedBusinessCustomerWithControllerBusinessType  $businessType
+     * @param  \Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithControllerController  $controller
+     * @param  \Dwolla\Models\Components\CreateVerifiedBusinessCustomerWithControllerBusinessType  $businessType
      * @param  ?string  $ipAddress
      * @param  ?string  $phone
      * @param  ?string  $correlationId

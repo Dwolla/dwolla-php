@@ -22,14 +22,14 @@ class UpdateWebhookSubscriptionRequest
     /**
      * Parameters to update a webhook subscription
      *
-     * @var UpdateWebhookSubscriptionRequestBody $body
+     * @var \Dwolla\Models\Operations\UpdateWebhookSubscriptionRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public UpdateWebhookSubscriptionRequestBody $body;
 
     /**
      * @param  string  $id
-     * @param  UpdateWebhookSubscriptionRequestBody  $body
+     * @param  \Dwolla\Models\Operations\UpdateWebhookSubscriptionRequestBody  $body
      * @phpstan-pure
      */
     public function __construct(string $id, UpdateWebhookSubscriptionRequestBody $body)

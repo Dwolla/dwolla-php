@@ -37,7 +37,7 @@ class DepositAccountRestrictedErrorError
 
     /**
      *
-     * @var ?DepositAccountRestrictedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\DepositAccountRestrictedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DepositAccountRestrictedErrorLinks|null')]
@@ -48,7 +48,7 @@ class DepositAccountRestrictedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?DepositAccountRestrictedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\DepositAccountRestrictedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?DepositAccountRestrictedErrorLinks $links = null)

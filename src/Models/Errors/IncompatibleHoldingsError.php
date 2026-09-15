@@ -28,7 +28,7 @@ class IncompatibleHoldingsError
 
     /**
      *
-     * @var ?Components\IncompatibleHoldingsErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\IncompatibleHoldingsErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\IncompatibleHoldingsErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class IncompatibleHoldingsError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\IncompatibleHoldingsErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\IncompatibleHoldingsErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

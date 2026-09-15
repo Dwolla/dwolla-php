@@ -28,7 +28,7 @@ class WireNotEnabledError
 
     /**
      *
-     * @var ?Components\WireNotEnabledErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WireNotEnabledErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WireNotEnabledErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WireNotEnabledError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WireNotEnabledErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WireNotEnabledErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

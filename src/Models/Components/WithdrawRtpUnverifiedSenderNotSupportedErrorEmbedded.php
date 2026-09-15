@@ -14,7 +14,7 @@ class WithdrawRtpUnverifiedSenderNotSupportedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<WithdrawRtpUnverifiedSenderNotSupportedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\WithdrawRtpUnverifiedSenderNotSupportedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WithdrawRtpUnverifiedSenderNotSupportedErrorError>|null')]
@@ -22,7 +22,7 @@ class WithdrawRtpUnverifiedSenderNotSupportedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<WithdrawRtpUnverifiedSenderNotSupportedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\WithdrawRtpUnverifiedSenderNotSupportedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

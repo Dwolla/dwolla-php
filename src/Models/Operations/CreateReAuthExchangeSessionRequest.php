@@ -29,14 +29,14 @@ class CreateReAuthExchangeSessionRequest
      * - Plaid web sessions
      *
      *
-     * @var Components\CreateReAuthExchangeSessionForWeb|Components\CreateReAuthExchangeSessionWithRedirect|null $body
+     * @var \Dwolla\Models\Components\CreateReAuthExchangeSessionForWeb|\Dwolla\Models\Components\CreateReAuthExchangeSessionWithRedirect|null $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/vnd.dwolla.v1.hal+json')]
     public Components\CreateReAuthExchangeSessionForWeb|Components\CreateReAuthExchangeSessionWithRedirect|null $body = null;
 
     /**
      * @param  string  $id
-     * @param  Components\CreateReAuthExchangeSessionForWeb|Components\CreateReAuthExchangeSessionWithRedirect|null  $body
+     * @param  \Dwolla\Models\Components\CreateReAuthExchangeSessionForWeb|\Dwolla\Models\Components\CreateReAuthExchangeSessionWithRedirect|null  $body
      * @phpstan-pure
      */
     public function __construct(string $id, Components\CreateReAuthExchangeSessionForWeb|Components\CreateReAuthExchangeSessionWithRedirect|null $body = null)

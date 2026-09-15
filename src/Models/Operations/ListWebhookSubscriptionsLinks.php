@@ -13,7 +13,7 @@ class ListWebhookSubscriptionsLinks
 {
     /**
      *
-     * @var ?ListWebhookSubscriptionsSelf $self
+     * @var ?\Dwolla\Models\Operations\ListWebhookSubscriptionsSelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListWebhookSubscriptionsSelf|null')]
@@ -21,7 +21,7 @@ class ListWebhookSubscriptionsLinks
     public ?ListWebhookSubscriptionsSelf $self = null;
 
     /**
-     * @param  ?ListWebhookSubscriptionsSelf  $self
+     * @param  ?\Dwolla\Models\Operations\ListWebhookSubscriptionsSelf  $self
      * @phpstan-pure
      */
     public function __construct(?ListWebhookSubscriptionsSelf $self = null)

@@ -14,7 +14,7 @@ class InvalidUrlFormatErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidUrlFormatErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidUrlFormatErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidUrlFormatErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidUrlFormatErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidUrlFormatErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidUrlFormatErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

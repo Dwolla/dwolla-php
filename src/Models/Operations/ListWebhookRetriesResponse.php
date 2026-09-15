@@ -35,7 +35,7 @@ class ListWebhookRetriesResponse
     /**
      * successful operation
      *
-     * @var ?Components\WebhookRetries $webhookRetries
+     * @var ?\Dwolla\Models\Components\WebhookRetries $webhookRetries
      */
     public ?Components\WebhookRetries $webhookRetries = null;
 
@@ -43,7 +43,7 @@ class ListWebhookRetriesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\WebhookRetries  $webhookRetries
+     * @param  ?\Dwolla\Models\Components\WebhookRetries  $webhookRetries
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\WebhookRetries $webhookRetries = null)

@@ -14,7 +14,7 @@ class SourceSameAsDestinationErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<SourceSameAsDestinationErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\SourceSameAsDestinationErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\SourceSameAsDestinationErrorError>|null')]
@@ -22,7 +22,7 @@ class SourceSameAsDestinationErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<SourceSameAsDestinationErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\SourceSameAsDestinationErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

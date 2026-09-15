@@ -37,7 +37,7 @@ class CannotParseAmountErrorError
 
     /**
      *
-     * @var ?CannotParseAmountErrorLinks $links
+     * @var ?\Dwolla\Models\Components\CannotParseAmountErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CannotParseAmountErrorLinks|null')]
@@ -48,7 +48,7 @@ class CannotParseAmountErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?CannotParseAmountErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\CannotParseAmountErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?CannotParseAmountErrorLinks $links = null)

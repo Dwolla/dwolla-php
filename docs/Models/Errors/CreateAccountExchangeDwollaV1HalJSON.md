@@ -9,7 +9,7 @@ Bad Request
 
 ```php
 /**
-* @var Errors\InvalidExchangeTokenException
+* @var \Dwolla\Models\Errors\InvalidExchangeTokenException
 */
 Errors\InvalidExchangeTokenException $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\InvalidExchangeTokenException $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidExchangeException
+* @var \Dwolla\Models\Errors\InvalidExchangeException
 */
 Errors\InvalidExchangeException $value = /* values here */
 ```

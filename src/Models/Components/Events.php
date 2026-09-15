@@ -13,7 +13,7 @@ class Events
 {
     /**
      *
-     * @var ?EventsLinks $links
+     * @var ?\Dwolla\Models\Components\EventsLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\EventsLinks|null')]
@@ -22,7 +22,7 @@ class Events
 
     /**
      *
-     * @var ?HalLink $additionalProperties
+     * @var ?\Dwolla\Models\Components\HalLink $additionalProperties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('additionalProperties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\HalLink|null')]
@@ -31,7 +31,7 @@ class Events
 
     /**
      *
-     * @var ?EventsEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\EventsEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\EventsEmbedded|null')]
@@ -47,9 +47,9 @@ class Events
     public ?int $total = null;
 
     /**
-     * @param  ?EventsLinks  $links
-     * @param  ?HalLink  $additionalProperties
-     * @param  ?EventsEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\EventsLinks  $links
+     * @param  ?\Dwolla\Models\Components\HalLink  $additionalProperties
+     * @param  ?\Dwolla\Models\Components\EventsEmbedded  $embedded
      * @param  ?int  $total
      * @phpstan-pure
      */

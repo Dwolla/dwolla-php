@@ -13,14 +13,14 @@ class SandboxSimulationCustomerVerificationRequestLinks
 {
     /**
      *
-     * @var SandboxSimulationCustomerVerificationRequestCustomer $customer
+     * @var \Dwolla\Models\Components\SandboxSimulationCustomerVerificationRequestCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SandboxSimulationCustomerVerificationRequestCustomer')]
     public SandboxSimulationCustomerVerificationRequestCustomer $customer;
 
     /**
-     * @param  SandboxSimulationCustomerVerificationRequestCustomer  $customer
+     * @param  \Dwolla\Models\Components\SandboxSimulationCustomerVerificationRequestCustomer  $customer
      * @phpstan-pure
      */
     public function __construct(SandboxSimulationCustomerVerificationRequestCustomer $customer)

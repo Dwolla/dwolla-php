@@ -14,7 +14,7 @@ class InvalidMetadataErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidMetadataErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidMetadataErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidMetadataErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidMetadataErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidMetadataErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidMetadataErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

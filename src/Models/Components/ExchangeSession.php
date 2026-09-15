@@ -28,7 +28,7 @@ class ExchangeSession
 
     /**
      *
-     * @var ExchangeSessionLinks $links
+     * @var \Dwolla\Models\Components\ExchangeSessionLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ExchangeSessionLinks')]
@@ -52,7 +52,7 @@ class ExchangeSession
      * Use these fields to initialize the Checkout.com Flow component for card capture.
      *
      *
-     * @var ?ExternalProviderSessionData $externalProviderSessionData
+     * @var ?\Dwolla\Models\Components\ExternalProviderSessionData $externalProviderSessionData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('externalProviderSessionData')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ExternalProviderSessionData|null')]
@@ -61,9 +61,9 @@ class ExchangeSession
 
     /**
      * @param  \DateTime  $created
-     * @param  ExchangeSessionLinks  $links
+     * @param  \Dwolla\Models\Components\ExchangeSessionLinks  $links
      * @param  ?string  $externalProviderSessionToken
-     * @param  ?ExternalProviderSessionData  $externalProviderSessionData
+     * @param  ?\Dwolla\Models\Components\ExternalProviderSessionData  $externalProviderSessionData
      * @phpstan-pure
      */
     public function __construct(\DateTime $created, ExchangeSessionLinks $links, ?string $externalProviderSessionToken = null, ?ExternalProviderSessionData $externalProviderSessionData = null)

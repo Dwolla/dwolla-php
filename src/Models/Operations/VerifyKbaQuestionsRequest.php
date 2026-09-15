@@ -22,14 +22,14 @@ class VerifyKbaQuestionsRequest
     /**
      * Parameters for verifying KBA questions
      *
-     * @var VerifyKbaQuestionsRequestBody $body
+     * @var \Dwolla\Models\Operations\VerifyKbaQuestionsRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public VerifyKbaQuestionsRequestBody $body;
 
     /**
      * @param  string  $id
-     * @param  VerifyKbaQuestionsRequestBody  $body
+     * @param  \Dwolla\Models\Operations\VerifyKbaQuestionsRequestBody  $body
      * @phpstan-pure
      */
     public function __construct(string $id, VerifyKbaQuestionsRequestBody $body)

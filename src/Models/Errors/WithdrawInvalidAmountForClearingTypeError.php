@@ -28,7 +28,7 @@ class WithdrawInvalidAmountForClearingTypeError
 
     /**
      *
-     * @var ?Components\WithdrawInvalidAmountForClearingTypeErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WithdrawInvalidAmountForClearingTypeErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawInvalidAmountForClearingTypeErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WithdrawInvalidAmountForClearingTypeError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WithdrawInvalidAmountForClearingTypeErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WithdrawInvalidAmountForClearingTypeErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

@@ -23,14 +23,14 @@ class CreateBeneficialOwnerForCustomerRequest
     /**
      * Parameters for creating a beneficial owner
      *
-     * @var Components\CreateUSBeneficialOwner|Components\CreateInternationalBeneficialOwner $body
+     * @var \Dwolla\Models\Components\CreateUSBeneficialOwner|\Dwolla\Models\Components\CreateInternationalBeneficialOwner $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Components\CreateUSBeneficialOwner|Components\CreateInternationalBeneficialOwner $body;
 
     /**
      * @param  string  $id
-     * @param  Components\CreateUSBeneficialOwner|Components\CreateInternationalBeneficialOwner  $body
+     * @param  \Dwolla\Models\Components\CreateUSBeneficialOwner|\Dwolla\Models\Components\CreateInternationalBeneficialOwner  $body
      * @phpstan-pure
      */
     public function __construct(string $id, Components\CreateUSBeneficialOwner|Components\CreateInternationalBeneficialOwner $body)

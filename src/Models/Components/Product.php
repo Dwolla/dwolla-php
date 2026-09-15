@@ -29,7 +29,7 @@ class Product
 
     /**
      *
-     * @var ?AccessPeriod $accessPeriod
+     * @var ?\Dwolla\Models\Components\AccessPeriod $accessPeriod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('accessPeriod')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\AccessPeriod|null')]
@@ -39,7 +39,7 @@ class Product
     /**
      * @param  ?string  $product
      * @param  ?string  $accountId
-     * @param  ?AccessPeriod  $accessPeriod
+     * @param  ?\Dwolla\Models\Components\AccessPeriod  $accessPeriod
      * @phpstan-pure
      */
     public function __construct(?string $product = null, ?string $accountId = null, ?AccessPeriod $accessPeriod = null)

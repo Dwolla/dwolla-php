@@ -35,7 +35,7 @@ class RetrieveLabelReallocationResponse
     /**
      * successful operation
      *
-     * @var ?RetrieveLabelReallocationResponseBody $object
+     * @var ?\Dwolla\Models\Operations\RetrieveLabelReallocationResponseBody $object
      */
     public ?RetrieveLabelReallocationResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class RetrieveLabelReallocationResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?RetrieveLabelReallocationResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\RetrieveLabelReallocationResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?RetrieveLabelReallocationResponseBody $object = null)

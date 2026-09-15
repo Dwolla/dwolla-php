@@ -13,7 +13,7 @@ class Item
 {
     /**
      *
-     * @var ?ItemLinks $links
+     * @var ?\Dwolla\Models\Operations\ItemLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ItemLinks|null')]
@@ -22,7 +22,7 @@ class Item
 
     /**
      *
-     * @var ?Components\TransferAmount $amount
+     * @var ?\Dwolla\Models\Components\TransferAmount $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\TransferAmount|null')]
@@ -31,7 +31,7 @@ class Item
 
     /**
      *
-     * @var ?InitiateMassPaymentProcessingChannel $processingChannel
+     * @var ?\Dwolla\Models\Operations\InitiateMassPaymentProcessingChannel $processingChannel
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('processingChannel')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateMassPaymentProcessingChannel|null')]
@@ -40,7 +40,7 @@ class Item
 
     /**
      *
-     * @var ?ItemMetadata $metadata
+     * @var ?\Dwolla\Models\Operations\ItemMetadata $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ItemMetadata|null')]
@@ -49,7 +49,7 @@ class Item
 
     /**
      *
-     * @var ?ItemClearing $clearing
+     * @var ?\Dwolla\Models\Operations\ItemClearing $clearing
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('clearing')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ItemClearing|null')]
@@ -58,7 +58,7 @@ class Item
 
     /**
      *
-     * @var ?ItemAchDetails $achDetails
+     * @var ?\Dwolla\Models\Operations\ItemAchDetails $achDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('achDetails')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ItemAchDetails|null')]
@@ -74,12 +74,12 @@ class Item
     public ?string $correlationId = null;
 
     /**
-     * @param  ?ItemLinks  $links
-     * @param  ?Components\TransferAmount  $amount
-     * @param  ?InitiateMassPaymentProcessingChannel  $processingChannel
-     * @param  ?ItemMetadata  $metadata
-     * @param  ?ItemClearing  $clearing
-     * @param  ?ItemAchDetails  $achDetails
+     * @param  ?\Dwolla\Models\Operations\ItemLinks  $links
+     * @param  ?\Dwolla\Models\Components\TransferAmount  $amount
+     * @param  ?\Dwolla\Models\Operations\InitiateMassPaymentProcessingChannel  $processingChannel
+     * @param  ?\Dwolla\Models\Operations\ItemMetadata  $metadata
+     * @param  ?\Dwolla\Models\Operations\ItemClearing  $clearing
+     * @param  ?\Dwolla\Models\Operations\ItemAchDetails  $achDetails
      * @param  ?string  $correlationId
      * @phpstan-pure
      */

@@ -29,7 +29,7 @@ class UnsupportedCardCountryError
 
     /**
      *
-     * @var Components\UnsupportedCardCountryErrorEmbedded $embedded
+     * @var \Dwolla\Models\Components\UnsupportedCardCountryErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\UnsupportedCardCountryErrorEmbedded')]
@@ -47,7 +47,7 @@ class UnsupportedCardCountryError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  Components\UnsupportedCardCountryErrorEmbedded  $embedded
+     * @param  \Dwolla\Models\Components\UnsupportedCardCountryErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

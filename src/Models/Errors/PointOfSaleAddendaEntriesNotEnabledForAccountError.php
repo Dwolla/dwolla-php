@@ -28,7 +28,7 @@ class PointOfSaleAddendaEntriesNotEnabledForAccountError
 
     /**
      *
-     * @var ?Components\PointOfSaleAddendaEntriesNotEnabledForAccountErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\PointOfSaleAddendaEntriesNotEnabledForAccountErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\PointOfSaleAddendaEntriesNotEnabledForAccountErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class PointOfSaleAddendaEntriesNotEnabledForAccountError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\PointOfSaleAddendaEntriesNotEnabledForAccountErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\PointOfSaleAddendaEntriesNotEnabledForAccountErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

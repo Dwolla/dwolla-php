@@ -14,14 +14,14 @@ class CreateReAuthExchangeSessionWithRedirect
 {
     /**
      *
-     * @var CreateReAuthExchangeSessionWithRedirectLinks $links
+     * @var \Dwolla\Models\Components\CreateReAuthExchangeSessionWithRedirectLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateReAuthExchangeSessionWithRedirectLinks')]
     public CreateReAuthExchangeSessionWithRedirectLinks $links;
 
     /**
-     * @param  CreateReAuthExchangeSessionWithRedirectLinks  $links
+     * @param  \Dwolla\Models\Components\CreateReAuthExchangeSessionWithRedirectLinks  $links
      * @phpstan-pure
      */
     public function __construct(CreateReAuthExchangeSessionWithRedirectLinks $links)

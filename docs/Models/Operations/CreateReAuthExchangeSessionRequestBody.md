@@ -14,7 +14,7 @@ Not required for:
 
 ```php
 /**
-* @var Components\CreateReAuthExchangeSessionForWeb
+* @var \Dwolla\Models\Components\CreateReAuthExchangeSessionForWeb
 */
 Components\CreateReAuthExchangeSessionForWeb $value = /* values here */
 ```
@@ -23,7 +23,7 @@ Components\CreateReAuthExchangeSessionForWeb $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateReAuthExchangeSessionWithRedirect
+* @var \Dwolla\Models\Components\CreateReAuthExchangeSessionWithRedirect
 */
 Components\CreateReAuthExchangeSessionWithRedirect $value = /* values here */
 ```

@@ -28,7 +28,7 @@ class RtpFacilitatorFeeNotSupportedError
 
     /**
      *
-     * @var ?Components\RtpFacilitatorFeeNotSupportedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\RtpFacilitatorFeeNotSupportedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\RtpFacilitatorFeeNotSupportedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class RtpFacilitatorFeeNotSupportedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\RtpFacilitatorFeeNotSupportedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\RtpFacilitatorFeeNotSupportedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

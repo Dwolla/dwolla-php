@@ -14,7 +14,7 @@ class CreateCustomerExchangeFundingSource
 {
     /**
      *
-     * @var CreateCustomerExchangeFundingSourceLinks $links
+     * @var \Dwolla\Models\Components\CreateCustomerExchangeFundingSourceLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerExchangeFundingSourceLinks')]
@@ -23,7 +23,7 @@ class CreateCustomerExchangeFundingSource
     /**
      * Type of bank account
      *
-     * @var CreateCustomerExchangeFundingSourceBankAccountType $bankAccountType
+     * @var \Dwolla\Models\Components\CreateCustomerExchangeFundingSourceBankAccountType $bankAccountType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('bankAccountType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerExchangeFundingSourceBankAccountType')]
@@ -38,8 +38,8 @@ class CreateCustomerExchangeFundingSource
     public string $name;
 
     /**
-     * @param  CreateCustomerExchangeFundingSourceLinks  $links
-     * @param  CreateCustomerExchangeFundingSourceBankAccountType  $bankAccountType
+     * @param  \Dwolla\Models\Components\CreateCustomerExchangeFundingSourceLinks  $links
+     * @param  \Dwolla\Models\Components\CreateCustomerExchangeFundingSourceBankAccountType  $bankAccountType
      * @param  string  $name
      * @phpstan-pure
      */

@@ -9,7 +9,7 @@ Unauthorized
 
 ```php
 /**
-* @var Errors\CreateCustomerExchangeResponseBodyException1
+* @var \Dwolla\Models\Errors\CreateCustomerExchangeResponseBodyException1
 */
 Errors\CreateCustomerExchangeResponseBodyException1 $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\CreateCustomerExchangeResponseBodyException1 $value = /* values here */
 
 ```php
 /**
-* @var Errors\CreateCustomerExchangeResponseBodyException2
+* @var \Dwolla\Models\Errors\CreateCustomerExchangeResponseBodyException2
 */
 Errors\CreateCustomerExchangeResponseBodyException2 $value = /* values here */
 ```

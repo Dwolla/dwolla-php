@@ -14,7 +14,7 @@ class WithdrawRtpPersonalWithdrawalNotSupportedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<WithdrawRtpPersonalWithdrawalNotSupportedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\WithdrawRtpPersonalWithdrawalNotSupportedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WithdrawRtpPersonalWithdrawalNotSupportedErrorError>|null')]
@@ -22,7 +22,7 @@ class WithdrawRtpPersonalWithdrawalNotSupportedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<WithdrawRtpPersonalWithdrawalNotSupportedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\WithdrawRtpPersonalWithdrawalNotSupportedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

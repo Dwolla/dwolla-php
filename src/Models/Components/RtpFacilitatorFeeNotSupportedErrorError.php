@@ -37,7 +37,7 @@ class RtpFacilitatorFeeNotSupportedErrorError
 
     /**
      *
-     * @var ?RtpFacilitatorFeeNotSupportedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\RtpFacilitatorFeeNotSupportedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\RtpFacilitatorFeeNotSupportedErrorLinks|null')]
@@ -48,7 +48,7 @@ class RtpFacilitatorFeeNotSupportedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?RtpFacilitatorFeeNotSupportedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\RtpFacilitatorFeeNotSupportedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?RtpFacilitatorFeeNotSupportedErrorLinks $links = null)

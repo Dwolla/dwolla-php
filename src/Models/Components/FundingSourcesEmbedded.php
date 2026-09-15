@@ -14,7 +14,7 @@ class FundingSourcesEmbedded
     /**
      * $fundingSources
      *
-     * @var ?array<FundingSource> $fundingSources
+     * @var ?array<\Dwolla\Models\Components\FundingSource> $fundingSources
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('funding-sources')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\FundingSource>|null')]
@@ -22,7 +22,7 @@ class FundingSourcesEmbedded
     public ?array $fundingSources = null;
 
     /**
-     * @param  ?array<FundingSource>  $fundingSources
+     * @param  ?array<\Dwolla\Models\Components\FundingSource>  $fundingSources
      * @phpstan-pure
      */
     public function __construct(?array $fundingSources = null)

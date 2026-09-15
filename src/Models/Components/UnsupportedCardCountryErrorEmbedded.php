@@ -14,14 +14,14 @@ class UnsupportedCardCountryErrorEmbedded
     /**
      * $errors
      *
-     * @var array<UnsupportedCardCountryErrorError> $errors
+     * @var array<\Dwolla\Models\Components\UnsupportedCardCountryErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\UnsupportedCardCountryErrorError>')]
     public array $errors;
 
     /**
-     * @param  array<UnsupportedCardCountryErrorError>  $errors
+     * @param  array<\Dwolla\Models\Components\UnsupportedCardCountryErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(array $errors)

@@ -13,7 +13,7 @@ class WebhookRetriesRetry
 {
     /**
      *
-     * @var ?RetryLinks $links
+     * @var ?\Dwolla\Models\Components\RetryLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\RetryLinks|null')]
@@ -37,7 +37,7 @@ class WebhookRetriesRetry
     public ?\DateTime $timestamp = null;
 
     /**
-     * @param  ?RetryLinks  $links
+     * @param  ?\Dwolla\Models\Components\RetryLinks  $links
      * @param  ?string  $id
      * @param  ?\DateTime  $timestamp
      * @phpstan-pure

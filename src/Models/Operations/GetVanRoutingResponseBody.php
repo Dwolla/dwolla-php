@@ -15,7 +15,7 @@ class GetVanRoutingResponseBody
     /**
      * $links
      *
-     * @var ?array<string, Components\HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -39,7 +39,7 @@ class GetVanRoutingResponseBody
     public ?string $routingNumber = null;
 
     /**
-     * @param  ?array<string, Components\HalLink>  $links
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  ?string  $accountNumber
      * @param  ?string  $routingNumber
      * @phpstan-pure

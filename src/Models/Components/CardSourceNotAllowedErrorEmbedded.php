@@ -14,14 +14,14 @@ class CardSourceNotAllowedErrorEmbedded
     /**
      * $errors
      *
-     * @var array<CardSourceNotAllowedErrorError> $errors
+     * @var array<\Dwolla\Models\Components\CardSourceNotAllowedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\CardSourceNotAllowedErrorError>')]
     public array $errors;
 
     /**
-     * @param  array<CardSourceNotAllowedErrorError>  $errors
+     * @param  array<\Dwolla\Models\Components\CardSourceNotAllowedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(array $errors)

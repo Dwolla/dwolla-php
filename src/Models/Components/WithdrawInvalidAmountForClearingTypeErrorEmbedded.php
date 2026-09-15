@@ -14,7 +14,7 @@ class WithdrawInvalidAmountForClearingTypeErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<WithdrawInvalidAmountForClearingTypeErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\WithdrawInvalidAmountForClearingTypeErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WithdrawInvalidAmountForClearingTypeErrorError>|null')]
@@ -22,7 +22,7 @@ class WithdrawInvalidAmountForClearingTypeErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<WithdrawInvalidAmountForClearingTypeErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\WithdrawInvalidAmountForClearingTypeErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

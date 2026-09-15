@@ -13,7 +13,7 @@ class InitiateMassPaymentAchDetails
 {
     /**
      *
-     * @var ?InitiateMassPaymentAchDetailsSource $source
+     * @var ?\Dwolla\Models\Operations\InitiateMassPaymentAchDetailsSource $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateMassPaymentAchDetailsSource|null')]
@@ -21,7 +21,7 @@ class InitiateMassPaymentAchDetails
     public ?InitiateMassPaymentAchDetailsSource $source = null;
 
     /**
-     * @param  ?InitiateMassPaymentAchDetailsSource  $source
+     * @param  ?\Dwolla\Models\Operations\InitiateMassPaymentAchDetailsSource  $source
      * @phpstan-pure
      */
     public function __construct(?InitiateMassPaymentAchDetailsSource $source = null)

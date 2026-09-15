@@ -22,14 +22,14 @@ class VerifyMicroDepositsRequest
     /**
      * The micro-deposit amounts received in the bank account
      *
-     * @var VerifyMicroDepositsRequestBody $body
+     * @var \Dwolla\Models\Operations\VerifyMicroDepositsRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/vnd.dwolla.v1.hal+json')]
     public VerifyMicroDepositsRequestBody $body;
 
     /**
      * @param  string  $id
-     * @param  VerifyMicroDepositsRequestBody  $body
+     * @param  \Dwolla\Models\Operations\VerifyMicroDepositsRequestBody  $body
      * @phpstan-pure
      */
     public function __construct(string $id, VerifyMicroDepositsRequestBody $body)

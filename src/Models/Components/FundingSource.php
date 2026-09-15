@@ -14,7 +14,7 @@ class FundingSource
     /**
      * $links
      *
-     * @var ?array<string, HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -80,7 +80,7 @@ class FundingSource
     /**
      * Payment processing channels supported by this funding source
      *
-     * @var ?array<FundingSourceChannel> $channels
+     * @var ?array<\Dwolla\Models\Components\FundingSourceChannel> $channels
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('channels')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\FundingSourceChannel>|null')]
@@ -106,7 +106,7 @@ class FundingSource
     /**
      * The usage type of the bank account. Indicates if this is a settlement account for card network processors.
      *
-     * @var ?BankUsageType $bankUsageType
+     * @var ?\Dwolla\Models\Components\BankUsageType $bankUsageType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('bankUsageType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\BankUsageType|null')]
@@ -116,7 +116,7 @@ class FundingSource
     /**
      * Card-specific details. Only present when type is 'card'.
      *
-     * @var ?FundingSourceCardDetails $cardDetails
+     * @var ?\Dwolla\Models\Components\FundingSourceCardDetails $cardDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cardDetails')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\FundingSourceCardDetails|null')]
@@ -124,7 +124,7 @@ class FundingSource
     public ?FundingSourceCardDetails $cardDetails = null;
 
     /**
-     * @param  ?array<string, HalLink>  $links
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  ?string  $id
      * @param  ?string  $status
      * @param  ?string  $type
@@ -132,11 +132,11 @@ class FundingSource
      * @param  ?string  $name
      * @param  ?\DateTime  $created
      * @param  ?bool  $removed
-     * @param  ?array<FundingSourceChannel>  $channels
+     * @param  ?array<\Dwolla\Models\Components\FundingSourceChannel>  $channels
      * @param  ?string  $bankName
      * @param  ?string  $fingerprint
-     * @param  ?BankUsageType  $bankUsageType
-     * @param  ?FundingSourceCardDetails  $cardDetails
+     * @param  ?\Dwolla\Models\Components\BankUsageType  $bankUsageType
+     * @param  ?\Dwolla\Models\Components\FundingSourceCardDetails  $cardDetails
      * @phpstan-pure
      */
     public function __construct(?array $links = null, ?string $id = null, ?string $status = null, ?string $type = null, ?string $bankAccountType = null, ?string $name = null, ?\DateTime $created = null, ?bool $removed = null, ?array $channels = null, ?string $bankName = null, ?string $fingerprint = null, ?BankUsageType $bankUsageType = null, ?FundingSourceCardDetails $cardDetails = null)

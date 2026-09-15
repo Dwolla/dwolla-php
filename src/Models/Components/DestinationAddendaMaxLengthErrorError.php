@@ -37,7 +37,7 @@ class DestinationAddendaMaxLengthErrorError
 
     /**
      *
-     * @var ?DestinationAddendaMaxLengthErrorLinks $links
+     * @var ?\Dwolla\Models\Components\DestinationAddendaMaxLengthErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DestinationAddendaMaxLengthErrorLinks|null')]
@@ -48,7 +48,7 @@ class DestinationAddendaMaxLengthErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?DestinationAddendaMaxLengthErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\DestinationAddendaMaxLengthErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?DestinationAddendaMaxLengthErrorLinks $links = null)

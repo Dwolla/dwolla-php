@@ -35,7 +35,7 @@ class GetLabelLedgerEntryResponse
     /**
      * successful operation
      *
-     * @var ?Components\LabelLedgerEntry $labelLedgerEntry
+     * @var ?\Dwolla\Models\Components\LabelLedgerEntry $labelLedgerEntry
      */
     public ?Components\LabelLedgerEntry $labelLedgerEntry = null;
 
@@ -43,7 +43,7 @@ class GetLabelLedgerEntryResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\LabelLedgerEntry  $labelLedgerEntry
+     * @param  ?\Dwolla\Models\Components\LabelLedgerEntry  $labelLedgerEntry
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\LabelLedgerEntry $labelLedgerEntry = null)

@@ -35,7 +35,7 @@ class GetLabelResponse
     /**
      * successful operation
      *
-     * @var ?Components\Label $label
+     * @var ?\Dwolla\Models\Components\Label $label
      */
     public ?Components\Label $label = null;
 
@@ -43,7 +43,7 @@ class GetLabelResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\Label  $label
+     * @param  ?\Dwolla\Models\Components\Label  $label
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\Label $label = null)

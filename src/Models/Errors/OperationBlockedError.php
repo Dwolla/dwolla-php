@@ -28,7 +28,7 @@ class OperationBlockedError
 
     /**
      *
-     * @var ?Components\OperationBlockedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\OperationBlockedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\OperationBlockedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class OperationBlockedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\OperationBlockedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\OperationBlockedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

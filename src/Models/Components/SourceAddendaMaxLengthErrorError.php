@@ -37,7 +37,7 @@ class SourceAddendaMaxLengthErrorError
 
     /**
      *
-     * @var ?SourceAddendaMaxLengthErrorLinks $links
+     * @var ?\Dwolla\Models\Components\SourceAddendaMaxLengthErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SourceAddendaMaxLengthErrorLinks|null')]
@@ -48,7 +48,7 @@ class SourceAddendaMaxLengthErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?SourceAddendaMaxLengthErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\SourceAddendaMaxLengthErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?SourceAddendaMaxLengthErrorLinks $links = null)

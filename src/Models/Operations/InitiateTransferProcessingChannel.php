@@ -13,7 +13,7 @@ class InitiateTransferProcessingChannel
 {
     /**
      *
-     * @var ?DestinationEnum $destination
+     * @var ?\Dwolla\Models\Operations\DestinationEnum $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\DestinationEnum|null')]
@@ -21,7 +21,7 @@ class InitiateTransferProcessingChannel
     public ?DestinationEnum $destination = null;
 
     /**
-     * @param  ?DestinationEnum  $destination
+     * @param  ?\Dwolla\Models\Operations\DestinationEnum  $destination
      * @phpstan-pure
      */
     public function __construct(?DestinationEnum $destination = null)

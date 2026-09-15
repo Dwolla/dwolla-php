@@ -28,7 +28,7 @@ class WithdrawInvalidFundingSourceError
 
     /**
      *
-     * @var ?Components\WithdrawInvalidFundingSourceErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WithdrawInvalidFundingSourceErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawInvalidFundingSourceErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WithdrawInvalidFundingSourceError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WithdrawInvalidFundingSourceErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WithdrawInvalidFundingSourceErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

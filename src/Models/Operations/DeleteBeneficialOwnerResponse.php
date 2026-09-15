@@ -35,7 +35,7 @@ class DeleteBeneficialOwnerResponse
     /**
      * successful operation
      *
-     * @var ?DeleteBeneficialOwnerResponseBody $object
+     * @var ?\Dwolla\Models\Operations\DeleteBeneficialOwnerResponseBody $object
      */
     public ?DeleteBeneficialOwnerResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class DeleteBeneficialOwnerResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?DeleteBeneficialOwnerResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\DeleteBeneficialOwnerResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?DeleteBeneficialOwnerResponseBody $object = null)

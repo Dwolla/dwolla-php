@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\UnverifiedCustomer
+* @var \Dwolla\Models\Components\UnverifiedCustomer
 */
 Components\UnverifiedCustomer $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\UnverifiedCustomer $value = /* values here */
 
 ```php
 /**
-* @var Components\ReceiveOnlyCustomer
+* @var \Dwolla\Models\Components\ReceiveOnlyCustomer
 */
 Components\ReceiveOnlyCustomer $value = /* values here */
 ```
@@ -25,7 +25,7 @@ Components\ReceiveOnlyCustomer $value = /* values here */
 
 ```php
 /**
-* @var Components\VerifiedPersonalCustomer
+* @var \Dwolla\Models\Components\VerifiedPersonalCustomer
 */
 Components\VerifiedPersonalCustomer $value = /* values here */
 ```
@@ -34,7 +34,7 @@ Components\VerifiedPersonalCustomer $value = /* values here */
 
 ```php
 /**
-* @var Components\VerifiedSolePropCustomer
+* @var \Dwolla\Models\Components\VerifiedSolePropCustomer
 */
 Components\VerifiedSolePropCustomer $value = /* values here */
 ```
@@ -43,7 +43,7 @@ Components\VerifiedSolePropCustomer $value = /* values here */
 
 ```php
 /**
-* @var Components\VerifiedBusinessCustomer
+* @var \Dwolla\Models\Components\VerifiedBusinessCustomer
 */
 Components\VerifiedBusinessCustomer $value = /* values here */
 ```

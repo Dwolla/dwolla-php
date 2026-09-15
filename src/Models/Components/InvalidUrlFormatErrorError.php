@@ -37,7 +37,7 @@ class InvalidUrlFormatErrorError
 
     /**
      *
-     * @var ?InvalidUrlFormatErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidUrlFormatErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidUrlFormatErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidUrlFormatErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidUrlFormatErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidUrlFormatErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidUrlFormatErrorLinks $links = null)

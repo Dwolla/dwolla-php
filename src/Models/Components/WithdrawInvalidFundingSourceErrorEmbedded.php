@@ -14,7 +14,7 @@ class WithdrawInvalidFundingSourceErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<WithdrawInvalidFundingSourceErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\WithdrawInvalidFundingSourceErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WithdrawInvalidFundingSourceErrorError>|null')]
@@ -22,7 +22,7 @@ class WithdrawInvalidFundingSourceErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<WithdrawInvalidFundingSourceErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\WithdrawInvalidFundingSourceErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

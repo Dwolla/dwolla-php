@@ -37,7 +37,7 @@ class Error
 
     /**
      *
-     * @var ?BadRequestLinks $links
+     * @var ?\Dwolla\Models\Operations\BadRequestLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\BadRequestLinks|null')]
@@ -48,7 +48,7 @@ class Error
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?BadRequestLinks  $links
+     * @param  ?\Dwolla\Models\Operations\BadRequestLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?BadRequestLinks $links = null)

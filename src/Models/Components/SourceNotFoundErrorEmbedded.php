@@ -14,7 +14,7 @@ class SourceNotFoundErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<SourceNotFoundErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\SourceNotFoundErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\SourceNotFoundErrorError>|null')]
@@ -22,7 +22,7 @@ class SourceNotFoundErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<SourceNotFoundErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\SourceNotFoundErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

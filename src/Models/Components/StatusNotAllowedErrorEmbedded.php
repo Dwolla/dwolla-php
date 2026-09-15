@@ -14,7 +14,7 @@ class StatusNotAllowedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<StatusNotAllowedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\StatusNotAllowedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\StatusNotAllowedErrorError>|null')]
@@ -22,7 +22,7 @@ class StatusNotAllowedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<StatusNotAllowedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\StatusNotAllowedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

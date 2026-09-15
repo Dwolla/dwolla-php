@@ -22,14 +22,14 @@ class CreateBeneficialOwnerDocumentRequest
     /**
      * Upload a document for a beneficial owner.
      *
-     * @var CreateBeneficialOwnerDocumentRequestBody $body
+     * @var \Dwolla\Models\Operations\CreateBeneficialOwnerDocumentRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=multipart/form-data')]
     public CreateBeneficialOwnerDocumentRequestBody $body;
 
     /**
      * @param  string  $id
-     * @param  CreateBeneficialOwnerDocumentRequestBody  $body
+     * @param  \Dwolla\Models\Operations\CreateBeneficialOwnerDocumentRequestBody  $body
      * @phpstan-pure
      */
     public function __construct(string $id, CreateBeneficialOwnerDocumentRequestBody $body)

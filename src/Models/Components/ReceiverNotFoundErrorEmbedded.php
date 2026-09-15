@@ -14,7 +14,7 @@ class ReceiverNotFoundErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<ReceiverNotFoundErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\ReceiverNotFoundErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\ReceiverNotFoundErrorError>|null')]
@@ -22,7 +22,7 @@ class ReceiverNotFoundErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<ReceiverNotFoundErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\ReceiverNotFoundErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

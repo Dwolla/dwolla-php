@@ -35,7 +35,7 @@ class ListCustomerTransfersResponse
     /**
      * successful operation
      *
-     * @var ?Components\Transfers $transfers
+     * @var ?\Dwolla\Models\Components\Transfers $transfers
      */
     public ?Components\Transfers $transfers = null;
 
@@ -43,7 +43,7 @@ class ListCustomerTransfersResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\Transfers  $transfers
+     * @param  ?\Dwolla\Models\Components\Transfers  $transfers
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\Transfers $transfers = null)

@@ -28,7 +28,7 @@ class ValidationErrorSchema
 
     /**
      *
-     * @var ?Components\ValidationErrorSchemaEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\ValidationErrorSchemaEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ValidationErrorSchemaEmbedded|null')]
@@ -47,7 +47,7 @@ class ValidationErrorSchema
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\ValidationErrorSchemaEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\ValidationErrorSchemaEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

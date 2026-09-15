@@ -15,14 +15,14 @@ class VerifyKbaQuestionsRequestBody
     /**
      * $answers
      *
-     * @var array<VerifyKbaQuestionsAnswer> $answers
+     * @var array<\Dwolla\Models\Operations\VerifyKbaQuestionsAnswer> $answers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('answers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Operations\VerifyKbaQuestionsAnswer>')]
     public array $answers;
 
     /**
-     * @param  array<VerifyKbaQuestionsAnswer>  $answers
+     * @param  array<\Dwolla\Models\Operations\VerifyKbaQuestionsAnswer>  $answers
      * @phpstan-pure
      */
     public function __construct(array $answers)

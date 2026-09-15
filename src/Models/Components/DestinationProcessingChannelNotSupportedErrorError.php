@@ -37,7 +37,7 @@ class DestinationProcessingChannelNotSupportedErrorError
 
     /**
      *
-     * @var ?DestinationProcessingChannelNotSupportedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\DestinationProcessingChannelNotSupportedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DestinationProcessingChannelNotSupportedErrorLinks|null')]
@@ -48,7 +48,7 @@ class DestinationProcessingChannelNotSupportedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?DestinationProcessingChannelNotSupportedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\DestinationProcessingChannelNotSupportedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?DestinationProcessingChannelNotSupportedErrorLinks $links = null)

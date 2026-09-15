@@ -9,7 +9,7 @@
 
 ```php
 /**
-* @var Errors\BadRequestError
+* @var \Dwolla\Models\Errors\BadRequestError
 */
 Errors\BadRequestError $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\BadRequestError $value = /* values here */
 
 ```php
 /**
-* @var Errors\StatusInvalidError
+* @var \Dwolla\Models\Errors\StatusInvalidError
 */
 Errors\StatusInvalidError $value = /* values here */
 ```
@@ -27,7 +27,7 @@ Errors\StatusInvalidError $value = /* values here */
 
 ```php
 /**
-* @var Errors\StatusNotAllowedError
+* @var \Dwolla\Models\Errors\StatusNotAllowedError
 */
 Errors\StatusNotAllowedError $value = /* values here */
 ```

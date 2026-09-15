@@ -14,14 +14,14 @@ class AvailableExchangeConnectionsEmbedded
     /**
      * $availableExchangeConnections
      *
-     * @var array<AvailableExchangeConnection> $availableExchangeConnections
+     * @var array<\Dwolla\Models\Components\AvailableExchangeConnection> $availableExchangeConnections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('available-exchange-connections')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\AvailableExchangeConnection>')]
     public array $availableExchangeConnections;
 
     /**
-     * @param  array<AvailableExchangeConnection>  $availableExchangeConnections
+     * @param  array<\Dwolla\Models\Components\AvailableExchangeConnection>  $availableExchangeConnections
      * @phpstan-pure
      */
     public function __construct(array $availableExchangeConnections)

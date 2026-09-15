@@ -14,7 +14,7 @@ class LabelLedgerEntry
     /**
      * $links
      *
-     * @var ?array<string, HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -31,7 +31,7 @@ class LabelLedgerEntry
 
     /**
      *
-     * @var ?LabelLedgerEntryAmount $amount
+     * @var ?\Dwolla\Models\Components\LabelLedgerEntryAmount $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\LabelLedgerEntryAmount|null')]
@@ -47,9 +47,9 @@ class LabelLedgerEntry
     public ?\DateTime $created = null;
 
     /**
-     * @param  ?array<string, HalLink>  $links
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  ?string  $id
-     * @param  ?LabelLedgerEntryAmount  $amount
+     * @param  ?\Dwolla\Models\Components\LabelLedgerEntryAmount  $amount
      * @param  ?\DateTime  $created
      * @phpstan-pure
      */

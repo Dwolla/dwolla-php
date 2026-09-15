@@ -14,7 +14,7 @@ class Transaction
     /**
      * $links
      *
-     * @var ?array<string, Components\HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -39,7 +39,7 @@ class Transaction
 
     /**
      *
-     * @var ?ListTransferFeesAmount $amount
+     * @var ?\Dwolla\Models\Operations\ListTransferFeesAmount $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\ListTransferFeesAmount|null')]
@@ -55,10 +55,10 @@ class Transaction
     public ?\DateTime $created = null;
 
     /**
-     * @param  ?array<string, Components\HalLink>  $links
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  ?string  $id
      * @param  ?string  $status
-     * @param  ?ListTransferFeesAmount  $amount
+     * @param  ?\Dwolla\Models\Operations\ListTransferFeesAmount  $amount
      * @param  ?\DateTime  $created
      * @phpstan-pure
      */

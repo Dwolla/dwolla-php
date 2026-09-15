@@ -37,7 +37,7 @@ class SenderRestrictedErrorError
 
     /**
      *
-     * @var ?SenderRestrictedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\SenderRestrictedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SenderRestrictedErrorLinks|null')]
@@ -48,7 +48,7 @@ class SenderRestrictedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?SenderRestrictedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\SenderRestrictedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?SenderRestrictedErrorLinks $links = null)

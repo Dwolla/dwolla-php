@@ -9,7 +9,7 @@ forbidden
 
 ```php
 /**
-* @var Errors\ResponseBodyForbiddenException1
+* @var \Dwolla\Models\Errors\ResponseBodyForbiddenException1
 */
 Errors\ResponseBodyForbiddenException1 $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\ResponseBodyForbiddenException1 $value = /* values here */
 
 ```php
 /**
-* @var Errors\ResponseBodyForbiddenException2
+* @var \Dwolla\Models\Errors\ResponseBodyForbiddenException2
 */
 Errors\ResponseBodyForbiddenException2 $value = /* values here */
 ```

@@ -52,8 +52,8 @@ class WebhookSubscriptions
      *
      * Create a webhook subscription to deliver webhook notifications to a specified URL endpoint for your application. Requires a destination URL where Dwolla will send notifications and a secret key for webhook validation and security. Returns the location of the created subscription resource. Essential for establishing real-time event notifications and automated integrations with Dwolla's payment processing events.
      *
-     * @param  Operations\CreateWebhookSubscriptionRequest  $request
-     * @return Operations\CreateWebhookSubscriptionResponse
+     * @param  \Dwolla\Models\Operations\CreateWebhookSubscriptionRequest  $request
+     * @return \Dwolla\Models\Operations\CreateWebhookSubscriptionResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(Operations\CreateWebhookSubscriptionRequest $request, ?Options $options = null): Operations\CreateWebhookSubscriptionResponse
@@ -82,11 +82,12 @@ class WebhookSubscriptions
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '403', '404', '429', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['201'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
@@ -146,7 +147,7 @@ class WebhookSubscriptions
      * Delete a webhook subscription to permanently remove webhook notifications for your application. This action stops all future webhook deliveries and cannot be undone. Returns the deleted subscription resource for confirmation. Use this endpoint when webhook notifications are no longer needed or when cleaning up unused subscriptions.
      *
      * @param  string  $id
-     * @return Operations\DeleteResponse
+     * @return \Dwolla\Models\Operations\DeleteResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function delete(string $id, ?Options $options = null): Operations\DeleteResponse
@@ -173,11 +174,12 @@ class WebhookSubscriptions
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -222,7 +224,7 @@ class WebhookSubscriptions
      * Retrieve detailed information for a specific webhook subscription by its unique identifier. Returns subscription configuration including URL endpoint, creation date, and links to associated webhooks for comprehensive subscription management. Essential for monitoring webhook subscription status and accessing webhook delivery history.
      *
      * @param  string  $id
-     * @return Operations\GetWebhookSubscriptionResponse
+     * @return \Dwolla\Models\Operations\GetWebhookSubscriptionResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\GetWebhookSubscriptionResponse
@@ -249,11 +251,12 @@ class WebhookSubscriptions
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -297,7 +300,7 @@ class WebhookSubscriptions
      *
      * Retrieve all webhook subscriptions that belong to an application including their configuration details and status. Returns subscription details including webhook endpoints, status, creation dates, and links to associated webhooks with total count. Essential for webhook management and monitoring subscription health.
      *
-     * @return Operations\ListWebhookSubscriptionsResponse
+     * @return \Dwolla\Models\Operations\ListWebhookSubscriptionsResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(?Options $options = null): Operations\ListWebhookSubscriptionsResponse
@@ -321,11 +324,12 @@ class WebhookSubscriptions
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
@@ -381,9 +385,9 @@ class WebhookSubscriptions
      *
      * Update a webhook subscription to pause or resume webhook delivery notifications. Allows toggling the paused status to temporarily stop webhook notifications without deleting the subscription. Returns the updated subscription resource with the new paused status. Use this endpoint to manage webhook delivery during maintenance or troubleshooting periods.
      *
-     * @param  Operations\UpdateWebhookSubscriptionRequestBody  $body
+     * @param  \Dwolla\Models\Operations\UpdateWebhookSubscriptionRequestBody  $body
      * @param  string  $id
-     * @return Operations\UpdateWebhookSubscriptionResponse
+     * @return \Dwolla\Models\Operations\UpdateWebhookSubscriptionResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function update(Operations\UpdateWebhookSubscriptionRequestBody $body, string $id, ?Options $options = null): Operations\UpdateWebhookSubscriptionResponse
@@ -416,11 +420,12 @@ class WebhookSubscriptions
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['400', '404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

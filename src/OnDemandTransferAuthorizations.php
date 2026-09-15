@@ -49,7 +49,7 @@ class OnDemandTransferAuthorizations
      *
      * Create an on-demand transfer authorization that allows Customers to pre-authorize variable amount ACH transfers from their bank account for future payments. This authorization is used when creating Customer funding sources to enable flexible payment processing. Returns UI text elements including authorization body text and button text for display in your application's bank account addition flow.
      *
-     * @return Operations\CreateOnDemandTransferAuthorizationResponse
+     * @return \Dwolla\Models\Operations\CreateOnDemandTransferAuthorizationResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function create(?Options $options = null): Operations\CreateOnDemandTransferAuthorizationResponse
@@ -73,11 +73,12 @@ class OnDemandTransferAuthorizations
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['403', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

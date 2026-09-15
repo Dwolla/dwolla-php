@@ -14,14 +14,14 @@ class CreateCustomerLabelRequestBody
 {
     /**
      *
-     * @var CreateCustomerLabelAmount $amount
+     * @var \Dwolla\Models\Operations\CreateCustomerLabelAmount $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\CreateCustomerLabelAmount')]
     public CreateCustomerLabelAmount $amount;
 
     /**
-     * @param  CreateCustomerLabelAmount  $amount
+     * @param  \Dwolla\Models\Operations\CreateCustomerLabelAmount  $amount
      * @phpstan-pure
      */
     public function __construct(CreateCustomerLabelAmount $amount)

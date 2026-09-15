@@ -37,7 +37,7 @@ class IncompatibleSourceForRtpDestinationErrorError
 
     /**
      *
-     * @var ?IncompatibleSourceForRtpDestinationErrorLinks $links
+     * @var ?\Dwolla\Models\Components\IncompatibleSourceForRtpDestinationErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\IncompatibleSourceForRtpDestinationErrorLinks|null')]
@@ -48,7 +48,7 @@ class IncompatibleSourceForRtpDestinationErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?IncompatibleSourceForRtpDestinationErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\IncompatibleSourceForRtpDestinationErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?IncompatibleSourceForRtpDestinationErrorLinks $links = null)

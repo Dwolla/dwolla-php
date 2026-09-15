@@ -13,7 +13,7 @@ class BusinessClassification
 {
     /**
      *
-     * @var ?BusinessClassificationLinks $links
+     * @var ?\Dwolla\Models\Components\BusinessClassificationLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\BusinessClassificationLinks|null')]
@@ -22,7 +22,7 @@ class BusinessClassification
 
     /**
      *
-     * @var ?BusinessClassificationEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\BusinessClassificationEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\BusinessClassificationEmbedded|null')]
@@ -46,8 +46,8 @@ class BusinessClassification
     public ?string $name = null;
 
     /**
-     * @param  ?BusinessClassificationLinks  $links
-     * @param  ?BusinessClassificationEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\BusinessClassificationLinks  $links
+     * @param  ?\Dwolla\Models\Components\BusinessClassificationEmbedded  $embedded
      * @param  ?string  $id
      * @param  ?string  $name
      * @phpstan-pure

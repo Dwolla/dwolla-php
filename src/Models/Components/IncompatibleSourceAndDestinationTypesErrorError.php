@@ -37,7 +37,7 @@ class IncompatibleSourceAndDestinationTypesErrorError
 
     /**
      *
-     * @var ?IncompatibleSourceAndDestinationTypesErrorLinks $links
+     * @var ?\Dwolla\Models\Components\IncompatibleSourceAndDestinationTypesErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\IncompatibleSourceAndDestinationTypesErrorLinks|null')]
@@ -48,7 +48,7 @@ class IncompatibleSourceAndDestinationTypesErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?IncompatibleSourceAndDestinationTypesErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\IncompatibleSourceAndDestinationTypesErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?IncompatibleSourceAndDestinationTypesErrorLinks $links = null)

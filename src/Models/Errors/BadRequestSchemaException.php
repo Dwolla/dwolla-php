@@ -28,7 +28,7 @@ class BadRequestSchemaException
 
     /**
      *
-     * @var ?Components\BadRequestSchemaEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\BadRequestSchemaEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\BadRequestSchemaEmbedded|null')]
@@ -47,7 +47,7 @@ class BadRequestSchemaException
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\BadRequestSchemaEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\BadRequestSchemaEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

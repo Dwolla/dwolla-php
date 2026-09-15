@@ -14,7 +14,7 @@ class OperationBlockedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<OperationBlockedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\OperationBlockedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\OperationBlockedErrorError>|null')]
@@ -22,7 +22,7 @@ class OperationBlockedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<OperationBlockedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\OperationBlockedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

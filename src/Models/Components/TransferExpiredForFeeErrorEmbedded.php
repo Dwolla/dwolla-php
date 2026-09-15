@@ -14,7 +14,7 @@ class TransferExpiredForFeeErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<TransferExpiredForFeeErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\TransferExpiredForFeeErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\TransferExpiredForFeeErrorError>|null')]
@@ -22,7 +22,7 @@ class TransferExpiredForFeeErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<TransferExpiredForFeeErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\TransferExpiredForFeeErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

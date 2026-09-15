@@ -14,7 +14,7 @@ class IncompatibleAddendaEntriesErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<IncompatibleAddendaEntriesErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\IncompatibleAddendaEntriesErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\IncompatibleAddendaEntriesErrorError>|null')]
@@ -22,7 +22,7 @@ class IncompatibleAddendaEntriesErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<IncompatibleAddendaEntriesErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\IncompatibleAddendaEntriesErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

@@ -37,7 +37,7 @@ class OperationBlockedErrorError
 
     /**
      *
-     * @var ?OperationBlockedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\OperationBlockedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\OperationBlockedErrorLinks|null')]
@@ -48,7 +48,7 @@ class OperationBlockedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?OperationBlockedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\OperationBlockedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?OperationBlockedErrorLinks $links = null)

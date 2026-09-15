@@ -14,7 +14,7 @@ class TransferProcessingChannel
     /**
      * The payment network used to process the transfer
      *
-     * @var ?DestinationEnum $destination
+     * @var ?\Dwolla\Models\Components\DestinationEnum $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DestinationEnum|null')]
@@ -22,7 +22,7 @@ class TransferProcessingChannel
     public ?DestinationEnum $destination = null;
 
     /**
-     * @param  ?DestinationEnum  $destination
+     * @param  ?\Dwolla\Models\Components\DestinationEnum  $destination
      * @phpstan-pure
      */
     public function __construct(?DestinationEnum $destination = null)

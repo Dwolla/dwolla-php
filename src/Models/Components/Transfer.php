@@ -14,7 +14,7 @@ class Transfer
     /**
      * $links
      *
-     * @var ?array<string, HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -39,7 +39,7 @@ class Transfer
 
     /**
      *
-     * @var ?TransferAmount1 $amount
+     * @var ?\Dwolla\Models\Components\TransferAmount1 $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\TransferAmount1|null')]
@@ -56,7 +56,7 @@ class Transfer
 
     /**
      *
-     * @var ?Clearing $clearing
+     * @var ?\Dwolla\Models\Components\Clearing $clearing
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('clearing')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Clearing|null')]
@@ -65,7 +65,7 @@ class Transfer
 
     /**
      *
-     * @var ?TransferMetadata $metadata
+     * @var ?\Dwolla\Models\Components\TransferMetadata $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\TransferMetadata|null')]
@@ -75,7 +75,7 @@ class Transfer
     /**
      * ACH-specific details for the transfer. Present when transfer was processed via ACH network.
      *
-     * @var ?AchDetails $achDetails
+     * @var ?\Dwolla\Models\Components\AchDetails $achDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('achDetails')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\AchDetails|null')]
@@ -85,7 +85,7 @@ class Transfer
     /**
      * Real-Time Payments (RTP) network specific details. Present when transfer was processed via RTP network.
      *
-     * @var ?RtpDetails $rtpDetails
+     * @var ?\Dwolla\Models\Components\RtpDetails $rtpDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('rtpDetails')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\RtpDetails|null')]
@@ -95,7 +95,7 @@ class Transfer
     /**
      * FedNow Service network specific details. Present when transfer was processed via FedNow network.
      *
-     * @var ?FedNowDetails $fedNowDetails
+     * @var ?\Dwolla\Models\Components\FedNowDetails $fedNowDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('fedNowDetails')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\FedNowDetails|null')]
@@ -112,7 +112,7 @@ class Transfer
 
     /**
      *
-     * @var ?TransferProcessingChannel $processingChannel
+     * @var ?\Dwolla\Models\Components\TransferProcessingChannel $processingChannel
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('processingChannel')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\TransferProcessingChannel|null')]
@@ -120,18 +120,18 @@ class Transfer
     public ?TransferProcessingChannel $processingChannel = null;
 
     /**
-     * @param  ?array<string, HalLink>  $links
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  ?string  $id
      * @param  ?string  $status
-     * @param  ?TransferAmount1  $amount
+     * @param  ?\Dwolla\Models\Components\TransferAmount1  $amount
      * @param  ?\DateTime  $created
-     * @param  ?Clearing  $clearing
-     * @param  ?TransferMetadata  $metadata
-     * @param  ?AchDetails  $achDetails
-     * @param  ?RtpDetails  $rtpDetails
-     * @param  ?FedNowDetails  $fedNowDetails
+     * @param  ?\Dwolla\Models\Components\Clearing  $clearing
+     * @param  ?\Dwolla\Models\Components\TransferMetadata  $metadata
+     * @param  ?\Dwolla\Models\Components\AchDetails  $achDetails
+     * @param  ?\Dwolla\Models\Components\RtpDetails  $rtpDetails
+     * @param  ?\Dwolla\Models\Components\FedNowDetails  $fedNowDetails
      * @param  ?string  $correlationId
-     * @param  ?TransferProcessingChannel  $processingChannel
+     * @param  ?\Dwolla\Models\Components\TransferProcessingChannel  $processingChannel
      * @phpstan-pure
      */
     public function __construct(?array $links = null, ?string $id = null, ?string $status = null, ?TransferAmount1 $amount = null, ?\DateTime $created = null, ?Clearing $clearing = null, ?TransferMetadata $metadata = null, ?AchDetails $achDetails = null, ?RtpDetails $rtpDetails = null, ?FedNowDetails $fedNowDetails = null, ?string $correlationId = null, ?TransferProcessingChannel $processingChannel = null)

@@ -14,21 +14,21 @@ class CreateBeneficialOwnerDocumentRequestBody
 {
     /**
      *
-     * @var CreateBeneficialOwnerDocumentDocumentType $documentType
+     * @var \Dwolla\Models\Operations\CreateBeneficialOwnerDocumentDocumentType $documentType
      */
     #[SpeakeasyMetadata('multipartForm:name=documentType')]
     public CreateBeneficialOwnerDocumentDocumentType $documentType;
 
     /**
      *
-     * @var CreateBeneficialOwnerDocumentFile $file
+     * @var \Dwolla\Models\Operations\CreateBeneficialOwnerDocumentFile $file
      */
     #[SpeakeasyMetadata('multipartForm:file=true,name=file')]
     public CreateBeneficialOwnerDocumentFile $file;
 
     /**
-     * @param  CreateBeneficialOwnerDocumentDocumentType  $documentType
-     * @param  CreateBeneficialOwnerDocumentFile  $file
+     * @param  \Dwolla\Models\Operations\CreateBeneficialOwnerDocumentDocumentType  $documentType
+     * @param  \Dwolla\Models\Operations\CreateBeneficialOwnerDocumentFile  $file
      * @phpstan-pure
      */
     public function __construct(CreateBeneficialOwnerDocumentDocumentType $documentType, CreateBeneficialOwnerDocumentFile $file)

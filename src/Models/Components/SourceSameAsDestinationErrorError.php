@@ -37,7 +37,7 @@ class SourceSameAsDestinationErrorError
 
     /**
      *
-     * @var ?SourceSameAsDestinationErrorLinks $links
+     * @var ?\Dwolla\Models\Components\SourceSameAsDestinationErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SourceSameAsDestinationErrorLinks|null')]
@@ -48,7 +48,7 @@ class SourceSameAsDestinationErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?SourceSameAsDestinationErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\SourceSameAsDestinationErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?SourceSameAsDestinationErrorLinks $links = null)

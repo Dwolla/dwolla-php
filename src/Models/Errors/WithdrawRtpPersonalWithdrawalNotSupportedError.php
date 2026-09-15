@@ -28,7 +28,7 @@ class WithdrawRtpPersonalWithdrawalNotSupportedError
 
     /**
      *
-     * @var ?Components\WithdrawRtpPersonalWithdrawalNotSupportedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WithdrawRtpPersonalWithdrawalNotSupportedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawRtpPersonalWithdrawalNotSupportedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class WithdrawRtpPersonalWithdrawalNotSupportedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\WithdrawRtpPersonalWithdrawalNotSupportedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WithdrawRtpPersonalWithdrawalNotSupportedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

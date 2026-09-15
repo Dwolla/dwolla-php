@@ -30,7 +30,7 @@ class InvalidUrlFormatError
 
     /**
      *
-     * @var ?Components\InvalidUrlFormatErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidUrlFormatErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidUrlFormatErrorEmbedded|null')]
@@ -49,7 +49,7 @@ class InvalidUrlFormatError
     /**
      * @param  ?string  $code
      * @param  ?string  $message
-     * @param  ?Components\InvalidUrlFormatErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidUrlFormatErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

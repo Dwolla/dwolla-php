@@ -28,7 +28,7 @@ class IncompatibleAddendaEntriesError
 
     /**
      *
-     * @var ?Components\IncompatibleAddendaEntriesErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\IncompatibleAddendaEntriesErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\IncompatibleAddendaEntriesErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class IncompatibleAddendaEntriesError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\IncompatibleAddendaEntriesErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\IncompatibleAddendaEntriesErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

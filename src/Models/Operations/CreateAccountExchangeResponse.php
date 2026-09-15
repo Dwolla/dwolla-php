@@ -42,7 +42,7 @@ class CreateAccountExchangeResponse
     /**
      * Created
      *
-     * @var ?CreateAccountExchangeResponseBody $object
+     * @var ?\Dwolla\Models\Operations\CreateAccountExchangeResponseBody $object
      */
     public ?CreateAccountExchangeResponseBody $object = null;
 
@@ -51,7 +51,7 @@ class CreateAccountExchangeResponse
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
      * @param  array<string, array<string>>  $headers
-     * @param  ?CreateAccountExchangeResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\CreateAccountExchangeResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?CreateAccountExchangeResponseBody $object = null, ?array $headers = [])

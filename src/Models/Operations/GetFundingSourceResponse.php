@@ -35,7 +35,7 @@ class GetFundingSourceResponse
     /**
      * successful operation
      *
-     * @var ?Components\FundingSource $fundingSource
+     * @var ?\Dwolla\Models\Components\FundingSource $fundingSource
      */
     public ?Components\FundingSource $fundingSource = null;
 
@@ -43,7 +43,7 @@ class GetFundingSourceResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\FundingSource  $fundingSource
+     * @param  ?\Dwolla\Models\Components\FundingSource  $fundingSource
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\FundingSource $fundingSource = null)

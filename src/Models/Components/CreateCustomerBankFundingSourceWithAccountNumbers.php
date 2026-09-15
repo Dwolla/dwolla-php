@@ -31,7 +31,7 @@ class CreateCustomerBankFundingSourceWithAccountNumbers
     /**
      * Type of bank account
      *
-     * @var CreateCustomerBankFundingSourceWithAccountNumbersBankAccountType $bankAccountType
+     * @var \Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersBankAccountType $bankAccountType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('bankAccountType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersBankAccountType')]
@@ -48,7 +48,7 @@ class CreateCustomerBankFundingSourceWithAccountNumbers
     /**
      * An array containing a list of processing channels. ACH is the default processing channel for bank transfers.
      *
-     * @var ?array<CreateCustomerBankFundingSourceWithAccountNumbersChannel> $channels
+     * @var ?array<\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersChannel> $channels
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('channels')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersChannel>|null')]
@@ -57,7 +57,7 @@ class CreateCustomerBankFundingSourceWithAccountNumbers
 
     /**
      *
-     * @var ?CreateCustomerBankFundingSourceWithAccountNumbersLinks $links
+     * @var ?\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersLinks|null')]
@@ -76,11 +76,11 @@ class CreateCustomerBankFundingSourceWithAccountNumbers
     /**
      * @param  string  $routingNumber
      * @param  string  $accountNumber
-     * @param  CreateCustomerBankFundingSourceWithAccountNumbersBankAccountType  $bankAccountType
+     * @param  \Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersBankAccountType  $bankAccountType
      * @param  string  $name
      * @param  ?bool  $verified
-     * @param  ?array<CreateCustomerBankFundingSourceWithAccountNumbersChannel>  $channels
-     * @param  ?CreateCustomerBankFundingSourceWithAccountNumbersLinks  $links
+     * @param  ?array<\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersChannel>  $channels
+     * @param  ?\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbersLinks  $links
      * @phpstan-pure
      */
     public function __construct(string $routingNumber, string $accountNumber, CreateCustomerBankFundingSourceWithAccountNumbersBankAccountType $bankAccountType, string $name, ?array $channels = null, ?CreateCustomerBankFundingSourceWithAccountNumbersLinks $links = null, ?bool $verified = false)

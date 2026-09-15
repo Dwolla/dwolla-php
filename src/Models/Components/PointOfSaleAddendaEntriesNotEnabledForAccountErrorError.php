@@ -37,7 +37,7 @@ class PointOfSaleAddendaEntriesNotEnabledForAccountErrorError
 
     /**
      *
-     * @var ?PointOfSaleAddendaEntriesNotEnabledForAccountErrorLinks $links
+     * @var ?\Dwolla\Models\Components\PointOfSaleAddendaEntriesNotEnabledForAccountErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\PointOfSaleAddendaEntriesNotEnabledForAccountErrorLinks|null')]
@@ -48,7 +48,7 @@ class PointOfSaleAddendaEntriesNotEnabledForAccountErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?PointOfSaleAddendaEntriesNotEnabledForAccountErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\PointOfSaleAddendaEntriesNotEnabledForAccountErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?PointOfSaleAddendaEntriesNotEnabledForAccountErrorLinks $links = null)

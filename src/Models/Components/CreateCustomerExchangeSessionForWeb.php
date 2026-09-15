@@ -14,14 +14,14 @@ class CreateCustomerExchangeSessionForWeb
 {
     /**
      *
-     * @var CreateCustomerExchangeSessionForWebLinks $links
+     * @var \Dwolla\Models\Components\CreateCustomerExchangeSessionForWebLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerExchangeSessionForWebLinks')]
     public CreateCustomerExchangeSessionForWebLinks $links;
 
     /**
-     * @param  CreateCustomerExchangeSessionForWebLinks  $links
+     * @param  \Dwolla\Models\Components\CreateCustomerExchangeSessionForWebLinks  $links
      * @phpstan-pure
      */
     public function __construct(CreateCustomerExchangeSessionForWebLinks $links)

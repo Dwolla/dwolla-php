@@ -14,7 +14,7 @@ class LabelsEmbedded
     /**
      * $labels
      *
-     * @var ?array<Label> $labels
+     * @var ?array<\Dwolla\Models\Components\Label> $labels
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('labels')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\Label>|null')]
@@ -22,7 +22,7 @@ class LabelsEmbedded
     public ?array $labels = null;
 
     /**
-     * @param  ?array<Label>  $labels
+     * @param  ?array<\Dwolla\Models\Components\Label>  $labels
      * @phpstan-pure
      */
     public function __construct(?array $labels = null)

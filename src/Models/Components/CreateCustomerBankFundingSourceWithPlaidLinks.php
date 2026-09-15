@@ -13,7 +13,7 @@ class CreateCustomerBankFundingSourceWithPlaidLinks
 {
     /**
      *
-     * @var ?CreateCustomerBankFundingSourceWithPlaidOnDemandAuthorization $onDemandAuthorization
+     * @var ?\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidOnDemandAuthorization $onDemandAuthorization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('on-demand-authorization')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidOnDemandAuthorization|null')]
@@ -21,7 +21,7 @@ class CreateCustomerBankFundingSourceWithPlaidLinks
     public ?CreateCustomerBankFundingSourceWithPlaidOnDemandAuthorization $onDemandAuthorization = null;
 
     /**
-     * @param  ?CreateCustomerBankFundingSourceWithPlaidOnDemandAuthorization  $onDemandAuthorization
+     * @param  ?\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidOnDemandAuthorization  $onDemandAuthorization
      * @phpstan-pure
      */
     public function __construct(?CreateCustomerBankFundingSourceWithPlaidOnDemandAuthorization $onDemandAuthorization = null)

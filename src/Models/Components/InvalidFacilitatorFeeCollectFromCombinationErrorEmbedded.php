@@ -14,7 +14,7 @@ class InvalidFacilitatorFeeCollectFromCombinationErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidFacilitatorFeeCollectFromCombinationErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromCombinationErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromCombinationErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidFacilitatorFeeCollectFromCombinationErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidFacilitatorFeeCollectFromCombinationErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidFacilitatorFeeCollectFromCombinationErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

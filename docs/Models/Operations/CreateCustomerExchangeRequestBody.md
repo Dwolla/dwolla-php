@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\CreateFinicitySecureExchange
+* @var \Dwolla\Models\Components\CreateFinicitySecureExchange
 */
 Components\CreateFinicitySecureExchange $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\CreateFinicitySecureExchange $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateTokenBasedExchange
+* @var \Dwolla\Models\Components\CreateTokenBasedExchange
 */
 Components\CreateTokenBasedExchange $value = /* values here */
 ```
@@ -25,7 +25,7 @@ Components\CreateTokenBasedExchange $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateMXOpenBankingExchange
+* @var \Dwolla\Models\Components\CreateMXOpenBankingExchange
 */
 Components\CreateMXOpenBankingExchange $value = /* values here */
 ```
@@ -34,7 +34,7 @@ Components\CreateMXOpenBankingExchange $value = /* values here */
 
 ```php
 /**
-* @var Components\CreatePlaidOpenBankingExchange
+* @var \Dwolla\Models\Components\CreatePlaidOpenBankingExchange
 */
 Components\CreatePlaidOpenBankingExchange $value = /* values here */
 ```

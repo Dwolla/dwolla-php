@@ -13,7 +13,7 @@ class VerifyMicroDepositsLinks
 {
     /**
      *
-     * @var ?VerifyMicroDepositsSelf $self
+     * @var ?\Dwolla\Models\Operations\VerifyMicroDepositsSelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\VerifyMicroDepositsSelf|null')]
@@ -21,7 +21,7 @@ class VerifyMicroDepositsLinks
     public ?VerifyMicroDepositsSelf $self = null;
 
     /**
-     * @param  ?VerifyMicroDepositsSelf  $self
+     * @param  ?\Dwolla\Models\Operations\VerifyMicroDepositsSelf  $self
      * @phpstan-pure
      */
     public function __construct(?VerifyMicroDepositsSelf $self = null)

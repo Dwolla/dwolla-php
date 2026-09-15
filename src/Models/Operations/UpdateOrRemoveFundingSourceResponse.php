@@ -35,7 +35,7 @@ class UpdateOrRemoveFundingSourceResponse
     /**
      * successful operation
      *
-     * @var ?UpdateOrRemoveFundingSourceResponseBody $object
+     * @var ?\Dwolla\Models\Operations\UpdateOrRemoveFundingSourceResponseBody $object
      */
     public ?UpdateOrRemoveFundingSourceResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class UpdateOrRemoveFundingSourceResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?UpdateOrRemoveFundingSourceResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\UpdateOrRemoveFundingSourceResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?UpdateOrRemoveFundingSourceResponseBody $object = null)

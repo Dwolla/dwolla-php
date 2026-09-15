@@ -13,7 +13,7 @@ class ItemAchDetails
 {
     /**
      *
-     * @var ?InitiateMassPaymentAchDetailsDestination $destination
+     * @var ?\Dwolla\Models\Operations\InitiateMassPaymentAchDetailsDestination $destination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateMassPaymentAchDetailsDestination|null')]
@@ -21,7 +21,7 @@ class ItemAchDetails
     public ?InitiateMassPaymentAchDetailsDestination $destination = null;
 
     /**
-     * @param  ?InitiateMassPaymentAchDetailsDestination  $destination
+     * @param  ?\Dwolla\Models\Operations\InitiateMassPaymentAchDetailsDestination  $destination
      * @phpstan-pure
      */
     public function __construct(?InitiateMassPaymentAchDetailsDestination $destination = null)

@@ -14,7 +14,7 @@ class DirectAccountWithoutBankErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<DirectAccountWithoutBankErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\DirectAccountWithoutBankErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\DirectAccountWithoutBankErrorError>|null')]
@@ -22,7 +22,7 @@ class DirectAccountWithoutBankErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<DirectAccountWithoutBankErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\DirectAccountWithoutBankErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

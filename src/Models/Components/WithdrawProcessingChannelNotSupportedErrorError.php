@@ -37,7 +37,7 @@ class WithdrawProcessingChannelNotSupportedErrorError
 
     /**
      *
-     * @var ?WithdrawProcessingChannelNotSupportedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WithdrawProcessingChannelNotSupportedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawProcessingChannelNotSupportedErrorLinks|null')]
@@ -48,7 +48,7 @@ class WithdrawProcessingChannelNotSupportedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WithdrawProcessingChannelNotSupportedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WithdrawProcessingChannelNotSupportedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WithdrawProcessingChannelNotSupportedErrorLinks $links = null)

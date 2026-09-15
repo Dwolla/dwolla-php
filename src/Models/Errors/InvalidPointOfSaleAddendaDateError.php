@@ -28,7 +28,7 @@ class InvalidPointOfSaleAddendaDateError
 
     /**
      *
-     * @var ?Components\InvalidPointOfSaleAddendaDateErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidPointOfSaleAddendaDateErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidPointOfSaleAddendaDateErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidPointOfSaleAddendaDateError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidPointOfSaleAddendaDateErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidPointOfSaleAddendaDateErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

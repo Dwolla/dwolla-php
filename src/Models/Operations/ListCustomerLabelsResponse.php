@@ -35,7 +35,7 @@ class ListCustomerLabelsResponse
     /**
      * success operation
      *
-     * @var ?Components\Labels $labels
+     * @var ?\Dwolla\Models\Components\Labels $labels
      */
     public ?Components\Labels $labels = null;
 
@@ -43,7 +43,7 @@ class ListCustomerLabelsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\Labels  $labels
+     * @param  ?\Dwolla\Models\Components\Labels  $labels
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\Labels $labels = null)

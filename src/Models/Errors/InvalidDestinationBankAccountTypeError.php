@@ -28,7 +28,7 @@ class InvalidDestinationBankAccountTypeError
 
     /**
      *
-     * @var ?Components\InvalidDestinationBankAccountTypeErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidDestinationBankAccountTypeErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidDestinationBankAccountTypeErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidDestinationBankAccountTypeError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidDestinationBankAccountTypeErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidDestinationBankAccountTypeErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

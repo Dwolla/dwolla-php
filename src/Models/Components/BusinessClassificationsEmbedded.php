@@ -14,7 +14,7 @@ class BusinessClassificationsEmbedded
     /**
      * $businessClassifications
      *
-     * @var ?array<BusinessClassification> $businessClassifications
+     * @var ?array<\Dwolla\Models\Components\BusinessClassification> $businessClassifications
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('business-classifications')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\BusinessClassification>|null')]
@@ -22,7 +22,7 @@ class BusinessClassificationsEmbedded
     public ?array $businessClassifications = null;
 
     /**
-     * @param  ?array<BusinessClassification>  $businessClassifications
+     * @param  ?array<\Dwolla\Models\Components\BusinessClassification>  $businessClassifications
      * @phpstan-pure
      */
     public function __construct(?array $businessClassifications = null)

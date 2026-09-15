@@ -28,7 +28,7 @@ class InvalidPointOfSaleAddendaIdentificationCodeError
 
     /**
      *
-     * @var ?Components\InvalidPointOfSaleAddendaIdentificationCodeErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\InvalidPointOfSaleAddendaIdentificationCodeErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidPointOfSaleAddendaIdentificationCodeErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class InvalidPointOfSaleAddendaIdentificationCodeError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\InvalidPointOfSaleAddendaIdentificationCodeErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\InvalidPointOfSaleAddendaIdentificationCodeErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

@@ -49,8 +49,8 @@ class CustomersTransfers
      *
      * Retrieve and search transfers for a specific Customer with comprehensive filtering and pagination support. Supports searching by customer details (name, email, business name), amount ranges, date ranges, transfer status, and correlation IDs for enhanced transaction discovery. Returns paginated transfer results including status, amounts, metadata, and links to source and destination funding sources. Use this endpoint for transaction history analysis and reconciliation purposes.
      *
-     * @param  Operations\ListCustomerTransfersRequest  $request
-     * @return Operations\ListCustomerTransfersResponse
+     * @param  \Dwolla\Models\Operations\ListCustomerTransfersRequest  $request
+     * @return \Dwolla\Models\Operations\ListCustomerTransfersResponse
      * @throws \Dwolla\Models\Errors\APIException
      */
     public function list(Operations\ListCustomerTransfersRequest $request, ?Options $options = null): Operations\ListCustomerTransfersResponse
@@ -77,11 +77,12 @@ class CustomersTransfers
         }
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['404', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
+
+        $statusCode = $httpResponse->getStatusCode();
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.dwolla.v1.hal+json')) {
                 $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);

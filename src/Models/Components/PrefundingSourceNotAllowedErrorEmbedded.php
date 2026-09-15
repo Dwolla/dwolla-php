@@ -14,7 +14,7 @@ class PrefundingSourceNotAllowedErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<PrefundingSourceNotAllowedErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\PrefundingSourceNotAllowedErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\PrefundingSourceNotAllowedErrorError>|null')]
@@ -22,7 +22,7 @@ class PrefundingSourceNotAllowedErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<PrefundingSourceNotAllowedErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\PrefundingSourceNotAllowedErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

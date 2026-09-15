@@ -14,7 +14,7 @@ class Label
     /**
      * $links
      *
-     * @var ?array<string, HalLink> $links
+     * @var ?array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>|null')]
@@ -39,7 +39,7 @@ class Label
 
     /**
      *
-     * @var ?LabelAmount $amount
+     * @var ?\Dwolla\Models\Components\LabelAmount $amount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\LabelAmount|null')]
@@ -47,10 +47,10 @@ class Label
     public ?LabelAmount $amount = null;
 
     /**
-     * @param  ?array<string, HalLink>  $links
+     * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  ?string  $id
      * @param  ?\DateTime  $created
-     * @param  ?LabelAmount  $amount
+     * @param  ?\Dwolla\Models\Components\LabelAmount  $amount
      * @phpstan-pure
      */
     public function __construct(?array $links = null, ?string $id = null, ?\DateTime $created = null, ?LabelAmount $amount = null)

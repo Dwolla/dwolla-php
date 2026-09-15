@@ -14,7 +14,7 @@ class EventsEmbedded
     /**
      * $events
      *
-     * @var ?array<Event> $events
+     * @var ?array<\Dwolla\Models\Components\Event> $events
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('events')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\Event>|null')]
@@ -22,7 +22,7 @@ class EventsEmbedded
     public ?array $events = null;
 
     /**
-     * @param  ?array<Event>  $events
+     * @param  ?array<\Dwolla\Models\Components\Event>  $events
      * @phpstan-pure
      */
     public function __construct(?array $events = null)

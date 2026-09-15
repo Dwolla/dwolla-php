@@ -34,7 +34,7 @@ class InvalidTokenErrorError
 
     /**
      *
-     * @var ?InvalidTokenErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidTokenErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidTokenErrorLinks|null')]
@@ -45,7 +45,7 @@ class InvalidTokenErrorError
      * @param  string  $code
      * @param  string  $message
      * @param  string  $path
-     * @param  ?InvalidTokenErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidTokenErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(string $code, string $message, string $path, ?InvalidTokenErrorLinks $links = null)

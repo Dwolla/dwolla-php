@@ -14,7 +14,7 @@ class WireAccountNotFoundErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<WireAccountNotFoundErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\WireAccountNotFoundErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WireAccountNotFoundErrorError>|null')]
@@ -22,7 +22,7 @@ class WireAccountNotFoundErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<WireAccountNotFoundErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\WireAccountNotFoundErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

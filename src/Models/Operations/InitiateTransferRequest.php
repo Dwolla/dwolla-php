@@ -14,7 +14,7 @@ class InitiateTransferRequest
     /**
      * Parameters to initiate a transfer
      *
-     * @var InitiateTransferRequestBody $body
+     * @var \Dwolla\Models\Operations\InitiateTransferRequestBody $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public InitiateTransferRequestBody $body;
@@ -27,7 +27,7 @@ class InitiateTransferRequest
     public ?string $idempotencyKey = null;
 
     /**
-     * @param  InitiateTransferRequestBody  $body
+     * @param  \Dwolla\Models\Operations\InitiateTransferRequestBody  $body
      * @param  ?string  $idempotencyKey
      * @phpstan-pure
      */

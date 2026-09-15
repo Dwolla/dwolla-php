@@ -14,7 +14,7 @@ class WireNotEnabledErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<WireNotEnabledErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\WireNotEnabledErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\WireNotEnabledErrorError>|null')]
@@ -22,7 +22,7 @@ class WireNotEnabledErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<WireNotEnabledErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\WireNotEnabledErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

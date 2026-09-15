@@ -9,7 +9,7 @@
 
 ```php
 /**
-* @var Errors\InvalidResourceStateSchemaException
+* @var \Dwolla\Models\Errors\InvalidResourceStateSchemaException
 */
 Errors\InvalidResourceStateSchemaException $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\InvalidResourceStateSchemaException $value = /* values here */
 
 ```php
 /**
-* @var Errors\ForbiddenError
+* @var \Dwolla\Models\Errors\ForbiddenError
 */
 Errors\ForbiddenError $value = /* values here */
 ```

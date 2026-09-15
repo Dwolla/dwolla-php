@@ -9,7 +9,7 @@ Forbidden
 
 ```php
 /**
-* @var Errors\InvalidAttemptToFacilitateFundsError
+* @var \Dwolla\Models\Errors\InvalidAttemptToFacilitateFundsError
 */
 Errors\InvalidAttemptToFacilitateFundsError $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\InvalidAttemptToFacilitateFundsError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidAttemptToPayInFundsError
+* @var \Dwolla\Models\Errors\InvalidAttemptToPayInFundsError
 */
 Errors\InvalidAttemptToPayInFundsError $value = /* values here */
 ```
@@ -27,7 +27,7 @@ Errors\InvalidAttemptToPayInFundsError $value = /* values here */
 
 ```php
 /**
-* @var Errors\InvalidAttemptToPayOutFundsError
+* @var \Dwolla\Models\Errors\InvalidAttemptToPayOutFundsError
 */
 Errors\InvalidAttemptToPayOutFundsError $value = /* values here */
 ```
@@ -36,7 +36,7 @@ Errors\InvalidAttemptToPayOutFundsError $value = /* values here */
 
 ```php
 /**
-* @var Errors\RtpAccountSettingNotEnabledError
+* @var \Dwolla\Models\Errors\RtpAccountSettingNotEnabledError
 */
 Errors\RtpAccountSettingNotEnabledError $value = /* values here */
 ```

@@ -35,7 +35,7 @@ class ListCustomerMassPaymentsResponse
     /**
      * successful operation
      *
-     * @var ?Components\MassPayments $massPayments
+     * @var ?\Dwolla\Models\Components\MassPayments $massPayments
      */
     public ?Components\MassPayments $massPayments = null;
 
@@ -43,7 +43,7 @@ class ListCustomerMassPaymentsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\MassPayments  $massPayments
+     * @param  ?\Dwolla\Models\Components\MassPayments  $massPayments
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\MassPayments $massPayments = null)

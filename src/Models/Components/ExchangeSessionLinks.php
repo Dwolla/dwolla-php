@@ -13,7 +13,7 @@ class ExchangeSessionLinks
 {
     /**
      *
-     * @var ExchangeSessionSelf $self
+     * @var \Dwolla\Models\Components\ExchangeSessionSelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ExchangeSessionSelf')]
@@ -21,7 +21,7 @@ class ExchangeSessionLinks
 
     /**
      *
-     * @var ExchangeSessionExchangePartner $exchangePartner
+     * @var \Dwolla\Models\Components\ExchangeSessionExchangePartner $exchangePartner
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('exchange-partner')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ExchangeSessionExchangePartner')]
@@ -29,7 +29,7 @@ class ExchangeSessionLinks
 
     /**
      *
-     * @var ?ExternalProviderSession $externalProviderSession
+     * @var ?\Dwolla\Models\Components\ExternalProviderSession $externalProviderSession
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('external-provider-session')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ExternalProviderSession|null')]
@@ -37,9 +37,9 @@ class ExchangeSessionLinks
     public ?ExternalProviderSession $externalProviderSession = null;
 
     /**
-     * @param  ExchangeSessionSelf  $self
-     * @param  ExchangeSessionExchangePartner  $exchangePartner
-     * @param  ?ExternalProviderSession  $externalProviderSession
+     * @param  \Dwolla\Models\Components\ExchangeSessionSelf  $self
+     * @param  \Dwolla\Models\Components\ExchangeSessionExchangePartner  $exchangePartner
+     * @param  ?\Dwolla\Models\Components\ExternalProviderSession  $externalProviderSession
      * @phpstan-pure
      */
     public function __construct(ExchangeSessionSelf $self, ExchangeSessionExchangePartner $exchangePartner, ?ExternalProviderSession $externalProviderSession = null)

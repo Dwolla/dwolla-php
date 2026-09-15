@@ -13,7 +13,7 @@ class OnDemandAuthorizationLinks
 {
     /**
      *
-     * @var ?OnDemandAuthorizationSelf $self
+     * @var ?\Dwolla\Models\Components\OnDemandAuthorizationSelf $self
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('self')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\OnDemandAuthorizationSelf|null')]
@@ -21,7 +21,7 @@ class OnDemandAuthorizationLinks
     public ?OnDemandAuthorizationSelf $self = null;
 
     /**
-     * @param  ?OnDemandAuthorizationSelf  $self
+     * @param  ?\Dwolla\Models\Components\OnDemandAuthorizationSelf  $self
      * @phpstan-pure
      */
     public function __construct(?OnDemandAuthorizationSelf $self = null)

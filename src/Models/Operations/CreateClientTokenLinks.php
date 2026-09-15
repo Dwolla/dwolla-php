@@ -13,14 +13,14 @@ class CreateClientTokenLinks
 {
     /**
      *
-     * @var CreateClientTokenCustomer $customer
+     * @var \Dwolla\Models\Operations\CreateClientTokenCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\CreateClientTokenCustomer')]
     public CreateClientTokenCustomer $customer;
 
     /**
-     * @param  CreateClientTokenCustomer  $customer
+     * @param  \Dwolla\Models\Operations\CreateClientTokenCustomer  $customer
      * @phpstan-pure
      */
     public function __construct(CreateClientTokenCustomer $customer)

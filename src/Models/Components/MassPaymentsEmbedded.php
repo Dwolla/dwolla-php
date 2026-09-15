@@ -14,7 +14,7 @@ class MassPaymentsEmbedded
     /**
      * $massPayments
      *
-     * @var ?array<MassPayment> $massPayments
+     * @var ?array<\Dwolla\Models\Components\MassPayment> $massPayments
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('mass-payments')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\MassPayment>|null')]
@@ -22,7 +22,7 @@ class MassPaymentsEmbedded
     public ?array $massPayments = null;
 
     /**
-     * @param  ?array<MassPayment>  $massPayments
+     * @param  ?array<\Dwolla\Models\Components\MassPayment>  $massPayments
      * @phpstan-pure
      */
     public function __construct(?array $massPayments = null)

@@ -37,7 +37,7 @@ class InvalidCorrelationIdErrorError
 
     /**
      *
-     * @var ?InvalidCorrelationIdErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidCorrelationIdErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidCorrelationIdErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidCorrelationIdErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidCorrelationIdErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidCorrelationIdErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidCorrelationIdErrorLinks $links = null)

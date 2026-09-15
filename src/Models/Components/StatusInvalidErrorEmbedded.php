@@ -14,7 +14,7 @@ class StatusInvalidErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<StatusInvalidErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\StatusInvalidErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\StatusInvalidErrorError>|null')]
@@ -22,7 +22,7 @@ class StatusInvalidErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<StatusInvalidErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\StatusInvalidErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

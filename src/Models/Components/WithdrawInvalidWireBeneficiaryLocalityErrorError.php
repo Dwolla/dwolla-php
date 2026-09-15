@@ -37,7 +37,7 @@ class WithdrawInvalidWireBeneficiaryLocalityErrorError
 
     /**
      *
-     * @var ?WithdrawInvalidWireBeneficiaryLocalityErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WithdrawInvalidWireBeneficiaryLocalityErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WithdrawInvalidWireBeneficiaryLocalityErrorLinks|null')]
@@ -48,7 +48,7 @@ class WithdrawInvalidWireBeneficiaryLocalityErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WithdrawInvalidWireBeneficiaryLocalityErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WithdrawInvalidWireBeneficiaryLocalityErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WithdrawInvalidWireBeneficiaryLocalityErrorLinks $links = null)

@@ -14,7 +14,7 @@ class ListWebhooksEmbedded
     /**
      * $webhooks
      *
-     * @var ?array<Components\Webhook> $webhooks
+     * @var ?array<\Dwolla\Models\Components\Webhook> $webhooks
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('webhooks')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\Webhook>|null')]
@@ -22,7 +22,7 @@ class ListWebhooksEmbedded
     public ?array $webhooks = null;
 
     /**
-     * @param  ?array<Components\Webhook>  $webhooks
+     * @param  ?array<\Dwolla\Models\Components\Webhook>  $webhooks
      * @phpstan-pure
      */
     public function __construct(?array $webhooks = null)

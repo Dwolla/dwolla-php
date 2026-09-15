@@ -13,14 +13,14 @@ class CreateCustomerCardFundingSourceWithExchangeLinks
 {
     /**
      *
-     * @var CreateCustomerCardFundingSourceWithExchangeExchange $exchange
+     * @var \Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeExchange $exchange
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('exchange')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeExchange')]
     public CreateCustomerCardFundingSourceWithExchangeExchange $exchange;
 
     /**
-     * @param  CreateCustomerCardFundingSourceWithExchangeExchange  $exchange
+     * @param  \Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchangeExchange  $exchange
      * @phpstan-pure
      */
     public function __construct(CreateCustomerCardFundingSourceWithExchangeExchange $exchange)

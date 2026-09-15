@@ -37,7 +37,7 @@ class SourceNotCardNetworkSettlementErrorError
 
     /**
      *
-     * @var ?SourceNotCardNetworkSettlementErrorLinks $links
+     * @var ?\Dwolla\Models\Components\SourceNotCardNetworkSettlementErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SourceNotCardNetworkSettlementErrorLinks|null')]
@@ -48,7 +48,7 @@ class SourceNotCardNetworkSettlementErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?SourceNotCardNetworkSettlementErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\SourceNotCardNetworkSettlementErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?SourceNotCardNetworkSettlementErrorLinks $links = null)

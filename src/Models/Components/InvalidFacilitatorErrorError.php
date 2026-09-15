@@ -37,7 +37,7 @@ class InvalidFacilitatorErrorError
 
     /**
      *
-     * @var ?InvalidFacilitatorErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InvalidFacilitatorErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InvalidFacilitatorErrorLinks|null')]
@@ -48,7 +48,7 @@ class InvalidFacilitatorErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InvalidFacilitatorErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InvalidFacilitatorErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InvalidFacilitatorErrorLinks $links = null)

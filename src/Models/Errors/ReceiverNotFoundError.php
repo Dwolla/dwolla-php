@@ -28,7 +28,7 @@ class ReceiverNotFoundError
 
     /**
      *
-     * @var ?Components\ReceiverNotFoundErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\ReceiverNotFoundErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ReceiverNotFoundErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class ReceiverNotFoundError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\ReceiverNotFoundErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\ReceiverNotFoundErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

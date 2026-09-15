@@ -37,7 +37,7 @@ class WireAccountNotFoundErrorError
 
     /**
      *
-     * @var ?WireAccountNotFoundErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WireAccountNotFoundErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WireAccountNotFoundErrorLinks|null')]
@@ -48,7 +48,7 @@ class WireAccountNotFoundErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WireAccountNotFoundErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WireAccountNotFoundErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WireAccountNotFoundErrorLinks $links = null)

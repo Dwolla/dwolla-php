@@ -28,7 +28,7 @@ class RtpPersonalToPersonalNotSupportedError
 
     /**
      *
-     * @var ?Components\RtpPersonalToPersonalNotSupportedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\RtpPersonalToPersonalNotSupportedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\RtpPersonalToPersonalNotSupportedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class RtpPersonalToPersonalNotSupportedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\RtpPersonalToPersonalNotSupportedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\RtpPersonalToPersonalNotSupportedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

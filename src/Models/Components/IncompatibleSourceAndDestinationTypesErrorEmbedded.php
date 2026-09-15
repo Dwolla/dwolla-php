@@ -14,7 +14,7 @@ class IncompatibleSourceAndDestinationTypesErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<IncompatibleSourceAndDestinationTypesErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\IncompatibleSourceAndDestinationTypesErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\IncompatibleSourceAndDestinationTypesErrorError>|null')]
@@ -22,7 +22,7 @@ class IncompatibleSourceAndDestinationTypesErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<IncompatibleSourceAndDestinationTypesErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\IncompatibleSourceAndDestinationTypesErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

@@ -35,7 +35,7 @@ class GetFundingSourceBalanceResponse
     /**
      * successful operation
      *
-     * @var DwollaBalanceResponse|BankBalanceResponse|SettlementAccountBalanceResponse|null $oneOf
+     * @var \Dwolla\Models\Operations\DwollaBalanceResponse|\Dwolla\Models\Operations\BankBalanceResponse|\Dwolla\Models\Operations\SettlementAccountBalanceResponse|null $oneOf
      */
     public DwollaBalanceResponse|BankBalanceResponse|SettlementAccountBalanceResponse|null $oneOf = null;
 
@@ -43,7 +43,7 @@ class GetFundingSourceBalanceResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  DwollaBalanceResponse|BankBalanceResponse|SettlementAccountBalanceResponse|null  $oneOf
+     * @param  \Dwolla\Models\Operations\DwollaBalanceResponse|\Dwolla\Models\Operations\BankBalanceResponse|\Dwolla\Models\Operations\SettlementAccountBalanceResponse|null  $oneOf
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, DwollaBalanceResponse|BankBalanceResponse|SettlementAccountBalanceResponse|null $oneOf = null)

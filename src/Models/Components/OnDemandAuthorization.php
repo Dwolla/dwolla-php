@@ -13,7 +13,7 @@ class OnDemandAuthorization
 {
     /**
      *
-     * @var ?OnDemandAuthorizationLinks $links
+     * @var ?\Dwolla\Models\Components\OnDemandAuthorizationLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\OnDemandAuthorizationLinks|null')]
@@ -37,7 +37,7 @@ class OnDemandAuthorization
     public ?string $buttonText = null;
 
     /**
-     * @param  ?OnDemandAuthorizationLinks  $links
+     * @param  ?\Dwolla\Models\Components\OnDemandAuthorizationLinks  $links
      * @param  ?string  $bodyText
      * @param  ?string  $buttonText
      * @phpstan-pure

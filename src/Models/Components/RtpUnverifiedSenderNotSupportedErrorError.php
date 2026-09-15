@@ -37,7 +37,7 @@ class RtpUnverifiedSenderNotSupportedErrorError
 
     /**
      *
-     * @var ?RtpUnverifiedSenderNotSupportedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\RtpUnverifiedSenderNotSupportedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\RtpUnverifiedSenderNotSupportedErrorLinks|null')]
@@ -48,7 +48,7 @@ class RtpUnverifiedSenderNotSupportedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?RtpUnverifiedSenderNotSupportedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\RtpUnverifiedSenderNotSupportedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?RtpUnverifiedSenderNotSupportedErrorLinks $links = null)

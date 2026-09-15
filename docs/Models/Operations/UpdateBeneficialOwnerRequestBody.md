@@ -9,7 +9,7 @@ Parameters for updating a beneficial owner
 
 ```php
 /**
-* @var Components\CreateUSBeneficialOwner
+* @var \Dwolla\Models\Components\CreateUSBeneficialOwner
 */
 Components\CreateUSBeneficialOwner $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Components\CreateUSBeneficialOwner $value = /* values here */
 
 ```php
 /**
-* @var Components\CreateInternationalBeneficialOwner
+* @var \Dwolla\Models\Components\CreateInternationalBeneficialOwner
 */
 Components\CreateInternationalBeneficialOwner $value = /* values here */
 ```

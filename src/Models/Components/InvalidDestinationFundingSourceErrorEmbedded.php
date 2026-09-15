@@ -14,7 +14,7 @@ class InvalidDestinationFundingSourceErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InvalidDestinationFundingSourceErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InvalidDestinationFundingSourceErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InvalidDestinationFundingSourceErrorError>|null')]
@@ -22,7 +22,7 @@ class InvalidDestinationFundingSourceErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InvalidDestinationFundingSourceErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InvalidDestinationFundingSourceErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

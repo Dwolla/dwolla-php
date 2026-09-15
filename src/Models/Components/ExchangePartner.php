@@ -14,7 +14,7 @@ class ExchangePartner
     /**
      * $links
      *
-     * @var array<string, HalLink> $links
+     * @var array<string, \Dwolla\Models\Components\HalLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Dwolla\Models\Components\HalLink>')]
@@ -29,7 +29,7 @@ class ExchangePartner
 
     /**
      *
-     * @var Name $name
+     * @var \Dwolla\Models\Components\Name $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Name')]
@@ -37,7 +37,7 @@ class ExchangePartner
 
     /**
      *
-     * @var ExchangePartnerStatus $status
+     * @var \Dwolla\Models\Components\ExchangePartnerStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\ExchangePartnerStatus')]
@@ -51,10 +51,10 @@ class ExchangePartner
     public \DateTime $created;
 
     /**
-     * @param  array<string, HalLink>  $links
+     * @param  array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  string  $id
-     * @param  Name  $name
-     * @param  ExchangePartnerStatus  $status
+     * @param  \Dwolla\Models\Components\Name  $name
+     * @param  \Dwolla\Models\Components\ExchangePartnerStatus  $status
      * @param  \DateTime  $created
      * @phpstan-pure
      */

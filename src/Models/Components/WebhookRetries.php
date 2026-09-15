@@ -13,7 +13,7 @@ class WebhookRetries
 {
     /**
      *
-     * @var ?WebhookRetriesLinks $links
+     * @var ?\Dwolla\Models\Components\WebhookRetriesLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WebhookRetriesLinks|null')]
@@ -22,7 +22,7 @@ class WebhookRetries
 
     /**
      *
-     * @var ?WebhookRetriesEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\WebhookRetriesEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WebhookRetriesEmbedded|null')]
@@ -38,8 +38,8 @@ class WebhookRetries
     public ?int $total = null;
 
     /**
-     * @param  ?WebhookRetriesLinks  $links
-     * @param  ?WebhookRetriesEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\WebhookRetriesLinks  $links
+     * @param  ?\Dwolla\Models\Components\WebhookRetriesEmbedded  $embedded
      * @param  ?int  $total
      * @phpstan-pure
      */

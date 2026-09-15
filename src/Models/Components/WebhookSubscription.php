@@ -13,7 +13,7 @@ class WebhookSubscription
 {
     /**
      *
-     * @var ?WebhookSubscriptionLinks $links
+     * @var ?\Dwolla\Models\Components\WebhookSubscriptionLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WebhookSubscriptionLinks|null')]
@@ -53,7 +53,7 @@ class WebhookSubscription
     public ?\DateTime $created = null;
 
     /**
-     * @param  ?WebhookSubscriptionLinks  $links
+     * @param  ?\Dwolla\Models\Components\WebhookSubscriptionLinks  $links
      * @param  ?string  $id
      * @param  ?string  $url
      * @param  ?bool  $paused

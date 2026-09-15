@@ -28,7 +28,7 @@ class FacilitatorFeeAccountNotFoundError
 
     /**
      *
-     * @var ?Components\FacilitatorFeeAccountNotFoundErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\FacilitatorFeeAccountNotFoundErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\FacilitatorFeeAccountNotFoundErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class FacilitatorFeeAccountNotFoundError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\FacilitatorFeeAccountNotFoundErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\FacilitatorFeeAccountNotFoundErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

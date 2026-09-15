@@ -9,7 +9,7 @@ Bad request
 
 ```php
 /**
-* @var Errors\InvalidUrlFormatError
+* @var \Dwolla\Models\Errors\InvalidUrlFormatError
 */
 Errors\InvalidUrlFormatError $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\InvalidUrlFormatError $value = /* values here */
 
 ```php
 /**
-* @var Errors\SecretTooLongError
+* @var \Dwolla\Models\Errors\SecretTooLongError
 */
 Errors\SecretTooLongError $value = /* values here */
 ```
@@ -27,7 +27,7 @@ Errors\SecretTooLongError $value = /* values here */
 
 ```php
 /**
-* @var Errors\MaxSubscriptionsReachedError
+* @var \Dwolla\Models\Errors\MaxSubscriptionsReachedError
 */
 Errors\MaxSubscriptionsReachedError $value = /* values here */
 ```

@@ -23,14 +23,14 @@ class CreateCustomerFundingSourceRequest
     /**
      * Parameters for creating a funding source
      *
-     * @var Components\CreateCustomerBankFundingSourceWithAccountNumbers|Components\CreateCustomerBankFundingSourceWithPlaid|Components\CreateCustomerExchangeFundingSource|Components\CreateCustomerVirtualAccountFundingSource|Components\CreateCustomerCardFundingSourceWithExchange $body
+     * @var \Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbers|\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaid|\Dwolla\Models\Components\CreateCustomerExchangeFundingSource|\Dwolla\Models\Components\CreateCustomerVirtualAccountFundingSource|\Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchange $body
      */
     #[SpeakeasyMetadata('request:mediaType=application/vnd.dwolla.v1.hal+json')]
     public Components\CreateCustomerBankFundingSourceWithAccountNumbers|Components\CreateCustomerBankFundingSourceWithPlaid|Components\CreateCustomerExchangeFundingSource|Components\CreateCustomerVirtualAccountFundingSource|Components\CreateCustomerCardFundingSourceWithExchange $body;
 
     /**
      * @param  string  $id
-     * @param  Components\CreateCustomerBankFundingSourceWithAccountNumbers|Components\CreateCustomerBankFundingSourceWithPlaid|Components\CreateCustomerExchangeFundingSource|Components\CreateCustomerVirtualAccountFundingSource|Components\CreateCustomerCardFundingSourceWithExchange  $body
+     * @param  \Dwolla\Models\Components\CreateCustomerBankFundingSourceWithAccountNumbers|\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaid|\Dwolla\Models\Components\CreateCustomerExchangeFundingSource|\Dwolla\Models\Components\CreateCustomerVirtualAccountFundingSource|\Dwolla\Models\Components\CreateCustomerCardFundingSourceWithExchange  $body
      * @phpstan-pure
      */
     public function __construct(string $id, Components\CreateCustomerBankFundingSourceWithAccountNumbers|Components\CreateCustomerBankFundingSourceWithPlaid|Components\CreateCustomerExchangeFundingSource|Components\CreateCustomerVirtualAccountFundingSource|Components\CreateCustomerCardFundingSourceWithExchange $body)

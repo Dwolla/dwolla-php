@@ -13,7 +13,7 @@ class CreateCustomerExchangeFundingSourceLinks
 {
     /**
      *
-     * @var CreateCustomerExchangeFundingSourceExchange $exchange
+     * @var \Dwolla\Models\Components\CreateCustomerExchangeFundingSourceExchange $exchange
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('exchange')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerExchangeFundingSourceExchange')]
@@ -21,7 +21,7 @@ class CreateCustomerExchangeFundingSourceLinks
 
     /**
      *
-     * @var ?CreateCustomerExchangeFundingSourceOnDemandAuthorization $onDemandAuthorization
+     * @var ?\Dwolla\Models\Components\CreateCustomerExchangeFundingSourceOnDemandAuthorization $onDemandAuthorization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('on-demand-authorization')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerExchangeFundingSourceOnDemandAuthorization|null')]
@@ -29,8 +29,8 @@ class CreateCustomerExchangeFundingSourceLinks
     public ?CreateCustomerExchangeFundingSourceOnDemandAuthorization $onDemandAuthorization = null;
 
     /**
-     * @param  CreateCustomerExchangeFundingSourceExchange  $exchange
-     * @param  ?CreateCustomerExchangeFundingSourceOnDemandAuthorization  $onDemandAuthorization
+     * @param  \Dwolla\Models\Components\CreateCustomerExchangeFundingSourceExchange  $exchange
+     * @param  ?\Dwolla\Models\Components\CreateCustomerExchangeFundingSourceOnDemandAuthorization  $onDemandAuthorization
      * @phpstan-pure
      */
     public function __construct(CreateCustomerExchangeFundingSourceExchange $exchange, ?CreateCustomerExchangeFundingSourceOnDemandAuthorization $onDemandAuthorization = null)

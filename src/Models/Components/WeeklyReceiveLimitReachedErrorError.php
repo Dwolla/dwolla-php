@@ -37,7 +37,7 @@ class WeeklyReceiveLimitReachedErrorError
 
     /**
      *
-     * @var ?WeeklyReceiveLimitReachedErrorLinks $links
+     * @var ?\Dwolla\Models\Components\WeeklyReceiveLimitReachedErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\WeeklyReceiveLimitReachedErrorLinks|null')]
@@ -48,7 +48,7 @@ class WeeklyReceiveLimitReachedErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?WeeklyReceiveLimitReachedErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\WeeklyReceiveLimitReachedErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?WeeklyReceiveLimitReachedErrorLinks $links = null)

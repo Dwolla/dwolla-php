@@ -62,7 +62,7 @@ class Finicity
     /**
      * $products
      *
-     * @var ?array<Product> $products
+     * @var ?array<\Dwolla\Models\Components\Product> $products
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('products')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\Product>|null')]
@@ -84,7 +84,7 @@ class Finicity
      * @param  ?string  $receiptVersion
      * @param  ?string  $customerId
      * @param  ?int  $partnerId
-     * @param  ?array<Product>  $products
+     * @param  ?array<\Dwolla\Models\Components\Product>  $products
      * @param  ?\DateTime  $timestamp
      * @phpstan-pure
      */

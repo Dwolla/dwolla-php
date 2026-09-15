@@ -35,7 +35,7 @@ class CreateApplicationAccessTokenResponse
     /**
      * successful operation
      *
-     * @var ?CreateApplicationAccessTokenResponseBody $object
+     * @var ?\Dwolla\Models\Operations\CreateApplicationAccessTokenResponseBody $object
      */
     public ?CreateApplicationAccessTokenResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class CreateApplicationAccessTokenResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?CreateApplicationAccessTokenResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\CreateApplicationAccessTokenResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?CreateApplicationAccessTokenResponseBody $object = null)

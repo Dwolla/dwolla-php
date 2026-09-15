@@ -14,7 +14,7 @@ class InsufficientFundsErrorEmbedded
     /**
      * $errors
      *
-     * @var ?array<InsufficientFundsErrorError> $errors
+     * @var ?array<\Dwolla\Models\Components\InsufficientFundsErrorError> $errors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('errors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\InsufficientFundsErrorError>|null')]
@@ -22,7 +22,7 @@ class InsufficientFundsErrorEmbedded
     public ?array $errors = null;
 
     /**
-     * @param  ?array<InsufficientFundsErrorError>  $errors
+     * @param  ?array<\Dwolla\Models\Components\InsufficientFundsErrorError>  $errors
      * @phpstan-pure
      */
     public function __construct(?array $errors = null)

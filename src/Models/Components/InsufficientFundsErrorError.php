@@ -37,7 +37,7 @@ class InsufficientFundsErrorError
 
     /**
      *
-     * @var ?InsufficientFundsErrorLinks $links
+     * @var ?\Dwolla\Models\Components\InsufficientFundsErrorLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\InsufficientFundsErrorLinks|null')]
@@ -48,7 +48,7 @@ class InsufficientFundsErrorError
      * @param  ?string  $code
      * @param  ?string  $message
      * @param  ?string  $path
-     * @param  ?InsufficientFundsErrorLinks  $links
+     * @param  ?\Dwolla\Models\Components\InsufficientFundsErrorLinks  $links
      * @phpstan-pure
      */
     public function __construct(?string $code = null, ?string $message = null, ?string $path = null, ?InsufficientFundsErrorLinks $links = null)

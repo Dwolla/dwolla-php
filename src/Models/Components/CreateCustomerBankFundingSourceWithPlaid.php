@@ -23,7 +23,7 @@ class CreateCustomerBankFundingSourceWithPlaid
     /**
      * Type of bank account
      *
-     * @var CreateCustomerBankFundingSourceWithPlaidBankAccountType $bankAccountType
+     * @var \Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidBankAccountType $bankAccountType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('bankAccountType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidBankAccountType')]
@@ -40,7 +40,7 @@ class CreateCustomerBankFundingSourceWithPlaid
     /**
      * An array containing a list of processing channels. ACH is the default processing channel for bank transfers.
      *
-     * @var ?array<CreateCustomerBankFundingSourceWithPlaidChannel> $channels
+     * @var ?array<\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidChannel> $channels
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('channels')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidChannel>|null')]
@@ -49,7 +49,7 @@ class CreateCustomerBankFundingSourceWithPlaid
 
     /**
      *
-     * @var ?CreateCustomerBankFundingSourceWithPlaidLinks $links
+     * @var ?\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidLinks|null')]
@@ -58,10 +58,10 @@ class CreateCustomerBankFundingSourceWithPlaid
 
     /**
      * @param  string  $plaidToken
-     * @param  CreateCustomerBankFundingSourceWithPlaidBankAccountType  $bankAccountType
+     * @param  \Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidBankAccountType  $bankAccountType
      * @param  string  $name
-     * @param  ?array<CreateCustomerBankFundingSourceWithPlaidChannel>  $channels
-     * @param  ?CreateCustomerBankFundingSourceWithPlaidLinks  $links
+     * @param  ?array<\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidChannel>  $channels
+     * @param  ?\Dwolla\Models\Components\CreateCustomerBankFundingSourceWithPlaidLinks  $links
      * @phpstan-pure
      */
     public function __construct(string $plaidToken, CreateCustomerBankFundingSourceWithPlaidBankAccountType $bankAccountType, string $name, ?array $channels = null, ?CreateCustomerBankFundingSourceWithPlaidLinks $links = null)

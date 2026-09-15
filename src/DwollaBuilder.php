@@ -106,6 +106,8 @@ class DwollaBuilder
                 'timeout' => 60,
             ]);
         }
+
+        $this->sdkConfig->defaultClient = $this->sdkConfig->client;
         if ($this->sdkConfig->hasSecurity()) {
             $this->sdkConfig->client = Utils\Utils::configureSecurityClient($this->sdkConfig->client, $this->sdkConfig->getSecurity());
         }

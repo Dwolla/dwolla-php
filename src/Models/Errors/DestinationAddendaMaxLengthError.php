@@ -28,7 +28,7 @@ class DestinationAddendaMaxLengthError
 
     /**
      *
-     * @var ?Components\DestinationAddendaMaxLengthErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\DestinationAddendaMaxLengthErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\DestinationAddendaMaxLengthErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class DestinationAddendaMaxLengthError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\DestinationAddendaMaxLengthErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\DestinationAddendaMaxLengthErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

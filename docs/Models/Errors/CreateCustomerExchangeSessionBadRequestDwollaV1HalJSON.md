@@ -9,7 +9,7 @@ validation error
 
 ```php
 /**
-* @var Errors\ResponseBodyBadRequestException1
+* @var \Dwolla\Models\Errors\ResponseBodyBadRequestException1
 */
 Errors\ResponseBodyBadRequestException1 $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\ResponseBodyBadRequestException1 $value = /* values here */
 
 ```php
 /**
-* @var Errors\ResponseBodyBadRequestException2
+* @var \Dwolla\Models\Errors\ResponseBodyBadRequestException2
 */
 Errors\ResponseBodyBadRequestException2 $value = /* values here */
 ```
@@ -27,7 +27,7 @@ Errors\ResponseBodyBadRequestException2 $value = /* values here */
 
 ```php
 /**
-* @var Errors\ResponseBodyBadRequestException3
+* @var \Dwolla\Models\Errors\ResponseBodyBadRequestException3
 */
 Errors\ResponseBodyBadRequestException3 $value = /* values here */
 ```

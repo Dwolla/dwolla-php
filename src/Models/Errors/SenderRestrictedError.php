@@ -28,7 +28,7 @@ class SenderRestrictedError
 
     /**
      *
-     * @var ?Components\SenderRestrictedErrorEmbedded $embedded
+     * @var ?\Dwolla\Models\Components\SenderRestrictedErrorEmbedded $embedded
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_embedded')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\SenderRestrictedErrorEmbedded|null')]
@@ -47,7 +47,7 @@ class SenderRestrictedError
     /**
      * @param  string  $code
      * @param  string  $message
-     * @param  ?Components\SenderRestrictedErrorEmbedded  $embedded
+     * @param  ?\Dwolla\Models\Components\SenderRestrictedErrorEmbedded  $embedded
      * @param  ?\Psr\Http\Message\ResponseInterface  $rawResponse
      * @phpstan-pure
      */

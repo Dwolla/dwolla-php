@@ -14,7 +14,7 @@ class VerifyKbaQuestionsResponseBody
 {
     /**
      *
-     * @var ?VerifyKbaQuestionsLinks $links
+     * @var ?\Dwolla\Models\Operations\VerifyKbaQuestionsLinks $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('_links')]
     #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\VerifyKbaQuestionsLinks|null')]
@@ -30,7 +30,7 @@ class VerifyKbaQuestionsResponseBody
     public ?string $verificationStatus = null;
 
     /**
-     * @param  ?VerifyKbaQuestionsLinks  $links
+     * @param  ?\Dwolla\Models\Operations\VerifyKbaQuestionsLinks  $links
      * @param  ?string  $verificationStatus
      * @phpstan-pure
      */

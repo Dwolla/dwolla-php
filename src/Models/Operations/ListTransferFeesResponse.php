@@ -35,7 +35,7 @@ class ListTransferFeesResponse
     /**
      * successful operation
      *
-     * @var ?ListTransferFeesResponseBody $object
+     * @var ?\Dwolla\Models\Operations\ListTransferFeesResponseBody $object
      */
     public ?ListTransferFeesResponseBody $object = null;
 
@@ -43,7 +43,7 @@ class ListTransferFeesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?ListTransferFeesResponseBody  $object
+     * @param  ?\Dwolla\Models\Operations\ListTransferFeesResponseBody  $object
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?ListTransferFeesResponseBody $object = null)

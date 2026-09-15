@@ -35,7 +35,7 @@ class ListCustomerFundingSourcesResponse
     /**
      * successful operation
      *
-     * @var ?Components\FundingSources $fundingSources
+     * @var ?\Dwolla\Models\Components\FundingSources $fundingSources
      */
     public ?Components\FundingSources $fundingSources = null;
 
@@ -43,7 +43,7 @@ class ListCustomerFundingSourcesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\FundingSources  $fundingSources
+     * @param  ?\Dwolla\Models\Components\FundingSources  $fundingSources
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\FundingSources $fundingSources = null)

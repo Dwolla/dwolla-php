@@ -14,7 +14,7 @@ class BeneficialOwnersEmbedded
     /**
      * $beneficialOwners
      *
-     * @var ?array<BeneficialOwner> $beneficialOwners
+     * @var ?array<\Dwolla\Models\Components\BeneficialOwner> $beneficialOwners
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('beneficial-owners')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Dwolla\Models\Components\BeneficialOwner>|null')]
@@ -22,7 +22,7 @@ class BeneficialOwnersEmbedded
     public ?array $beneficialOwners = null;
 
     /**
-     * @param  ?array<BeneficialOwner>  $beneficialOwners
+     * @param  ?array<\Dwolla\Models\Components\BeneficialOwner>  $beneficialOwners
      * @phpstan-pure
      */
     public function __construct(?array $beneficialOwners = null)
