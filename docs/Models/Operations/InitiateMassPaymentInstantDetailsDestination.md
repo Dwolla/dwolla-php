@@ -1,4 +1,4 @@
-# InstantDetailsDestination
+# InitiateMassPaymentInstantDetailsDestination
 
 Instant payment details for the destination
 

@@ -54,8 +54,8 @@ $body = new Operations\InitiateTransferRequestBody(
             remittanceData: 'ABC_123 Remittance Data',
         ),
     ),
-    instantDetails: new Operations\InstantDetails(
-        destination: new Operations\InstantDetailsDestination(
+    instantDetails: new Operations\InitiateTransferInstantDetails(
+        destination: new Operations\InitiateTransferInstantDetailsDestination(
             remittanceData: 'ABC_123 Remittance Data',
         ),
     ),

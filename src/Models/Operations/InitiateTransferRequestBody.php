@@ -76,14 +76,14 @@ class InitiateTransferRequestBody
     public ?RtpDetails $rtpDetails = null;
 
     /**
-     * Instant Payments specific transaction details for both RTP and FedNow networks.
+     * Instant Payments specific transaction details for both RTP and FedNow networks. Only destination is supported; there is no sender-side remittance field. Use destination.remittanceData to convey payment context to the receiver. The metadata and correlationId fields are for your own reconciliation and are not transmitted over the payment network.
      *
-     * @var ?\Dwolla\Models\Operations\InstantDetails $instantDetails
+     * @var ?\Dwolla\Models\Operations\InitiateTransferInstantDetails $instantDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('instantDetails')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InstantDetails|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateTransferInstantDetails|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?InstantDetails $instantDetails = null;
+    public ?InitiateTransferInstantDetails $instantDetails = null;
 
     /**
      *
@@ -110,12 +110,12 @@ class InitiateTransferRequestBody
      * @param  ?\Dwolla\Models\Operations\InitiateTransferClearing  $clearing
      * @param  ?\Dwolla\Models\Operations\InitiateTransferAchDetails  $achDetails
      * @param  ?\Dwolla\Models\Operations\RtpDetails  $rtpDetails
-     * @param  ?\Dwolla\Models\Operations\InstantDetails  $instantDetails
+     * @param  ?\Dwolla\Models\Operations\InitiateTransferInstantDetails  $instantDetails
      * @param  ?string  $correlationId
      * @param  ?\Dwolla\Models\Operations\InitiateTransferProcessingChannel  $processingChannel
      * @phpstan-pure
      */
-    public function __construct(InitiateTransferLinks $links, Components\TransferAmount $amount, ?InitiateTransferMetadata $metadata = null, ?array $fees = null, ?InitiateTransferClearing $clearing = null, ?InitiateTransferAchDetails $achDetails = null, ?RtpDetails $rtpDetails = null, ?InstantDetails $instantDetails = null, ?string $correlationId = null, ?InitiateTransferProcessingChannel $processingChannel = null)
+    public function __construct(InitiateTransferLinks $links, Components\TransferAmount $amount, ?InitiateTransferMetadata $metadata = null, ?array $fees = null, ?InitiateTransferClearing $clearing = null, ?InitiateTransferAchDetails $achDetails = null, ?RtpDetails $rtpDetails = null, ?InitiateTransferInstantDetails $instantDetails = null, ?string $correlationId = null, ?InitiateTransferProcessingChannel $processingChannel = null)
     {
         $this->links = $links;
         $this->amount = $amount;
