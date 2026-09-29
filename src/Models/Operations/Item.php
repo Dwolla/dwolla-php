@@ -66,6 +66,16 @@ class Item
     public ?ItemAchDetails $achDetails = null;
 
     /**
+     * Instant Payments specific transaction details for both RTP and FedNow networks. Applies to items where processingChannel.destination is set to instant or real-time-payments. Only destination is supported; there is no sender-side remittance field. Use destination.remittanceData to convey payment context to the receiver. The metadata and correlationId fields are for your own reconciliation and are not transmitted over the payment network.
+     *
+     * @var ?\Dwolla\Models\Operations\InitiateMassPaymentInstantDetails $instantDetails
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('instantDetails')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\InitiateMassPaymentInstantDetails|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?InitiateMassPaymentInstantDetails $instantDetails = null;
+
+    /**
      *
      * @var ?string $correlationId
      */
@@ -80,10 +90,11 @@ class Item
      * @param  ?\Dwolla\Models\Operations\ItemMetadata  $metadata
      * @param  ?\Dwolla\Models\Operations\ItemClearing  $clearing
      * @param  ?\Dwolla\Models\Operations\ItemAchDetails  $achDetails
+     * @param  ?\Dwolla\Models\Operations\InitiateMassPaymentInstantDetails  $instantDetails
      * @param  ?string  $correlationId
      * @phpstan-pure
      */
-    public function __construct(?ItemLinks $links = null, ?Components\TransferAmount $amount = null, ?InitiateMassPaymentProcessingChannel $processingChannel = null, ?ItemMetadata $metadata = null, ?ItemClearing $clearing = null, ?ItemAchDetails $achDetails = null, ?string $correlationId = null)
+    public function __construct(?ItemLinks $links = null, ?Components\TransferAmount $amount = null, ?InitiateMassPaymentProcessingChannel $processingChannel = null, ?ItemMetadata $metadata = null, ?ItemClearing $clearing = null, ?ItemAchDetails $achDetails = null, ?InitiateMassPaymentInstantDetails $instantDetails = null, ?string $correlationId = null)
     {
         $this->links = $links;
         $this->amount = $amount;
@@ -91,6 +102,7 @@ class Item
         $this->metadata = $metadata;
         $this->clearing = $clearing;
         $this->achDetails = $achDetails;
+        $this->instantDetails = $instantDetails;
         $this->correlationId = $correlationId;
     }
 }

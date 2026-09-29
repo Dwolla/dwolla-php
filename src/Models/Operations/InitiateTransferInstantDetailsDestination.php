@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Dwolla\Models\Operations;
 
 
-/** InstantDetailsDestination - Instant payment details for the destination */
-class InstantDetailsDestination
+/** InitiateTransferInstantDetailsDestination - Instant payment details for the destination */
+class InitiateTransferInstantDetailsDestination
 {
     /**
      * Remittance information for Instant Payments (RTP/FedNow), providing context about the payment purpose. Acceptable characters: alphanumeric (0-9, a-z, A-Z), space, and special characters (#,.'&/-@!$%*()_+={}|:;`[]^~\")
