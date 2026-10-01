@@ -48,17 +48,29 @@ class GetMicroDepositsResponseBody
     public ?Failure $failure = null;
 
     /**
+     * ACH details for each micro-deposit. Optional; only returned when ACH details are available for the micro-deposits. `deposit1` or `deposit2` may be omitted if details for that deposit are unavailable.
+     *
+     * @var ?\Dwolla\Models\Operations\GetMicroDepositsAchDetails $achDetails
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('achDetails')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Operations\GetMicroDepositsAchDetails|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?GetMicroDepositsAchDetails $achDetails = null;
+
+    /**
      * @param  ?array<string, \Dwolla\Models\Components\HalLink>  $links
      * @param  ?\DateTime  $created
      * @param  ?string  $status
      * @param  ?\Dwolla\Models\Operations\Failure  $failure
+     * @param  ?\Dwolla\Models\Operations\GetMicroDepositsAchDetails  $achDetails
      * @phpstan-pure
      */
-    public function __construct(?array $links = null, ?\DateTime $created = null, ?string $status = null, ?Failure $failure = null)
+    public function __construct(?array $links = null, ?\DateTime $created = null, ?string $status = null, ?Failure $failure = null, ?GetMicroDepositsAchDetails $achDetails = null)
     {
         $this->links = $links;
         $this->created = $created;
         $this->status = $status;
         $this->failure = $failure;
+        $this->achDetails = $achDetails;
     }
 }

@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: 51667746-b5a1-4f3a-b02d-c95dc7a72ad4
 management:
-  docChecksum: a8ffe3659bb9781bf4055ccbbefae66e
+  docChecksum: ecb89d4bbd9900d2938c5961d762507b
   docVersion: "2.0"
-  speakeasyVersion: 1.799.0
-  generationVersion: 2.941.0
-  releaseVersion: 0.0.1-beta.5
-  configChecksum: 3cdba01fbc7af0a799fa7e0207d7dc5b
+  speakeasyVersion: 1.800.0
+  generationVersion: 2.943.0
+  releaseVersion: 0.0.1-beta.6
+  configChecksum: b68c3916b0ff5cb0f56b386068498c9f
   repoURL: https://github.com/Dwolla/dwolla-php.git
   installationURL: https://github.com/Dwolla/dwolla-php.git
   published: true
 persistentEdits:
-  generation_id: 321cfeba-1fda-4f7c-94d6-3de5d75b0f83
-  pristine_commit_hash: cd1ecab961fb5e6e4f68574ae151911b7fcc2cd6
-  pristine_tree_hash: 7f4023ba73d2ee249cadd2336bea5d269661a908
+  generation_id: 4f3ce417-5d2d-4dbb-93c0-c44b00541038
+  pristine_commit_hash: fa8db3112574ebecbaed36502027a4fb8a44c02b
+  pristine_tree_hash: 18eb077a9423facaf61358b08cd4e2720b85f541
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -29,7 +29,7 @@ features:
     oauth2ClientCredentials: 1.1.6
     responseFormat: 0.1.0
     serverIDs: 2.81.1
-    unions: 0.1.9
+    unions: 0.1.11
 trackedFiles:
   .gitattributes:
     id: 24139dae6567
@@ -3067,6 +3067,14 @@ trackedFiles:
     id: 5744a918fd54
     last_write_checksum: sha1:c11b1a27da26f048fb6ecb80229f178ef6092e02
     pristine_git_object: eb3145abd6b2c66896e4be53d00d2d184ed14bc3
+  docs/Models/Operations/Deposit1.md:
+    id: 7ab073ec2ba0
+    last_write_checksum: sha1:a6fe889504d7c464c8cf97aa4f2772954b37d2cf
+    pristine_git_object: 8e5b490ceede9ca6b570ce8c38f5289926de5ba4
+  docs/Models/Operations/Deposit2.md:
+    id: 1a8569cae827
+    last_write_checksum: sha1:92ff3f75ce882f759acba8141e600b045f3eb66b
+    pristine_git_object: 0ca8600204a1ad0a6f0292971892221465eb4cd7
   docs/Models/Operations/DestinationEnum.md:
     id: 2974b3664b37
     last_write_checksum: sha1:5c54c06ecd1122ec77ae710f000ae104912e585f
@@ -3243,6 +3251,10 @@ trackedFiles:
     id: c5dc7ce0e3fe
     last_write_checksum: sha1:062dc4005766df53a7c2a13cee5324cc309342cc
     pristine_git_object: 184d072fc93b38d52df2fa068be114852bdb1ecb
+  docs/Models/Operations/GetMicroDepositsAchDetails.md:
+    id: 15ce15f38ab0
+    last_write_checksum: sha1:b280fb6f95a0a57c8d8970830db3fdf30a476eba
+    pristine_git_object: 4356c322bcc42ce8faa2bd9e53746cc9fdb03cae
   docs/Models/Operations/GetMicroDepositsRequest.md:
     id: 0efc0928fdfb
     last_write_checksum: sha1:35f52f5b5190101c372f69fbfada7ecae566b1bb
@@ -3253,8 +3265,8 @@ trackedFiles:
     pristine_git_object: 2c88aad5f77048999504e5b0bb39b2bade1d516d
   docs/Models/Operations/GetMicroDepositsResponseBody.md:
     id: c72027467eb8
-    last_write_checksum: sha1:30a75a590e2a50bc6e699cd6429035588465878e
-    pristine_git_object: eb85ac3462fe8f8a4b56be3039b20938b6e58313
+    last_write_checksum: sha1:9a7ae51a656070aee212c2d72faf3c1eb1efefa3
+    pristine_git_object: 88e10dcdd0fe2d010b33c9dfb93bb3c1f42df36f
   docs/Models/Operations/GetRootResponse.md:
     id: 2209d932dc40
     last_write_checksum: sha1:e74da8c4d04154870ea0d65372d709fa97fcc0bc
@@ -4097,8 +4109,8 @@ trackedFiles:
     pristine_git_object: 8e3e8ad80bccc43ac70b51802bea38f7e1dca420
   docs/sdks/microdeposits/README.md:
     id: 5388e9c10dc1
-    last_write_checksum: sha1:ff2dec2d1bdc1073bf92f717825bcaf0767e6ce9
-    pristine_git_object: 26edf937b5f2a41795b8e8598005ee0e3ac9fe3b
+    last_write_checksum: sha1:bfd46c177067e99aca6b4aee71ee6e5010115fa6
+    pristine_git_object: 1a1905994f36ee9aaebdc2c8992c434b892831bb
   docs/sdks/ondemandtransferauthorizations/README.md:
     id: 08e9755cfe2e
     last_write_checksum: sha1:730a011a1d88fff2cc75e80e6b01681d0f74c253
@@ -4369,8 +4381,8 @@ trackedFiles:
     pristine_git_object: 5bd0188e9f8e34bed5df234aca136fd36206ac38
   src/MicroDeposits.php:
     id: 592420b7e1f9
-    last_write_checksum: sha1:e32ce6c3a05a441a9444ae7a990a5d67f8d70f3f
-    pristine_git_object: e86a1dc00dd027a7074b3ae5c44df098b5b12cc7
+    last_write_checksum: sha1:4d89c5a6f9685541be5016638639891543861a0c
+    pristine_git_object: d0db3fc28ac9ee8e413a8788c9501cc9bf5aba35
   src/Models/Components/About.php:
     id: ec621a05ea72
     last_write_checksum: sha1:5860156da49c3578e07e7145771b503dfffc48bf
@@ -8019,6 +8031,14 @@ trackedFiles:
     id: f360c7be8156
     last_write_checksum: sha1:e8dd4f29fc4879db31702497a298f175dbf09a41
     pristine_git_object: 68f183bb81f9e0e829010aa64b2bac35de43f390
+  src/Models/Operations/Deposit1.php:
+    id: a45afbb3e2f6
+    last_write_checksum: sha1:36ec196d658ca09884e95504f70c16a129e538e3
+    pristine_git_object: b280562f99f7288ef9ef3a7b88eb6f7fe2ecde47
+  src/Models/Operations/Deposit2.php:
+    id: a5f4d55a3e0e
+    last_write_checksum: sha1:430f6f62c27f696ae6ae599111a4e9e2162399a0
+    pristine_git_object: b5d13ecd8f37f0a730cf22eb49a006f9f67bb171
   src/Models/Operations/DestinationEnum.php:
     id: c3c7e33807b7
     last_write_checksum: sha1:b55b105bb2a61dbf5eb8453efa73b8dd52acf491
@@ -8187,6 +8207,10 @@ trackedFiles:
     id: eadff27dcd2a
     last_write_checksum: sha1:9311ab5eff7ebb7640fccdafa5c0de6a609670ab
     pristine_git_object: 74f4f38e2ffe88d50c8d2ab3376747d69bc4ac56
+  src/Models/Operations/GetMicroDepositsAchDetails.php:
+    id: 7323d3f15448
+    last_write_checksum: sha1:002d5a8f862fc00042e7455030fce02d31fae9dd
+    pristine_git_object: 6c5a6a914c4dcb693713dcaf3ebce458699fe311
   src/Models/Operations/GetMicroDepositsRequest.php:
     id: 785d1136c66e
     last_write_checksum: sha1:60d0a855910dd182ae30028b627e0cd1c5fbafee
@@ -8197,8 +8221,8 @@ trackedFiles:
     pristine_git_object: 942b02b72ffa7e708fdb29094325685db2e21521
   src/Models/Operations/GetMicroDepositsResponseBody.php:
     id: acfda4efb98a
-    last_write_checksum: sha1:6c4d4457b41c51d346de632f134e3f02da01eed8
-    pristine_git_object: 95bb4f571a2da9c54d39cc883de3ec8d01c3e294
+    last_write_checksum: sha1:0493517c1e20506a940868a4b810a64ced45caa8
+    pristine_git_object: 29ee33ecdab23105eb589d1755b809aabfb81bbe
   src/Models/Operations/GetRootResponse.php:
     id: "291609347281"
     last_write_checksum: sha1:fbbf5baae745ba789b602f8b603ad371269e8069
@@ -8901,8 +8925,8 @@ trackedFiles:
     pristine_git_object: 7041356267e9f6a378f6649728cfd5f928fbf9cd
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:c3b846dff2239c3022c7a7ed11352ee129ccdb97
-    pristine_git_object: ca5b528a1f3a9cd1cd2b05c597fcb2fd19d0693b
+    last_write_checksum: sha1:2373ce8885ad1b19d6e3a518d2a216e377c31692
+    pristine_git_object: f67ab4e1bf0c8c017fb4df61927c201e5d4300e4
   src/SandboxSimulations.php:
     id: 0c15c34c441c
     last_write_checksum: sha1:fc0a12b62b79a6a2ba2fe46fa9458a9f7df87440
@@ -9632,7 +9656,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/vnd.dwolla.v1.hal+json: {"_links": {"key": {"href": "https://api.dwolla.com", "type": "application/vnd.dwolla.v1.hal+json", "resource-type": "resource-type"}}, "created": "2022-12-30T20:56:53.000Z", "status": "failed", "failure": {"code": "R03", "description": "No Account/Unable to locate account"}}
+          application/vnd.dwolla.v1.hal+json: {"_links": {"key": {"href": "https://api.dwolla.com", "type": "application/vnd.dwolla.v1.hal+json", "resource-type": "resource-type"}}, "created": "2022-12-30T20:56:53.000Z", "status": "failed", "failure": {"code": "R03", "description": "No Account/Unable to locate account"}, "achDetails": {"deposit1": {"traceId": "273976360000105"}, "deposit2": {"traceId": "273976360000106"}}}
         "404":
           application/vnd.dwolla.v1.hal+json: {"code": "NotFound", "message": "The requested resource was not found."}
   initiateOrVerifyMicroDeposits:
@@ -10100,4 +10124,6 @@ examples:
         "404":
           application/vnd.dwolla.v1.hal+json: {"code": "NotFound", "message": "The requested resource was not found."}
 examplesVersion: 1.0.2
-releaseNotes: "## Php SDK Changes:\n* `dwolla->masspayments->create()`: \n  *  `request.body->items[]->instantDetails` **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `dwolla->fundingsources->microDeposits->get()`:  `response.achDetails` **Added**
