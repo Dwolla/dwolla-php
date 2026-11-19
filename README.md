@@ -19,6 +19,7 @@ Dwolla API: Dwolla API Documentation
   * [SDK Example Usage](#sdk-example-usage)
   * [Authentication](#authentication)
   * [Available Resources and Operations](#available-resources-and-operations)
+  * [Pagination](#pagination)
   * [Error Handling](#error-handling)
   * [Server Selection](#server-selection)
   * [Maturity](#maturity)
@@ -168,6 +169,11 @@ if ($response->object !== null) {
 #### [Accounts.Transfers](docs/sdks/accountstransfers/README.md)
 
 * [list](docs/sdks/accountstransfers/README.md#list) - List and search account transfers
+
+### [Alerts](docs/sdks/alerts/README.md)
+
+* [list](docs/sdks/alerts/README.md#list) - List alerts
+* [get](docs/sdks/alerts/README.md#get) - Retrieve alert
 
 ### [BeneficialOwners](docs/sdks/beneficialowners/README.md)
 
@@ -370,6 +376,48 @@ if ($response->object !== null) {
 
 </details>
 <!-- End Available Resources and Operations [operations] -->
+
+<!-- Start Pagination [pagination] -->
+## Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned object will be a `Generator` instead of an individual response.
+
+Working with generators is as simple as iterating over the responses in a `foreach` loop, and you can see an example below:
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Dwolla;
+use Dwolla\Models\Components;
+use Dwolla\Models\Operations;
+
+$sdk = Dwolla\Dwolla::builder()
+    ->setSecurity(
+        new Components\Security(
+            clientID: '<YOUR_CLIENT_ID_HERE>',
+            clientSecret: '<YOUR_CLIENT_SECRET_HERE>',
+        )
+    )
+    ->build();
+
+
+
+$responses = $sdk->alerts->list(
+    limit: 25,
+    status: Operations\Status::Open
+
+);
+
+
+foreach ($responses as $response) {
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+}
+```
+<!-- End Pagination [pagination] -->
 
 <!-- Start Error Handling [errors] -->
 ## Error Handling

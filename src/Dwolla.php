@@ -97,6 +97,13 @@ class Dwolla
      */
     public Events $events;
 
+    /**
+     * Operations related to Alerts
+     *
+     * @var Alerts $$alerts
+     */
+    public Alerts $alerts;
+
     public WebhookSubscriptions $webhookSubscriptions;
 
     /**
@@ -155,6 +162,7 @@ class Dwolla
         $this->massPayments = new MassPayments($this->sdkConfiguration);
         $this->labels = new Labels($this->sdkConfiguration);
         $this->events = new Events($this->sdkConfiguration);
+        $this->alerts = new Alerts($this->sdkConfiguration);
         $this->webhookSubscriptions = new WebhookSubscriptions($this->sdkConfiguration);
         $this->webhooks = new Webhooks($this->sdkConfiguration);
         $this->sandboxSimulations = new SandboxSimulations($this->sdkConfiguration);

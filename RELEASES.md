@@ -49,3 +49,13 @@ Based on:
 - [php v0.0.1-beta.6] .
 ### Releases
 - [Composer v0.0.1-beta.6] https://packagist.org/packages/dwolla/dwolla-php#v0.0.1-beta.6 - .
+
+## 2026-11-19 00:30:02
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.810.0 (2.961.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.0.1-beta.7] .
+### Releases
+- [Composer v0.0.1-beta.7] https://packagist.org/packages/dwolla/dwolla-php#v0.0.1-beta.7 - .

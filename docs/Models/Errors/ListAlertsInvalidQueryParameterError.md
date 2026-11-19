@@ -1,0 +1,16 @@
+# ListAlertsInvalidQueryParameterError
+
+A query parameter is invalid. Common cases:
+- The cursor in a `next` or `prev` link was modified or is malformed (`Invalid cursor.`)
+- `limit` is less than 1 or greater than 200 (`Limit must be > 0 and <= 200.`)
+- `limit` isn't an integer (`Invalid query parameter: limit`)
+
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  | Example                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `code`                                                                                                       | *string*                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          | InvalidQueryParameter                                                                                        |
+| `message`                                                                                                    | *string*                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          | Invalid cursor.                                                                                              |
+| `rawResponse`                                                                                                | [\Psr\Http\Message\ResponseInterface](https://www.php-fig.org/psr/psr-7/#33-psrhttpmessageresponseinterface) | :heavy_minus_sign:                                                                                           | Raw HTTP response; suitable for custom response parsing                                                      |                                                                                                              |
