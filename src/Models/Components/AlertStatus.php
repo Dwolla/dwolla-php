@@ -9,7 +9,9 @@ declare(strict_types=1);
 namespace Dwolla\Models\Components;
 
 
-enum Code: string
+/** Whether the alert is still `open` or has been `resolved`. */
+enum AlertStatus: string
 {
-    case NotAllowed = 'NotAllowed';
+    case Open = 'open';
+    case Resolved = 'resolved';
 }
