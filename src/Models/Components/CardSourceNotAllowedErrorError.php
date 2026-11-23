@@ -13,11 +13,11 @@ class CardSourceNotAllowedErrorError
 {
     /**
      *
-     * @var \Dwolla\Models\Components\Code $code
+     * @var \Dwolla\Models\Components\CardSourceNotAllowedErrorCode $code
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('code')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\Code')]
-    public Code $code;
+    #[\Speakeasy\Serializer\Annotation\Type('\Dwolla\Models\Components\CardSourceNotAllowedErrorCode')]
+    public CardSourceNotAllowedErrorCode $code;
 
     /**
      *
@@ -45,13 +45,13 @@ class CardSourceNotAllowedErrorError
     public ?CardSourceNotAllowedErrorLinks $links = null;
 
     /**
-     * @param  \Dwolla\Models\Components\Code  $code
+     * @param  \Dwolla\Models\Components\CardSourceNotAllowedErrorCode  $code
      * @param  \Dwolla\Models\Components\Message  $message
      * @param  \Dwolla\Models\Components\Path  $path
      * @param  ?\Dwolla\Models\Components\CardSourceNotAllowedErrorLinks  $links
      * @phpstan-pure
      */
-    public function __construct(Code $code, Message $message, Path $path, ?CardSourceNotAllowedErrorLinks $links = null)
+    public function __construct(CardSourceNotAllowedErrorCode $code, Message $message, Path $path, ?CardSourceNotAllowedErrorLinks $links = null)
     {
         $this->code = $code;
         $this->message = $message;
